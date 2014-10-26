@@ -1,0 +1,30 @@
+\label{sec:polcor}
+\begin{figure}[h]
+ \begin{center}
+ \includegraphics[width=0.33\textwidth,bb= 0 0 567 544]{../thesis/Figures/polrew/05e}
+ % 05e.eps: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb= 0 0 567 544
+\end{center}
+\caption{The polarisation reweighting factors for 2004/2005$e^-$ data taking period determined using the HECTOR program. The red curve represents the spline interpolation.}
+\label{fig:polcor05e}
+\end{figure} 
+The MC samples used in this analysis were generated assuming vanishing polarisation of the lepton beam, $P_e = 0$. In order to take non-zero polarisation of the electrons into account, the MC samples were reweighted using theoretical predictions. For this purpose the HECTOR program~\cite{HECTOR} interfaced to BASES~\cite{bases} with the CTEQ5D PDFs~\cite{CTEQ5} was used. The reweighting factors were determined from the ratio of predictions for the unpolarised inclusive DIS cross sections and those for the lepton beam polarisation corresponding to particular data-taking period. The polarisation correction was implemented as weight assigned to each MC event according to the \qsq~of the scattering process:
+\begin{equation}
+ w_p\left(\qsq\right) = w_p = \frac{\sigma_\mathrm{pol}}{\sigma_\mathrm{unpol}}.
+\end{equation}
+
+The average polarisation for different data-taking periods is summarised in Table~\ref{tab:polvalues}.
+\begin{table}[h]
+ \centering
+ \begin{tabular}{lc}
+ Data-taking period & Average polarisation, $P_e$ \\
+\hline
+ 2004/2005$e^-$   & -0.06184 \\
+ 2006$e^-$   & 0.09386  \\
+ 2006/2007$e^+$ & -0.06857
+\end{tabular} 
+\caption{The average polarisation values for the data samples used in the analysis.}
+\label{tab:polvalues}
+\end{table}
+The obtained correction factors as a function of \qsq~and a spline interpolation is illustrated in Figure~\ref{fig:polcor05e}. The size of the correction increases with increasing \qsq~but nowhere exceeds 3\% and typicaly is below 1\%. The sign of the correction depends on the helicity of the lepton beam.
+
+Besides the polarisation correction applied to MC events, an inverse of determined factors was applied to the data in order to obtain jet cross sections corresponding to unpolarised lepton scattering.

@@ -1,0 +1,84 @@
+An accurate description of the trigger efficiency is an important ingredient in this analysis.
+
+As it was described in Chapter~\ref{ch:detector} the \zeus trigger was used to reject non-$ep$ background and to enhance the acceptance for physics-related processes. At the FLT most of the trigger bits were utilising CTD information to veto the events characterised by specific combinations of all and vertex-fitted tracks. The definitions for the corresponding track classes is illustrated in Figure~\ref{fig:trackvetodefinition}. According to this information two track-veto types, relevant for this analysis, were identified (see Table~\ref{tab:trackveto}). 
+\begin{table}[htpb]
+ \centering
+ \begin{tabular}{lc}
+ \multicolumn{2}{c}{track-veto requirement} \\
+  \hline
+ ``semi-loose'' & track-class $\le$ 2 or (track class = 8 and track multiplicity $\ge$ 26) \\
+ ``tight''      & track-class $\le$ 2 \\
+ \end{tabular} 
+\caption{The track-veto condition used in the first level trigger.}
+\label{tab:trackveto}
+\end{table} 
+In order to check the description of the track-veto in MC simulations monitor trigger bit was used. The FLT30 was requiring an isolated electromagnetic cluster in the RCAL and therefore was independent of the CTD information. The track-veto efficiency, expressed as a ratio
+\begin{equation}
+ \epsilon_\mathrm{trk} = \frac{N\left(\text{track veto} \wedge \text{FLT30}\right)}{N\left(\text{FLT30}\right)},
+\end{equation}
+where $N\left(\text{FLT30}\right)$ is a number of events triggered by the FLT30 and $N\left(\text{track veto} \wedge \text{FLT30}\right)$ is a number of events in a subset satisfying additional track-veto requirements, was studied separately in data and MC for different data taking periods. To determine $N\left(\text{track veto} \wedge \text{FLT30}\right)$ the track-veto was simulated offline by imposing additional restrictions on track quantities available at the FLT.
+
+The efficiency was investigated as a function of $y_{DA}$. This variable was strongly correlated with the size of hadronic activity and thus with track multiplicity. The corresponding ratios in the data and MC are shown in Figures~\ref{fig:tveffdatamc}~\subref{fig:tveffdatamc_subfig1}--\subref{fig:tveffdatamc_subfig4}. The discrepancy between the data and MC simulations was attributed to the bad description of the track-class distribution in MC. In order to compensate for higher efficiency in MC an additional correction was implemented. The ratio of efficiencies in the data and MC was fitted to the first order polynomial
+\begin{equation} 
+ f\left(y_{DA}\right)=a_0 + a_1 \cdot y_{DA}.
+\end{equation}
+Because the efficiency observed in MC was higher than that in the data it can be corrected by rejecting overabundant MC events. Therefore, for each MC event a uniformly distributed random number, $r$, was generated and the event was rejected if $r > f\left(y_{DA}\right)$. The correction was implemented in \lepto and \ariadne samples and for different data-taking periods separately. The size of the correction depends on the value of $y_{DA}$ and was typically less than 0.5\% for 2004--2005$e^-$ and 2006$e^-$ and less than 3\% for 2007$e^+$. It was observed that for the ``semi-loose'' track-veto the same correction as for ``tight'' track-veto can be applied. The comparison of the track-veto efficiencies in the data and MC after applying the correction is illustrated in Figures~\ref{fig:aftveffdatamc}~\subref{fig:aftveffdatamc_subfig1}--\subref{fig:aftveffdatamc_subfig4}. After the correction the data efficiency was very well described by MC. 
+
+The systematic effects attributed to the MC track-veto correction was examined investigating trigger efficiency as a function of CTD-FLT track multiplicity. The results of these studies are detailed in Chapter~\ref{systematics}.
+\begin{figure}[t]
+  \begin{center}
+    \includegraphics[width=0.65\textwidth,trim={0 120 0 120},clip]{../thesis/Figures/classes96}
+  \end{center}
+  \caption{The definition of track veto classes (taken from~\cite{Yamazaki site}).}
+  \label{fig:trackvetodefinition}
+\end{figure}
+
+\begin{figure}[ht!]
+\begin{center}
+\begin{subfloat}[]{\includegraphics[width=.45\linewidth,trim={0 0 280 0},clip] {../thesis/Figures/tvrew/tvrew_lep07p_yda_ltv}
+   \label{fig:tveffdatamc_subfig1}
+ }%
+\end{subfloat}
+ \begin{subfloat}[]{\includegraphics[width=.45\linewidth,trim={0 0 280 0},clip]{../thesis/Figures/tvrew/tvrew_ari07p_yda_ltv}
+   \label{fig:tveffdatamc_subfig2}
+ }%
+\end{subfloat}
+\newline
+\begin{subfloat}[]{\includegraphics[width=.45\linewidth,trim={0 0 280 0},clip] {../thesis/Figures/tvrew/ratio_tvrew_lep07p_yda_ltv}
+   \label{fig:tveffdatamc_subfig3}
+ }%
+\end{subfloat}
+ \begin{subfloat}[]{\includegraphics[width=.45\linewidth,trim={0 0 280 0},clip]{../thesis/Figures/tvrew/ratio_tvrew_ari07p_yda_ltv}
+   \label{fig:tveffdatamc_subfig4}
+ }%
+\end{subfloat}
+\end{center}
+\caption{Loose track-veto efficiency as a function of $y_{DA}$ in data and \lepto (a), \ariadne (b) MC. The ratio of the track-veto efficiency in data and \lepto (c), \ariadne (d) MC and the result of the fit.}
+\label{fig:tveffdatamc}
+\end{figure}
+
+%After correction
+\begin{figure}[pht]
+\begin{center}
+\begin{subfloat}[]{\includegraphics[width=.45\linewidth,trim={0 0 280 0},clip] {../thesis/Figures/tvrew/checktvrew_lep07p_yda_ltv}
+   \label{fig:aftveffdatamc_subfig1}
+ }%
+\end{subfloat}
+ \begin{subfloat}[]{\includegraphics[width=.45\linewidth,trim={0 0 280 0},clip]{../thesis/Figures/tvrew/checktvrew_lep07p_yda_sltv}
+   \label{fig:aftveffdatamc_subfig2}
+ }%
+\end{subfloat}
+\newline
+\begin{subfloat}[]{\includegraphics[width=.45\linewidth,trim={0 0 280 0},clip] {../thesis/Figures/tvrew/checktvrew_ari07p_yda_ltv}
+   \label{fig:aftveffdatamc_subfig3}
+ }%
+\end{subfloat}
+ \begin{subfloat}[]{\includegraphics[width=.45\linewidth,trim={0 0 280 0},clip]{../thesis/Figures/tvrew/checktvrew_ari07p_yda_sltv}
+   \label{fig:aftveffdatamc_subfig4}
+ }%
+\end{subfloat}
+\end{center}
+\caption{Comparison between data and MC of the loose (a,c) and semi-loose (b,d) track-veto after applying the track veto correction.}
+\label{fig:aftveffdatamc}
+\end{figure}
+

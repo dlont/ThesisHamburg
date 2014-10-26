@@ -1,0 +1,310 @@
+%% Based on a TeXnicCenter-Template by Gyorgy SZEIDL.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------
+%
+%\documentclass[14pt,a4paper,reqno,twoside]{scrreprt}%
+\documentclass[14pt,a4paper,reqno,twoside]{scrbook}%
+%
+%----------------------------------------------------------
+% This is a sample document for the AMS LaTeX Book or Monograph Class
+% Class options
+%       --  Body text point size:
+%                        8pt, 9pt, 10pt (default), 11pt, 12pt
+%       --  Paper size:  letterpaper (8.5x11 inch, default), a4paper
+%       --  Orientation: portrait(default), landscape
+%       --  Print side:  oneside, twoside (default)
+%       --  Quality:     final(default), draft
+%       --  Title page:  titlepage, notitlepage
+%       --  Start chapter on left:
+%                        openright (no, default), openany
+%       --  Columns:     onecolumn (default), twocolumn
+%       --  Omit extra math features:
+%                        nomath
+%       --  AMS fonts (noamasfonts available):
+%                        noamsfonts
+%       --  PSAMSfonts (fewer AMSfontsizes)
+%                        psamsfonts
+%       --  Equation numbering (equation numbers on the left is the default)
+%                        leqno (default), reqno
+%       --  Equation centering (equations centered is the default)
+%                        centeredtags (default}, tbtags (top, bottom)
+%       --  Displayed equations (centered is the default)
+%                        fleqn (flush left)
+% For instance the command
+%          \documentclass[a4paper,12p,reqno]{amsbook}
+% ensures that the paper size is a4, fonts are typeset at the size 12p
+% and the equation numbers are on the right side.
+\usepackage{extsizes}%
+\usepackage{fourier}%
+%
+\usepackage{nicefrac}%
+\usepackage{xfrac}%
+%
+%\usepackage{axodraw4j}%
+%
+\usepackage{slashed}
+%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]%
+{\markboth{\MakeUppercase{\thechapter.\ #1}}{}}
+\renewcommand{\sectionmark}[1]%
+{\markright{\MakeUppercase{\thesection.\ #1}}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\newcommand{\helv}{%
+\fontfamily{phv}\fontseries{m}\fontsize{11}{13}\selectfont}
+\fancyhf{}
+\fancyhead[LO]{\helv \rightmark}
+\fancyhead[RE]{\helv \leftmark}
+\cfoot{\large\thepage}
+
+\usepackage{amsmath}%
+\numberwithin{equation}{subsection}
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{graphicx}%
+\usepackage{wrapfig}
+%
+%\usepackage[multiple]{footmisc}
+\usepackage{mcite}
+\usepackage{hepunits}
+\usepackage{lineno}
+\usepackage{a4wide}
+\usepackage{lscape}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{sidecap}
+%\captionsetup[subfigure]{labelformat=simple}
+\renewcommand{\thesubfigure}{\alph{subfigure}}
+%\usepackage{zeusdet_siunitx}
+%\usepackage{zeusdet_hepunits}
+%\usepackage{zeusdet_units}
+
+%
+\usepackage[linktoc=all]{hyperref}
+\hypersetup{
+    hyperfootnotes=false,
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black,
+		linkbordercolor	={1 0 0},
+    citebordercolor	={0 1 0}
+}
+\usepackage[Sonny]{fncychap}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																										%%
+%%							Title size redefinition                 												%%
+%%																																										%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\makeatletter
+%\renewcommand{\section}{\@startsection
+%{section}%              % the name
+%{1}%                    % the level
+%{0mm}%                  % the indent
+%{-0.5\baselineskip}%    % the before skip
+%{0.25\baselineskip}%    % the after skip
+%{\normalfont\large\bf}} % the style
+%
+%\renewcommand{\subsection}{\@startsection
+%{subsection}%                % the name
+%{2}%                         % the level
+%{0mm}%                       % the indent
+%{0mm}%                       % the before skip
+%{0.1mm}%                     % the after skip
+%{\normalfont\normalsize\bf}} % the style
+%
+%\renewcommand{\subsubsection}{\@startsection
+%{subsubsection}%                % the name
+%{3}%                            % the level
+%{0mm}%                          % the indent
+%{0mm}%                          % the before skip
+%{0.1mm}%                        % the after skip
+%{\normalfont\normalsize\bf\it}} % the style
+%\makeatother
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                                                %%
+%%					TABLE OF CONTENTS SETUP                                               %%
+%%																																																%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\makeatletter
+%\renewcommand\tocchapter[3]{%
+  %\indentlabel{\@ifnotempty{#2}{\ignorespaces#2.\quad}}#3\dotfill%
+%}
+%\renewcommand{\tocsection}[3]{%
+  %\indentlabel{\@ifnotempty{#2}{\ignorespaces#1 #2.\quad}}#3\dotfill%
+%}
+%\renewcommand{\tocsubsection}[3]{%
+  %\indentlabel{\@ifnotempty{#2}{\ignorespaces#1 #2.\quad}}#3\dotfill%
+%}
+%\renewcommand{\tocsubsubsection}[3]{%
+  %\indentlabel{\@ifnotempty{#2}{\ignorespaces#1 #2.\quad}}#3\dotfill%
+%}
+%\makeatother
+
+%\setmainfont{DejaVu Serif}  %% задаёт основной шрифт документа
+%\setsansfont{DejaVu Sans}  %% задаёт шрифт без засечек
+%\setmonofont{DejaVu Sans Mono}  %% задаёт моноширинный шрифт
+%\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}  %% устанавливает поведение шрифтов по умолчанию
+%----------------------------------------------------------
+%print line numbers
+%\linenumbers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																																					 %%
+%%							             DIFINITIONS                                                             %%
+%%																																																					 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{parts/definitions}
+
+%-----------------------------------------------------------
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+\begin{document}
+
+
+%\frontmatter
+\title[]{Measurement of the Jet Production with the ZEUS Detector and Track Alignment for Pixel Telescopes}
+\author[D. Lontkovskyi]{Denys Lontkovskyi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																																					 %%
+%%							             Abstract                                                                    %%
+%%																																																					 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{abstract}
+%This is a sample document which shows the most important features
+%%of the AMS Book or Monograph Article class.
+%\end{abstract}
+\maketitle
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+
+%\chapter*{Preface}
+%
+%\markboth{PREFACE}{PREFACE} This is the preface and it is created
+%using a TeX field in a paragraph by itself containing
+%\verb|\chapter*{Preface}|. When the document is loaded, this
+%appears if it were a normal chapter, but it is actually an
+%unnumbered chapter.
+
+\mainmatter
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																																					       %%
+%%							Part 1. Measurement of the Jet Production with the ZEUS Detector       %%
+%%																																																					       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\part{Measurement of the Jet Production with the ZEUS Detector}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																																					 %%
+%%							Chapter 0. Introduction                                                             %%
+%%																																																					 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{parts//PartI_Analysis//Introduction}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																																					 %%
+%%							Chapter 1. Theoretical Framework                                               %%
+%%																																																					 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{parts//PartI_Analysis//TheoreticalFramework}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																																					       %%
+%%							Chapter 2. Models for Hadron Production and Fixed-Order Calculations   %%
+%%																																																					       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{parts//PartI_Analysis//LONLO}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																																					       %%
+%%							Chapter 3. Experimental setup                                                         %%
+%%																																																					       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{parts//PartI_Analysis//ExperimentalSetup}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																																					       %%
+%%							Chapter 4. Event Selection and Reconstruction                                   %%
+%%																																																					       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{parts//PartI_Analysis//SelectionReconstruction}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																																					       %%
+%%							Chapter 5. Data Unfolding                                                               %%
+%%																																																					       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{parts//PartI_Analysis//Unfolding}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																																					       %%
+%%							Chapter 6. Results                                                                         %%
+%%																																																					       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{parts//PartI_Analysis//Results}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																																					       %%
+%%							Chapter 7. Summary and Outlook                                                      %%
+%%																																																					       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{parts//PartI_Analysis//JetsSummary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																																					       %%
+%%							Part 2. Tracking and Alignment with Pixel Telescopes                          %%
+%%																																																					       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\part{Tracking and Alignment with Pixel Telescopes}
+%\include{parts//PartII_Technical//Eutelescope}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																																					       %%
+%%							APPENDICES																												                           %%
+%%																																																					       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\backmatter \appendix
+%\chapter{Leading order matrix elements for jet production in DIS and PHP}
+%\include{parts//Appendix//AppMatrixElements}
+%
+%\chapter{High-$\qsq$ Cross Section Tables}
+%
+%The \verb"\appendix" command should be used only once. Subsequent
+%appendices can be created using the Chapter command.
+%
+%\chapter{Photoproduction Cross Section Tables}
+%
+%Some text for the second Appendix.
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																																					       %%
+%%							BIBLIOGRAPHY                     															                           %%
+%%																																																					       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{bibliography//BiBTeX//bst//l4z_jhep3}
+\bibliography{bibliography//bibliography,bibliography//BiBTeX//bib//l4z_articles,bibliography//BiBTeX//bib//l4z_books,bibliography//BiBTeX//bib//l4z_misc,bibliography//BiBTeX//bib//l4z_preprints,bibliography//BiBTeX//bib//l4z_zeus,bibliography//BiBTeX//bib//l4z_h1,bibliography//BiBTeX//bib//l4z_conferences}
+
+\end{document}

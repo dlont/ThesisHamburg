@@ -1,0 +1,28 @@
+All microscopic phenomena observed up to date can be described in the framework of the Standard Model (SM). The SM is a renormalisable quantum field theory of the strong, electromagnetic and weak interactions. According to the SM the matter particles are represented by spin-$\frac{1}{2}$ Dirac fermions coming in three generations while interaction between matter fields is mediated by spin-1 gauge bosons. The SM is based on combined local $\mathrm{SU}\left(3\right) \bigotimes \mathrm{SU}\left(2\right) \bigotimes \mathrm{U}\left(1\right)$ symmetry representing strong, weak and electromagnetic sectors, respectively. The fermions are distinguished by the quantum numbers corresponding to the gauge groups. Quark fields are endowed with electroweak and colour charges, while leptons (electron $e$, muon $\mu$, tau $\tau$ and three corresponding neutrinos $\nu_e, \nu_\mu, \nu_\tau$) carry only electroweak charge. As a consequence of exact local gauge symmetry the mediators of the strong force, gluons, are massless quanta. In contrast to the strong interaction three electroweak gauge bosons $W^\pm, Z^0$ acquire mass as a result of spontaneous $\mathrm{SU}\left(2\right) \bigotimes \mathrm{U}\left(1\right)$ symmetry breaking, while photon $\gamma$ stays massless. According to the Higgs mechanism elementary particles acquire mass due to coupling to the scalar field, quanta of which have been recently discovered at the LHC~\cite{higgs atlas cms}.
+
+Subsequent sections briefly outline the theoretical framework used for the description of the strong sector of the Standard Model and hard interactions at HERA in particular.
+\section{Quantum Chromodynamics}
+Quantum Chromodynamcs emerged as a model for description of hadron spectra and absence of observations of free hadron constituents. The QCD Lagrangian density can by derived from local $\mathrm{SU}\left(3\right)$ invariance and reads as follows
+\begin{align}
+ \mathcal{L}\left( x\right)_{\mathrm{QCD}}  = & -\dfrac{1}{4}G_a^{\mu\nu}G_{\mu\nu}^a + i\sum_{j=1}^n{\overline{\psi}^{\alpha}_j \gamma_\mu \left( D^\mu \right)_{\alpha\beta} \psi_j^\beta } - \sum_{j=1}^n{m_j\overline{\psi}^{\alpha}_j\psi_{j,\alpha}} \\
+					      & - \dfrac{1}{2\alpha_G} \partial^\mu \mathcal{A}^a_\mu \partial_\mu \mathcal{A}_a^\mu - \partial_\mu \overline{\varphi}_a D^\mu \varphi^a,
+\end{align}
+where $G_{\mu\nu}^a \equiv \partial_\mu \mathcal{A}^a_\nu - \partial_\nu \mathcal{A}^a_\mu + gf_{abc}\mathcal{A}^b_\mu \mathcal{A}^c_\nu $, $a=1 \ldots 8$ are the Yang-Mills field strenght tensor~\cite{C.N. Yang and R.L. Mills, Phys. Rev. 96 (1954) 191.} constructed from gluon fields $\mathcal{A}^a_\mu$ in adjoint representation of $\mathrm{SU}\left(3\right)$. Quarks of different flavours are described by $\psi_j$ fields in fundamental representation of $\mathrm{SU}\left(3\right)$ while $\varphi^a$ are eight anti-commuting scalar Faddeev-Popov ghost fields required in quantisation procedure~\cite{L.D. Faddeev and Y.N Popov, Phys. Lett. B 25 (1967) 29;
+B. De Wit, Phys. Rev. Lett. 12 (1964) 742.}. Covariant derivative, $\left( D^\mu \right)_{\alpha\beta} = \delta_{\alpha\beta}\partial_\mu - ig\sum_a{\dfrac{1}{2}\lambda^a_{\alpha\beta}\mathcal{A}^a_\mu}$, defines infinitesimal transformation in colour space acting on quark fields. Gell-Mann $3\times 3$ matrices, $\lambda^a_{\alpha\beta}$, are the generators of $su\left(3\right)$ algebra and $f_{abc}$ are its real structure constants related by the following expression:
+\begin{align}
+ \left[T_a,T_b\right] = if_{abc}T_c,\qquad T_a = \dfrac{1}{2}\lambda_a.
+\end{align}
+An important feature that can be readily observed is a non-linear term, $gf_{abc}\mathcal{A}^b_\mu \mathcal{A}^c_\nu$, in the definition of the field strength tensor. This term is the result of non-abelian structure of the symmetry group and determines the self-interaction of the force carriers. In contrast to electromagnetic interaction gluons carry two color charges. 
+
+Given the Lagrangian density the Feynman rules for QCD can be derived.  Feynman diagrams representing interaction vertices of the fundamental fields are depicted in Figure~\ref{fig:FundamentalQCDInteractions}.
+\begin{figure}[t]
+	\centering
+		\includegraphics[width=\textwidth]{../../Figures/source/FundamentalQCDInteractions.png}
+	\caption{The interaction verices of the Feynman rules of QCD and schematic colour flow interpretation for quark-gluon, three-gluon and four-gluon vertices.}
+	\label{fig:FundamentalQCDInteractions}
+\end{figure}
+
+Such relatively simple model is extremely successful in description of vast variety of experimental data collected up to now. In particular, strong interaction has two distinct features: at large energy scales\footnote{In the limit $\Lambda_\mathrm{QCD}/E\rightarrow 0$, where $\Lambda^{n_f=5}_{\overline{\mathrm{MS}}}=226$ MeV is QCD characteristic energy scale.} hadron constituents behave as free particles and strength of the coupling decreases (``asymptotic freedom''); conversely, at low energy scales strength of the coupling grows, bounding quarks and gluons inside hadrons (``confinement'').  
+ 
+At current stage direct solution of Yang-Mills equations is an incapable task. Almost all quantitative QCD predictions are based on three first-principle approaches: perturbative QCD (pQCD), lattice QCD and effective theories. Perturbative approach exploits smallness of the strong coupling constant in high-energy regime and develops successive approximations to the solution. Next section summarises basic information about pQCD approach.
+

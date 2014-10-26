@@ -1,0 +1,76 @@
+\documentclass[notitlepage,a4paper,10pt]{scrreprt}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+
+\usepackage[normalem]{ulem} % either use this (simple) or
+\usepackage{xspace}
+
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subfig}
+% \usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{pdflscape}
+\newcommand*\rfrac[2]{{}^{#1}\!/_{#2}}
+
+\newcommand{\hera}{\mbox{\textsf{HERA}}\xspace}
+\newcommand{\zeus}{\mbox{\textsf{ZEUS}}\xspace}
+\newcommand{\lepto}{\mbox{\textsf{LEPTO}}\xspace}
+\newcommand{\ariadne}{\mbox{\textsf{ARIADNE}}\xspace}
+\input{definitions}
+% \hoffset = -10pt \voffset = -45pt \textwidth = 450pt \textheight = 642pt
+% \hoffset = -45pt \voffset = -45pt \textwidth = 450pt \textheight = 642pt
+
+\makeatletter
+\newcommand*{\toccontents}{\@starttoc{toc}}
+\makeatother
+
+\begin{document}
+% Title Page
+\title{}
+\author{Denys Lontkovskyi}
+\maketitle
+
+\toccontents
+\chapter{Introduction}
+\input{intro}
+
+% \chapter{Corrections and reweightings}
+% In many high energy physics analyses the estimation of detector effects is often based on the Monte Carlo simulations. However, as it will be discussed in Chapter~\ref{ch:cs} a reliable estimate of the influence of the detector responce is only possible if the MC simulations accurately describe all relevant distributions. %\sout{Therefore a detailed description of the observed data distributions is one of the crucial steps in any analysis.} 
+% The discrepancy between data and MC may originate from two basic sources: inadequacy of the modelling of the physics process or the particle transport through the detector volume.
+% 
+% The improvement in the simulations is provided by using more accurate predictions for the physical observables and employing better simulation algorithms. However, obtaining the detailed description of the physical process can be a formidable task, therefore, often, a more feasible approach is used. An improvement of the description of the data distribution is obtained by assigning weights to the MC events (\emph{reweighting method}). The weights are usually the functions of the kinematic variables and the sum of the reweighting factors are adjusted in such a way that the simulations reasonably describe the data. The size of the weights is usually determined from the empirical fit to the data. The reweighting procedure is required to be independent of the reconstruction therefore it must be based on \emph{true} level information. In case when several quantities are reweighted, the final weight factor applied to the MC event is a product of individual weights, $w = \prod_i w_i$.
+% 
+% This chapter describes the corrections applied to the MC simulations. At the beginning, the details of the longitudinal vertex position reweighting are presented. Later the MC track-veto correction is described. 
+% 
+% \section{Longitudinal vertex position reweighting}
+% \input{zvtxrew}
+% 
+% \section{Track veto efficiency correction}
+% \input{trackveto}
+% 
+% \chapter{Cross section determination}
+% \input{csdetermination}
+% 
+% \section{Polarisation correction}
+% \input{polcor}
+% 
+% \section{QED corrections}
+% \input{qedcorr}
+% % 
+% \section{Hadronisation correction}
+% \input{hadrcorr}
+% % 
+% \section{Electroweak corrections}
+% \input{z0corr}
+% 
+% \newpage
+% \section{Jet corrections}
+% \subsection{Hadronic energy scale}
+% \subsection{Jet energy correction}
+% \input{jetenecorr}
+% \subsection{Conclusion}
+\end{document}

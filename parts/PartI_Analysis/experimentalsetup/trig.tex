@@ -1,0 +1,20 @@
+Due to limited data processing speed and storage capabilities, not every bunch crossing can be analysed. Furthermore, the total event sample is dominated by non-$\ep$ background from beam-gas interactions or cosmic-rays showers. In order to reduce the event rate to acceptable level and efficiently reject the background a sophisticated three level system was used. The architecture of the ZEUS trigger system is demonstrated in Figure~\ref{fig:trigarch}. 
+
+\subsection{First Level Trigger}
+\label{subsec:flt} Each detector component was coupled to its own hardware first level trigger operating with general information such as regional energy sums (CAL), track multiplicity (CTD) or muon stubs. The information from 26 consecutive bunch crossings (2.5 $\mu$s) was stored in a 46 event deep pipe-line and was analysed in parallel streams. The combined information from each detector component was sent to the programmable Global First Level Trigger (GFLT), which was selecting the events that should be kept for the consideration at the second level. The decision was taken during 1.9 $\mu$s, which corresponds to 20 bunch crossings. If an event was accepted the analogue information from different detector components was digitised and stored from the pipelines to the data buffers. The GFLT had 64 bit, called ``slots'' corresponding to different event categories (see Section~\ref{subsubsec:fltcuts}). By using the FLT level the event rate was reduced from approximately 10 MHz to $\sim$1 kHz. The dead-time of the FLT was approximately 1\% and it was automatically accounted by disabling the luminosity monitors when the trigger was dead.
+
+\subsection{Second Level Trigger}
+\label{subsec:slt}
+The second level trigger had more time for the processing of the information because events were arriving at reduced rate. The SLT had very similar to the FLT architecture. The information from each detector component was combined at the GSLT, which was based on reconfigurable network of transputers. More time available to SLT was sufficient for better estimation of the position of the primary vertex, identification of  calorimeter clusters and reconstruction of tracks. The timing information from the calorimeter system was used to efficiently reject non-$\ep$ background events at the SLT. The output rate of the second level was in range 50 -- 100 Hz. The full information about the accepted event was sent further to the event builder.
+
+\subsection{Third Level Trigger}
+\label{subsec:tlt}
+The TLT was a cluster of computer servers running complex algorithms for the vertex reconstruction, electron identification and reconstruction of event kinematic variables. Highly-configurable architecture of the TLT made possible utilisation of the up-to-date calibration information as well as fine tuning of the decision rules. The output rate of the TLT of about 5 Hz was compatible with the storage capabilities, thus the information from event builder was converted in ADAMO format~\cite{adamo} and written on magnetic tape.
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[height=0.9\textheight]{../../Figures/ZEUStrigger_syst.jpg}
+	\caption{The ZEUS trigger system architecture.}
+	\label{fig:ZEUStrigger_syst}
+\end{figure}
+\newpage

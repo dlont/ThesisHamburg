@@ -1,0 +1,36 @@
+
+The size of unknown higher order terms in perturbative series~\ref{eq:pertseries} is usually one the dominant sources of uncertainty in theoretical predictions. These contributions can be estimated from the dependence of the perturbative expansion on renormalisation and factorisation scales. Using the renormalisation group equation it can demonstrated that the scale dependence of higher order coefficients accompanied by logarithmic terms are fully determined by lower order coefficients~\cite{DataAnalysisBehnke}. For example, in case of dimensionless observable with perturbative expansion of the form~\ref{eq:pertseries} the following expressions can be obtained:
+\begin{align}
+	f_1\left(\frac{\mu}{Q}\right) &= f_1\left(1\right) - k\beta_0f_0\log{\frac{\mu}{Q}}, \\
+	f_2\left(\frac{\mu}{Q}\right) &= f_2\left(1\right) - \left[\left(k+1\right)\beta_0f_1\left(1\right) + k\beta_1f_0\right]\log{\frac{\mu}{Q}}, \\
+																						&+ \frac{k\left(k+1\right)}{2}\beta_0^2f_0\log^2{\frac{\mu}{Q}},\\
+																						& \ldots 
+\end{align}
+Thus, the $\mu$ variation in the $\mathcal{O}\left(\as^n\right)$ expression corresponds to the higher-order terms of the form:
+\begin{equation}
+ \as^{n+1}\left(\mu\right) \sum_{i=1}^{n+1-k}{\text{(know part)}\cdot\log^i{\frac{\mu}{Q}}} + \mathcal{O}\left(\as^{n+1}\right).
+\label{eq:scalevariationerror}
+\end{equation}
+However, terms that are not accompanied by the logarithms e.g. $f_2\left(1\right)$, require explicit calculation. Therefore the reliability of an estimate of the size of truncated terms depends on whether $f_i\left(1\right), i \ge 1$ are of similar order as $f_0$. Notably,
+the leading order coefficient $f_0$ is independent of renormalisation scale, therefore the scale dependence of LO approximation is completely governed by the scale dependence of the strong coupling. Therefore a realistic estimate of the size of unknown terms is possible at least at NLO.
+
+Besides that, the sensitivity of perturbative predictions to the $\mu_f$ scale variation has to be taken into account. Although, formally the DGLAP equations perform all-orders resummation of the ladder diagrams the residual dependence on the factorisation scale of order $\mathcal{O}\left(\as^{k+1}\right)$ persists in the pQCD calculations. Similarly to the renormalisation scale dependence the behaviour of the perturbative coefficients on $\mu_f$ can be recovered~\cite{markusdiehl}:
+\begin{equation}
+ f_1\left(\frac{\mu_f}{Q},\frac{\mu_r}{Q}\right) = f_1\left(1,\frac{\mu_r}{Q}\right) + P_0 \otimes f_0 \log{\frac{Q^2}{\mu_f^2}},
+\label{eq:factorisationscaledep}
+\end{equation}
+where $P_0$ is the LO splitting function. For the higher-order coefficients a pattern similar to the renormalisation case is obtained.
+
+Moreover, the DGLAP equations involve the strong coupling evaluated at factorisation scale $\mu_f$. Whenever this scale differs from $\mu_r$, the RGE evolution from factorisation to renormalisation point has to be performed. Since the RGE is determined by incomplete series for the $\beta$-function, the strong coupling evolution can be unreliable if transition over a wide interval of scales is required. Mathematically this can be formulated as follows. Considering Taylor expansion of $\as\left(\mu_f\right)$ around $\as\left(\mu_r\right)$ and substituting RGE expression for derivatives of the strong coupling $d\as/d\log{\frac{\mu_f^2}{\mu_r^2}}$ gives~\ref{botjeqcdnum}:
+{\small
+\begin{align}
+ \as\left(\mu_f\right) &= \as\left(\mu_r\right) - \beta_0\log{\frac{\mu_f^2}{\mu_r^2}}\as^2\left(\mu_r\right) - \left(\beta_1\log{\frac{\mu_f^2}{\mu_r^2}} - \beta_2^2\log^2{\frac{\mu_f^2}{\mu_r^2}}\right)\as^3\left(\mu_r\right) + \mathcal{O}\left(\as^4\right)\\ \nonumber
+ \as^2\left(\mu_f\right) & = \as^2\left(\mu_r\right) - 2\beta_0\log{\frac{\mu_f^2}{\mu_r^2}}\as^3\left(\mu_r\right) + \mathcal{O}\left(\as^4\right)\\
+\as^3\left(\mu_f\right) & = \as^3\left(\mu_r\right) + \mathcal{O}\left(\as^4\right).
+\end{align}
+}
+Thus, to ensure convergence of such expansion the factorisation scale must be closely related to the renormalisation scale. In addition, as in case of renormalisation the $\mu_f$ scale must be much larger than $\Lambda_\mathrm{QCD}$ to justify applicability of perturbation theory results for the PDF evolution.
+
+There is no commonly adopted way for the estimation of the size of the contribution from missing terms in perturbative series. However, it is widely accepted to calculate corresponding uncertainty from the variation of the renormalisation and factorisation scales up and down by a factor of two. Additionally, resulting variation of the observable depends on the central values $\mu_{f,0},\,\mu_{r,0}$ around which the variation is performed. It is desirable to choose central values such that the difference between nominal result and the one with scaled values of $\mu_f$ and $\mu_r$ is minimal i.e. $\partial\mathcal{S}/\partial\mu=0$. This method is called ``principle of minimum sensitivity'' (PMS)~\cite{pmsprinciple}. However, straightforward application of this method can result in a very large inclusive-jet cross sections at lowest \qsq and \etjet values~\cite{britzer}. Alternative variants can be found in~\cite{ioffelipatovfadin}. The proposed methods emphasise different aspects of perturbative expansion, however it has to be noted that all of them are related to the behaviour of logarithmically enhanced terms.
+
+In this analysis the traditional prescription of choosing the scale corresponding to typical energy scale of the process was adopted. Theoretical setting used in this work to perform the calculations for the jet production cross sections are described in Chapter~\ref{ch:results} in details.

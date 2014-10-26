@@ -1,0 +1,49 @@
+\chapter{Models for Hadron Production and Fixed-Order Calculations and Jet Production}
+Precise theoretical description of the final state of $\ep$-scattering from the first principles is an intractable problem at the current stage. It requires calculations in the regions of phase-space where perturbative techniques are not applicable or have to be performed to high orders.
+\section{QCD Parton Showers}
+The parton shower approach is used to simulate higher order perturbative QCD contributions when a complete calculation is infeasible or unknown. For example the DGLAP approach can be utilised to describe initial-state and final-state radiation. The probability for a branching, $\mathcal{P}_{a\rightarrow bc}$, during the evolution is governed by the equation:
+\begin{equation}
+\frac{\mathrm{d}\mathcal{P}_{a\rightarrow bc}}{\mathrm{d}t} = \int_0^1{\mathrm{d}z\frac{\as\left(\qsq\right)}{2\pi}P_{_{a\rightarrow bc}}}\left(z\right),
+\end{equation}
+where $P_{a\rightarrow bc}\left(z\right)$ are the Altareli-Parisi splitting kernels.
+
+Such an approximation is usually used in general event generators where the successive radiation is simulated until the evolution parameter reaches some low energy scale, $E_0$, of the order $\mathcal{O}\left(1\;\GeV\right)$. At this point the showering process is stopped and partons are recombined into colourless hadrons.
+
+In order to improve the leading logarithmic accuracy of the parton shower approach, the hard emission are described using complete matrix elements. In such case an intermediate scale is introduced at which regions dominated by parton shower or hard scattering dynamics are matched. Nowadays most of the event generators are based on the LO matrix elements, however NLO calculations with matched parton shower start to appear~\cite{powheg, mcatnlo}.
+
+Another approximation for the QCD radiation widely used to describe DIS related processes is the \emph{colour dipole model} (CDM)~\cite{cdm}. It is assumed the quark--anti-quark pairs form colour dipoles with corresponding radiation pattern that radiate gluons. The gluons themselves are interpreted as pairs of colour charges that also build colour dipoles and so on. The corresponding schematic illustration is depicted in Figure~\ref{fig:cdm}. 
+\begin{figure}[t]%
+\includegraphics[width=0.5\textwidth]{../../Figures/source/CDMradiation.png}%
+\caption{The colour dipole model radiation pattern.}%
+\label{fig:cdm}%
+\end{figure}
+The radiation from each dipole is assumed to be independent. It proceeds iteratively until some stopping criterion is not reached, for example the invariant mass of a dipole falls below some cut-of  value. The CDM is based on leading order matrix element in the soft gluon approximation fir the gluon radiation with transverse momentum $p_T$ and rapidity $y$
+\begin{equation}
+\mathrm{d}\sigma = \frac{n_c\as}{2\pi}\frac{\mathrm{d}p_T^2}{p_T^2}\mathrm{d}y.
+\end{equation}
+In contrast to the leading-logarithm DGLAP-based parton shower algorithm there is no $k_T$ ordering for the gluon radiation. The partons are rather uniformely distributed in $k_T$. Thus the CDM approach is somewhat similar to the BFKL evolution.
+
+Another important issue in the simulation of the parton showers is quantum mechanical interference of the initial-state and final-state radiation or the interference between the partons emmited either in intial or final state. These effects are naturally taken into account in the complete perturbative calculations, however special care must be taken in the resummed calculations like those based on DGLAP evolution, because it 
+
+%\section{Hadronisation}
+%aa
+%\subsection{String fragmentation model}
+%aaa
+%\subsection{Cluster fragmentation model}
+%aaa
+\section{Monte Carlo Event Generators}
+%aa
+\subsection{LEPTO}
+The \lepto event generator~\cite{lepto} combines the leading order QCD matrix elements (ME) for the hard scattering process together with the DGLAP parton shower (PS) for the soft gluon emission. In order to ensure colour coherence during the showering process angular ordering is imposed. The Lund string model~\cite{lund} as implemented in JETSET~\cite{jetset} is used to simulate the hadronisation process. This generator also includes LO electroweak processes necessary for the description of high-\qsq~DIS. The higher order QED effects are obtained through the interface to the HERACLES~\cite{heracles} program. The \lepto generator is also oftenly called MEPS and is used as a reference MC generator in this analysis.
+\subsection{ARIADNE}
+The colour-dipole pattern for QCD radiation is implemented in the \ariadne event generator~\cite{ariadne}. Since this model naturally includes only the QCD Compton scattering diagram the BGF graph contribution was introduced by hands. The hadronisation is performed using the same JETSET interface. This event generator was used in the analysis mainly to estimate systematic effects attributed to the choice of the parton shower model.
+%\subsection{PYTHIA}
+%aaa
+%\subsection{HERWIG}
+%aaa
+%\section{Higher-Order QED and Electro-Weak Effects}
+%aa
+%\section{Next-to-Leading order Jet Cross Sections Calculation}
+%aa
+%\newpage
+%\input{parts//PartI_Analysis//theory//inna}
