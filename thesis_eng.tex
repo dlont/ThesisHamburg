@@ -4,7 +4,7 @@
 %----------------------------------------------------------
 %
 %\documentclass[14pt,a4paper,reqno,twoside]{scrreprt}%
-\documentclass[14pt,a4paper,reqno,twoside,draft]{scrbook}%
+\documentclass[14pt,a4paper,reqno,twoside,final]{scrbook}%
 %
 %----------------------------------------------------------
 % This is a sample document for the AMS LaTeX Book or Monograph Class
@@ -74,10 +74,11 @@
 \usepackage{a4wide}
 \usepackage{lscape}
 \usepackage{caption}
-\usepackage{subcaption}
-\usepackage{sidecap}
+%\usepackage{subcaption}
+%\usepackage{sidecap}
+\usepackage{subfig}
 %\captionsetup[subfigure]{labelformat=simple}
-\renewcommand{\thesubfigure}{\alph{subfigure}}
+%\renewcommand{\thesubfigure}{\alph{subfigure}}
 %\usepackage{zeusdet_siunitx}
 %\usepackage{zeusdet_hepunits}
 %\usepackage{zeusdet_units}
@@ -207,6 +208,10 @@
 
 \part{Measurement of the Jet Production with the ZEUS Detector}
 
+\chapter{Introduction}
+\label{ch:intro}
+\include{parts//PartI_Analysis//Intro}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					 %%
 %%							Chapter 0. Introduction                                                             %%
@@ -220,6 +225,8 @@
 %%							Chapter 1. Theoretical Framework                                               %%
 %%																																																					 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Theoretical Framework}
+\label{ch:theory}
 \include{parts//PartI_Analysis//TheoreticalFramework}
 
 
@@ -249,14 +256,24 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
-%%							Chapter 5. Data Unfolding                                                               %%
+%%							Chapter 5. Calibrations & Corrections                                   %%
+%%																																																					       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Calibrations and Corrections}
+\label{ch:calibcorr}
+\include{parts//PartI_Analysis//CalibrationsCorrections}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																																					       %%
+%%							Chapter 6. Data Unfolding                                                               %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{parts//PartI_Analysis//Unfolding}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
-%%							Chapter 6. Results                                                                         %%
+%%							Chapter 7. Results                                                                         %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{parts//PartI_Analysis//Results}
@@ -264,7 +281,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
-%%							Chapter 7. Summary and Outlook                                                      %%
+%%							Chapter 8. Summary and Outlook                                                      %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{parts//PartI_Analysis//JetsSummary}
