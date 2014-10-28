@@ -154,6 +154,7 @@
 %\setmonofont{DejaVu Sans Mono}  %% задаёт моноширинный шрифт
 %\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}  %% устанавливает поведение шрифтов по умолчанию
 %----------------------------------------------------------
+\usepackage{soul}
 %print line numbers
 %\linenumbers
 
@@ -168,6 +169,8 @@
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
 
+\newcommand*{\plogo}{\fbox{$\mathcal{PL}$}} % Generic publisher logo
+
 \begin{document}
 
 
@@ -176,8 +179,13 @@
 \author{Denys Lontkovskyi}
 \date{Hamburg\\2014}
 \dedication{To my family}
-\maketitle
 
+\pagestyle{empty} % Removes page numbers
+\input{parts//coverpage}
+\titlePAGE % This command includes the title page
+\newpage
+\titelGUTACHTERS
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					 %%
 %%							             Abstract                                                                    %%
@@ -211,9 +219,9 @@
 %%							Chapter 0. Introduction                                                             %%
 %%																																																					 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Introduction}
+\chapter{\st{Introduction}}
 \label{ch:intro}
-\input{parts//PartI_Analysis//Intro}
+%\input{parts//PartI_Analysis//Intro}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					 %%
@@ -222,7 +230,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Theoretical Framework}
 \label{ch:theory}
-\input{parts//PartI_Analysis//TheoreticalFramework}
+%\input{parts//PartI_Analysis//TheoreticalFramework}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -231,7 +239,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Experimental Setup}
 \label{ch:expsetup}
-\input{parts//PartI_Analysis//ExperimentalSetup}
+%\input{parts//PartI_Analysis//ExperimentalSetup}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -240,7 +248,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Event Selection and Reconstruction}
 \label{ch:selectionreco}
-\input{parts//PartI_Analysis//SelectionReconstruction}
+%\input{parts//PartI_Analysis//SelectionReconstruction}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -258,7 +266,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Cross section determination}
 \label{ch:unfolding}
-\input{parts//PartI_Analysis//Unfolding}
+%\input{parts//PartI_Analysis//Unfolding}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -267,7 +275,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Results}
 \label{ch:results}
-\input{parts//PartI_Analysis//Results}
+%\input{parts//PartI_Analysis//Results}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -278,7 +286,7 @@
 \chapter*{Summary and Outlook}
 \addcontentsline{toc}{chapter}{Summary and Outlook}
 \label{ch:summary}
-\include{parts//PartI_Analysis//JetsSummary}
+%\include{parts//PartI_Analysis//JetsSummary}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -299,7 +307,7 @@
 \backmatter \appendix
 \chapter{Cross section tables}
 \label{ch:cstables}
-\include{parts//Appendix//csetinq2bins}
+%\include{parts//Appendix//csetinq2bins}
 %
 %\chapter{High-$\qsq$ Cross Section Tables}
 %
