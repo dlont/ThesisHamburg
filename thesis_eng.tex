@@ -4,7 +4,7 @@
 %----------------------------------------------------------
 %
 %\documentclass[14pt,a4paper,reqno,twoside]{scrreprt}%
-\documentclass[12pt,a4paper,reqno,twoside,final]{scrbook}%
+\documentclass[12pt,a4paper,reqno,twoside,draft]{scrbook}%
 %
 %----------------------------------------------------------
 % This is a sample document for the AMS LaTeX Book or Monograph Class
@@ -176,22 +176,27 @@
 \author{Denys Lontkovskyi}
 \date{Hamburg\\2014}
 \dedication{To my family}
+\maketitle
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					 %%
 %%							             Abstract                                                                    %%
 %%																																																					 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\textbf{Abstract}
+\end{center}
+\input{parts//Abstract}
+\hrule
+\begin{center}
+\textbf{Kurzfassung}
+\end{center}
 
-This is a sample document which shows the most important features
-of the AMS Book or Monograph Article class.
-
-\maketitle
 \tableofcontents
 %\listoffigures
 %\listoftables
 
 \mainmatter
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
