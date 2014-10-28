@@ -46,20 +46,20 @@
 %
 \usepackage{slashed}
 %
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\renewcommand{\chaptermark}[1]%
-{\markboth{\MakeUppercase{\thechapter.\ #1}}{}}
-\renewcommand{\sectionmark}[1]%
-{\markright{\MakeUppercase{\thesection.\ #1}}}
-\renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0pt}
-\newcommand{\helv}{%
-\fontfamily{phv}\fontseries{m}\fontsize{11}{13}\selectfont}
-\fancyhf{}
-\fancyhead[LO]{\helv \rightmark}
-\fancyhead[RE]{\helv \leftmark}
-\cfoot{\large\thepage}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\renewcommand{\chaptermark}[1]%
+%{\markboth{\MakeUppercase{\thechapter.\ #1}}{}}
+%\renewcommand{\sectionmark}[1]%
+%{\markright{\MakeUppercase{\thesection.\ #1}}}
+%\renewcommand{\headrulewidth}{0.5pt}
+%\renewcommand{\footrulewidth}{0pt}
+%\newcommand{\helv}{%
+%\fontfamily{phv}\fontseries{m}\fontsize{11}{13}\selectfont}
+%\fancyhf{}
+%\fancyhead[LO]{\helv \rightmark}
+%\fancyhead[RE]{\helv \leftmark}
+%\cfoot{\large\thepage}
 
 \usepackage{amsmath}%
 \numberwithin{equation}{subsection}
@@ -96,7 +96,7 @@
 		linkbordercolor	={1 0 0},
     citebordercolor	={0 1 0}
 }
-\usepackage[Sonny]{fncychap}
+%\usepackage[Sonny]{fncychap}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																										%%
 %%							Title size redefinition                 												%%
@@ -174,29 +174,21 @@
 %\frontmatter
 \title{Measurement of the Jet Production with the ZEUS Detector}
 \author{Denys Lontkovskyi}
-
+\date{Hamburg\\2014}
+\dedication{To my family}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					 %%
 %%							             Abstract                                                                    %%
 %%																																																					 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{abstract}
-%This is a sample document which shows the most important features
-%%of the AMS Book or Monograph Article class.
-%\end{abstract}
+
+This is a sample document which shows the most important features
+of the AMS Book or Monograph Article class.
+
 \maketitle
 \tableofcontents
-\listoffigures
-\listoftables
-
-
-%\chapter*{Preface}
-%
-%\markboth{PREFACE}{PREFACE} This is the preface and it is created
-%using a TeX field in a paragraph by itself containing
-%\verb|\chapter*{Preface}|. When the document is loaded, this
-%appears if it were a normal chapter, but it is actually an
-%unnumbered chapter.
+%\listoffigures
+%\listoftables
 
 \mainmatter
 
@@ -216,9 +208,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduction}
 \label{ch:intro}
-\include{parts//PartI_Analysis//Intro}
-
-z
+\input{parts//PartI_Analysis//Intro}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					 %%
@@ -227,41 +217,38 @@ z
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Theoretical Framework}
 \label{ch:theory}
-\include{parts//PartI_Analysis//TheoreticalFramework}
+\input{parts//PartI_Analysis//TheoreticalFramework}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
-%%							Chapter 3. Experimental setup                                                         %%
+%%							Chapter 2. Experimental setup                                                         %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Experimental Setup}
 \label{ch:expsetup}
-\include{parts//PartI_Analysis//ExperimentalSetup}
-
+\input{parts//PartI_Analysis//ExperimentalSetup}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
-%%							Chapter 4. Event Selection and Reconstruction                                   %%
+%%							Chapter 3. Event Selection and Reconstruction                                   %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Event Selection and Reconstruction}
 \label{ch:selectionreco}
-\include{parts//PartI_Analysis//SelectionReconstruction}
-
+\input{parts//PartI_Analysis//SelectionReconstruction}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
-%%							Chapter 5. Calibrations & Corrections                                   %%
+%%							Chapter 4. Calibrations & Corrections                                   %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Calibrations and Corrections}
 \label{ch:calibcorr}
-\include{parts//PartI_Analysis//CalibrationsCorrections}
-
+\input{parts//PartI_Analysis//CalibrationsCorrections}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
-%%							Chapter 6. Data Unfolding                                                               %%
+%%							Chapter 5. Data Unfolding                                                               %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Cross section determination}
@@ -270,19 +257,22 @@ z
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
-%%							Chapter 7. Results                                                                         %%
+%%							Chapter 6. Results                                                                         %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Results}
 \label{ch:results}
-\include{parts//PartI_Analysis//Results}
+\input{parts//PartI_Analysis//Results}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
-%%							Chapter 8. Summary and Outlook                                                      %%
+%%							Chapter 7. Summary and Outlook                                                      %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Summary and Outlook}
+\addcontentsline{toc}{chapter}{Summary and Outlook}
+\label{ch:summary}
 \include{parts//PartI_Analysis//JetsSummary}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -302,10 +292,8 @@ z
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \backmatter \appendix
-\chapter{Leading order matrix elements for jet production in DIS and PHP}
-\include{parts//Appendix//AppMatrixElements}
-\newpage
 \chapter{Cross section tables}
+\label{ch:cstables}
 \include{parts//Appendix//csetinq2bins}
 %
 %\chapter{High-$\qsq$ Cross Section Tables}
@@ -325,5 +313,8 @@ z
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{bibliography//BiBTeX//bst//l4z_jhep3}
 \bibliography{bibliography//bibliography,bibliography//BiBTeX//bib//l4z_articles,bibliography//BiBTeX//bib//l4z_books,bibliography//BiBTeX//bib//l4z_misc,bibliography//BiBTeX//bib//l4z_preprints,bibliography//BiBTeX//bib//l4z_zeus,bibliography//BiBTeX//bib//l4z_h1,bibliography//BiBTeX//bib//l4z_conferences}
+
+\chapter*{Acknowledgements}
+\include{parts//Acknowledgements}
 
 \end{document}
