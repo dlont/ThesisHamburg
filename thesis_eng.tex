@@ -172,8 +172,8 @@
 
 
 %\frontmatter
-\title[]{Measurement of the Jet Production with the ZEUS Detector and Track Alignment for Pixel Telescopes}
-\author[D. Lontkovskyi]{Denys Lontkovskyi}
+\title{Measurement of the Jet Production with the ZEUS Detector}
+\author{Denys Lontkovskyi}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					 %%
@@ -186,8 +186,8 @@
 %\end{abstract}
 \maketitle
 \tableofcontents
-%\listoffigures
-%\listoftables
+\listoffigures
+\listoftables
 
 
 %\chapter*{Preface}
@@ -207,19 +207,18 @@
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\part{Measurement of the Jet Production with the ZEUS Detector}
-
-\chapter{Introduction}
-\label{ch:intro}
-\include{parts//PartI_Analysis//Intro}
+%\part{Measurement of the Jet Production with the ZEUS Detector}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					 %%
 %%							Chapter 0. Introduction                                                             %%
 %%																																																					 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{parts//PartI_Analysis//Introduction}
+\chapter{Introduction}
+\label{ch:intro}
+\include{parts//PartI_Analysis//Intro}
 
+z
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					 %%
@@ -230,20 +229,13 @@
 \label{ch:theory}
 \include{parts//PartI_Analysis//TheoreticalFramework}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%																																																					       %%
-%%							Chapter 2. Models for Hadron Production and Fixed-Order Calculations   %%
-%%																																																					       %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{parts//PartI_Analysis//LONLO}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
 %%							Chapter 3. Experimental setup                                                         %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Experimental Setup}
+\label{ch:expsetup}
 \include{parts//PartI_Analysis//ExperimentalSetup}
 
 
@@ -252,6 +244,8 @@
 %%							Chapter 4. Event Selection and Reconstruction                                   %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Event Selection and Reconstruction}
+\label{ch:selectionreco}
 \include{parts//PartI_Analysis//SelectionReconstruction}
 
 
@@ -270,13 +264,17 @@
 %%							Chapter 6. Data Unfolding                                                               %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{parts//PartI_Analysis//Unfolding}
+\chapter{Cross section determination}
+\label{ch:unfolding}
+\input{parts//PartI_Analysis//Unfolding}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
 %%							Chapter 7. Results                                                                         %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Results}
+\label{ch:results}
 \include{parts//PartI_Analysis//Results}
 
 
@@ -303,9 +301,12 @@
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\backmatter \appendix
-%\chapter{Leading order matrix elements for jet production in DIS and PHP}
-%\include{parts//Appendix//AppMatrixElements}
+\backmatter \appendix
+\chapter{Leading order matrix elements for jet production in DIS and PHP}
+\include{parts//Appendix//AppMatrixElements}
+\newpage
+\chapter{Cross section tables}
+\include{parts//Appendix//csetinq2bins}
 %
 %\chapter{High-$\qsq$ Cross Section Tables}
 %
