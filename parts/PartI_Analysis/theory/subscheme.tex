@@ -1,0 +1,19 @@
+The NLO $n$-jet partonic cross section is a sum:
+\begin{equation}
+\sigma = \sigma_\text{LO} + \sigma_\text{NLO} = \int_n{\mathrm{d}\sigma^B} + \left[ \int_{n+1}{\mathrm{d}\sigma^R} + \int_n{\mathrm{d}\sigma^V} \right],
+\label{eq:sigmanjet}
+\end{equation}
+where $\sigma^B$ is the born-level cross section, $\sigma^R$ is the real-radiation correction and $\sigma^V$ is the virtual correction. In order to remove explicit divergences from the the real and virtual parts, specially constructed counter-terms are added and subtracted from Eq.~\ref{eq:sigmanjet}. The counter-term is an approximation to the real-radiation contribution in the region of the phase-space containing a singularity and has the same point-wise singular behaviour. Each singular parton configuration requires a corresponding counter-term. The real-radiation contribution with subtracted counter-term, $\sigma^A$, becomes a regular function that can be integrated in $D=4$ dimensions:
+\begin{equation}
+\int_{n+1}{\mathrm{d}\sigma^R} \rightarrow \left[ \int_{n+1}{\mathrm{d}\sigma^R} - \int_{n+1}{\mathrm{d}\sigma^A} \right].
+%\label{eq:sigmanjet}
+\end{equation}
+The virtual contribution term is modified as follows:
+\begin{equation}
+	\begin{split}
+		\int_{n}{\mathrm{d}\sigma^V} \rightarrow& \left[ \int_{n}{\mathrm{d}\sigma^V} + \int_{n+1}{\mathrm{d}\sigma^A} \right] = \\
+                                                      & \left[ \int_{n}{\mathrm{d}\sigma^V + \int_{1}{\mathrm{d}\sigma^A}} \right]
+	\end{split}
+%\label{eq:sigmanjet}
+\end{equation}
+The divergence in the virtual contribution appear as a pole in $\epsilon$ but this pole is exactly cancelled by that resulting from one-parton phase-space analytic integration of the counter-term. After the cancellation, the integration of the virtual part can be carried out numerically in physical $D=4$ dimensions. Since the net effect of adding and subtracting counter-terms is zero, this scheme results only in reshuffling of the divergences.

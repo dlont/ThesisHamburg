@@ -11,9 +11,15 @@ Such an approximation is usually used in general event generators where the succ
 In order to improve the leading logarithmic accuracy of the parton shower approach, the hard emission are described using complete matrix elements. In such case an intermediate scale is introduced at which regions dominated by parton shower or hard scattering dynamics are matched. Nowadays most of the event generators are based on the LO matrix elements, however NLO calculations with matched parton shower start to appear~\cite{powheg, mcatnlo}.
 
 Another approximation for the QCD radiation widely used to describe DIS related processes is the \emph{colour dipole model} (CDM)~\cite{cdm}. It is assumed the quark--anti-quark pairs form colour dipoles with corresponding radiation pattern that radiate gluons. The gluons themselves are interpreted as pairs of colour charges that also build colour dipoles and so on. The corresponding schematic illustration is depicted in Figure~\ref{fig:cdm}. 
+\begin{figure}[t]
+	\centering
+		\includegraphics[width=0.65\textwidth,angle=90,trim={500 0 0 0},clip]{./Figures/source/MEPSradiation}
+	\caption{Schematic demonstration of the matrix element + parton shower approach.}
+\label{fig:meps}
+\end{figure}
 \begin{figure}[t]%
 \centering
-\includegraphics[width=0.5\textwidth]{./Figures/source/CDMradiation.png}%
+\includegraphics[width=0.95\textwidth,trim={20 550 20 0},clip]{./Figures/source/CDMradiation}%
 \caption{The colour dipole model radiation pattern.}%
 \label{fig:cdm}%
 \end{figure}
@@ -25,8 +31,23 @@ In contrast to the leading-logarithm DGLAP-based parton shower algorithm there i
 
 Another important issue in the simulation of the parton showers is quantum mechanical interference of the initial-state and final-state radiation or the interference between the partons emitted either in initial or final state. These effects are naturally taken into account in the complete perturbative calculations, however special care must be taken in the resummed calculations like those based on DGLAP evolution, because it 
 
-\section{Fragmentation and hadronisation}
-%aa
+\section{Fragmentation }
+In order to be able to compare pQCD predictions to experimental result the calculations have to be defined in term of experimentally observable quantities. Because the quarks and gluons do not appear as asymptotic states, the transition from the patronic quantities to those defined in terms of hadrons has to be modelled. The formation of colorless objects from partons, called \emph{hadronisation}, is essentialy non-perturbative process and the first-principle calculations are very difficult. 
+\begin{figure}[t]
+	\centering
+	\begin{subfloat}[]{
+		\includegraphics[width=0.45\linewidth,angle=0,trim={50 500 0 0},clip]{./Figures/source/LundString}
+		\label{fig:lund}
+	 }%
+	\end{subfloat}
+	\begin{subfloat}[]{
+		\includegraphics[width=0.45\linewidth,trim={50 500 0 0},clip]{./Figures/source/ClusterModel}
+		\label{fig:cluster}
+	}%
+	\end{subfloat}
+	\caption{Schematic illustration of the string fragmentation (a) and cluster fragmentation (b) model}
+\label{fig:fragmentationmodels}
+\end{figure}
 \subsection{String fragmentation model}
 %aaa
 \subsection{Cluster fragmentation model}

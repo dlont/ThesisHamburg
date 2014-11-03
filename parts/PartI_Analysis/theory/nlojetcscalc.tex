@@ -1,0 +1,22 @@
+As described in ``Factorisation'', the predictions for the jet production cross sections in $\ep$ collisions have a factorised form (see Eq. ?). The partonic cross section is calculated perturbatively, as a power series in the strong coupling, \as. The predictions for the jet cross sections are finite at each order according to the KNL theorem\cite{KNL}, provided infrared- and collinear-safe jet-algorithm. However, the parton configurations with soft or collinear radiation have divergent matrix elements; after dimensional regularisation (analytic continuation to $D=4+2\epsilon$ dimensions) soft and collinear (overlapping) divergences appear as $1/\epsilon$ ($1/\epsilon^2$) poles in the expressions. These divergences cancel exactly with those arising from the virtual contributions.
+
+The differential jet cross section is calculated according to the expression:
+\begin{equation}
+\frac{\mathrm{d}\sigma}{\mathrm{d}X} = \frac{1}{\text{flux}}\, \sum_n{ \frac{1}{n!} \, \int{\mathrm{d}\Phi^{n}} \, \overline{\sum}{ \left| \mathcal{M}^{\left(n\right)}\left(p_i\right) \right|^2 } \delta\left( X - \mathcal{X}_n\left( p_i\right)\right)}
+\label{eq:}
+\end{equation}
+The first summation is performed over all n-parton final states, assuming that quarks, antiquarks and gluons are indistinguishable ($1/n!$ is a symmetrisation factor). The inner sum represents the averaging over possible colour and spin configurations. The jet-function $\mathcal{X}_n\left( p_i\right)$ of the momenta of $n$ partons represents the measurement observable e.g. $\etjetav, \mjj$ etc. In order to ensure cancellation of real and virtual divergences the jet-algorithm must be independent of the number of the soft and collinear partons in the final state. The cancellation of divergences holds only if the observable satisfies the following conditions:
+\begin{equation}
+\left.
+\begin{aligned}
+	&\mathcal{X}_{n+1}\left( p_1,\dots,\lambda p_n,\left(1-\lambda\right)p_{n+1}\right)\\
+	&\mathcal{X}_{n+1}\left( p_1,\dots,\lambda p_n,0\right)
+\end{aligned}
+\right\} = \mathcal{X}_{n}\left( p_1,\dots, p_n\right).
+\label{eq:}
+\end{equation}
+The jet-functions $\mathcal{X}_{n+1}$ and $\mathcal{X}_{n}$ must be equal in collinear and soft limits. The algorithm must produce identical results if a single particle is replaced by a pair of collinear particles carrying the same total momentum, or if the energy of one of the particles vanishes.
+
+In this analysis the infrared- and collinear-safe \kt-jet-algorithm was used for the reconstruction of jets from the final state partons. Since fixed-order QCD predictions refer to the jets of partons while the measurements refer to the hadronic jets, the calculations were corrected to the hadron level using Monte Carlo predictions (see Section. MC).
+
+Practical calculations, suitable for the comparison with experimental results involving cuts (e.g. phase space restrictions or detector acceptance limitations), utilise numerical techniques for the calculation of the phase space integrals. General schemes for the calculation of the jet production cross section at next-to-leading order, suitable for numerical calculations and independent of experimental requirements, exist. The subtraction scheme is briefly described in the following. 

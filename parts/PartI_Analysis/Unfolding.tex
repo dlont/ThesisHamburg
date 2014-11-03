@@ -21,7 +21,7 @@ The acceptance correction factors $\mathcal{A}_{\mathrm{bin},i}$ are applied to 
  \mathcal{A}=\frac{N_{\mathrm{bin},i}^{\mathrm{gen}}}{N_{\mathrm{bin},i}^{\mathrm{rec}}}.
  \label{eq:accdef}
 \end{equation}
-In order to ensure the validity of this bin-by-bin multiplicative correction, the migrations across the neighboring bins have to be sufficiently small and MC simulations have to provide a good description of the shape of the measured distributions. Two additional variables can be defined in order to quantify the detector effects,  namely the \emph{purity}
+In order to ensure the validity of this bin-by-bin multiplicative correction, the migrations across the neighbouring bins have to be sufficiently small and MC simulations have to provide a good description of the shape of the measured distributions. Two additional variables can be defined in order to quantify the detector effects,  namely the \emph{purity}
 \begin{equation}
  \mathcal{P}=\frac{N_{\mathrm{bin},i}^{\mathrm{rec \wedge gen}}}{N_{\mathrm{bin},i}^{\mathrm{rec}}}
 \label{eq:puritydef}
@@ -31,9 +31,9 @@ and the \emph{efficiency}
  \mathcal{E}=\frac{N_{\mathrm{bin},i}^{\mathrm{rec \wedge gen}}}{N_{\mathrm{bin},i}^{\mathrm{gen}}}.
 \label{eq:efficiencydef}
 \end{equation}
-In these definitions $N_{\mathrm{bin},i}^{\mathrm{rec \wedge gen}}$ represents the number of jets generated and reconstructed in some particular bin. The purity of a bin is the fraction of jets that migrated into this bin while originating from the other bin. This can happen, for example, due to finite resolution of the detector. Unlike purity, the efficiency is an estimate of jets loss due to migrations outside the measurement bin or due reconstruction inefficiency or cut requirements. The acceptance is defined as:
+In these definitions $N_{\mathrm{bin},i}^{\mathrm{rec \wedge gen}}$ represents the number of jets generated and reconstructed in some particular bin. The purity of a bin is the fraction of jets that migrated into this bin while originating from the other bin. This can happen, for example, due to finite resolution of the detector. Unlike purity, the efficiency is an estimate of jets loss due to migrations outside the measurement bin or due reconstruction inefficiency or cut requirements. Using purity and efficiency the acceptance can be re-expressed as:
 \begin{equation}
-  \mathcal{A} = \frac{\mathcal{E}}{\mathcal{P}} = \frac{N_{\mathrm{bin},i}^{\mathrm{rec}}{N_{\mathrm{bin},i}^{\mathrm{gen}}.
+  \mathcal{A} = \frac{N_{\mathrm{bin},i}^{\mathrm{rec}}}{N_{\mathrm{bin},i}^{\mathrm{gen}}} = \frac{\mathcal{E}}{\mathcal{P}}.
 \end{equation}
 
 The terms appearing in the definitions~\eqref{eq:accdef}--\eqref{eq:efficiencydef} are not statistically independent, therefore a correlation between different factors has to be taken into account when statistical uncertainty attributed to $\mathcal{A},\, \mathcal{P}$ or $\mathcal{E}$ factors is needed. However, they can be expressed in terms of statistically independent quantities 
@@ -43,7 +43,7 @@ The terms appearing in the definitions~\eqref{eq:accdef}--\eqref{eq:efficiencyde
 \end{equation}
 where $N_{\mathrm{bin},i}^{\mathrm{\ulcorner rec \wedge gen}}$ and $N_{\mathrm{bin},i}^{\mathrm{rec \wedge \ulcorner gen}}$ are the number of jets generated but not reconstructed in bin $i$ and reconstructed but not generated in that bin, respectively.
 
-The acceptance correction factors, efficiency and purity for the relevant inclusive-jet cross sections determined using either \lepto or \ariadne MC samples are shown in Figures~\ref{fig:epa}~\subref{fig:epa_subfig1}--\subref{fig:epa_subfig3}. In general, the purity is typically above 40\% for all kinematic observables, while the efficiency is typicaly within 30\% and 65\%. The decrease of efficency in the region $250\,\GeV^2<\qsq<500\,GeV^2$ was observed before~\cite{joerg hanno trevor januschek} and was attributed to the reduced electron identification capabilities in the transition region between the RCAL and BCAL. The acceptance correction factors never exceed 1.6 and are typicaly below 1.4.
+The acceptance correction factors, efficiency and purity for the relevant inclusive-jet cross sections determined using either \lepto or \ariadne MC samples are shown in Figures~\ref{fig:epa}~\subref{fig:epa_subfig1}--\subref{fig:epa_subfig3}. In general, the purity is typically above 40\% for all kinematic observables, while the efficiency is typicaly within 30\% and 65\%. The decrease of efficiency in the region $250\,\GeV^2<\qsq<500\,GeV^2$ was observed before~\cite{joerg hanno trevor januschek} and was attributed to the reduced electron identification capabilities in the transition region between the RCAL and BCAL. The acceptance correction factors never exceed 1.6 and are typically below 1.4.
 \begin{figure}[pht]
 \begin{center}
 \begin{subfloat}{\includegraphics[width=\linewidth,trim={0 0 0 0},clip] {./Figures/epa/h_etjetb_CS_d_epa}
@@ -80,10 +80,10 @@ The choice of the size of the bin width is limited by two factors. Naturally, in
 The binning definition for the jet cross sections measured in this analysis is outlined below.
 \subsection*{Bin definition for ${\mathrm{d}\sigma}/{\mathrm{d}Q^2}$}
 \label{subsec:bindefq2}
-For the single differential cross section ${\mathrm{d}\sigma}/{\mathrm{d}Q^2}$ six bins were defined spanning the measurement phase space from 125 GeV to 20000 GeV. Because the inclusive NC DIS cross section scales as $1/Q^4$ the size of the bins increases with increasing \qsq~in order to obtain a statistically significant jet sample in each bin.
+For the single differential cross section ${\mathrm{d}\sigma}/{\mathrm{d}Q^2}$ six bins were defined spanning the measurement phase space from 125 \GeV to 20000 \GeV. Because the inclusive NC DIS cross section scales as $1/Q^4$ the size of the bins increases with increasing \qsq~in order to obtain a statistically significant jet sample in each bin.
 \subsection*{Bin definition for ${\mathrm{d}\sigma}/{\mathrm{d}\etjetb}$}
 \label{subsec:bindefet}
-For the single differential inclusive jet cross section as a function of \etjetb~also six bins were chosen with varying width. Although the cross section is large at low \etjetb~the size of the bin width was limited by the purity at low jet transverse energies. At low \etjetb the measurement is bounded by the phase space restriction $\etjetb > 8$ GeV while the upper limit was chosen as 100 \GeV~became only few jets in the whole sample have larger jet \etjetb value.
+For the single differential inclusive jet cross section as a function of \etjetb~also six bins were chosen with varying width. Although the cross section is large at low \etjetb~the size of the bin width was limited by the purity at low jet transverse energies. At low \etjetb the measurement is bounded by the phase space restriction $\etjetb > 8$ \GeV while the upper limit was chosen as 100 \GeV~became only few jets in the whole sample have larger jet \etjetb value.
 \subsection*{Bin definition for ${\mathrm{d}\sigma}/{\mathrm{d}\etajetlab}$}
 \label{subsec:bindefeta}
 The cross section ${\mathrm{d}\sigma}/{\mathrm{d}\etajetlab}$ spans the region $-2<\etajetb<1.8$ and has 5 bins. The sizes of the bins were chosen in order to optimise the purity and at the same time keep an appropriate number of bins. As can be seen in Figure~\ref{fig:epa}~\subref{fig:epa_subfig2}, a stable and reasonably high purity was achieved.
