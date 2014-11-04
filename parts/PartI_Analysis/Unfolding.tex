@@ -1,12 +1,12 @@
-The data are subject to various detector effects including non-linear response, finite resolution, limited acceptance and reconstruction inefficiencies. Such distortions in case of vanishing background contribution are described by the Fredholm integral equation:
+The data are subject to various detector effects including non-linear response, finite resolution, limited acceptance and reconstruction inefficiencies. Such distortions in the case of vanishing background contributions are described by the Fredholm integral equation:
 \begin{equation}
  \int_\Omega K\left(s,t\right)\,f\left(t\right)\,\mathrm{d}t = g\left(s\right),
  \label{eq:fredholm}
 \end{equation}
-where $g\left(s\right)$ is the measured distribution, $f\left(t\right)$ the underlying true distribution and the kernel $K\left(s,t\right)$ describes the response of the detector. Thus the determination of $f\left(t\right)$ requires solving this equation.
+where $g\left(s\right)$ is the measured distribution, $f\left(t\right)$ the underlying true distribution and the kernel $K\left(s,t\right)$ describes the response of the detector. Thus the determination of $f\left(t\right)$ requires the solution of this equation.
 The process of extracting of the true distribution from the measured one is called \emph{unfolding}. Various techniques were proposed in the literature to solve equation~\ref{eq:fredholm} (see for example~\cite{statistics book page 187} and references therein). In this thesis the so-called \emph{method of correction factors (or bin-by-bin method)} was employed.
 
-In this chapter the procedure used for the determination of inclusive-jet cross sections is described. In Section~\ref{sec:acccor} the bin-by-bin method is presented. Afterwards in Section~\ref{sec:bindef} the binning definition for the cross sections measurement is discussed. The chapter finishes with the description of polarisation corrections.
+In this chapter the procedure used for the determination of inclusive-jet cross sections is described. In Section~\ref{sec:acccor} the bin-by-bin method is presented. Afterwards in Section~\ref{sec:bindef} the binning definition for the cross sections measurement is discussed. The chapter concludes with the description of polarisation corrections.
 
 \section{Acceptance Correction}
 \label{sec:acccor}
@@ -31,7 +31,7 @@ and the \emph{efficiency}
  \mathcal{E}=\frac{N_{\mathrm{bin},i}^{\mathrm{rec \wedge gen}}}{N_{\mathrm{bin},i}^{\mathrm{gen}}}.
 \label{eq:efficiencydef}
 \end{equation}
-In these definitions $N_{\mathrm{bin},i}^{\mathrm{rec \wedge gen}}$ represents the number of jets generated and reconstructed in some particular bin. The purity of a bin is the fraction of jets that migrated into this bin while originating from the other bin. This can happen, for example, due to finite resolution of the detector. Unlike purity, the efficiency is an estimate of jets loss due to migrations outside the measurement bin or due reconstruction inefficiency or cut requirements. Using purity and efficiency the acceptance can be re-expressed as:
+In these definitions $N_{\mathrm{bin},i}^{\mathrm{rec \wedge gen}}$ represents the number of jets generated and reconstructed in some particular bin. The purity of a bin is the fraction of jets that migrated into this bin while originating from the other bin. This can happen, for example, due to the finite resolution of the detector. Unlike purity, the efficiency is an estimate of jet loss due to migrations outside the measurement bin or due to reconstruction inefficiency or cut requirements. Using purity and efficiency the acceptance can be re-expressed as:
 \begin{equation}
   \mathcal{A} = \frac{N_{\mathrm{bin},i}^{\mathrm{rec}}}{N_{\mathrm{bin},i}^{\mathrm{gen}}} = \frac{\mathcal{E}}{\mathcal{P}}.
 \end{equation}

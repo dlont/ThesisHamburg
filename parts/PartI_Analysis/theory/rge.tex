@@ -1,4 +1,4 @@
-When the problem is treated perturbatively one naturally restricts the class of quantum fluctuations contributing to the process. Beyond the tree level this results in the dependence of the calculations on the parameter $\mu$, which approximately represents the spatial scale beyond which the effect of quantum fluctuations are absorbed into the dependence of the theory parameters on the scale $\mu$. The value of the parameter can be chosen arbitrarily, but the physical quantity calculated in perturbation theory, e.g. jet production cross section, can not depend on arbitrary parameter. This requirement can be formulated as follows\footnote{The condition must hold upto terms proportional to $\as^{k+1}$ if expansion of observable $\mathcal{S}$ is known to $\mathcal{O}\left(\as^{k}\right)$}:
+When the problem is treated perturbatively, the class of quantum fluctuations contributing to the process is naturally restricted. Beyond the tree level this results in the dependence of the calculations on the parameter $\mu$, which approximately represents the spatial scale beyond which the effect of quantum fluctuations are absorbed into the dependence of the theory parameters on the scale $\mu$. The value of the parameter can be chosen arbitrarily, but the physical quantity calculated in perturbation theory, e.g. the jet production cross section, cannot depend on arbitrary parameter. This requirement can be formulated as follows\footnote{The condition must hold up to terms proportional to $\as^{k+1}$ if the expansion of an observable $\mathcal{S}$ is known to $\mathcal{O}\left(\as^{k}\right)$}:
 \begin{equation}
  \frac{d}{d\log{\mu^2}} \mathcal{S} \left( Q^2/\mu^2, \alpha_s \right) = \frac{\partial \mathcal{S} }{\partial \log{\mu^2}} + \frac{\partial \alpha_s }{\partial \log{\mu^2}}\frac{\partial \mathcal{S} }{\partial \alpha_s} \stackrel{!}{=} \mathcal{O}\left(\as^{k+1}\right),
 \end{equation}
@@ -7,7 +7,7 @@ where for simplicity $\mathcal{S}$ is chosen to be a dimensionless observable. A
    \frac{d\as\left(\mu\right)}{d\ln{\mu^2}} = \beta\left(\as\left(\mu\right)\right),\qquad \beta\left(\as\left(\mu\right)\right) = -\as^2\left(\beta_0 + \beta_1\as + \beta_2\as^2\right).
  \label{eq:asrunnig}
  \end{equation}
-This equation is called renormalisation group equation (RGE). Few first terms in the $\beta$-function were calculated in perturbation theory to be
+This equation is called the renormalisation group equation (RGE). The few first terms in the $\beta$-function were calculated in perturbation theory to be
 \begin{align}
 	\beta_0 &= \dfrac{11C_A-2n_f}{12\pi} = \dfrac{33 - 2n_f}{12\pi^2},\\
 	\beta_1 &= \dfrac{17C_A^2-n_fT_R\left(C_A+6C_F\right)}{24\pi^2} = \frac{153-19n_f}{24\pi^2},\\
@@ -16,10 +16,10 @@ This equation is called renormalisation group equation (RGE). Few first terms in
 where $C_A$, $C_F$ are $SU\left(3\right)$ structure coefficients, while $T_R=\dfrac{1}{2}$ and $n_f$ is the number of active flavours\footnote{In general, the $\beta$-function coefficients, $\beta_i$ depend on the employed renormalisation scheme. Only $\beta_0$ and $\beta_1$ are scheme independent. The $\beta_2$ term specified here refers to the widely used $\overline{\mathrm{MS}}$ renormalisation scheme.}$^,$
 \footnote{It is assumed that heavy quark flavours decouple from the theory below energy scales much smaller than the heavy quark mass $\mu \ll m_h$.}. 
 
-The equation~\ref{eq:asrunnig} can be solved analytically. Taking into account only the first term involving $\beta_0$ the solution reads:
+The equation~\ref{eq:asrunnig} can be solved analytically. Taking into account only the first term involving $\beta_0$ the solution is:
 \begin{equation}
  \as\left(\mu^2\right) = \dfrac{ \as\left(\mu_0^2\right) }{1+\beta_0\as\left(\mu_0^2\right)\ln{\mu^2/\mu_0^2}} = \dfrac{1}{\beta_0\ln{\mu_0/\Lambda^2}}
 \label{eq:asrunnigsolution}
 \end{equation}
-Initial condition for the solution is specified by the value of the coupling at the starting scale $\as\left(\mu_0\right)$. The positivity of $\beta_0$ in SM results in vanishing of the coupling constant when the energy scale $\mu$ increases or correspondingly shorter time scales are considered. Quarks and gluons behave as non-interacting free particle in the limit of high energy. On the other hand, in processes characterised by long time intervals or equivalently at small momenta the coupling grows. Eventually, the coupling becomes undefined near the pole $\mu = \Lambda_{\overline{MS}}^{n_f=5} \approx 226$ MeV. In this region the theory becomes essentially nonperturbative and series expansion is no longer valid. 
+The initial condition for the solution is specified by the value of the coupling at the starting scale $\as\left(\mu_0\right)$. The positivity of $\beta_0$ in the SM results in the coupling constant vanishing when the energy scale $\mu$ increases or correspondingly shorter time scales are considered. Quarks and gluons behave as non-interacting free particles in the high-energy limit. On the other hand, in processes characterised by long time intervals or equivalently, small momenta, the coupling grows. Eventually, the coupling becomes undefined near the pole $\mu = \Lambda_{\overline{MS}}^{n_f=5} \approx 226$ MeV. In this region, the theory becomes essentially nonperturbative and series expansion is no longer valid. 
 

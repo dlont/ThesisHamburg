@@ -1,6 +1,7 @@
 An accurate description of the trigger efficiency is an important ingredient in this analysis.
 
-As it was described in Chapter~\ref{ch:detector} the \zeus trigger was used to select with high acceptance the interesting hard \ep collisions and to reject non-$ep$ background. At the FLT, most of the trigger bits were utilising CTD information to veto events characterised by specific combinations of all and vertex-fitted tracks. The definitions for the corresponding track classes is illustrated in Figure~\ref{fig:trackvetodefinition}. According to this information two track-veto types, relevant for this analysis, were identified ``semi-loose'' and ``tight'' (see Table~\ref{tab:trackveto}). 
+As was described in Chapter~\ref{ch:detector}, the \zeus trigger was used to select with high acceptance the interesting hard \ep~collisions and to reject non-$ep$ background. At the FLT, most of the trigger bits utilised CTD information to veto events characterised by specific combinations of all and vertex-fitted tracks. The definitions for the corresponding track classes is illustrated in Figure~\ref{fig:trackvetodefinition}. According to this information, two track-veto types relevant for this analysis were identified: ``semi-loose'' and ``tight'' (see Table~\ref{tab:trackveto}). 
+\textcolor{blue}{
 \begin{table}[htpb]
  \centering
  \begin{tabular}{lc}
@@ -12,19 +13,20 @@ As it was described in Chapter~\ref{ch:detector} the \zeus trigger was used to s
 \caption{The track-veto condition used in the first level trigger.}
 \label{tab:trackveto}
 \end{table} 
-In order to check the description of the track-veto in MC simulations a monitor trigger was used. The FLT30 was requiring an isolated electromagnetic cluster in the RCAL and therefore was independent of the CTD information. The track-veto efficiency, expressed as the ratio
+}
+In order to check the description of the track-veto in MC simulations, a monitor trigger was used. The FLT30 required an isolated electromagnetic cluster in the RCAL and therefore was independent of the CTD information. The track-veto efficiency, expressed as the ratio
 \begin{equation}
  \epsilon_\mathrm{trk} = \frac{N\left(\text{track veto} \wedge \text{FLT30}\right)}{N\left(\text{FLT30}\right)},
 \end{equation}
-where $N\left(\text{FLT30}\right)$ is the number of events triggered by FLT30 and $N\left(\text{track veto} \wedge \text{FLT30}\right)$ is the number of events in a subset satisfying additional track-veto requirements, was studied separately in data and MC for different data taking periods. To determine $N\left(\text{track veto} \wedge \text{FLT30}\right)$, the track-veto was emulated offline by imposing additional restrictions on track quantities available at the FLT.
+where $N\left(\text{FLT30}\right)$ is the number of events triggered by FLT30 and $N\left(\text{track veto} \wedge \text{FLT30}\right)$ is the number of events in a subset satisfying additional track-veto requirements, was studied separately in data and MC for different data-taking periods. To determine $N\left(\text{track veto} \wedge \text{FLT30}\right)$, the track veto was emulated offline by imposing additional restrictions on track quantities available at the FLT.
 
-The efficiency was investigated as a function of $y_{DA}$. This variable was strongly correlated with the amount of hadronic activity and thus with the track multiplicity. The corresponding ratios in the data and MC are shown in Figures~\ref{fig:tveffdatamc}~\subref{fig:tveffdatamc_subfig1}--\subref{fig:tveffdatamc_subfig4}. The discrepancy between data and MC simulations was attributed to a bad description of the track-class distribution in the MC. In order to compensate for higher efficiency in the MC an additional correction was implemented. The ratio of efficiencies in the data and MC was fitted to the first order polynomial
+The efficiency was investigated as a function of $y_{DA}$. This variable was strongly correlated with the amount of hadronic activity and thus with the track multiplicity. The corresponding ratios in the data and MC are shown in Figures~\ref{fig:tveffdatamc}~\subref{fig:tveffdatamc_subfig1}--\subref{fig:tveffdatamc_subfig4}. The discrepancy between data and MC simulations was attributed to a bad description of the track-class distribution in the MC. In order to compensate for higher efficiency in the MC, an additional correction was implemented. The ratio of efficiencies in the data and MC was fitted to the first order polynomial
 \begin{equation} 
  f\left(y_{DA}\right)=a_0 + a_1 \cdot y_{DA}.
 \end{equation}
-Because the efficiency observed in MC was higher than that in the data it can be corrected by rejecting over abundant MC events. Therefore, for each MC event a uniformly distributed random number, $r$, was generated and the event was rejected if $r > f\left(y_{DA}\right)$. The correction was implemented in the \lepto and \ariadne samples, separately for different data-taking periods. The size of the correction depends on the value of $y_{DA}$ and was typically less than 0.5\% for 2004--2005$e^-$ and 2006$e^-$ samples and less than 3\% for the 2007$e^+$ sample. It was observed that for the ``semi-loose'' track-veto the same correction as for ``tight'' track-veto can be applied. The comparison of the track-veto efficiencies in the data and MC after applying the correction is illustrated in Figures~\ref{fig:aftveffdatamc}~\subref{fig:aftveffdatamc_subfig1}--\subref{fig:aftveffdatamc_subfig4}. After the correction the data efficiency was very well described by the MC. 
+Because the efficiency observed in MC was higher than that in the data it can be corrected by rejecting excess MC events. Therefore, for each MC event a uniformly distributed random number, $r$, was generated and the event was rejected if $r > f\left(y_{DA}\right)$. The correction was implemented in the \lepto and \ariadne samples, separately for different data-taking periods. The size of the correction depends on the value of $y_{DA}$ and was typically less than 0.5\% for 2004--2005~$e^-$ and 2006~$e^-$ samples and less than 3\% for the 2006-2007~$e^+$ sample. It was observed that for the ``semi-loose'' track-veto, the same correction as for ``tight'' track-veto can be applied. The comparison of the track-veto efficiencies in the data and MC after applying the correction is illustrated in Figures~\ref{fig:aftveffdatamc}~\subref{fig:aftveffdatamc_subfig1}--\subref{fig:aftveffdatamc_subfig4}. After the correction the data efficiency was very well described by the MC. 
 
-The systematic effects attributed to the MC track-veto correction was examined investigating the trigger efficiency as a function of the CTD-FLT track multiplicity. The results of these studies are detailed in Chapter~\ref{systematics}.
+The systematic effects attributed to the MC track-veto correction were examined by investigating the trigger efficiency as a function of the CTD-FLT track multiplicity. The results of these studies are detailed in Chapter~\ref{systematics}.
 \begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.65\textwidth,trim={0 120 0 120},clip]{./Figures/classes96}
@@ -78,7 +80,7 @@ The systematic effects attributed to the MC track-veto correction was examined i
  }%
 \end{subfloat}
 \end{center}
-\caption{Comparison between data and MC of the loose (a,c) and semi-loose (b,d) track-veto after applying the track veto correction.}
+\caption{Comparison between data and MC of the loose (a,c) and semi-loose (b,d) track-veto after applying the track-veto correction.}
 \label{fig:aftveffdatamc}
 \end{figure}
 

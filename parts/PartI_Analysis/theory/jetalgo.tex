@@ -1,11 +1,11 @@
-Recombination-type generalised \kt-algorithm is defined by the following iterative procedure applied to the input list of objects\footnote{The input objects may refer to the energy deposits in the calorimeter cells; the set of partons in MC or fixed-order predictions or the set of stable hadrons appearing at the hadron level of MC simulations.} (see Fig.~\ref{fig:jetcombinationalgorithm}).
+The recombination-type generalised \kt-algorithm is defined by the following iterative procedure applied to the input list of objects\footnote{The input objects may refer to the energy deposits in the calorimeter cells; the set of partons in MC or fixed-order predictions or the set of stable hadrons appearing at the hadron level of MC simulations.} (see Fig.~\ref{fig:jetcombinationalgorithm}).
 \begin{enumerate}
 	\item A distance measure, $d_{ij}$, quantifying the phase-space separation of two objects $i$ and $j$, is defined for each pair of particles:
 	\begin{equation}
 	  d_{ij} = \mathrm{\text{min}} \left( E_{\text{T},i}^{2n}, E_{\text{T},j}^{2n} \right) \dfrac{\Delta R_{ij}^2}{R_0^2},
 		\label{eq:dij}
 	\end{equation}
-	where $\Delta R_{ij}^2 = \left( \eta_{i} - \eta_{j} \right)^2 + \left( \phi_{i} - \phi_{j} \right)^2$ is the angular separation between objects. Dimensionless parameter $R_0$ determines the jet radius.
+	where $\Delta R_{ij}^2 = \left( \eta_{i} - \eta_{j} \right)^2 + \left( \phi_{i} - \phi_{j} \right)^2$ is the angular separation between objects. The dimensionless parameter $R_0$ determines the jet radius.
 	\item A quantity, $d_i$, defining the distance to the beam-axis is calculated for each object $i$:
 		\begin{equation}
 	  d_{i} = E_{\text{T},i}^{2n}.
@@ -15,16 +15,16 @@ Recombination-type generalised \kt-algorithm is defined by the following iterati
 	\begin{align}
 		E_\text{T} = E_{\text{T},i} + E_{\text{T},j} & \qquad \eta = \frac{\eta_iE_{\text{T},i} + \eta_jE_{\text{T},j}}{E_\text{T}} & \qquad \phi = \frac{\phi_iE_{\text{T},i} + \phi_jE_{\text{T},j}}{E_\text{T}}.			 \label{eq:snowmass}
 	\end{align}
-	In case $d_i$ is the smallest, object is called jet and removed from the list.
+	When $d_i$ is the smallest, the object is called jet and removed from the list.
 	\item The algorithm is repeated until no objects remain in the list.
 \end{enumerate}
-Parameter $n$ in equation~\ref{eq:dij} defines three types of algorithm:
+The parameter $n$ in equation~\ref{eq:dij} defines three types of algorithm:
 \begin{itemize}
-	\item \textsl{$n$ = -1}: the inclusive anti-\kt~algorithm~\cite{pub:antikt}, which is now extensively used at the LHC. This algorithm results in jets of circular shape and combines particles with large $E_\text{T}$ at the first place;
-	\item \textsl{$n$ = 0}: the Cambrdige-Aachen~\cite{pub:cambidgeaachen} algorithm, which takes into account only angular separation between two object.  This algorithm was mostly used in the $e^+e^-$ collider experiments.
+	\item \textsl{$n$ = -1}: the inclusive anti-\kt~algorithm~\cite{pub:antikt}, which is now extensively used at the LHC. This algorithm results in jets of circular shape and combines particles with large $E_\text{T}$ \textcolor{blue}{at the first place};
+	\item \textsl{$n$ = 0}: the Cambridge-Aachen~\cite{pub:cambidgeaachen} algorithm, which takes into account only angular separations between two objects.  This algorithm was mostly used in $e^+e^-$ collider experiments.
 	\item \textsl{$n$ = 1}: the inclusive \kt~algorithm~\cite{pub:kt}. It produces jets of irregular shape and combines soft particles first.
 \end{itemize}
- It has been shown that in photoproduction~\cite{pub:incljetphp} and DIS~\cite{pub:claudia} the \kt~and anti-\kt~have similar performance. The study~\cite{pub:jetradius} has demonstrated that $R=1$ is the optimal choice of the radius parameter. Taking this into account, the choice of the \kt~algorithm with $R=1$ was adopted in this thesis. Taking the advantage of longitudinal invariance of the algorithm, jet search is performed in the Breit frame.
+ It has been shown that in photoproduction~\cite{pub:incljetphp} and DIS~\cite{pub:claudia}, the \kt~and anti-\kt~have similar performance. The study~\cite{pub:jetradius} has demonstrated that $R=1$ is the optimal choice of the radius parameter. Taking this into account, the choice of the \kt~algorithm with $R=1$ was adopted in this thesis. Taking advantage of the longitudinal invariance of the algorithm, the jet search is performed in the Breit frame.
 
 \begin{figure}
 	\centering
