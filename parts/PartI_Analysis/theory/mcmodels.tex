@@ -1,4 +1,4 @@
-A precise theoretical description of the final state of $\ep$ scattering from first principles is currently an intractable problem. It requires calculations in regions of phase-space where perturbative techniques are not applicable or have to be performed to high orders.
+A precise theoretical description of the final state of $\ep$~scattering from first principles is currently an intractable problem. It requires calculations in regions of phase-space where perturbative techniques are not applicable or have to be performed to high orders.
 \section{QCD Parton Showers}
 \label{sec:qcdpartonshower}
 The parton-shower approach is used to simulate higher-order perturbative QCD contributions when a complete calculation is unfeasible or unknown. For example, the DGLAP approach can be utilised to describe initial-state and final-state radiation. The probability for a branching, $\mathcal{P}_{a\rightarrow bc}$, during the evolution is governed by the equation:
@@ -24,7 +24,7 @@ Another approximation for QCD radiation that is widely used to describe DIS rela
 \caption{The colour dipole model radiation pattern.}%
 \label{fig:cdm}%
 \end{figure}
-The radiation from each dipole is assumed to be independent. It proceeds iteratively until some stopping criterion is reached, for example the invariant mass of a dipole falls below some cut-off  value. The CDM is based on leading-order matrix elements in the soft gluon approximation for gluon radiation with transverse momentum $p_T$ and rapidity $y$
+The radiation from each dipole is assumed to be independent. It proceeds iteratively until some stopping criterion is reached, for example the invariant mass of a dipole falls below some cut-off  value. The CDM is based on leading-order matrix elements in the soft gluon approximation for gluon radiation with transverse momentum $p_T$ and rapidity~$y$
 \begin{equation}
 \mathrm{d}\sigma = \frac{n_c\as}{2\pi}\frac{\mathrm{d}p_T^2}{p_T^2}\mathrm{d}y.
 \end{equation}
@@ -66,4 +66,4 @@ The generation of events proceeds through the Monte Carlo sampling of the proces
 \subsubsection{LEPTO}
 The \lepto event generator~\cite{lepto} combines the leading-order QCD matrix elements (ME) for the hard-scattering process together with the DGLAP parton shower (PS) for the soft-gluon emission. In order to ensure colour coherence during the showering process angular ordering is imposed. The Lund string model~\cite{lund} as implemented in JETSET~\cite{jetset} is used to simulate the hadronisation process. This generator also includes LO electroweak processes necessary for the description of high-\qsq~DIS. The higher-order QED effects are obtained through the interface to the HERACLES~\cite{heracles} program. The \lepto generator is also oftenly called MEPS and is used as a reference MC generator in this analysis.
 \subsubsection{ARIADNE}
-The colour-dipole pattern for QCD radiation is implemented in the \ariadne event generator~\cite{ariadne}. Since this model naturally includes only the QCD Compton scattering diagram, the BGF graph contribution was introduced by hand. The hadronisation is performed using the same JETSET interface. This event generator was used in the analysis mainly to estimate systematic effects attributed to the choice of the parton-shower model.
+The colour-dipole pattern for QCD radiation is implemented in the \ariadne event generator~\cite{ariadne}. Since this model naturally includes only the QCD Compton scattering diagram, the BGF graph contribution was introduced by hands. The hadronisation is performed using the same JETSET interface. This event generator was used in the analysis mainly to estimate systematic effects attributed to the choice of the parton-shower model.
