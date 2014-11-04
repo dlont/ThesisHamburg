@@ -1,5 +1,6 @@
 Precise theoretical description of the final state of $\ep$-scattering from the first principles is an intractable problem at the current stage. It requires calculations in the regions of phase-space where perturbative techniques are not applicable or have to be performed to high orders.
-\subsection{QCD Parton Showers}
+\section{QCD Parton Showers}
+\label{sec:qcdpartonshower}
 The parton shower approach is used to simulate higher order perturbative QCD contributions when a complete calculation is infeasible or unknown. For example the DGLAP approach can be utilised to describe initial-state and final-state radiation. The probability for a branching, $\mathcal{P}_{a\rightarrow bc}$, during the evolution is governed by the equation:
 \begin{equation}
 \frac{\mathrm{d}\mathcal{P}_{a\rightarrow bc}}{\mathrm{d}t} = \int_0^1{\mathrm{d}z\frac{\as\left(\qsq\right)}{2\pi}P_{_{a\rightarrow bc}}}\left(z\right),
@@ -23,16 +24,17 @@ Another approximation for the QCD radiation widely used to describe DIS related 
 \caption{The colour dipole model radiation pattern.}%
 \label{fig:cdm}%
 \end{figure}
-The radiation from each dipole is assumed to be independent. It proceeds iteratively until some stopping criterion is not reached, for example the invariant mass of a dipole falls below some cut-of  value. The CDM is based on leading order matrix element in the soft gluon approximation fir the gluon radiation with transverse momentum $p_T$ and rapidity $y$
+The radiation from each dipole is assumed to be independent. It proceeds iteratively until some stopping criterion is not reached, for example the invariant mass of a dipole falls below some cut-of  value. The CDM is based on leading order matrix element in the soft gluon approximation fir the gluon radiation with transverse momentum $p_T$ and rapidity~$y$
 \begin{equation}
 \mathrm{d}\sigma = \frac{n_c\as}{2\pi}\frac{\mathrm{d}p_T^2}{p_T^2}\mathrm{d}y.
 \end{equation}
 In contrast to the leading-logarithm DGLAP-based parton shower algorithm there is no $k_T$ ordering for the gluon radiation. The partons are rather uniformely distributed in $k_T$. Thus the CDM approach is somewhat similar to the BFKL evolution.
 
-Another important issue in the simulation of the parton showers is quantum mechanical interference of the initial-state and final-state radiation or the interference between the partons emitted either in initial or final state. These effects are naturally taken into account in the complete perturbative calculations, however special care must be taken in the resummed calculations like those based on DGLAP evolution, because it 
+Another important issue in the simulation of the parton showers is quantum mechanical interference of the initial-state and final-state radiation or the interference between the partons emitted either in initial or final state. These effects are naturally taken into account in the complete perturbative calculations, however special care must be taken in the resummed calculations like those based on DGLAP evolution, because they are based on probabilistic description of the process in contrast to quantum mechanical probability amplitudes.
 
-\section{Fragmentation }
-In order to be able to compare pQCD predictions to experimental result the calculations have to be defined in term of experimentally observable quantities. Because the quarks and gluons do not appear as asymptotic states, the transition from the patronic quantities to those defined in terms of hadrons has to be modelled. The formation of colorless objects from partons, called \emph{hadronisation}, is essentialy non-perturbative process and the first-principle calculations are very difficult. 
+\section{Fragmentation}
+\label{sec:fragmentation}
+In order to be able to compare pQCD predictions to experimental results the calculations have to be defined in terms of experimentally observable quantities, which usually are functions of the momenta of the final-state hadrons. The formation of hadrons, called \emph{hadronisation}, is essentialy non-perturbative process and the first-principle calculations are impossible. Therefore the phenomenological hadronisation models are used to correct partonic predictions in order to obtain consistent observable definition. In practice, the transition from patronic quantities to those defined in terms of hadrons is usually modelled by means of general-purpose event generators. Two widely used hadronisation models are described below.
 \begin{figure}[t]
 	\centering
 	\begin{subfloat}[]{
@@ -49,14 +51,19 @@ In order to be able to compare pQCD predictions to experimental result the calcu
 \label{fig:fragmentationmodels}
 \end{figure}
 \subsection{String fragmentation model}
-%aaa
+It is assumed in the Lund string model~\cite{lundmodel} that the flux of the colour field between two quarks is confined within a tube of finite transverse size. This string-like object has a constant energy-density per unit length of $\mathcal{O}\left( \text{1 \GeV/fm}\right)$ and the potential energy of the string increases with increasing separation between the quarks. When the tension exceeds the quark--anti-quark production threshold the $q\bar{q}$-pair is picked up from the vacuum and the string breaks up. Loose ends of the string are terminated by newly created $q$ and $\bar{q}$ and the process is iterated until the potential energy of the daughter string falls below a cut-off $\mathcal{O}\left( \text{1 \GeV}\right)$. The gluons endowed with two colours and are represented as a joint between two strings or a kink in the colour flux of the $q\bar{q}$-system in this model. 
+
+A schematic illustration of the Lund picture of the hadronisation process is shown in Figure~\ref{fig:lund}.
 \subsection{Cluster fragmentation model}
-%aaa
+In the cluster model~\cite{clustemodel} all partons after the parton-shower step are combined into colourless objects. If the invariant mass of the cluster is large enough it can be decayed into lighter clusters, which subsequently decay into hadrons. The gluons in this model are converted into $q\bar{q}$-pairs and do not appear in the hadron formation process. This model was inspired by the ``preconfinement''~\cite{preconfinement} idea according to which the colour connected partons group in the phase space towards the end of perturbative evolution.
+
+The cluster model process is depicted in Figure~\ref{fig:cluster}.
 \subsection{Monte Carlo Event Generators}
-%aa
+General-purpose event generators are indispensable tool in high-energy physics because they provide full access to the details of the event hadronic final-state. Using the event generators the detector performance can be investigated or the effects related to the background contributions can be estimated.
+
+The generation of events proceeds through the Monte Carlo sampling of the processes according to the probability of their occurrence. An ensemble of MC events must resemble the characteristic features of the data. These programs usually have several levels naturally corresponding to the processes separated by different time-scales. The simulation of the hard interaction, occurring over the shortest time intervals, is usually based on the leading order contribution that can be relatively easy calculated in perturbation theory (see Chapter~\ref{ch:theory}). The higher perturbative orders in MC generators are approximated by parton-shower models, as was briefly described in Section~\ref{sec:qcdpartonshower}. The last step, corresponding to the formation of the color-neutral hadrons is implemented in hadronisation models, which use the result of the parton-shower stage as an input. The output of the event generators is usually provided in a form of a table containing list of particles and their four-momentum vector components. The output available after the parton-shower and hadronsisation steps are called the parton and hadron level respectively. The subsequent section summarises basic information about the MC generators used in this analysis.
+
 \subsubsection{LEPTO}
 The \lepto event generator~\cite{lepto} combines the leading order QCD matrix elements (ME) for the hard scattering process together with the DGLAP parton shower (PS) for the soft gluon emission. In order to ensure colour coherence during the showering process angular ordering is imposed. The Lund string model~\cite{lund} as implemented in JETSET~\cite{jetset} is used to simulate the hadronisation process. This generator also includes LO electroweak processes necessary for the description of high-\qsq~DIS. The higher order QED effects are obtained through the interface to the HERACLES~\cite{heracles} program. The \lepto generator is also oftenly called MEPS and is used as a reference MC generator in this analysis.
 \subsubsection{ARIADNE}
 The colour-dipole pattern for QCD radiation is implemented in the \ariadne event generator~\cite{ariadne}. Since this model naturally includes only the QCD Compton scattering diagram the BGF graph contribution was introduced by hands. The hadronisation is performed using the same JETSET interface. This event generator was used in the analysis mainly to estimate systematic effects attributed to the choice of the parton shower model.
-%\newpage
-%\input{parts//PartI_Analysis//theory//inna}

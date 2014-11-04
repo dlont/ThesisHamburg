@@ -33,7 +33,9 @@ Additional source of background comes from cosmic and beam-halo muons. Cosmic mu
 
 \subsection{On-line selection}
 \label{subsec:onlineselect}
+The operation of the detector components was continuously monitored during the data-taking. The status of each of the detector components was stored for every run in the so-called, ``EVTAKE'' flag. For this analysis the EVTAKE=1 was required indicating that all main detector components e.g. CTD, MVD, CAL were fully operational.
 
+In addition to EVTAKE flag, the LPOLTAKE and TPOLTAKE status records were used in this analysis in order to verify the availability of the information from the corresponding lepton-beam polarisation detectors. At least one of the detectors was required to be in good status on in order to determine the polarisation value for particular runs.
 \subsubsection{FLT trigger}
 \label{subsubsec:fltcuts}
 \begin{itemize}
@@ -44,9 +46,22 @@ Additional source of background comes from cosmic and beam-halo muons. Cosmic mu
 
 \subsubsection{SLT trigger}
 \label{subsubsec:sltcuts}
+The second-level trigger was used to suppress further the beam-related background. The information from the \zeus global tracking trigger was utilised at SLT for the reconstruction of the interaction vertex position and to reject events originating from background processes. Moreover, the calorimeter timing information was used extensively to suppress beam-gas and cosmic-ray background. For example, hadrons emerging in vicinity of the nominal interaction point will be characterised by approximately the same arrival time in different parts of the CAL, in contrast to cosmic-shower events for which the signals from the upper part of the BCAL will arrive earlier than from the bottom part. Thus, given the high timing resolution of the CAL, the background processes can be efficiently discriminated.
 
 \subsubsection{TLT trigger}
 \label{subsubsec:tltcuts}
+The final stage of the trigger selection was based on the identification of the scattered DIS electron. The reduced read-out rate at the TLT allowed application of the complex reconstruction algorithms that were much closer related to those used in the off-line analysis. The TLT bit \textsf{DIS03} together with DST bit 12 were used in the selection chain and impose loose cuts summarised in the Table~\ref{tab:TLTDSTreq}.
+\begin{table}
+\centering
+\begin{tabular}{|c|c|}
+\hline scattered electron energy & $E'_{el}>4\,\GeV$ \\ 
+\hline distance from the beam pipe  & $R_{el}^{CAL}>35\,\cm$ \\ 
+\hline longitudinal momentum balance & $30<E-p_Z<100\,\GeV$\\
+\hline 
+\end{tabular} 
+\caption{The requirements imposed on the events at the TLT.}
+\label{tab:TLTDSTreq}
+\end{table}
 
 \subsection{Off-line selection}
 \label{subsec:offlineselect}
