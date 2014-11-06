@@ -1,0 +1,12 @@
+zenlontko
+
+Figures
+*.aux
+*.log
+thesis_eng.bbl
+thesis_eng.blg
+thesis_eng.lof
+thesis_eng.lot
+thesis_eng.out
+thesis_eng.synctex.gz
+thesis_eng.toc
