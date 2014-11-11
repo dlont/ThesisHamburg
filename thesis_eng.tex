@@ -86,7 +86,6 @@
 %\usepackage{zeusdet_hepunits}
 %\usepackage{zeusdet_units}
 
-%
 \usepackage[linktoc=all]{hyperref}
 \hypersetup{
     hyperfootnotes=false,
@@ -98,6 +97,7 @@
 		linkbordercolor	={1 0 0},
     citebordercolor	={0 1 0}
 }
+
 %\usepackage[Sonny]{fncychap}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																										%%
@@ -170,8 +170,6 @@
 %-----------------------------------------------------------
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
-
-\newcommand*{\plogo}{\fbox{$\mathcal{PL}$}} % Generic publisher logo
 
 \begin{document}
 
@@ -272,23 +270,31 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
-%%							Chapter 6. Results                                                                         %%
+%%							Chapter 6. Results. Inclusive-Jet cross sections                                                                   %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Results}
-\label{ch:results}
+\chapter{Results. Inclusive-Jet cross sections}
+\label{ch:resultscs}
 \input{parts//PartI_Analysis//Results}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%																																																					       %%
+%%							Chapter 7. Results. QCD and PDF fits                                                                         %%
+%%																																																					       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Results. QCD Analysis of Inclusive-Jet data}
+\label{ch:resultsqcdfit}
+\input{parts//PartI_Analysis//ResultsQCDfit}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
-%%							Chapter 7. Summary and Outlook                                                      %%
+%%							Chapter 8. Summary and Outlook                                                      %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter*{Summary and Outlook}
 \addcontentsline{toc}{chapter}{Summary and Outlook}
 \label{ch:summary}
-%\include{parts//PartI_Analysis//JetsSummary}
+\include{parts//PartI_Analysis//JetsSummary}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -333,7 +339,7 @@
 \bibliographystyle{bibliography//BiBTeX//bst//l4z_jhep3}
 \bibliography{bibliography//bibliography,bibliography//BiBTeX//bib//l4z_articles,bibliography//BiBTeX//bib//l4z_books,bibliography//BiBTeX//bib//l4z_misc,bibliography//BiBTeX//bib//l4z_preprints,bibliography//BiBTeX//bib//l4z_zeus,bibliography//BiBTeX//bib//l4z_h1,bibliography//BiBTeX//bib//l4z_conferences}
 
+\newpage
 \chapter*{Acknowledgements}
 \include{parts//Acknowledgements}
-
 \end{document}
