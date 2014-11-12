@@ -1,16 +1,22 @@
-As it was demonsted in previous chapter, the measured inclusive-jet cross sections are very well described by the predictions based on the proton PDFs and \asz extracted in global fits to the inclusive DIS data from \hera. 
-
-Jet rates in DIS are sensitive to the value of the strong coupling. The inclusive-jet cross sections determined in this thesis can be utilised for the \as determination if used in the QCD fit with \as as a free parameter. This section outlines the results of the strong coupling determination performed in this work.
-
-According to factorisation property, explained in Chapter~\ref{ch:theory}, the perturbative QCD predictions for inclusive-jet cross sections can be expressed a convolution of the hard-scattering matrix elements and the proton PDFs. The NLO predictions for \dsdetjetb,~thus, have the following formal representation:
+As it was demonstrated in previous chapter, the measured inclusive-jet cross sections are very well described by the predictions based on the proton PDFs and \asz extracted in global fits to the inclusive DIS data from \hera. Assuming the validity of NLO pQCD predictions for inclusive-jet production in NC DIS, the accurate data can be exploited for constraining possible values of the input parameters used in the calculations.
+\begin{figure}[t]
+ \centering
+ \includegraphics[width=\textwidth,bb= 0 0 567 515]{Figures/cs_etjet_different_as_values}
+ % cs_etjet_different_as_values.eps: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb= 0 0 567 515
+ \caption{Comparison of the measured inclusive-jet cross sections to NLO pQCD predictions calcualted assuming different values of \asz.}
+ \label{fig:etjetdifferentas}
+\end{figure}
+According to factorisation property, explained in Chapter~\ref{ch:theory}, the perturbative QCD predictions for inclusive-jet cross sections can be expressed a convolution of the hard-scattering matrix elements and the proton PDFs. The parton level NLO predictions, e.g. for \dsdetjetb, have the following formal representation:
 \begin{equation}
 	\begin{split}
-\dsdetjetb\left( \mu_R, \mu_F\right) &= \as^1\left( \mu_R\right) \cdot \left[ c_{1,i}\left( x, \mu_R, \mu_F\right) \overset{x}{\bigotimes } F_i\left( x, \mu_f, \mu_R \right) \right] \\
+\sigma\left( \mu_R, \mu_F\right)  &= \as^1\left( \mu_R\right) \cdot \left[ c_{1,i}\left( x, \mu_R, \mu_F\right) \overset{x}{\bigotimes } F_i\left( x, \mu_f, \mu_R \right) \right] \\
 &+ \as^2\left( \mu_R\right) \cdot \left[ c_{2,i}\left( x, \mu_R, \mu_F\right) \overset{x}{\bigotimes } F_i\left( x, \mu_f, \mu_R \right) \right],
 	\end{split}
 \end{equation}
-where $c_{n,i}$ are the perturbative coefficients for the jet-production subprocess $i$, e.g. QCD Compton scattering, and $F_i\left( x, \mu_f, \mu_R \right)$ are the corresponding linear combinations of the proton PDFs depending on the fraction of the proton momentum, $x$, renormalisation and factorisation scales and implicitly (through the DGLAP evolution equations) on \as.
+where $c_{n,i}$ are the perturbative coefficients for the jet-production subprocess $i$, e.g. QCD Compton scattering, and $F_i\left( x, \mu_f, \mu_R \right)$ are the corresponding linear combinations of the proton PDFs depending on the fraction of the proton momentum, $x$, renormalisation and factorisation scales and implicitly (through the DGLAP evolution equations) on \as. Thus, jet rates in DIS are sensitive to the value of the strong coupling and the proton PDFs. The comparison of the predictions based on different proton PDFs sets to the measured cross sections was presented in Chapter~\ref{ch:resultscs}; the predictions calculated assuming different values of \asz are illustrated in in Figure~\ref{fig:etjetdifferentas}. It can be seen that the calculations with lower (higher) value of the strong coupling have lower (higher) cross sections.
 
-The value of the strong coupling is determined in a fit to the data parametrising the predictions as a function of \as. The \herafitter~\cite{Aaron:2009aa,Aaron:2009kv} program package was used for the \as extraction. The main features of the \herafitter framework are outlined below.
+The inclusive-jet measurements obtained in this thesis can be utilised for the \as and PDFs determination. The values of input parameters providing the best description of the measurements can be determined in a fit to the data if the predictions are parametrised as functions of \asz and the proton PDF parameters. The details of this procedure, also called the \emph{'QCD fit'}, are described below.
+
+
 
 %In the following the explicit dependence of the strong coupling on the scale is suppressed and the reference scale at which \as is determined is set to the mass of the $\zn$ boson. The \as denotes \asz, whenever otherwise stated.

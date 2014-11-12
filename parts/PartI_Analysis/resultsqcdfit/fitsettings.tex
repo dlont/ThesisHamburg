@@ -1,4 +1,17 @@
-The predictions for the inclusive-jet cross sections were calculated using the \nlojet program with the \fastnlo interface. The setting for the NLO pQCD calculations were described in detail in Section~\ref*{sec:nlopredictions} and are briefly summarised in the Table~\ref{tab:nlosettings}.
+The agreement between data and theory is estimated using the following ansatz for the $\chi^2$-function:
+%\begin{equation}
+% \chi^2\left( \mathbf{m},\mathbf{b}\right) = \sum_{i}{\frac{\left[ m^i-\Sigma_j{\gamma^i_jm^ib_j-\mu^i}\right]^2 }{\left( \delta_{i,\text{stat}}\mu^i\right)^2 + \left( \delta_{i,\text{uncor}}\mu^i\right)^2 }} + \sum_{j}{b_j^2}
+% \label{eq:chi2uncor}
+%\end{equation}
+\begin{equation}
+ \chi^2\left( \mathbf{m},\mathbf{b}\right) = \sum_{ij}{\left( m^i -\sum_{l}{\Gamma_l^i\left( m^i\right)b_l - \mu^i }\right) C^{-1}_{ij,\text{stat}} \left( m^j -\sum_{l}{\Gamma_l^j\left( m^j\right)b_l - \mu^j }\right) } + \sum_{j}{b_j^2},
+ \label{eq:chi2corr}
+\end{equation}
+where $\mu^i$ is the measured central value of the cross section in bin $i$, the $\Gamma_i^l$ quantifies the sensitivity of the measurement $i$ to the correlated systematic source of uncertainty $l$, the $C^{-1}_{ij,\text{stat}}$ is covariance matrix for the measured data points. The parameter vectors $\mathbf{m}$ and $\mathbf{b}$ represent the theoretical predictions for the point $i$ and systematic uncertainties, respectively. The predictions $\mathbf{m}\left( \mathbf{a},\asz\right)$ are usually treated as functions of the proton PDF parameters, $\mathbf{a}$,  and \asz. The determination procedure of the parametrisation of the pPDFs and \as that best fit the data is based on the numerical minimisation of the $\chi^2$ function with respect to the free parameters. The nuisance parameters $\mathbf{b}$ introduced in the $\chi^2$ definition are fitted together with other parameters in order to consistently take into account systematic uncertainties correlated across measurement points. The last term in Eq.~\eqref{eq:chi2corr} represents the penalty for these parameters.
+
+An efficient code~\cite{herafitter} for QCD analysis...  The \herafitter program is a tool originally developed for least-square fits of the proton PDFs. The other details concerning the $\chi^2$-function definition can be found in the \herafitter manual~\cite{herafitter:2014:manual}. The \herafitter~\cite{Aaron:2009aa,Aaron:2009kv} program package was used for the \as extraction. The main features of the \herafitter framework are outlined below.
+
+The predictions for the inclusive-jet cross sections were calculated using the \nlojet program with the \fastnlo interface. The setting for the NLO pQCD calculations were described in detail in Section~\ref{sec:nlopredictions} and are briefly summarised in the Table~\ref{tab:nlosettings}.
 \begin{table}[h]
 \centering
 \begin{tabular}{l|c}
