@@ -4,6 +4,7 @@ Figures
 *.aux
 *.log
 *~
+*backup
 thesis_eng.bbl
 thesis_eng.blg
 thesis_eng.lof
