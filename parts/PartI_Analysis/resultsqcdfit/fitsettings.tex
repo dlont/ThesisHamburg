@@ -1,3 +1,9 @@
+In the least-square method the optimal values of parameters providing the best agreement of theoretical predictions with the data are estimated minimising the difference between data and theory. Given theoretical predictions, $t_i\left( \mathbf{a} \right)$, in the cross section bin $i$ which depend on the vector of parameters of interest $\mathbf{a}$, the outcome of the measurement, $m_i$, can be modelled as follows:
+\begin{equation}
+ m_i = t_i\left( \mathbf{a} \right) + \varepsilon_{i} \sigma_{i,\text{uncor}} + \sum_{\mu=1}^{K}{b_{i,\mu}\sigma_{i,\text{cor}}^\mu}, \qquad i=1\ldots N_\text{bins},
+\end{equation}
+where $\sigma_{i,\text{uncor}$ is an estimate of total uncorrelated uncertainty for the cross section measuremet and $\varepsilon_{i}$ is a random Gaussian-distributed variable with mean value $\left\langle \varepsilon_{i}\right\rangle = 0$ and variance $\text{Var}\left( \varepsilon_{i}\right) = 1$;
+
 Agreement between data and theory is estimated using the following ansatz for the $\chi^2$-function~\cite{Aaron:2009aa}:
 %\begin{equation}
 % \chi^2\left( \mathbf{m},\mathbf{b}\right) = \sum_{i}{\frac{\left[ m^i-\Sigma_j{\gamma^i_jm^ib_j-\mu^i}\right]^2 }{\left( \delta_{i,\text{stat}}\mu^i\right)^2 + \left( \delta_{i,\text{uncor}}\mu^i\right)^2 }} + \sum_{j}{b_j^2}
