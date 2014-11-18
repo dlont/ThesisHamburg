@@ -1,40 +1,51 @@
-In the least-square method the optimal values of parameters providing the best agreement of theoretical predictions with the data are estimated minimising the difference between data and theory. Given theoretical predictions, $t_i\left( \mathbf{a} \right)$, in the cross section bin $i$ which depend on the vector of parameters of interest $\mathbf{a}$, the outcome of the measurement, $m_i$, can be modelled as follows~\cite{Stump:2001gu,Botje:2001fx}:
+In the least-square method the optimal values of parameters providing the best agreement of theoretical predictions with the data are estimated by minimising the difference between data and theory. Given theoretical predictions, $t_i\left( \mathbf{a} \right)$, in the cross section bin $i$ which depend on the vector of parameters of interest $\mathbf{a}$, the outcome of the measurement, $m_i$, can be modelled as follows~\cite{Stump:2001gu,Botje:2001fx}:
 \begin{equation}
  m_i = t_i\left( \mathbf{a} \right) + \varepsilon_{i} \sigma_{i,\text{uncor}} + \sum_{\mu=1}^{K}{b_{i,\mu}\sigma_{i,\text{cor}}^\mu}, \qquad i=1\ldots N_\text{bins},
 \end{equation}
-where $\sigma_{i,\text{uncor}}$ is an estimate of total uncorrelated uncertainty for the cross section measuremet and $\varepsilon_{i}$ is a random normally distributed variable with mean value $\left\langle \varepsilon_{i}\right\rangle = 0$ and variance $\text{Var}\left( \varepsilon_{i}\right) = 1$; $\sigma_{i,\text{cor}}^\mu$ and $b_{i,\mu}$ represent the correlated uncertainty from sources $\mu$ and the corresponding systematic shift, respectively. It is assumed that the systematic shifts can also be modelled by normally distributed random variables with zero mean and unit variance. In order to take into account proportionality of the systematic uncertainties to the central value\footnote{Most of the systematic uncertainties in this analysis e.g. absolute normalisation uncertainty or acceptance correction uncertainty to good approximation are proportional to the central value of the measured cross section.}, the corresponding uncertainty components are expressed as $\sigma_{i,\text{cor}}^\mu = \gamma_{i,\mu}m_i$, where $\gamma_{i,\mu}=1/\left( {m_i\sigma_{i,\text{cor}}^\mu}\right) \frac{\partial m_i}{\partial b_{i,\mu}}$ quantifies the sensitivity of the measurement $i$ to the systematic source $\mu$. The statistical uncertainty, however, is assumed to scale propotionaly to the square root of number of events. The difference between data and theoretical predictions is evaluated using the weighted squared norm. Taking everything into account the $\chi^2$-function for statistically uncorrelated measurements is defined as:
+where $\sigma_{i,\text{uncor}}$ is an estimate of total uncorrelated uncertainty for the cross section measuremet and $\varepsilon_{i}$ is a random normally distributed variable with mean value $\left\langle \varepsilon_{i}\right\rangle = 0$ and variance $\text{Var}\left( \varepsilon_{i}\right) = 1$; $\sigma_{i,\text{cor}}^\mu$ and $b_{i,\mu}$ represent the correlated uncertainty from source $\mu$ and the corresponding systematic shift, respectively. It is assumed that the systematic shifts can also be modelled by normally distributed random variables with zero mean and unit variance. In order to take into account proportionality of the systematic uncertainties to the central value\footnote{Most of the systematic uncertainties in this analysis e.g. absolute normalisation uncertainty or acceptance correction uncertainty to good approximation are proportional to the central value of the measured cross section.}, the corresponding uncertainty components are expressed as $\sigma_{i,\text{cor}}^\mu = \gamma_{i,\mu}t_i$, where 
 \begin{equation}
- \chi^2 = \sum_i{ \frac{\left( m_i-t_i-\sum_{\mu}{\gamma_{i,\mu} m_i b_\mu} \right)^2 }{ \left( \sigma_{\text{stat},i}m_i \right)^2 + \left( \sigma_{i,\text{uncor}}\right)^2 } } + \sum_{\mu}{b_\mu^2}
+\gamma_{i,\mu}=\frac{1}{{m_i}} \frac{\partial m_i}{\partial b_{i,\mu}}
+\end{equation}
+is the relative correlated systematic uncertainty quantifying the sensitivity of the measurement $i$ to the systematic source $\mu$. The statistical uncertainty is assumed to scale propotionaly to the square root of expected number of events. Corrected for bias from systematic shifts, the statistical uncertainty is equal to
+\begin{equation}
+ \sigma_{\text{stat},i} = \delta_{\text{stat},i}^2m_i\left( t_i - \sum_\mu\gamma_{i,\mu}t_ib_\mu \right),
+\end{equation}
+where $\delta_{\text{stat},i}$ is the relative statistical uncertainty. The difference between data and theoretical predictions is evaluated using the weighted squared norm, thus the so-called $\chi^2$-function used in the QCD fit  for statistically uncorrelated measurements is defined as:
+\begin{equation}
+ \chi^2 = \sum_i{ \frac{\left( m_i-t_i-\sum_{\mu}{\gamma_{i,\mu} t_i b_\mu} \right)^2 }{ \delta_{\text{stat},i}^2\left( t_i - \sum_\mu{\gamma_{i,\mu}t_ib_\mu} \right)m_i + \left( \delta_{i,\text{uncor}}t_i\right)^2 } } + \sum_{\mu}{b_\mu^2},
  \label{eq:chi2uncorr}
 \end{equation}
-The last term in Eq.~\eqref{eq:chi2uncorr} represents the penalty for the nuissance parameters. 
-
-Agreement between data and theory is estimated using the following ansatz for the $\chi^2$-function~\cite{Aaron:2009aa}:
+with $\delta_{i,\text{uncor}}$ --- relative uncorrelated systematic uncertainty. The last term in this equation represents the penalty for the systematic-shift parameters. In order to take into account statistical correlations between different data points the $\chi^2$-function can be re-expressed as follows~\cite{Aaron:2009aa}:
 %\begin{equation}
 % \chi^2\left( \mathbf{m},\mathbf{b}\right) = \sum_{i}{\frac{\left[ m^i-\Sigma_j{\gamma^i_jm^ib_j-\mu^i}\right]^2 }{\left( \delta_{i,\text{stat}}\mu^i\right)^2 + \left( \delta_{i,\text{uncor}}\mu^i\right)^2 }} + \sum_{j}{b_j^2}
 % \label{eq:chi2uncor}
 %\end{equation}
-\begin{equation}
- \chi^2\left( \mathbf{m},\mathbf{b}\right) = \sum_{ij}{\left( m^i -\sum_{l}{\Gamma_l^i\left( m^i\right)b_l - \mu^i }\right) C^{-1}_{ij,\text{stat}} \left( m^j -\sum_{l}{\Gamma_l^j\left( m^j\right)b_l - \mu^j }\right) } + \sum_{j}{b_j^2},
+\begin{align}
+ \chi^2 &= \sum_{ij}{\left( m^i -\sum_{\mu}{\Gamma_\mu^i\left( m^i\right)b_\mu - t^i }\right) C^{-1}_{ij} \left( m^j -\sum_{\mu}{\Gamma_\mu^j\left( m^j\right)b_\mu - t^j }\right) }\notag\\
+                                           &+ \sum_{\mu}{b_\mu^2},
  \label{eq:chi2corr}
+\end{align}
+where the $C_{ij}$ is covariance matrix for the measured data points. It is equal to the sum of covariance matrices for statistical and uncorrelated systematic uncertainty components\footnote{The covariance matrix for uncorrelated uncertainties has diagonal form.} $C_{ij}=C_{ij}^{\text{stat.}}+C_{ij}^{\text{uncor.}}$. The $\Gamma_\mu^l$ is related to the relative correlated systematic uncertainties
+\begin{equation}
+ \Gamma_{\mu}^i = \gamma_{\mu}^i \cdot t^i. 
 \end{equation}
-where $\mu^i$ is the measured central value of the cross section in bin $i$, the $\Gamma_i^l$ quantifies the sensitivity of the measurement $i$ to the correlated systematic source of uncertainty $l$, the $C^{-1}_{ij,\text{stat}}$ is covariance matrix for the measured data points. The parameter vectors $\mathbf{m}$ and $\mathbf{b}$ represent the theoretical predictions for the point $i$ and systematic uncertainties, respectively. The predictions $\mathbf{m}\left( \mathbf{a},\asz\right)$ are usually treated as functions of the proton PDF parameters, $\mathbf{a}$,  and \asz. The determination procedure of the parametrisation of the pPDFs and \as that best fit the data is based on the numerical minimisation of the $\chi^2$ function with respect to the free parameters. The nuisance parameters $\mathbf{b}$ introduced in the $\chi^2$ definition are fitted together with other parameters in order to consistently take into account systematic uncertainties correlated across measurement points.
 
-An efficient code~\cite{herafitter} for QCD analysis...  The \herafitter program is a tool originally developed for least-square fits of the proton PDFs. The other details concerning the $\chi^2$-function definition can be found in the \herafitter manual~\cite{herafitter:2014:manual}. The \herafitter~\cite{Aaron:2009aa,Aaron:2009kv} program package was used for the \as extraction. The main features of the \herafitter framework are outlined below.
+As it was mentioned, some systematic variations in this analysis resulted in assymetric change of the cross section values, thefore some measurement bins have assymetric uncertainties. In order to conform with the definition of the $\chi^2$-function, the assymetric uncertainlies are converted into symmetric form according to:
+\begin{equation}
+ \sigma_i^{sym} = \frac{\sigma_i^+ + \sigma_i^-}{2},
+\end{equation}
+with $\sigma_i^{+\left(-\right)}$ expressing positive (negative) component of assymetric uncertainty.
 
-The predictions for the inclusive-jet cross sections were calculated using the \nlojet program with the \fastnlo interface. The setting for the NLO pQCD calculations were described in detail in Section~\ref{sec:nlopredictions} and are briefly summarised in the Table~\ref{tab:nlosettings}.
-\begin{table}[h]
-\centering
-\begin{tabular}{l|c}
-Parameter  & Default setup \\ 
-\hline \hline proton PDF set & \herapdf1.5 (NLO) \\
-\hline renormaliastion scale & $\mu_R^2=\qsq + \etjetb^2$ \\ 
-\hline factorisation scale          & $\mu_F^2=\qsq $ \\ 
-\hline number of active flavours    & $n_f = 5 $ \\ 
-\end{tabular} 
-\caption{Summary of the theory settings used for the calculations for the \as determination.}
-\label{tab:nlosettings}
-\end{table}
-The NLO predictions were corrected for electroweak and non-perturbative effects using the MC models as described in Sections~\ref{electroweak hadronisation}.
+The determination procedure of the parameters that best fit the data is based on the numerical minimisation of the $\chi^2$ function with respect to free parameters. The systematic shifts $\mathbf{b}$, described above, are fitted simultaneously with physical parameters in order to take into account the correlation of systematic uncertainties across measurement points consistently.
+
+The quality of the fit is assessed by the value of $\chi^2$-function in its minimum. Assuming that the measurements are normaly distributed around the expectation value provided by theoretical predictions and with the variance described by the covariance matrix, the $\chi^2$ value can be treated as a random variable with the mean value equal to the number of degrees of freedom $\left\langle \chi^2 \right\rangle = n_\text{DF}$, which in case of $n_\text{par}$ parameter fit to $n_\text{p}$ points is $n_\text{DF}=n_\text{p}-n_\text{par}$\footnote{Due to penalty term, the nuissance parameters $\mathbf{b}$ are not free parametes, hence they do not contribute to the number of degrees of freedom.}. Therefore, the ratio
+\begin{equation}
+ \chi^2/n_\text{DF} \approx 1
+\end{equation}
+is an indication of the good quality of the fit.
+
+In the QCD fit the predictions $\mathbf{t}\left( \mathbf{a},\asz\right)$ are usually treated as functions of the proton PDF parameters, $\mathbf{a}$,  and the strong coupling constant \asz. 
+
+
 
 These setting define the, so-called ``central-fit''. The value of the strong coupling determined with this setup is used as a reference for the studies of the sensitivity of the extracted \asz to the variation of the theory parameters that will be discussed in a section devoted to the treatment of systematic uncertainties (see Section~\ref{subsec:assystematics}).
