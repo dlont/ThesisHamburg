@@ -23,11 +23,11 @@ must be conserved. Similarly, the total transverse momentum of the event must va
 
 \subsubsection{Photoproduction}
 \label{subsubsec:photoprodbg}
-The cross section of inelastic electron-proton scattering with $\qsq \approx 0\;\GeV^2$ is large and serves as potential source of backgound to NC DIS analysis. At low \qsq, the scattered electron is deflected by a small angle and escapes in the beampipe. Isolated electromagnetic clusters from $\pi^0$ decays can be misidentified as the final-state electron. The variable $\delta$ calculated from the final-state energy deposits will be smaller than 55 \GeV~by approximately twice the energy of the escaped electron\footnote{The energy and momentum of the particles escaping in the forward direction is approximately cancelled.}.
+The cross section of inelastic electron-proton scattering with $\qsq \approx 0\;\GeV^2$ is large and serves as potential source of backgound to the NC DIS analysis. At low \qsq, the scattered electron is deflected by a small angle and escapes in the beampipe. Isolated electromagnetic clusters from $\pi^0$ decays can be misidentified as the final-state electron. The variable $\delta$ calculated from the final-state energy deposits will be smaller than 55 \GeV~by approximately twice the energy of the escaped electron\footnote{The energy and momentum of the particles escaping in the forward direction is approximately cancelled.}.
 
 \subsubsection{Beam-Gas interactions. Cosmic and Halo Muons}
 \label{subsubsec:beamgasfeatures}
-The electron and proton beams can interact with the residual gas in the beam pipe. The proton collisions are characterised by large hadronic activity and many tracks emerging at low polar angles downstream from the nominal interaction point. Using the calorimeter timing information as well as signals from the \textcolor{blue}{Veto-Wall} such events can be successfully rejected. Additionally, such processes are characterised by low values of $\delta$. The rate of the electron beam interactions was found in a previous study~\cite{thesis:moritz:2001} to be very small and can be ignored.
+The electron and proton beams can interact with the residual gas in the beam pipe. The proton collisions are characterised by large hadronic activity and many tracks emerging at low polar angles upstream from the nominal interaction point. Using the calorimeter timing information as well as signals from the \textcolor{blue}{Veto-Wall} such events can be successfully rejected. Additionally, such processes are characterised by low values of $\delta$. The rate of the electron beam interactions was found in a previous study~\cite{thesis:moritz:2001} to be very small and can be ignored.
 
 Additional sources of background come from cosmic and beam-halo muons. Cosmic muons are produced in high-energy cosmic rays. Passage of muons though the volume of the detector results in a time difference between the signals in the upper and lower parts of the CAL. Beam-halo muons, emerging from decays of pions produced in beam-gas interactions upstream of the detector, travel parallel to the beam axis. The time difference between signals in the RCAL and FCAL is used to eliminate such processes. In general, cosmic and beam-halo events have non-zero total transverse momentum due to imbalance of the energy deposits in the transverse plane. This information can be used for background suppression. The detailed description of event selection is presented in the following sections.
 
@@ -39,9 +39,9 @@ In addition to EVTAKE flag, the LPOLTAKE and TPOLTAKE status records were used i
 \subsubsection{FLT trigger}
 \label{subsubsec:fltcuts}
 \begin{itemize}
-	\item \textbf{FLT bit 40:} A total energy in the electromagnetic section of the calorimeter, $E_\text{EMC}^\text{CAL}$, exceeds 20 \GeV\, and \textcolor{blue}{track veto}.
-	\item \textbf{FLT bit 43:} A total transverse energy in the calorimeter, $E_\text{T}^\text{CAL}$, exceeds 20 \GeV\, and a good track is required.
-	\item \textbf{FLT bit 50:} A total energy, $E^\text{CAL}$, greater than $15\, \GeV$\, or $E_\text{EMC}^\text{CAL} > 10\, \GeV\,$ or $E_\text{EMC}^\text{BCAL} > 3.5\, \GeV$\, or $E_\text{EMC}^\text{RCAL} > 2\, \GeV$\, and $E_\text{T}^\text{CAL} > 1\, \GeV$\, and a good track is required.
+	\item \textbf{FLT bit 40:} The total energy in the electromagnetic section of the calorimeter, $E_\text{EMC}^\text{CAL}$, exceeds 20 \GeV\, and \textcolor{blue}{track veto}.
+	\item \textbf{FLT bit 43:} The total transverse energy in the calorimeter, $E_\text{T}^\text{CAL}$, exceeds 20 \GeV\, and at least one good track is required.
+	\item \textbf{FLT bit 50:} The total energy, $E^\text{CAL}$, greater than $15\, \GeV$\, or $E_\text{EMC}^\text{CAL} > 10\, \GeV\,$ or $E_\text{EMC}^\text{BCAL} > 3.5\, \GeV$\, or $E_\text{EMC}^\text{RCAL} > 2\, \GeV$\, and $E_\text{T}^\text{CAL} > 1\, \GeV$\, and a good track is required.
 \end{itemize}
 
 \subsubsection{SLT trigger}
@@ -50,7 +50,7 @@ The second-level trigger was used to suppress further the beam-related backgroun
 
 \subsubsection{TLT trigger}
 \label{subsubsec:tltcuts}
-The final stage of the trigger selection was based on the identification of the scattered DIS electron. The reduced read-out rate at the TLT allowed application of the complex reconstruction algorithms that were much closer related to those used in the off-line analysis. The TLT bit \textsf{DIS03} together with DST bit 12 were used in the selection chain and impose loose cuts summarised in the Table~\ref{tab:TLTDSTreq}.
+The final stage of the trigger selection was based on the identification of the scattered DIS electron. The reduced read-out rate at the TLT allowed application of the complex reconstruction algorithms that were much closer related to those used in the off-line analysis. The TLT bit \textsf{DIS03} together with DST bit 12 were used in the selection chain and impose the loose cuts summarised in the Table~\ref{tab:TLTDSTreq}.
 \begin{table}
 \centering
 \begin{tabular}{|c|c|}
@@ -70,9 +70,9 @@ After the trigger-based pre-selection a set of cuts is applied off-line to ensur
 
 \subsubsection{Phase space}
 \label{subsubsec:phasespace}
-The phase-space cuts are performed for selection of the kinematic region of the reaction in question. As was mentioned earlier, two variables completely determine the kinematics of deep inelastic scattering. In this analysis, photon virtuality \qsq~and inelasticity \y~were used.
+The phase-space cuts are performed for selection of the kinematic region of the reaction in question. As was mentioned earlier, two variables completely determine the kinematics of deep inelastic scattering. In this analysis, the boson virtuality \qsq~and inelasticity \y~were used.
 \begin{itemize}
-	\item \textbf{Photon virtuality}, $125 < \qsq_{DA} < 20000\;\GeV$;  deep inelastic scattering processes with large four-momentum transfer are selected.
+	\item \textbf{Photon virtuality}, $125 < \qsq_{DA} < 20000\;\GeV^2$;  deep inelastic scattering processes with large four-momentum transfer were selected.
 	\item \textbf{Inelasticity}, $0.2 < \y_{DA} < 0.6\;\GeV$; the lower cut was imposed to reject events with large hadronic activity in the forward direction for which hadronisation corrections were found to be inaccurate. The upper cut was applied to ensure reliability of the detector acceptance corrections.
 \end{itemize}
 
@@ -159,7 +159,7 @@ In order to identify jets, the \kt~clustering-algorithm in the longitudinally-in
 
 The phase space for jet production was limited by the following requirements:
 \begin{itemize}
-	\item \textbf{transverse energy} of the jets was required to be greater than 8~\GeV.
+	\item \textbf{transverse energy} of the jets in the Breit frame was required to be greater than 8~\GeV.
 	\item \textbf{pseudorapidity} of the jets had to be in region $-1<\etajetlab<2.5$.
 \end{itemize}
 The purity of the jet sample was enhanced by applying the following jet-cleaning cuts:
@@ -167,7 +167,7 @@ The purity of the jet sample was enhanced by applying the following jet-cleaning
 \begin{itemize}
 	\item good isolation of the electron candidate from hadronic jets was ensured by requiring the distance between electron and jet in the pseudorapidity-azimuth plane to be $\Delta R > 1$;
 	\item initial-state electron radiation hitting the RCAL was often reconstructed as a jet. Such events were removed from the sample if a jet with $\etjetb > 5\;\GeV$ and $\etajetlab < -1$ was identified;
-	\item jets with low transverse energy in the laboratory frame have large energy-scale uncertainty, therefore jets with $\etjetlab < 3\;\GeV$ were excluded.
+	\item jets with low transverse energy in the laboratory frame have large relative energy-scale uncertainty, therefore jets with $\etjetlab < 3\;\GeV$ were excluded.
 \end{itemize}
 
 \subsection{Final event sample}
