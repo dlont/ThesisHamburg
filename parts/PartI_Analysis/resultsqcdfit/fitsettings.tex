@@ -8,7 +8,7 @@ where $\sigma_{i,\text{uncor}}$ is an estimate of total uncorrelated uncertainty
 \end{equation}
 is the relative correlated systematic uncertainty quantifying the sensitivity of the measurement $i$ to the systematic source $\mu$. The statistical uncertainty is assumed to scale propotionaly to the square root of expected number of events. Corrected for bias from systematic shifts, the statistical uncertainty is equal to
 \begin{equation}
- \sigma_{\text{stat},i} = \delta_{\text{stat},i}^2m_i\left( t_i - \sum_\mu\gamma_{i,\mu}t_ib_\mu \right),
+ \sigma_{\text{stat},i} = \delta_{\text{stat},i}\cdot m_i\left( t_i - \sum_\mu\gamma_{i,\mu}t_ib_\mu \right),
 \end{equation}
 where $\delta_{\text{stat},i}$ is the relative statistical uncertainty. The difference between data and theoretical predictions is evaluated using the weighted squared norm, thus the so-called $\chi^2$-function used in the QCD fit  for statistically uncorrelated measurements is defined as:
 \begin{equation}
@@ -21,11 +21,11 @@ with $\delta_{i,\text{uncor}}$ --- relative uncorrelated systematic uncertainty.
 % \label{eq:chi2uncor}
 %\end{equation}
 \begin{align}
- \chi^2 &= \sum_{ij}{\left( m^i -\sum_{\mu}{\Gamma_\mu^i\left( m^i\right)b_\mu - t^i }\right) C^{-1}_{ij} \left( m^j -\sum_{\mu}{\Gamma_\mu^j\left( m^j\right)b_\mu - t^j }\right) }\notag\\
+ \chi^2 &= \sum_{ij}{\left( m^i -\sum_{\mu}{\Gamma_\mu^i\,b_\mu - t^i }\right) C^{-1}_{ij} \left( m^j -\sum_{\mu}{\Gamma_\mu^j\,b_\mu - t^j }\right) }\notag\\
                                            &+ \sum_{\mu}{b_\mu^2},
  \label{eq:chi2corr}
 \end{align}
-where the $C_{ij}$ is covariance matrix for the measured data points. It is equal to the sum of covariance matrices for statistical and uncorrelated systematic uncertainty components\footnote{The covariance matrix for uncorrelated uncertainties has diagonal form.} $C_{ij}=C_{ij}^{\text{stat.}}+C_{ij}^{\text{uncor.}}$. The $\Gamma_\mu^l$ is related to the relative correlated systematic uncertainties
+where the $C_{ij}$ is covariance matrix for the measured data points. It is equal to the sum of covariance matrices for statistical and uncorrelated systematic uncertainty components\footnote{The covariance matrix for uncorrelated uncertainties has diagonal form.} $C_{ij}=C_{ij}\left(t_i\right)=C_{ij}^{\text{stat.}}+C_{ij}^{\text{uncor.}}$. The $\Gamma_\mu^l$ is related to the relative correlated systematic uncertainties
 \begin{equation}
  \Gamma_{\mu}^i = \gamma_{\mu}^i \cdot t^i. 
 \end{equation}
@@ -44,8 +44,4 @@ The quality of the fit is assessed by the value of $\chi^2$-function in its mini
 \end{equation}
 is an indication of the good quality of the fit.
 
-In the QCD fit the predictions $\mathbf{t}\left( \mathbf{a},\asz\right)$ are usually treated as functions of the proton PDF parameters, $\mathbf{a}$,  and the strong coupling constant \asz. 
-
-
-
-These setting define the, so-called ``central-fit''. The value of the strong coupling determined with this setup is used as a reference for the studies of the sensitivity of the extracted \asz to the variation of the theory parameters that will be discussed in a section devoted to the treatment of systematic uncertainties (see Section~\ref{subsec:assystematics}).
+\textcolor{blue}{These setting define the, so-called ``central-fit''. The value of the strong coupling determined with this setup is used as a reference for the studies of the sensitivity of the extracted \asz to the variation of the theory parameters that will be discussed in a section devoted to the treatment of systematic uncertainties (see Section~\ref{subsec:assystematics}).}
