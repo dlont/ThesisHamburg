@@ -5,6 +5,31 @@ The minimisation of the $\chi^2$-function is performed employing the iterative \
  \item due to stochastic nature of the Monte Carlo approach for calculation of the phase space integrals, the $\chi^2$ minimisation procedure,  in general, may not converge;
  \item the computing time for a single iteration (i.e. evaluation of the $\chi^2$ function for a single fit parameter value) is prohibitively long.
 \end{itemize}
-Therefore, in the iterative fit procedure the \fastnlo framework for the recalculations of the NLO predictions for the jet production have been used. A brief summary of the \fastnlo approach is provided in the next section. 
+Therefore, in the iterative fit procedure the \fastnlo framework for the recalculations of the NLO predictions for the jet production have been used. 
 
-\textcolor{blue}{The uncertainties due to experimental precision of the data are propagated to the determined parameters by means of ``Hesse''-method implemented in \minuit. The other details concerning the $\chi^2$-function definition can be found in the \herafitter manual~\cite{herafitter:2014:manual}.} 
+The \fastnlo~\cite{thesis:wobisch:2001,Kluge:2006,Wobisch:2011,Britzger:2012} approach is a based on the idea of calculating the LO and NLO weights, $\mathcal{C}_{n,a,i,j}$, which are independent of the \as and PDFs, on a 2d-grid in convolution variable $x$ and factorisation scale $\mu_F$. Thus, the cross section can be obtained from a simple sum:
+\begin{equation}
+\sigma = \sum_{n,a,i,j}{ \as^n\left( \mu_{F,j} \right) F_a\left( x_i, \mu_{F,j}\right)\mathcal{C}_{n,a,i,j} },
+\end{equation}
+where the magnitude of the strong coupling and PDFs can be chosen independently, without repeating the time-consuming MC integration. Because certain parton configurations lead to the identical final-state, only weights for the linear combinations of PDFs $a=\left( \Delta, \Sigma, g\right) $ are stored, where $\Delta=\sum_a{e_q^2\left(q_a\left(x\right)+\bar{q}_a\left(x\right)\right)}, \Sigma=\sum_a{q_a\left(x\right)+\bar{q}_a\left(x\right)}$ and $g=g\left(x\right)$ is the gluon PDF. The weights $\mathcal{C}_{n,a,i,j}$ are organised in form of a table and can be effectively processed leading to the jet cross sections recalculation time of the order $\mathcal{O}\left( ms\right)$ sufficient for the usage in the fitting procedure.
+
+The predictions for the inclusive-jet cross sections were calculated using the \nlojet program with the \fastnlo interface. The setting for the NLO pQCD calculations were described in detail in Section~\ref{sec:nlopredictions} and are briefly summarised in the Table~\ref{tab:nlosettings}.
+\begin{table}[h]
+\centering
+\begin{tabular}{l|c}
+Parameter  & Default setup \\ 
+\hline \hline proton PDF set & \herapdf1.5 (NLO) \\
+\hline renormaliastion scale & $\mu_R^2=\qsq + \etjetb^2$ \\ 
+\hline factorisation scale          & $\mu_F^2=\qsq $ \\ 
+\hline number of active flavours    & $n_f = 5 $ \\ 
+\end{tabular} 
+\caption{Summary of the theory settings used for the calculations for the \as determination.}
+\label{tab:nlosettings}
+\end{table}
+Unless otherwise stated, these setting define the, so-called ``central-fit''. The value of the strong coupling determined with this setup is used as a reference for the studies of the sensitivity of the extracted \asz to the variation of the theory parameters that will be discussed in a section devoted to the treatment of systematic uncertainties (see Section~\ref{subsec:assystematics}).
+
+Withing the \herafitter program, the evolution of the parton densities according to the DGLAP-equations is performed using the \qcdnum code~\cite{Botje:2010ay}. In the \qcdnum approach the equations are solved numerically on a $n\times m$ lattice in $x$ and $\mu$ variables. The method is based on numerical spline interpolation of the parton densities on equidistant logarithmic grid in $x$ and logarithmic grid\footnote{(Non-)equidistant $\mu^2$-grid can be used as an option.} in $\mu^2$. Thus, the integral convolution is represented as a finite sum and $t \equiv \ln{\mu^2}$-integration is formulated as an interative process. The analytic form of the DGLAP-equations and specific choice of spline-type were successfully exploited to recast the continuous evolution into linear problem that admits very efficient numerical solution.
+
+The NLO predictions were corrected for electroweak and non-perturbative effects using the MC models as described in Sections~\ref{electroweak hadronisation}.
+
+\textcolor{blue}{The uncertainties due to experimental precision of the data are propagated to the determined parameters by means of ``Hesse''-method implemented in \minuit. The other details concerning the $\chi^2$-function definition can be found in the \herafitter manual~\cite{herafitter:2014:manual}.}
