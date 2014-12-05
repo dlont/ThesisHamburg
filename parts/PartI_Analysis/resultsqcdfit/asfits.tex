@@ -3,6 +3,7 @@ As a first step \asz is determined in a fit to individual measurements of single
 The combined \asz-value determined from a simultaneous fit to all measured data point is
 \begin{equation}
  \asz = 0.1195 \pm 0.0029 \left( \text{exp.} \right) %^{+0.0079}_{-0.0061} \left( \text{scales} \right) ^{+0.0028}_{-0.0010} \left( \text{pdf}\right)
+ \label{eq:assingledifval}
 \end{equation}
 and is also demonstrated in the Figure~\ref{fig:alphassinglediffindividual}. The quality of combined fit is characterised by $\chi^2/N_\text{DF}=1.79/5$ which is below 1 and may indicate an overestimation of the experimental uncertainties.
 
@@ -15,20 +16,21 @@ and is also demonstrated in the Figure~\ref{fig:alphassinglediffindividual}. The
  \label{fig:alphassinglediffindividual}
 \end{figure}
 
+The energy-scale dependence of the strong coupling was investigated. The \as-values were determined in the QCD fit to measured \dsdetjetb parametrising the predictions for individual \dsdetjetb data points in terms of $\as\left(\left<\etjetb\right>\right)$ (see Eq.~\eqref{eq:fitnloqcdpredictions}), where $\left<\etjetb\right>$ is the average \etjetb of the data in particular bin. The extracted values of \as are compared to the renormalisation-group equation QCD predictions~\cite{Gross:1973id,Politzer:1973fx,Gross:1973ju,Politzer:1974fr}.
 
-\begin{figure}[th!]
-\centering
-\includegraphics[width=0.99\linewidth,trim={0 70 0 0},clip]{./Figures/alphas/alphas_systematics_sd}
-\caption{The results of the strong coupling $\asz$ extraction. Summary of individual systematic variations (see text).}
-\label{fig:alphas_systematics}
+\begin{figure}
+ \centering
+ \includegraphics[width=\textwidth,bb=0 0 796 772]{Figures/alphas/alphas_running.png}
+ % alphas_running.png: 796x772 pixel, 72dpi, 28.08x27.23 cm, bb=0 0 796 772
+ \caption{The \as values determined in each $\left<\etjetb\right>$ from the analysis of the measured \dsdetjetb cross section. The error bars represent the total experimental uncertainty. The solid-line curve represents the renormalisation-group prediction at two loops approximation obtained from the correponding \asz value determined in this analysis (Eq.~\eqref{eq:assingledifval}).}
+ \label{fig:asrunning}
 \end{figure}
 
 
-\begin{align}
-	125 < \qsq < 250\;\GeV^2:\qquad \asz &= 0.1221 \pm 0.0027 \left( \text{exp.} \right) ^{+0.0033}_{-0.0044} \left( \text{th.} \right) \notag \\
-	250 < \qsq < 500\;\GeV^2:\qquad \asz &= 0.1221 \pm 0.0027 \left( \text{exp.} \right) ^{+0.0033}_{-0.0044} \left( \text{th.} \right) \notag \\
-	500 < \qsq < 1000\;\GeV^2:\qquad \asz &= 0.1221 \pm 0.0027 \left( \text{exp.} \right) ^{+0.0033}_{-0.0044} \left( \text{th.} \right) \notag \\
-	1000 < \qsq < 2000\;\GeV^2:\qquad \asz &= 0.1221 \pm 0.0027 \left( \text{exp.} \right) ^{+0.0033}_{-0.0044} \left( \text{th.} \right) \notag \\
-	2000 < \qsq < 5000\;\GeV^2:\qquad \asz &= 0.1221 \pm 0.0027 \left( \text{exp.} \right) ^{+0.0033}_{-0.0044} \left( \text{th.} \right) \notag \\
-	5000 < \qsq < 20000\;\GeV^2:\qquad \asz &= 0.1221 \pm 0.0027 \left( \text{exp.} \right) ^{+0.0033}_{-0.0044} \left( \text{th.} \right) 	
-\end{align}
+
+% \begin{figure}[th!]
+% \centering
+% \includegraphics[width=0.99\linewidth,trim={0 70 0 0},clip]{./Figures/alphas/alphas_systematics_sd}
+% \caption{The results of the strong coupling $\asz$ extraction. Summary of individual systematic variations (see text).}
+% \label{fig:alphas_systematics}
+% \end{figure}
