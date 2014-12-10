@@ -1,0 +1,50 @@
+Additional sources of uncertainty on \as arise from limited precision of theoretical calculations. In this section the results of the study of sensitivity of the \asz-fits to external theoretical assumptions is presented. In general, uncertainties attributed to assumptions are difficult to quantify or even impossible to define due to their specific nature. Approaches, used for the treatment of particular error sources, are, typically, tailored for each problem and statistical interpretation of the stability of the results if often doubtful. In this section the errors due to truncation of perturbative series, limited precision of the proton PDFs and hadronisation corrections were investigated and described in detail.
+
+\subsubsection{Uncertainties due missing higher orders}
+\label{subsec:asscalevar}
+Natural approach that can be used for estimation of the uncertainties attributed to theoretical assumptions is to repeat the parameter determination under different assumptions and treat the difference between the results as as uncertainty on the extracted parameter value. If the value of \asz obtained under different theoretical assumption is denoted by $\alpha_s^{\ast}$ and the central value is $\alpha_s^0$, then the uncertainty is:
+\begin{equation}
+ \Delta\alpha_s = \alpha_s^{\ast} - \alpha_s^0.
+\end{equation}
+Such an approach is called 'offset method'~\cite{amanda}. In principle, it takes into account non-linear effects in the error propagation. In case, when underlying assumption can be parametrised by a single continuous parameter, this method can be used for linear error propagation employing numerical approximation for the derivative:
+\begin{equation}
+ \frac{\partial \as}{ \partial a} \approx \frac{\Delta\alpha_s}{\Delta a},
+\end{equation}
+where $\Delta a$ is an infinitesimal change of the parameter in question.
+
+By default, the offset method was used in this analysis for the determination of the uncertainty attributed to the truncation of the perturbation series for the jet cross sections. As it was described in Chapter~\ref{ch:theory} the size of the missing terms can be estimated by varying the renormalisation and factorisation scales. For this purpose the \asz-fit were repeated using theoretical predictions evaluated with modified definition of the renormalisation and factorisation scales. Commonly accepted definition of '1$\sigma$ confidence interval' for scale variation uncertainty~\cite{soper:1997} was adopted in this work. Two variants of the scale variation were considered:
+\begin{itemize}
+ \item \textbf{Independent variation of $\mu_R$ and $\mu_F$}. To study the stability of the fit with respect to scale variations, the theoretical predictions for the double-differential jet cross sections were recalculated with the scaled $\mu_R$ and $\mu_F$ parameters:
+\begin{align}
+ \mu_R \rightarrow 2\mu_R;&\qquad \mu_R \rightarrow 1/2\mu_R;\\
+ \mu_F \rightarrow 2\mu_F;&\qquad \mu_F \rightarrow 1/2\mu_F;
+\end{align}
+performing each variation one at a time. In general, the fits were characterised by larger value of $\chi^2/N_\text{DF}$. Only the fit with $\mu_F \rightarrow 2\mu_F$ had smaller value of $\chi^2/N_\text{DF}$ than the central \asz-fit. The resulting variation of \asz was:
+\begin{equation}
+ \asz = 0.1218\;^{+0.0057}_{-0.0050}\left(\mu_R\right)\;^{+0.0003}_{-0.0003}\left(\mu_F\right)
+\end{equation}
+\item \textbf{Simultaneous variation of $\mu_R$ and $\mu_F$}. Because the analytic expressions for the renormalisation and factorisation scales are related
+\begin{equation}
+ \mu_F = \lim_{\etjetb \rightarrow 0} \mu_R,
+\end{equation}
+it is natural to vary both scales up and down simultaneously. The obtained variations are:
+\begin{equation}
+ \asz = 0.1218\;^{+0.0065}_{-0.0053}\left(\text{scales}\right)
+\end{equation}
+Such fit variants resulted in more conservative estimate of the uncertainty when compared to the combined error obtained from independent variations. 
+\end{itemize}
+It can be seen that the fits are much more sensitive to the renormalisation scale variation and result in asymmetric uncertainty on \asz value. The comparison of the fit results for different scale variations is illustrated in Figure~\ref{fig:asthunc_dd} and denoted as $\delta_1$.
+
+\subsubsection{Sensitivity to the pPDF sets}
+\label{subsec:aspdfassump}
+
+\subsubsection{Sensitivity to the \asz Assumption}
+\label{subsec:asassump}
+
+\begin{figure}
+ \centering
+ \includegraphics[width=\textwidth,bb=0 0 1796 572,trim=30 0 135 0,clip]{Figures/alphas/alphas_systematics_dd}
+ % alphas_systematics.png: 1796x572 pixel, 72dpi, 63.36x20.18 cm, bb=0 0 1796 572
+ \caption{The results of \asz extraction from double-differential cross sections. The individual systematic variations are combined into groups $\delta_1-\delta_5$ (see text).}
+ \label{fig:asthunc_dd}
+\end{figure}
