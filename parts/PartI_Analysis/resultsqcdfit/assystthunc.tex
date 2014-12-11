@@ -35,16 +35,59 @@ Such fit variants resulted in more conservative estimate of the uncertainty when
 \end{itemize}
 It can be seen that the fits are much more sensitive to the renormalisation scale variation and result in asymmetric uncertainty on \asz value. The comparison of the fit results for different scale variations is illustrated in Figure~\ref{fig:asthunc_dd} and denoted as $\delta_1$.
 
+Other other approaches for the treatment of the scale variation uncertainty were investigated. As an alternative, theoretical uncertainties were included into the covariance matrix assuming that errors attributed to the scale variations are completely uncorrelated across the measurements points. In this case the total error attributed to the theoretical and experimental uncertainties was propagated to the uncertainty on \asz value using the Hesse-method. In order to determine the effect of the theoretical component, the uncertainty from the scale variations was calculated from the total $\Delta_\text{tot}\as$ error according to:
+\begin{equation}
+ \Delta_\text{scales}\as = \sqrt{\left(\Delta_\text{tot}\as\right)^2 - \left(\Delta_\text{exp}\as\right)^2}
+\end{equation}
+Besides that, another approach was tested. The uncertainties due to missing higher-orders contribution were included into the $\chi^2$ using the nuisance parameters, similar to jet-energy scale or luminosity uncertainty. In this case the systematic shifts attributed to the theoretical uncertainty are treated as correlated across different bins and propagated to the result using the Hesse-method. Fits with Hesse-treatment of the scale variation uncertainties resulted in substantial reduction of \asz error, when compared to the offset method. The comparison of different approaches is provided in Table~\ref{tab:scaleuncvariants}.
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|}
+ \hline
+ Treatment approach & $\Delta\as$ \\
+ \hline
+ \hline
+  Offset & $\phantom{x}^{+0.0065}_{-0.0053}$\\
+  Hesse (nuissance) & 0.0027 \\
+  Hesse (uncorrelated) & 0.0015 \\
+ \hline
+\end{tabular}
+\caption{Comparison of the uncertainty on extracted \asz-value due to missing higher oreders obtained using different error treatment approaches. The uncertainties due to renormalisation and factorisation scale variations are combined in a single contribution.}
+\label{tab:scaleuncvariants}
+\end{table}
+The overall reduction of the \asz-value uncertainty can be expained as follows. If one interpers the simultaneous least-squares fit to all measured points of the double-differential cross sections as the averaging procedure for the \asz values from individual measurements, then the offset method would correspond to the averaging of \asz-values determined with the scaled definition for the renormalisation and factorisation scales and assuming equal weight for every extraction. On the other hand, in Hesse-approach, the extractions characterised by smaller theoretical uncertainty acquire larger weight in the averaging procedure and therefore the uncertainty of the average \asz is smaller. Although, theoretically, nuisance-parameters and covariance matrix approches must be equivalent, the former method is conceptually  
+
+In addition, the fits with alternative definition of the renormalisation and factorisation scales were performed. Scale choices such as $\mu_R=\etjetb$, $\mu_R=Q$ and $\mu_F=\etjetb$, $\mu_F=\sqrt{\qsq+\etjetb^2}$ were investigated. In general, alternative fits had comparable $\chi^2/N_\text{DF}$, but resulted in lower value of \asz. Only the fit with $\mu_R=\mu_F=\sqrt{\qsq+\etjetb^2}$ gave rise to somewhat larger value on the strong coupling. The discrepancy between the outcome of different fit variants was smaller than the scale variation uncetainty estimated unsing the offset-method.
+
+
 \subsubsection{Sensitivity to the pPDF sets}
 \label{subsec:aspdfassump}
+
+\begin{figure}[t]
+ \centering
+ \includegraphics[width=\textwidth]{Figures/alphas/PDFsets_chi2_scan.png}
+ % PDFsets_chi2_scan.: 1418x772 pixel, 72dpi, 50.02x27.23 cm, bb=0 0 1418 772
+ \caption{YO}
+ \label{fig:chi2scanpdf}
+\end{figure}
 
 \subsubsection{Sensitivity to the \asz Assumption}
 \label{subsec:asassump}
 
-\begin{figure}
+\begin{figure}[t]
  \centering
- \includegraphics[width=\textwidth,bb=0 0 1796 572,trim=30 0 135 0,clip]{Figures/alphas/alphas_systematics_dd}
- % alphas_systematics.png: 1796x572 pixel, 72dpi, 63.36x20.18 cm, bb=0 0 1796 572
+ \includegraphics[width=\textwidth]{Figures/alphas/alphas_asPDF_scan.png}
+ % PDFsets_chi2_scan.: 1418x772 pixel, 72dpi, 50.02x27.23 cm, bb=0 0 1418 772
+ \caption{YO}
+ \label{fig:chi2scanpdf}
+\end{figure}
+
+\begin{landscape}
+\begin{figure}[p]
+ \centering
  \caption{The results of \asz extraction from double-differential cross sections. The individual systematic variations are combined into groups $\delta_1-\delta_5$ (see text).}
  \label{fig:asthunc_dd}
+ \includegraphics[width=1.5\textwidth,trim=30 0 135 0,clip,angle=180]{Figures/alphas/alphas_systematics_dd}
+ % alphas_systematics.png: 1796x572 pixel, 72dpi, 63.36x20.18 cm, bb=0 0 1796 572
 \end{figure}
+\end{landscape}
