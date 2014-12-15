@@ -37,11 +37,11 @@
 % and the equation numbers are on the right side.
 \usepackage{geometry}
 \usepackage{extsizes}%
-\usepackage{fourier}%
+% \usepackage{fourier}%
 %
-\usepackage{pbox}
+% \usepackage{pbox}
 \usepackage{nicefrac}%
-\usepackage{xfrac}%
+% \usepackage{xfrac}%
 %
 %\usepackage{axodraw4j}%
 %
@@ -68,6 +68,7 @@
 \usepackage{amssymb}%
 \usepackage{graphicx}%
 \usepackage{wrapfig}
+\usepackage{xcolor}
 %
 %\usepackage[multiple]{footmisc}
 \usepackage{cite}
@@ -86,17 +87,17 @@
 %\usepackage{zeusdet_hepunits}
 %\usepackage{zeusdet_units}
 
-\usepackage[linktoc=all]{hyperref}
-\hypersetup{
-    hyperfootnotes=false,
-    colorlinks,
-    citecolor=black,
-    filecolor=black,
-    linkcolor=black,
-    urlcolor=black,
-		linkbordercolor	={1 0 0},
-    citebordercolor	={0 1 0}
-}
+% \usepackage[linktoc=all]{hyperref}
+% \hypersetup{
+%     hyperfootnotes=false,
+%     colorlinks,
+%     citecolor=black,
+%     filecolor=black,
+%     linkcolor=black,
+%     urlcolor=black,
+% 		linkbordercolor	={1 0 0},
+%     citebordercolor	={0 1 0}
+% }
 
 %\usepackage[Sonny]{fncychap}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -185,25 +186,25 @@
 %%							             Title page                                                                    %%
 %%																																																					 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\thispagestyle{empty} % Removes page numbers
-\input{parts//coverpage}
-\titlePAGE % This command includes the title page
-\newpage
-\titelGUTACHTERS
-\newpage
+% \thispagestyle{empty} % Removes page numbers
+% \input{parts//coverpage}
+% \titlePAGE % This command includes the title page
+% \newpage
+% \titelGUTACHTERS
+% \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					 %%
 %%							             Abstract                                                                    %%
 %%																																																					 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textbf{Abstract}
-\end{center}
-\input{parts//Abstract}
-\hrule
-\begin{center}
-\textbf{Kurzfassung}
-\end{center}
+% \begin{center}
+% \textbf{Abstract}
+% \end{center}
+% \input{parts//Abstract}
+% \hrule
+% \begin{center}
+% \textbf{Kurzfassung}
+% \end{center}
 
 \tableofcontents
 %\listoffigures
@@ -224,63 +225,63 @@
 %%							Chapter 0. Introduction                                                             %%
 %%																																																					 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Introduction}
-\label{ch:intro}
-%\input{parts//PartI_Analysis//Intro}
+% \chapter{Introduction}
+% \label{ch:intro}
+% \input{parts//PartI_Analysis//Intro}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					 %%
 %%							Chapter 1. Theoretical Framework                                               %%
 %%																																																					 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Theoretical Framework}
-\label{ch:theory}
-%\input{parts//PartI_Analysis//TheoreticalFramework}
+% \chapter{Theoretical Framework}
+% \label{ch:theory}
+% \input{parts//PartI_Analysis//TheoreticalFramework}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
 %%							Chapter 2. Experimental setup                                                         %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Experimental Setup}
-\label{ch:expsetup}
-%\input{parts//PartI_Analysis//ExperimentalSetup}
+% \chapter{Experimental Setup}
+% \label{ch:expsetup}
+% \input{parts//PartI_Analysis//ExperimentalSetup}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
 %%							Chapter 3. Event Selection and Reconstruction                                   %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Event Selection and Reconstruction}
-\label{ch:selectionreco}
-%\input{parts//PartI_Analysis//SelectionReconstruction}
+% \chapter{Event Selection and Reconstruction}
+% \label{ch:selectionreco}
+% \input{parts//PartI_Analysis//SelectionReconstruction}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
 %%							Chapter 4. Calibrations & Corrections                                   %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Calibrations and Corrections}
-\label{ch:calibcorr}
-%\input{parts//PartI_Analysis//CalibrationsCorrections}
+% \chapter{Calibrations and Corrections}
+% \label{ch:calibcorr}
+% \input{parts//PartI_Analysis//CalibrationsCorrections}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
 %%							Chapter 5. Data Unfolding                                                               %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Cross-section determination}
-\label{ch:unfolding}
-%\input{parts//PartI_Analysis//Unfolding}
+% \chapter{Cross-section determination}
+% \label{ch:unfolding}
+% \input{parts//PartI_Analysis//Unfolding}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
 %%							Chapter 6. Results. Inclusive-Jet cross sections                                                                   %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Results. Inclusive-Jet cross sections}
-\label{ch:resultscs}
-%\input{parts//PartI_Analysis//Results}
+% \chapter{Results. Inclusive-Jet cross sections}
+% \label{ch:resultscs}
+% \input{parts//PartI_Analysis//Results}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -296,10 +297,10 @@
 %%							Chapter 8. Summary and Outlook                                                      %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter*{Summary and Outlook}
-\addcontentsline{toc}{chapter}{Summary and Outlook}
-\label{ch:summary}
-\include{parts//PartI_Analysis//JetsSummary}
+% \chapter*{Summary and Outlook}
+% \addcontentsline{toc}{chapter}{Summary and Outlook}
+% \label{ch:summary}
+% \include{parts//PartI_Analysis//JetsSummary}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -317,24 +318,24 @@
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\backmatter \appendix
-\chapter{Cross section tables}
-\label{ch:cstables}
-\input{parts//Appendix//cset}
-\input{parts//Appendix//cseta}
-\input{parts//Appendix//csq2}
-\input{parts//Appendix//csetinq2bins}
-\input{parts//Appendix//asrunning}
+% \backmatter \appendix
+% \chapter{Cross section tables}
+% \label{ch:cstables}
+% \input{parts//Appendix//cset}
+% \input{parts//Appendix//cseta}
+% \input{parts//Appendix//csq2}
+% \input{parts//Appendix//csetinq2bins}
+%  \input{parts/Appendix/asrunning.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
 %%							BIBLIOGRAPHY                     															                           %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliographystyle{bibliography//BiBTeX//bst//l4z_jhep3}
-\bibliography{bibliography//bibliography,bibliography//BiBTeX//bib//l4z_articles,bibliography//BiBTeX//bib//l4z_books,bibliography//BiBTeX//bib//l4z_misc,bibliography//BiBTeX//bib//l4z_preprints,bibliography//BiBTeX//bib//l4z_zeus,bibliography//BiBTeX//bib//l4z_h1,bibliography//BiBTeX//bib//l4z_conferences}
-
-\newpage
-\chapter*{Acknowledgements}
-\include{parts//Acknowledgements}
+% \bibliographystyle{bibliography//BiBTeX//bst//l4z_jhep3}
+% \bibliography{bibliography//bibliography,bibliography//BiBTeX//bib//l4z_articles,bibliography//BiBTeX//bib//l4z_books,bibliography//BiBTeX//bib//l4z_misc,bibliography//BiBTeX//bib//l4z_preprints,bibliography//BiBTeX//bib//l4z_zeus,bibliography//BiBTeX//bib//l4z_h1,bibliography//BiBTeX//bib//l4z_conferences}
+% 
+% \newpage
+% \chapter*{Acknowledgements}
+% \include{parts//Acknowledgements}
 \end{document}
