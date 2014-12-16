@@ -66,7 +66,31 @@ The fits with alternative definitions of the renormalisation and factorisation s
 
 \subsubsection{Sensitivity to the pPDF sets}
 \label{subsec:aspdfassump}
-Because the proton PDFs have limited precision the stability of the \asz-fits with respect to pPDF assumption have to be investigated. 
+Because the proton PDFs have limited precision the stability of the \asz-fits with respect to PDF assumption has to be investigated. Several effects contributing to the proton PDF uncertainty can be identified. All of them can be roughly attributed to one of the following categories:
+\begin{itemize}
+ \item \textbf{Limited PDFs precision due data uncertainty.} Because PDFs are extracted from the QCD-fits to the the data, the uncertainty on the measurements propagates to the error on the proton PDFs, which in turn affects the precision of the \asz determination.
+ \item \textbf{QCD-fit setup differences.} As it was explained above, simultaneous PDF-fit of all individual parton spicies is an ill-defined problem and additional assumptions has to be imposed in order to obtain reasonable fit results. However, the choice of the data and fit settings is usually ambigous. Different fitting groups, typically, use partially different datasets to constrain PDF parameters. Furthermore, they can have different choices of PDF parametertrisation at the starting evolution scale, distinct approaches to the treatment of heavy quarks, alternative $\chi^2$-function and/or error definitions, etc. This leads to different results for PDFs obtained by different groups.
+ \item \textbf{PDF and \asz correlation.} In the most of the high-energy processes the strong coupling and the proton PDFs are coupled, i.e. the predictions are proportional to the product $\propto \as\cdot f_i\left(x,\mu\right)$. In particular, the gluon component is always accompanied by \as in the matrix elements, therefore, a value of \asz has to be assumed in a PDF-fit, which introduces an implicit dependence of the results on the \asz. In order to enable propagation of this type of uncertainty into pQCD predictions, different PDF fitting groups, provide series of PDFs, extracted assuming different values of \asz.
+\end{itemize}
+
+\subsubsection{PDF uncertainty propagation}
+In the HERAPDF1.5 set, that was used as a default in the calculations of the inclusive-jet cross sections, 34 systematic variations performed for estimation of the PDF uncertainties are classified into several groups. The uncertainty due to the experimental precions of the data in propagated to the error on PDF parameters and is represented in the covariance matarix form. In order to simplify propagation of the uncertainties attributed to the proton PDF parameters, the matrix is transformed to diagonal form with eigenvectors representing the uncertainty on the corresponding linear combinations of the PDF parameters. $1\sigma$ parameter variation along the eigenvectors translates into the 68\% confidence interval for the pQCD predictions according to the formula~\cite{Campbell:2006wx}
+\begin{equation}
+ \delta^{\pm}\as = \sqrt{\sum_{i=1}^{N_{eig}}{\left(\mbox{$\delta_i^{\pm}\as$}\right)^2}},
+ \label{eq:mastereq}
+\end{equation}
+where the positive (negative) uncertainty, $\delta^{\pm}\as$, is calculated from the quadratic sum of positive (negative) variations of the result with respect to those based on central PDF, $\mbox{$\delta_i^{\pm}$}^2$. The summation runs over eigenvectors, number of which is equal to the number of free PDF parameters\footnote{In total, the HERAPDF1.5 set provides 20 eigenvector variations.}. In general, PDF eigenvectors variation results in asymetric uncertainty on the \as value. In order to obtain a symmetric estimate of the \as-error $\delta\as$ was defined as:
+\begin{equation}
+ \delta\as = \sqrt{\sum_{i=1}^{N_{eig}}{\frac{\left(\mbox{$\delta_i^{+}\as$} - \mbox{$\delta_i^{-}\as$}\right)^2}{2}}}.
+ \label{eq:mastereqsym}
+\end{equation}
+It provide a reasonable average of the assymetric uncertainties and thus will be used as a final value. In order to estimate the uncertainty on \asz, the \as-fits were repeated for every individual up and down variations of the PDF eigenvectors and compared to the central value~\ref{eq:asdoubledifval}. The results of these fits are summarised in Figure~\ref{fig:asthunc_dd} and denoted by $\delta_2$.
+ 
+The model uncertainty on the PDF, attributed to the variation of the assumtions such as fraction of the strange sea contribution, mass of the charm and bottom quarks, etc. was treated using the offset approach. The detailed description of the nature of individual variations are described in~\cite{herapdf1.5}. The uncertainty on \asz was estimeted  by taking the difference between the variation and the central value, and then adding in quadrature all positive (negative) differences to obtain the positive (negative) model error (see Eq.~\eqref{eq:mastereq}). Corresponding results of the \as-fits are combined into $\delta_3$ group in Figure~\ref{fig:asthunc_dd}. 
+
+Variations of the functional form of the PDF parameterisation (see~\cite{herapdf1.5}) were also treated unsing the offset-method. To form the parametrisation envelope, the largest positive (negative) difference between the variation and the central value is taken as the positive (negative) parametrisation error and added in quadrature to the model errors. The outcome of the variations are illustrated in Figure~\ref{fig:asthunc_dd} as $\delta_4$.
+
+The uncertainty attributed to the assumption imposed on the magnitude of the strong coupling in the PDF extraction procedure was estimated from two PDF sets with \asz=0.1156 and \asz=0.1196. The difference between the two results, (see Figure\ref{fig:asthunc_dd}~($\delta_5$)), was scaled to the current uncertainty on the world average~\cite{Bethke:2012jm}. 
 
 \begin{figure}[t]
  \centering
