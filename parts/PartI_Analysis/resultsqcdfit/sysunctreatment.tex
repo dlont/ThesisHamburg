@@ -9,11 +9,11 @@ The detailed description of systematic uncertainties on the measured jet cross s
  \begin{itemize}
  \item the model uncertainty was treated as uncorrelated. Such an approach is supported by the observation that the individual systematic variations performed for this source (see Chapter~\ref{ch:resultscs}) do not result in correlated deviation of the extracted cross sections with respect to the central value.
  \item the normalisation uncertainty due to simulation of the track-veto efficiency in MC $\delta_\text{TV}$ was treated as uncorrelated according to the same argument;
- \item although, conceptually, the uncertainty due to absolute electron energy scale $\delta_\text{EES}$ has to be treated in the same way as jet-energy scale error, $\delta_\text{EES}$ was assumed to be uncorrelated across measurement bins;
+ \item conceptually, the uncertainty due to absolute electron energy scale $\delta_\text{EES}$ has to be treated in the same way as jet-energy scale error. However, the contribution of $\delta_\text{EES}$ to the total experimental uncertainty is typicaly below 1\%, and the effect from correlations is very small and can be neglected;
  \item the uncertainty due to electron identification $\delta_\text{eID}$ and due to $\left(E-p_Z\right)$-cut variation $\delta_\text{E-Pz}$ were also assumed to be uncorrelated;
  \end{itemize}
 \end{itemize}
-The uncertainties from uncorrelated sources except for statistical error were added in quadrature and included as a single uncorrelated source into the $\chi^2$-function. The experimental errors on the measured jet cross sections were propagated to \asz values by means of ``Hesse''-method implemented in \minuit. A study the impact of experimental precion on \asz extraction is explained in Section~\ref{subsec:assysunc}.
+The uncertainties from uncorrelated sources except for statistical error were added in quadrature and included as a single uncorrelated source into the $\chi^2$-function. All experimental errors on the measured jet cross sections were propagated to \asz values by means of ``Hesse''-method implemented in \minuit. The study of the effect of experimental precion of the data on \asz extraction is summarised in Section~\ref{subsec:assysunc}.
 \begin{table}[t]
 \centering
 \begin{tabular}{|l|c|c|}
@@ -45,4 +45,4 @@ parton density function & \multicolumn{2}{|c|}{PDF error analysis} \\
 \label{tab:correlsyst} 
 \end{table}
 
-In this analysis theoretical uncertainties related to the variation of renormalisation and factorisation scales were treated as correlated. The detailed discussion of the effect of different approaches for the treatment of scale variations is presented in Section~\ref{} together with discussion of the sensitivity of the fit procedure to \asz and PDF assumptions. Table~\ref{tab:correlsyst} contains an outline of systematic uncertainty treatment.
+Besides experimental uncertainties, the stability of the fit with respect to theoretical assumtions has to be investigated. In this analysis theoretical uncertainties related to the variation of renormalisation and factorisation scales were treated as correlated. The detailed discussion of the effect of different approaches for the treatment of scale variations is presented in Section~\ref{} together with discussion of the sensitivity of the fit procedure to PDF parametrisation and implicit \asz assumptions. Table~\ref{tab:correlsyst} contains an outline of systematic uncertainty treatment.
