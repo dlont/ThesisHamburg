@@ -35,11 +35,11 @@ Such fit variants resulted in more conservative estimate of the uncertainty when
 \end{itemize}
 It can be seen that the fits are much more sensitive to the renormalisation scale variation and result in asymmetric uncertainty on \asz value. The comparison of the fit results for different scale variations is illustrated in Figure~\ref{fig:asthunc_dd} and denoted as $\delta_1$.
 
-Other other approaches for the treatment of the scale variation uncertainty were investigated. As an alternative, theoretical uncertainties were included into the covariance matrix assuming that errors attributed to the scale variations are completely uncorrelated across the measurements points. In this case the total error attributed to the theoretical and experimental uncertainties was propagated to the uncertainty on \asz value using the Hesse-method. In order to determine the effect of the theoretical component, the uncertainty from the scale variations was calculated from the total $\Delta_\text{tot}\as$ error according to:
+Other other approaches for the treatment of the scale variation uncertainty were also investigated. As an alternative, theoretical uncertainties were included into the covariance matrix assuming that errors attributed to the scale variations are completely uncorrelated across the measurements points. In this case the total error attributed to the theoretical and experimental uncertainties was propagated to the uncertainty on \asz value using the Hesse-method. In order to determine the effect of the theoretical component, the uncertainty from the scale variations was calculated from the total $\Delta_\text{tot}\as$ error according to:
 \begin{equation}
  \Delta_\text{scales}\as = \sqrt{\left(\Delta_\text{tot}\as\right)^2 - \left(\Delta_\text{exp}\as\right)^2}
 \end{equation}
-Besides that, another approach was tested. The uncertainties due to missing higher-orders contribution were included into the $\chi^2$ using the nuisance parameters, similar to jet-energy scale or luminosity uncertainty. In this case the systematic shifts attributed to the theoretical uncertainty are treated as correlated across different bins and propagated to the result using the Hesse-method. Overall, fits with Hesse-treatment of the scale variation uncertainties resulted in substantial reduction of \asz error, when compared to the offset method. The comparison of different approaches is provided in Table~\ref{tab:scaleuncvariants}.
+Apart from that, another approach was tested. The uncertainties due to missing higher-orders contribution were included into the $\chi^2$ using the nuisance parameters, similar to jet-energy scale or luminosity uncertainty. In this case the systematic shifts attributed to the theoretical uncertainty are treated as correlated across different bins and propagated to the result using the Hesse-method. Overall, fits with Hesse-treatment of the scale variation uncertainties resulted in substantial reduction of \asz error, when compared to the offset method. The comparison of different approaches is provided in Table~\ref{tab:scaleuncvariants}.
 \begin{table}[h]
 \centering
 \begin{tabular}{|l|c|}
@@ -56,11 +56,11 @@ Besides that, another approach was tested. The uncertainties due to missing high
 \label{tab:scaleuncvariants}
 \end{table}
 
-The reduction of the \asz-value uncertainty can be explained as follows. If one interpreters the simultaneous least-squares fit to all measured points of the double-differential cross sections as the averaging procedure for the \asz values from individual measurements, then the offset method would correspond to the averaging of \asz-values determined with the scaled definition for the renormalisation and factorisation scales and assuming equal weight for every extraction. On the other hand, in Hesse-approach, the extractions characterised by smaller theoretical uncertainty acquire larger weight in the averaging procedure and therefore the uncertainty of the average \asz is smaller. Although, theoretically, nuisance-parameters and covariance matrix approaches must be equivalent, the results from the former method are difficult to interpret. In this case, the numerical value for the systematic shift represents the rescaling factor that has to be applied to the renormalisation or factorisation scale in order to obtain better fit:
+The reduction of the \asz-value uncertainty can be explained as follows. If one interpreters the simultaneous least-squares fit to all measured points of the double-differential cross sections as the averaging procedure for the \asz values from individual measurements, then the offset method would correspond to the averaging of \asz-values determined with the scaled definition for the renormalisation and factorisation parameters and assuming equal weight for every extraction. On the other hand, in Hesse-approach, the extractions characterised by smaller theoretical uncertainty acquire larger weight in the averaging procedure and therefore the uncertainty of the average \asz is smaller. Although, theoretically, nuisance-parameters and covariance matrix approaches must be equivalent, the results from the former method are difficult to interpret. In this case, the numerical value for the systematic shift represents the rescaling factor that has to be applied to the renormalisation or factorisation parameters in order to obtain better fit:
 \begin{equation}
- b_{\mu_R} = \ln{\frac{\mu'}{\mu_R^0}},
+ b_{\mu} = \ln{\frac{\mu'}{\mu^0}},
 \end{equation}
-where $\mu_R^{0}$ is the numerical value for the default choice of $\mu_R$, while $\mu'$ represents the 'optimal' value obtained from the fit. However, $\mu_R$ can be arbitrary in QCD and there cannot be preferred values apriory. Apart from that, the nuisance treatment of the scale variation uncertainty assumes full correlation of the missing higher-orders contributions across the phase space, which is difficult to justify.
+where $\mu^{0}$ is the numerical value for the default choice of $\mu_{R(F)}$, while $\mu'$ represents the 'optimal' value obtained from the fit. Because $\mu_{R(F)}$ can be arbitrary in QCD there are no prefered values apriory. Moreover, the nuisance treatment of the scale variation uncertainty assumes full correlation of the missing higher-orders contributions across the phase space, which is difficult to justify.
 
 The fits with alternative definitions of the renormalisation and factorisation scales were also performed. Scale choices such as $\mu_R=\etjetb$, $\mu_R=Q$ and $\mu_F=\etjetb$, $\mu_F=\sqrt{\qsq+\etjetb^2}$ were investigated. In general, alternative fits had comparable $\chi^2/N_\text{DF}$, but resulted in lower value of \asz. Only the fit with $\mu_R=\mu_F=\sqrt{\qsq+\etjetb^2}$ gave rise to somewhat larger value on the strong coupling. The discrepancy between the results of different fit variants was smaller than the scale variation uncertainty estimated using the offset-method and therefore is assumed to be covered by the scales variation uncertainty.
 
@@ -73,30 +73,45 @@ Because the proton PDFs have limited precision the stability of the \asz-fits wi
  \item \textbf{PDF and \asz correlation.} In the most of the high-energy processes the strong coupling and the proton PDFs are coupled, i.e. the predictions are proportional to the product $\propto \as\cdot f_i\left(x,\mu\right)$. In particular, the gluon component is always accompanied by \as in the matrix elements, therefore, a value of \asz has to be assumed in a PDF-fit, which introduces an implicit dependence of the results on the \asz. In order to enable propagation of this type of uncertainty into pQCD predictions, different PDF fitting groups, provide series of PDFs, extracted assuming different values of \asz.
 \end{itemize}
 
-\subsubsection{PDF uncertainty propagation}
-In the HERAPDF1.5 set, that was used as a default in the calculations of the inclusive-jet cross sections, 34 systematic variations performed for estimation of the PDF uncertainties are classified into several groups. The uncertainty due to the experimental precions of the data in propagated to the error on PDF parameters and is represented in the covariance matarix form. In order to simplify propagation of the uncertainties attributed to the proton PDF parameters, the matrix is transformed to diagonal form with eigenvectors representing the uncertainty on the corresponding linear combinations of the PDF parameters. $1\sigma$ parameter variation along the eigenvectors translates into the 68\% confidence interval for the pQCD predictions according to the formula~\cite{Campbell:2006wx}
+% \subsubsection{PDF uncertainty propagation}
+In the HERAPDF1.5 set, that was used as a default in the calculations of the inclusive-jet cross sections, 34 systematic variations were performed for estimation of the PDF uncertainty and were classified into three groups roughly corresponding to the categories listed above. 
+
+The uncertainty due to the experimental precions of the data in propagated to the error on PDF parameters and is represented in the covariance matarix form. In order to simplify propagation of the uncertainties attributed to the proton PDF parameters, the matrix is transformed to diagonal form with eigenvectors representing the uncertainty on the corresponding linear combinations of the PDF parameters. $1\sigma$ parameter variation along the eigenvectors translates into the 68\% confidence interval for the pQCD predictions according to the formula~\cite{Campbell:2006wx}
 \begin{equation}
- \delta^{\pm}\as = \sqrt{\sum_{i=1}^{N_{eig}}{\left(\mbox{$\delta_i^{\pm}\as$}\right)^2}},
+ \delta^{\pm}\mathbf{t} = \sqrt{\sum_{i=1}^{N_{eig}}{\left(\mbox{$\delta_i^{\pm}\mathbf{t}$}\right)^2}},
  \label{eq:mastereq}
 \end{equation}
-where the positive (negative) uncertainty, $\delta^{\pm}\as$, is calculated from the quadratic sum of positive (negative) variations of the result with respect to those based on central PDF, $\mbox{$\delta_i^{\pm}$}^2$. The summation runs over eigenvectors, number of which is equal to the number of free PDF parameters\footnote{In total, the HERAPDF1.5 set provides 20 eigenvector variations.}. In general, PDF eigenvectors variation results in asymetric uncertainty on the \as value. In order to obtain a symmetric estimate of the \as-error $\delta\as$ was defined as:
+where the positive (negative) uncertainty, $\delta^{\pm}\mathbf{t}$, is calculated from the quadratic sum of positive (negative) variations of the predictions with respect to those based on central PDF, $\mbox{$\delta_i^{\pm}\mathbf{t}$}^2$. The summation runs over eigenvectors, number of which is equal to the number of free PDF parameters\footnote{In total, the HERAPDF1.5 set provides 20 up and down eigenvector variations.}. When propagated to the strong coupling, PDF eigenvectors variation results in asymetric uncertainty on the \as value. In order to obtain a symmetric estimate of the \as-error $\delta\as$ was defined as:
 \begin{equation}
  \delta\as = \sqrt{\sum_{i=1}^{N_{eig}}{\frac{\left(\mbox{$\delta_i^{+}\as$} - \mbox{$\delta_i^{-}\as$}\right)^2}{2}}}.
  \label{eq:mastereqsym}
 \end{equation}
-It provide a reasonable average of the assymetric uncertainties and thus will be used as a final value. In order to estimate the uncertainty on \asz, the \as-fits were repeated for every individual up and down variations of the PDF eigenvectors and compared to the central value~\ref{eq:asdoubledifval}. The results of these fits are summarised in Figure~\ref{fig:asthunc_dd} and denoted by $\delta_2$.
+It provides a reasonable average of the assymetric uncertainties and can be treated as a modification of the offset method. In order to estimate the uncertainty on \asz, the \as-fits were repeated for every individual up and down variations of the PDF eigenvectors and compared to the central value~\ref{eq:asdoubledifval}. The results of these fits are summarised in Figure~\ref{fig:asthunc_dd} and denoted by $\delta_2$.
  
-The model uncertainty on the PDF, attributed to the variation of the assumtions such as fraction of the strange sea contribution, mass of the charm and bottom quarks, etc. was treated using the offset approach. The detailed description of the nature of individual variations are described in~\cite{herapdf1.5}. The uncertainty on \asz was estimeted  by taking the difference between the variation and the central value, and then adding in quadrature all positive (negative) differences to obtain the positive (negative) model error (see Eq.~\eqref{eq:mastereq}). Corresponding results of the \as-fits are combined into $\delta_3$ group in Figure~\ref{fig:asthunc_dd}. 
+The model uncertainty on the PDF, attributed to the variation of the assumtions such as fraction of the strange quarks in the $d$-type sea PDFs, mass of the charm and bottom quarks, etc. was also treated using the offset approach. The detailed description of the nature of individual variations are presented in~\cite{herapdf1.5}. The uncertainty on \asz was estimeted  by taking the difference between the variation and the central value, and then adding in quadrature all positive (negative) differences to obtain the positive (negative) model error (see Eq.~\eqref{eq:mastereq}). Corresponding results of the \as-fits are combined into $\delta_3$ group in Figure~\ref{fig:asthunc_dd}. 
 
-Variations of the functional form of the PDF parameterisation (see~\cite{herapdf1.5}) were also treated unsing the offset-method. To form the parametrisation envelope, the largest positive (negative) difference between the variation and the central value is taken as the positive (negative) parametrisation error and added in quadrature to the model errors. The outcome of the variations are illustrated in Figure~\ref{fig:asthunc_dd} as $\delta_4$.
+Variations of the functional form of the PDF parameterisation (see~\cite{herapdf1.5}) were treated unsing the offset-method as well. To form the parametrisation envelope, the largest positive (negative) difference between the variation and the central value is taken as the positive (negative) parametrisation error and added in quadrature to the model errors. The outcome of the variations are illustrated in Figure~\ref{fig:asthunc_dd} as $\delta_4$.
 
-The uncertainty attributed to the assumption imposed on the magnitude of the strong coupling in the PDF extraction procedure was estimated from two PDF sets with \asz=0.1156 and \asz=0.1196. The difference between the two results, (see Figure\ref{fig:asthunc_dd}~($\delta_5$)), was scaled to the current uncertainty on the world average~\cite{Bethke:2012jm}. 
+The uncertainty attributed to the assumption imposed on the magnitude of the strong coupling in the PDF extraction procedure was estimated from two PDF sets with \asz=0.1156 and \asz=0.1196. The difference between the two results, (see Figure\ref{fig:asthunc_dd}~($\delta_5$)), was scaled to the current uncertainty on the world average~\cite{Bethke:2012jm}.
+
+In order to obtain the total error on the \asz-value due to the proton PDF, all mentioned sources were combined quadraticaly which resulted in the final value:
+\begin{equation}
+ \asz = 0.1218\;^{+0.0029}_{-0.0018}\left(\text{PDF}\right)
+\end{equation}
+
+The \asz-fits with alternative predictions based on PDF sets provided by different fitting-groups were repeated in order to investigate the stability of the \asz deternimation procedure. The considered set of PDFs comprises the extractions by the MSTW~\cite{}, NNPDF~\cite{} and CT groups. The obtained results were compared to the reference fit based on HERAPDF1.5, described above. All fits were performed using the so-called 'central' PDF set determined with the \asz value recommended in the corresponding PDF-fit. Analysing the obtained results, several observations can be made:
+\begin{itemize}
+ \item All of the fits with alternative PDFs have larger $\chi^2$ than the reference one, however in all cases the obtained values of $\chi^2/n_\text{DF}$ were $\lesssim 1$. Figure~\ref{fig:chi2scanpdf} illustrates the scan of the $\chi^2$ as a function of \asz for different PDF sets. The difference in the fit quality was attributed to the difference in the gluon distribution obtained by different PDF sets, especialy in the high-$x$ region.
+ \item The obtainted values of the stong coupling was larger than that extracted unsing HERAPDF1.5
+ \item a
+\end{itemize}
+
 
 \begin{figure}[t]
  \centering
  \includegraphics[width=\textwidth]{Figures/alphas/PDFsets_chi2_scan.png}
  % PDFsets_chi2_scan.: 1418x772 pixel, 72dpi, 50.02x27.23 cm, bb=0 0 1418 772
- \caption{YO}
+ \caption{The results of the scan of $\chi^2\left(\asz\right)$ as a function of \asz obtained using different PDF sets.}
  \label{fig:chi2scanpdf}
 \end{figure}
 
@@ -108,7 +123,7 @@ The uncertainty attributed to the assumption imposed on the magnitude of the str
  \includegraphics[width=\textwidth,trim=20 10 20 10,clip]{Figures/alphas/alphas_asPDF_scan.png}
  % PDFsets_chi2_scan.: 1418x772 pixel, 72dpi, 50.02x27.23 cm, bb=0 0 1418 772
  \caption{YO}
- \label{fig:chi2scanpdf}
+ \label{fig:aschi2scanpdf}
 \end{figure}
 
 \begin{landscape}
