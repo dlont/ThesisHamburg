@@ -99,21 +99,47 @@ In order to obtain the total error on the \asz-value due to the proton PDF, all 
  \asz = 0.1218\;^{+0.0029}_{-0.0018}\left(\text{PDF}\right)
 \end{equation}
 
-The \asz-fits with alternative predictions based on PDF sets provided by different fitting-groups were repeated in order to investigate the stability of the \asz deternimation procedure. The considered set of PDFs comprises the extractions by the MSTW~\cite{}, NNPDF~\cite{} and CT groups. The obtained results were compared to the reference fit based on HERAPDF1.5, described above. All fits were performed using the so-called 'central' PDF set determined with the \asz value recommended in the corresponding PDF-fit. Analysing the obtained results, several observations can be made:
+The \asz-fits with alternative predictions based on PDF sets provided by different fitting-groups were repeated in order to investigate the stability of the \asz deternimation procedure. The considered set of PDFs comprises the extractions by the MSTW~\cite{}, NNPDF~\cite{} and CT~\cite{} groups. The obtained results were compared to the reference fit based on HERAPDF1.5, described above. All fits were performed using the so-called 'central' PDF set determined with the \asz value recommended in the corresponding PDF-fit. Analysing the obtained results, several observations can be made:
 \begin{itemize}
- \item All of the fits with alternative PDFs have larger $\chi^2$ than the reference one, however in all cases the obtained values of $\chi^2/n_\text{DF}$ were $\lesssim 1$. Figure~\ref{fig:chi2scanpdf} illustrates the scan of the $\chi^2$ as a function of \asz for different PDF sets. The difference in the fit quality was attributed to the difference in the gluon distribution obtained by different PDF sets, especialy in the high-$x$ region.
- \item The obtainted values of the stong coupling was larger than that extracted unsing HERAPDF1.5
- \item a
+ \item All fits with alternative PDFs have larger $\chi^2$ than the reference one, however in all cases the obtained values of $\chi^2/n_\text{DF}$ were $\lesssim 1$. Figure~\ref{fig:chi2scanpdf} illustrates the scan of the $\chi^2$ as a function of \asz for different PDF sets. The difference in the fit quality was attributed to the difference in the gluon distribution of different PDF sets, especialy in the high-$x$ region, releveant for inclusive-jet production (see Figure~\ref{fig:pdf_gluon_comp}).
+ \item It is interesting to note that in the HERAPDF1.5 PDF-fit only inclusive NC and CC DIS data from HERA were used, while, for example, MSTW08 already includes HERAI inclusive-jet data. The preference of the HERAPDF set in the fit was unexplained and we belive that the 'true' PDF is somewhere between the considered sets.
+ \item The obtainted values of the stong coupling were larger than that extracted unsing HERAPDF1.5, but the difference was always within the uncertainty attributed to the HERAPDF1.5 parameterisation.  
 \end{itemize}
 
+\begin{figure}[t]
+ \begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+PDF set & \asz-value & $\chi^2/n_\text{DF}$\\
+\hline
+\hline
+HERAPDF1.5 & $0.1218^{+0.0029}_{-0.0018}$ & 0.626 \\
+NNPDF23 & 0.1221 & 1.00\\   
+MSTW08 & 0.1232 & 0.884\\ 
+CT10 & 0.1240 & 0.831\\ 
+\hline
+\end{tabular}
+\end{center}
+\caption{The results of the \asz extractions based on different PDF sets.}
+\label{tab:}
+\end{figure} 
+
+\begin{figure}[ht]
+ \centering
+ \includegraphics[width=0.8\textwidth]{Figures/alphas/pdf_comparison}
+ % pdf_comparison.: 896x972 pixel, 72dpi, 31.61x34.29 cm, bb=0 0 896 972
+ \caption{Comparison of the gluon distribution in high-$\x$ region for different PDF sets at \qsq=100~\GeV$^2$.}
+ \label{fig:pdf_gluon_comp}
+\end{figure}
 
 \begin{figure}[t]
  \centering
  \includegraphics[width=\textwidth]{Figures/alphas/PDFsets_chi2_scan.png}
  % PDFsets_chi2_scan.: 1418x772 pixel, 72dpi, 50.02x27.23 cm, bb=0 0 1418 772
- \caption{The results of the scan of $\chi^2\left(\asz\right)$ as a function of \asz obtained using different PDF sets.}
+ \caption{The results of the scan of $\chi^2\left(\asz\right)$ as a function of \asz obtained using different PDF sets. Vertical dashed lines represent the PDF uncertainty from HERAPDF1.5 error analysis described in text.}
  \label{fig:chi2scanpdf}
 \end{figure}
+
 
 \subsubsection{Sensitivity to the \asz Assumption}
 \label{subsec:asassump}
