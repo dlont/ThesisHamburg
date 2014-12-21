@@ -87,7 +87,16 @@ where the positive (negative) uncertainty, $\delta^{\pm}\mathbf{t}$, is calculat
  \label{eq:mastereqsym}
 \end{equation}
 It provides a reasonable average of the asymmetric uncertainties and can be considered as a modification of the offset method. In order to estimate the uncertainty on \asz, the \as-fits were repeated for every individual up and down variations of the PDF eigenvectors and compared to the central value~\ref{eq:asdoubledifval}. The results of these fits are summarised in Figure~\ref{fig:asthunc_dd} and denoted by $\delta_2$.
- 
+\begin{landscape}
+\begin{figure}[p]
+ \centering
+ \caption{The results of \asz extraction from double-differential cross sections. The individual systematic variations are combined into groups $\delta_1-\delta_5$ (see text).}
+ \label{fig:asthunc_dd}
+ \includegraphics[height=1.5\textheight,angle=90]{Figures/alphas/alphas_systematics_dd}
+ % alphas_systematics.png: 1796x572 pixel, 72dpi, 63.36x20.18 cm, bb=0 0 1796 572
+\end{figure}
+\end{landscape}
+
 The model uncertainty on the PDF, attributed to the variation of the assumptions such as fraction of the strange quarks in the $d$-type sea PDFs, mass of the charm and bottom quarks, etc. was also treated using the offset approach. The detailed description of the nature of individual variations are presented in~\cite{herapdf1.5}. The uncertainty on \asz was estimated  by taking the difference between the variation and the central value, and then adding in quadrature all positive (negative) differences to obtain the positive (negative) model error (see Eq.~\eqref{eq:mastereq}). Corresponding results of the \as-fits are combined into $\delta_3$ group in Figure~\ref{fig:asthunc_dd}. 
 
 Variations of the functional form of the PDF parameterisation (see~\cite{herapdf1.5}) were treated using the offset-method as well. To form the parametrisation envelope, the largest positive (negative) difference between the variation and the central value is taken as the positive (negative) parametrisation error and added in quadrature to the model errors. The outcome of the variations are illustrated in Figure~\ref{fig:asthunc_dd} as $\delta_4$.
@@ -102,28 +111,13 @@ In order to obtain the total error on the \asz-value due to the proton PDF, all 
 The \asz-fits with alternative predictions based on PDF sets provided by different fitting-groups were repeated in order to investigate the stability of the \asz determination procedure. The considered set of PDFs comprises the extractions by the MSTW~\cite{}, NNPDF~\cite{} and CT~\cite{} groups. The obtained results were compared to the reference fit based on HERAPDF1.5, described above. All fits were performed using the so-called 'central' PDF set determined with the \asz value recommended in the corresponding PDF-fit. Analysing the obtained results, several observations can be made:
 \begin{itemize}
  \item All fits with alternative PDFs have larger $\chi^2$ than the reference one, however in all cases the obtained values of $\chi^2/n_\text{DF}$ were $\lesssim 1$. Figure~\ref{fig:chi2scanpdf} illustrates the scan of the $\chi^2$ as a function of \asz for different PDF sets. The difference in the fit quality was attributed to the difference in the gluon distribution of different PDF sets, especially in the high-$x$ region, relevant for inclusive-jet production (see Figure~\ref{fig:pdf_gluon_comp}).
- \item It is interesting to note that in the HERAPDF1.5 PDF-fit only inclusive NC and CC DIS data from HERA were used, while, for example, MSTW08 already includes HERAI inclusive-jet data. The preference of the HERAPDF set in the fit was unexplained and we believe that the 'true' PDF is somewhere between the considered sets.
- \item The obtained values of the strong coupling were larger than that extracted using HERAPDF1.5, but the difference was always within the uncertainty attributed to the HERAPDF1.5 parameterisation. A summary of the fit results based on different PDF sets are compiled in Table~\ref{tab:asdifferentPDFs}
-\end{itemize}
-
 \begin{figure}[t]
- \begin{center}
-\begin{tabular}{|c|c|c|}
-\hline
-PDF set & \asz-value & $\chi^2/n_\text{DF}$\\
-\hline
-\hline
-HERAPDF1.5 & $0.1218^{+0.0029}_{-0.0018}$ & 0.626 \\
-NNPDF23 & 0.1221 & 1.00\\   
-MSTW08 & 0.1232 & 0.884\\ 
-CT10 & 0.1240 & 0.831\\ 
-\hline
-\end{tabular}
-\end{center}
-\caption{The results of the \asz extractions based on different PDF sets.}
-\label{tab:asdifferentPDFs}
-\end{figure} 
-
+ \centering
+ \includegraphics[width=0.8\textwidth]{Figures/alphas/PDFsets_chi2_scan}
+ % PDFsets_chi2_scan.: 1418x772 pixel, 72dpi, 50.02x27.23 cm, bb=0 0 1418 772
+ \caption{The results of the scan of $\chi^2\left(\asz\right)$ as a function of \asz obtained using different PDF sets. Vertical dashed lines represent the PDF uncertainty from HERAPDF1.5 error analysis described in text.}
+ \label{fig:chi2scanpdf}
+\end{figure}
 \begin{figure}[ht]
  \centering
  \includegraphics[width=0.8\textwidth]{Figures/alphas/pdf_comparison}
@@ -131,33 +125,48 @@ CT10 & 0.1240 & 0.831\\
  \caption{Comparison of the gluon distribution in high-$\x$ region for different PDF sets at \qsq=100~\GeV$^2$.}
  \label{fig:pdf_gluon_comp}
 \end{figure}
+ \item It is interesting to note that in the HERAPDF1.5 PDF-fit only inclusive NC and CC DIS data from HERA were used, while, for example, MSTW08 already includes HERAI inclusive-jet data. The preference of the HERAPDF set in the fit was unexplained and we believe that the 'true' PDF is somewhere between the considered sets.
+ \item The obtained values of the strong coupling were larger than that extracted using HERAPDF1.5, but the difference was always within the uncertainty attributed to the HERAPDF1.5 parameterisation. A summary of the fit results based on different PDF sets are compiled in Table~\ref{tab:asdifferentPDFs}
+\begin{table}[t]
+ \begin{center}
+ \begin{tabular}{|c|c|c|}
+ \hline
+ PDF set & \asz-value & $\chi^2/n_\text{DF}$\\
+ \hline
+ \hline
+ HERAPDF1.5 & $0.1218^{+0.0029}_{-0.0018}$ & 0.626 \\
+ NNPDF23 & 0.1221 & 1.00\\   
+ MSTW08 & 0.1232 & 0.884\\ 
+ CT10 & 0.1240 & 0.831\\ 
+ \hline
+ \end{tabular}
+ \end{center}
+ \caption{The results of the \asz extractions based on different PDF sets.}
+ \label{tab:asdifferentPDFs}
+ \end{table}
+\end{itemize}
 
-\begin{figure}[t]
- \centering
- \includegraphics[width=\textwidth]{Figures/alphas/PDFsets_chi2_scan.png}
- % PDFsets_chi2_scan.: 1418x772 pixel, 72dpi, 50.02x27.23 cm, bb=0 0 1418 772
- \caption{The results of the scan of $\chi^2\left(\asz\right)$ as a function of \asz obtained using different PDF sets. Vertical dashed lines represent the PDF uncertainty from HERAPDF1.5 error analysis described in text.}
- \label{fig:chi2scanpdf}
-\end{figure}
-
+In accord with PDF4LHC recomendations, in recent analysis~\ref{Britzger} an additional uncertainty was attributed to the difference between results obtained with different PDF sets. In contrast to that, the checks, described above, reveal the consistency of the considered PDF sets in the phase space of the inclusive-jet measurement and support the adequacy of the HERAPDF1.5 error analysis. Therefore no additional uncertainties due to PDFs were assinged to the \asz-value determined in this thesis. 
 
 \subsubsection{Sensitivity to the \asz Assumption}
 \label{subsec:asassump}
+As it was mentioned, the strong coupling enters pQCD predictions for hadron-induced processes through the matrix elements and the DGLAP spliting functions $\mathcal{P}\left(z\right)=\sum_{i=1}^{N}{\as^i\cdot P_i\left(z\right)}$ (see chapter~\ref{ch:theory}). Threfore, in order to determine PDFs in global fits to the data, a value of \asz has to be either taken from other analyses or fitted together with PDFs. Due to the coupled nature of perturbative hard coefficients and PDFs ($c\left(\as\right)\cdot f\left(x,\mu\right)$) the decrease of one quantity leads to the incerase of the other to maintain constant cross section. Therefore the question of the influence of the \asz assumtion in the PDF extraction procedure has to be addressed. The Figure~\ref{fig:aschi2scanpdf} shows the results of the \asz-fits to the double-differential inclusive-jet cross secions with PDF sets from several fitting groups, extracted under different assumtions on the magnitude of the strong coupling. It can be seen that, apart from MSTW08 sets, avaliable for a wide range of assumed \asz values, the extracted \asz increases with increasing \asz-value assumed in the PDFs. Only for MSTW08 and NNPDF23 input and output values of \asz coinside at relatively large value of \as. Qualitatively, correlation of the input and output values can be explained as follows: in the global fit PDFs decrease as assumed value of the strong coupling incereases, therefore to compensate the reduction of $f\left(x,\mu\right)$ in the fit to inclusive-jet data, the determined \asz-value increases.
+
+As can be seen in Figure~\ref{fig:aschi2scanpdf1} the quality of the fit deteriorates with increasing assumed value of the strong coupling and the fits based on PDFs with the smallest \asz-value yeild the smallest values of $\chi^2/n_\text{DF}$. Nevertheless, for MSTW08, CT10 and HERAPDF1.5 the dependece of $\chi^2/n_\text{DF}$ on the assumed value is very mild in the vicinity of minimum. The resulting values of \as for the fits with minimal value of $\chi^2/n_\text{DF}$ are consistent with the central value within the experimental uncertainty.
 
 \begin{figure}[t]
  \centering
- \includegraphics[width=\textwidth,trim=20 10 20 10,clip]{Figures/alphas/alphas_asPDF_scan.png}
+ \includegraphics[height=0.4\textheight,trim=20 10 0 10,clip]{Figures/alphas/alphas_asPDF_scan}
+ \includegraphics[height=0.4\textheight,trim=20 10 10 10,clip]{Figures/alphas/alphas_asPDFChi2_scan}
  % PDFsets_chi2_scan.: 1418x772 pixel, 72dpi, 50.02x27.23 cm, bb=0 0 1418 772
- \caption{YO}
+ \caption{}
  \label{fig:aschi2scanpdf}
 \end{figure}
 
-\begin{landscape}
-\begin{figure}[p]
+\begin{figure}[t]
  \centering
- \caption{The results of \asz extraction from double-differential cross sections. The individual systematic variations are combined into groups $\delta_1-\delta_5$ (see text).}
- \label{fig:asthunc_dd}
- \includegraphics[height=1.5\textheight,angle=90]{Figures/alphas/alphas_systematics_dd}
- % alphas_systematics.png: 1796x572 pixel, 72dpi, 63.36x20.18 cm, bb=0 0 1796 572
+ 
+ % PDFsets_chi2_scan.: 1418x772 pixel, 72dpi, 50.02x27.23 cm, bb=0 0 1418 772
+ \caption{}
+ \label{fig:aschi2scanpdf1}
 \end{figure}
-\end{landscape}
