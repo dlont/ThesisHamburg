@@ -113,7 +113,7 @@ The \asz-fits with alternative predictions based on PDF sets provided by differe
  \item All fits with alternative PDFs have larger $\chi^2$ than the reference one, however in all cases the obtained values of $\chi^2/n_\text{DF}$ were $\lesssim 1$. Figure~\ref{fig:chi2scanpdf} illustrates the scan of the $\chi^2$ as a function of \asz for different PDF sets. The difference in the fit quality was attributed to the difference in the gluon distribution of different PDF sets, especially in the high-$x$ region, relevant for inclusive-jet production (see Figure~\ref{fig:pdf_gluon_comp}).
 \begin{figure}[t]
  \centering
- \includegraphics[width=0.8\textwidth]{Figures/alphas/PDFsets_chi2_scan}
+ \includegraphics[width=0.8\textwidth,angle=-90]{Figures/alphas/PDFsets_chi2_scan}
  % PDFsets_chi2_scan.: 1418x772 pixel, 72dpi, 50.02x27.23 cm, bb=0 0 1418 772
  \caption{The results of the scan of $\chi^2\left(\asz\right)$ as a function of \asz obtained using different PDF sets. Vertical dashed lines represent the PDF uncertainty from HERAPDF1.5 error analysis described in text.}
  \label{fig:chi2scanpdf}
@@ -146,27 +146,25 @@ The \asz-fits with alternative predictions based on PDF sets provided by differe
  \end{table}
 \end{itemize}
 
-In accord with PDF4LHC recomendations, in recent analysis~\ref{Britzger} an additional uncertainty was attributed to the difference between results obtained with different PDF sets. In contrast to that, the checks, described above, reveal the consistency of the considered PDF sets in the phase space of the inclusive-jet measurement and support the adequacy of the HERAPDF1.5 error analysis. Therefore no additional uncertainties due to PDFs were assinged to the \asz-value determined in this thesis. 
+In accord with PDF4LHC recomendations, in recent analysis~\ref{Britzger} an additional uncertainty was attributed to the difference between results obtained with different PDF sets. In contrast to that, the checks, described above, reveal the consistency of the considered PDF sets in the phase space of the inclusive-jet measurement and support the adequacy of the HERAPDF1.5 error analysis. Therefore no additional uncertainties due to PDFs were assigned to the \asz-value determined in this thesis. 
 
 \subsubsection{Sensitivity to the \asz Assumption}
 \label{subsec:asassump}
-As it was mentioned, the strong coupling enters pQCD predictions for hadron-induced processes through the matrix elements and the DGLAP spliting functions $\mathcal{P}\left(z\right)=\sum_{i=1}^{N}{\as^i\cdot P_i\left(z\right)}$ (see chapter~\ref{ch:theory}). Threfore, in order to determine PDFs in global fits to the data, a value of \asz has to be either taken from other analyses or fitted together with PDFs. Due to the coupled nature of perturbative hard coefficients and PDFs ($c\left(\as\right)\cdot f\left(x,\mu\right)$) the decrease of one quantity leads to the incerase of the other to maintain constant cross section. Therefore the question of the influence of the \asz assumtion in the PDF extraction procedure has to be addressed. The Figure~\ref{fig:aschi2scanpdf} shows the results of the \asz-fits to the double-differential inclusive-jet cross secions with PDF sets from several fitting groups, extracted under different assumtions on the magnitude of the strong coupling. It can be seen that, apart from MSTW08 sets, avaliable for a wide range of assumed \asz values, the extracted \asz increases with increasing \asz-value assumed in the PDFs. Only for MSTW08 and NNPDF23 input and output values of \asz coinside at relatively large value of \as. Qualitatively, correlation of the input and output values can be explained as follows: in the global fit PDFs decrease as assumed value of the strong coupling incereases, therefore to compensate the reduction of $f\left(x,\mu\right)$ in the fit to inclusive-jet data, the determined \asz-value increases.
+As it was mentioned, the strong coupling enters pQCD predictions for hadron-induced processes through the matrix elements and the DGLAP splitting functions $\mathcal{P}\left(z\right)=\sum_{i=1}^{N}{\as^i\cdot P_i\left(z\right)}$ (see chapter~\ref{ch:theory}). Therefore, in order to determine PDFs in global fits to the data, a value of \asz has to be either taken from other analyses or fitted together with PDFs. Due to the coupled nature of perturbative hard coefficients and PDFs ($c\left(\as\right)\cdot f\left(x,\mu\right)$) the decrease of one quantity leads to the increase of the other to maintain constant cross section. Therefore the question of the influence of the \asz assumption in the PDF extraction procedure has to be addressed. The Figure~\ref{fig:aschi2scanpdf_a} shows the results of the \asz-fits to the double-differential inclusive-jet cross sections with PDF sets from several fitting groups, extracted under different assumptions on the magnitude of the strong coupling. It can be seen that, apart from MSTW08 sets, available for a wide range of assumed \asz values, the extracted \asz increases with increasing \asz-value assumed in the PDFs. Only for MSTW08 and NNPDF23 input and output values of \asz coincide at relatively large value of \as. Qualitatively, correlation of the input and output values can be explained as follows: in the global fit PDFs decrease as assumed value of the strong coupling increases, therefore to compensate the reduction of $f\left(x,\mu\right)$ in the fit to inclusive-jet data, the determined \asz-value increases.
 
-As can be seen in Figure~\ref{fig:aschi2scanpdf1} the quality of the fit deteriorates with increasing assumed value of the strong coupling and the fits based on PDFs with the smallest \asz-value yeild the smallest values of $\chi^2/n_\text{DF}$. Nevertheless, for MSTW08, CT10 and HERAPDF1.5 the dependece of $\chi^2/n_\text{DF}$ on the assumed value is very mild in the vicinity of minimum. The resulting values of \as for the fits with minimal value of $\chi^2/n_\text{DF}$ are consistent with the central value within the experimental uncertainty.
+As can be seen in Figure~\ref{fig:aschi2scanpdf_b} the quality of the fit deteriorates with increasing assumed value of the strong coupling and the fits based on PDFs with the smallest \asz-value yield the smallest values of $\chi^2/n_\text{DF}$. Nevertheless, for MSTW08, CT10 and HERAPDF1.5 the dependence of $\chi^2/n_\text{DF}$ on the assumed value is very mild in the vicinity of minimum. The resulting values of \as for the fits with minimal value of $\chi^2/n_\text{DF}$ are consistent with the central value within the experimental uncertainty.
 
 \begin{figure}[t]
  \centering
- \includegraphics[height=0.4\textheight,trim=20 10 0 10,clip]{Figures/alphas/alphas_asPDF_scan}
- \includegraphics[height=0.4\textheight,trim=20 10 10 10,clip]{Figures/alphas/alphas_asPDFChi2_scan}
+\begin{subfloat}[]{\includegraphics[width=0.45\textwidth,trim=20 10 0 10,clip,angle=-90]{Figures/alphas/alphas_asPDF_scan}
+   \label{fig:aschi2scanpdf_a}
+ }%
+\end{subfloat}
+\begin{subfloat}[]{\includegraphics[width=0.45\textwidth,trim=20 10 10 10,clip,angle=-90]{Figures/alphas/alphas_asPDFChi2_scan}
+   \label{fig:aschi2scanpdf_b}
+ }%
+\end{subfloat}
  % PDFsets_chi2_scan.: 1418x772 pixel, 72dpi, 50.02x27.23 cm, bb=0 0 1418 772
  \caption{}
  \label{fig:aschi2scanpdf}
-\end{figure}
-
-\begin{figure}[t]
- \centering
- 
- % PDFsets_chi2_scan.: 1418x772 pixel, 72dpi, 50.02x27.23 cm, bb=0 0 1418 772
- \caption{}
- \label{fig:aschi2scanpdf1}
 \end{figure}
