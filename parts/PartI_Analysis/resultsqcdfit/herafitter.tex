@@ -7,13 +7,13 @@ The minimisation of the $\chi^2$-function is performed employing the iterative \
 \end{itemize}
 Therefore, for the iterative fit procedure, the \fastnlo framework is used for the recalculation of the NLO predictions for jet production. 
 
-The \fastnlo~\cite{thesis:wobisch:2001,Kluge:2006,Wobisch:2011,Britzger:2012} approach is a based on the idea of calculating the LO and NLO weights, $\mathcal{C}_{n,a,i,j,k}$, which are independent of \as and the PDFs, on a 3d-grid in the convolution variable $x_i$ and the factorisation and renormalisation scales $\mu_{F,j}, \mu_{R,k}$. The cross section can be obtained from a simple sum:
+The \fastnlo~\cite{thesis:wobisch:2001,Kluge:2006,Wobisch:2011,Britzger:2012} approach is a based on the idea of calculating the LO and NLO weights, $\mathcal{C}_{n,a,i,j,k}$, which are independent of \as and the PDFs, on a 3d-grid in the convolution variable $x_i$ and the factorisation and renormalisation scales $\mu_{F,j}, \mu_{R,k}$; index $a$ runs over the number of contributing processes. The cross section can be obtained from a simple sum:
 \begin{equation}
 \sigma = \sum_{n,a,i,j,k}{ \as^n\left( \mu_{R,k} \right) F_a\left( x_i, \mu_{F,j}\right)\mathcal{C}_{n,a,i,j,k} },
 \end{equation}
 where the magnitude of the strong coupling and PDFs can be chosen independently, without repeating the time-consuming MC integration. Because certain parton configurations lead to the identical final-state, only weights for the linear combinations of PDFs $a=\left( \Delta, \Sigma, g\right) $ are stored, where $\Delta=\sum_a{e_q^2\left(q_a\left(x\right)+\bar{q}_a\left(x\right)\right)}$, $\Sigma=\sum_a{q_a\left(x\right)+\bar{q}_a\left(x\right)}$ and $g=g\left(x\right)$ is the gluon PDF. The weights $\mathcal{C}_{n,a,i,j,k}$ are organised in form of a table and can be efficiently processed leading to a jet cross sections calculation time $\mathcal{O}\left( ms\right)$, to be practical for the usage in the fitting procedure.
 
-The predictions for the inclusive-jet cross sections were calculated using the \nlojet program with the \fastnlo interface. The setting for the NLO pQCD calculations were described in detail in Section~\ref{sec:nlopredictions} and are briefly summarised in the Table~\ref{tab:nlosettings}.
+The predictions for the inclusive-jet cross sections were calculated using the \nlojet program with the \fastnlo interface. The setting for the NLO pQCD calculations were described in detail in Section~\ref{sec:nlopredictions} and are briefly summarised in Table~\ref{tab:nlosettings}.
 \begin{table}[h]
 \centering
 \begin{tabular}{l|c}
@@ -26,21 +26,21 @@ Parameter  & Default setup \\
 \caption{Summary of the theory settings used for the calculations for the \as determination.}
 \label{tab:nlosettings}
 \end{table}
-Unless otherwise stated, these setting define the so-called ``central-fit''. The value of the strong coupling determined with this setup is used as a reference for the studies of the sensitivity of the extracted \asz to the variation of the theory parameters that will be discussed in Section~\ref{subsec:assystematics}.
+Unless otherwise stated, these settings define the so-called ``central-fit''. The value of the strong coupling determined with this setup is used as a reference for studies of the sensitivity of the extracted \asz to the variation of the theory parameters discussed in Section~\ref{subsec:assystematics}.
 
-Within the \herafitter program, the evolution of the parton densities according to the DGLAP-equations is performed using the \qcdnum code~\cite{Botje:2010ay}. In the \qcdnum approach the equations are solved numerically on a $n\times m$ lattice in the $x$ and $\mu$ variables. The method is based on a numerical spline interpolation of the parton densities on an equidistant a logarithmic grid in $x$ and logarithmic grid\footnote{A (non-)equidistant $\mu^2$-grid can be set as an option.} in $\mu^2$. Thus, the integral convolution (see Eqn.~\ref{DGLAP}) is represented as a finite sum and $t \equiv \ln{\mu^2}$-integration is formulated as an iterative process.
-The analytic form of the DGLAP-equations and specific choice of spline-type were successfully exploited to recast the continuous evolution into a linear problem that admits very efficient numerical solution. For the sake of illustration, an example for the evolution of non-single combination of parton distributions is considered. Let $\mathbf{h_i}=\hat{S}\mathbf{a_i}$ denote vectors of the non-singlet PDF values on the discrete $\x$-grid determined at different factorisation scales $t_0 < ... < t_i=\ln{\mu^2_i} < t_n$, where $t_0=\ln{Q^2_0}$ is the initial scale and $\mathbf{a_i}$ is the corresponding vector of the spline coefficients, while matrix $\hat{S}$ contains spline-specific constants. Then, for initial scale, the discretised version of the DGLAP equations has the following form:
+Within the \herafitter program, the evolution of the parton densities according to the DGLAP-equations is performed using the \qcdnum code~\cite{Botje:2010ay}. In the \qcdnum approach the equations are solved numerically on a $n\times m$ lattice in the $x$ and $\mu$ variables. The method is based on a numerical spline interpolation of the parton densities on an equally spaced grid in $\ln\left(x\right)$ and in $\ln\left(\mu^2\right)$\footnote{An unequally spaced $\mu^2$-grid can be set as an option.} . Thus, the convolution (see Eqn.~\ref{DGLAP}) is represented as a finite sum and the $t \equiv \ln{\mu^2}$ integration is formulated as an iterative process.
+The analytic form of the DGLAP-equations and a specific choice of the type of interpolation were used to recast the continuous evolution into a linear problem that admits a very efficient numerical solution. For the sake of illustration, an example for the evolution of a non-singlet combination of parton distributions is considered. Let $\mathbf{h_i}=\hat{S}\mathbf{a_i}$ denote vectors of the non-singlet PDF values on the discrete $\x$ grid determined at different factorisation scales $t_0 < ... < t_i=\ln{\mu^2_i} < t_n$, where $t_0=\ln{Q^2_0}$ is the initial scale and $\mathbf{a_i}$ is the corresponding vector of spline coefficients, while the matrix $\hat{S}$ contains spline-specific constants. Then, for the initial scale $t_0$, the discretised version of the DGLAP equations has the following form:
 \begin{equation}
  \frac{\mathrm{d}\mathbf{h_0}}{\mathrm{d}t} \equiv \frac{\mathrm{d}\hat{S}\mathbf{a_0}}{\mathrm{d}t} = \hat{W_0}\mathbf{a_0},
 \end{equation}
-where $\hat{W_0}$ represent $\x$-space PDF convolution. The subscript of matrix $\hat{W_i}$ corresponds to the scale node $t_i$, while the r.h.s of the DGLAP equations includes $\as\left(t_i\right)$. Moving $\hat{S}$ to the r.h.s of the equation one obtains:
+where $\hat{W_0}$ represents the $\x$-space PDF convolution. The subscript of matrix $\hat{W_i}$ corresponds to the grid node $t_i$, while the r.h.s of the DGLAP equations includes $\as\left(t_i\right)$. Moving $\hat{S}$ to the r.h.s of the equation gives:
 \begin{equation}
  \frac{\mathrm{d}\mathbf{a_0}}{\mathrm{d}t} = \hat{S}^{-1}\hat{W_0}\mathbf{a_0}.
 \end{equation}
-Approximating infinitesimal differential $\mathrm{d}t$ by small $\Delta t$, the equation can be solved numerically for the scale $t_1=t_0+\Delta t$:
+Approximating the infinitesimal differential $\mathrm{d}t$ by small $\Delta t$, the equation can be solved numerically for the scale $t_1=t_0+\Delta t$:
 \begin{equation}
  \mathbf{a_1} = \hat{S}^{-1}\hat{W_0}\mathbf{a_0}\Delta t.
 \end{equation}
-The solution can be iterated to find PDFs for all scales $t_i>t_0$\footnote{In principle, backward evolution $t_i<t_0$ is possible.}. In the QCDNUM method, however, more precise higher-order integration scheme was proposed~\cite{Botje:2010ay}.
+The solution can be iterated to find PDFs for all scales $t_i>t_0$\footnote{In principle, backward evolution $t_i<t_0$ is possible.}. However, in the QCDNUM method, a more precise higher-order integration scheme was proposed~\cite{Botje:2010ay}.
 
-Because the NLOJET++ program provides predictions only for the single-photon exchange, the NLO calculations were corrected for electroweak and non-perturbative effects using the MC models as described in Sections~\ref{subsec:z0corr,subsec:hadrcorr}, to match the definition of the cross section in the data.
+Because the NLOJET++ program only provides predictions for the single-photon exchange, the NLO calculations were corrected for electroweak and non-perturbative effects using the MC models as described in Sections~\ref{subsec:z0corr,subsec:hadrcorr}, to match the definition of the cross section in the data.
