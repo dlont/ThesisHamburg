@@ -23,21 +23,17 @@ performing each variation one at a time. In general, the fits were characterised
 \begin{equation}
  \asz = 0.1218\;^{+0.0057}_{-0.0050}\left(\mu_R\right)\;^{+0.0003}_{-0.0003}\left(\mu_F\right)
 \end{equation}
-\item \textbf{Simultaneous variation of $\mu_R$ and $\mu_F$}. Because the analytic expressions for the renormalisation and factorisation scales are related
-\begin{equation}
- \mu_F = \lim_{\etjetb \rightarrow 0} \mu_R,
-\end{equation}
-it is natural to vary both scales up and down simultaneously. The obtained variations are:
+\item \textbf{Simultaneous variation of $\mu_R$ and $\mu_F$}. Because the analytic expressions for the renormalisation and factorisation scales are related, alternatively both scales were varied up and down simultaneously. The obtained variations are:
 \begin{equation}
  \asz = 0.1218\;^{+0.0065}_{-0.0053}\left(\text{scales}\right)
 \end{equation}
-Such fit variants resulted in more conservative estimates of the uncertainty when compared to the combined error obtained from independent variations. 
+Such variant results in a more conservative estimates of the uncertainty. 
 \end{itemize}
-It can be seen that the fits are much more sensitive to the renormalisation scale variation and result in asymmetric uncertainty on \asz value. The comparison of the fit results for different scale variations is illustrated in Figure~\ref{fig:asthunc_dd} and denoted as $\delta_1$.
+It can be seen that the fits are much more sensitive to the renormalisation scale variation and result in an asymmetric uncertainty of the \asz value. The comparison of the fit results for different scale variations is illustrated in Figure~\ref{fig:asthunc_dd} and denoted as $\delta_1$.
 
-Other approaches for the treatment of the scale variation uncertainty were also investigated. As an alternative, theoretical uncertainties were included into the covariance matrix assuming that errors attributed to the scale variations are completely uncorrelated across the measurements points. In this case the total error attributed to the theoretical and experimental uncertainties was propagated to the uncertainty on \asz value using the Hesse method. In order to determine the effect of the theoretical component, the uncertainty from the scale variations was calculated from the total error $\Delta_\text{tot}\as$ according to:
+Other approaches for the treatment of the scale variation uncertainty were also investigated. As an alternative, theoretical uncertainties were included into the covariance matrix assuming that errors attributed to the scale variations are completely uncorrelated across the measurements points. In this case the total error attributed to the theoretical and experimental uncertainties was propagated to the uncertainty on \asz value using the Hesse method. The uncertainty contribution on \as from the scale variations was calculated from the total error $\Delta_\text{tot}$ according to:
 \begin{equation}
- \Delta_\text{scales}\as = \sqrt{\left(\Delta_\text{tot}\as\right)^2 - \left(\Delta_\text{exp}\as\right)^2}
+ \Delta_\text{scales} = \sqrt{\left(\Delta_\text{tot}\right)^2 - \left(\Delta_\text{exp}\right)^2}
 \end{equation}
 Another approach was also tested. The uncertainties due to missing higher-order contributions were included into the $\chi^2$ using the nuisance parameters, similar to jet-energy scale or luminosity uncertainty. In this case the systematic shifts attributed to the theoretical uncertainty are treated as correlated across different bins and propagated to the result using the Hesse method. Overall, fits with Hesse treatment of the scale variation uncertainties resulted in substantial reduction of \asz error in comparison to the offset method. The comparison of different approaches is provided in Table~\ref{tab:scaleuncvariants}.
 \begin{table}[h]
@@ -48,7 +44,7 @@ Another approach was also tested. The uncertainties due to missing higher-order 
  \hline
  \hline
   Offset & $\phantom{x}^{+0.0065}_{-0.0053}$\\
-  Hesse (nuissance) & 0.0027 \\
+  Hesse (nuissance) & 0.0026 \\
   Hesse (uncorrelated) & 0.0015 \\
  \hline
 \end{tabular}
@@ -56,11 +52,7 @@ Another approach was also tested. The uncertainties due to missing higher-order 
 \label{tab:scaleuncvariants}
 \end{table}
 
-The reduction of the \asz uncertainty can be explained as follows. If the simultaneous least-squares fit to all measured points of the double-differential cross sections is interpreted as the averaging procedure for the \asz values from individual measurements, then the offset method would correspond to the averaging of \asz values determined with the scaled definition for the renormalisation and factorisation parameters and assuming equal weight for every extraction. On the other hand, in the Hesse approach, the extractions characterised by smaller theoretical uncertainty acquire larger weight in the averaging procedure and therefore the uncertainty of the average \asz is smaller. Although, theoretically, nuisance-parameters and covariance matrix approaches must be equivalent, the results from the former method are difficult to interpret. In this case, the numerical value for the systematic shift represents the rescaling factor that has to be applied to the renormalisation or factorisation parameters in order to obtain a better fit:
-\begin{equation}
- b_{\mu} = \ln{\frac{\mu'}{\mu^0}},
-\end{equation}
-where $\mu^{0}$ is the numerical value for the default choice of $\mu_{R(F)}$, while $\mu'$ represents the 'optimal' value obtained from the fit. Because $\mu_{R(F)}$ can be arbitrary in QCD there are no preferred \textit{a priory} values. Moreover, the nuisance treatment of the scale variation uncertainty assumes full correlation of the missing higher-order contributions across the phase space, which is difficult to justify.
+The reduction of the \asz uncertainty can be explained as follows. If the simultaneous least-squares fit to all measured points of the double-differential cross sections is interpreted as the averaging procedure for the \asz values from individual measurements, then the offset method would correspond to the averaging of \asz values determined with the scaled definition for the renormalisation and factorisation parameters and assuming equal weight for every extraction. On the other hand, in the Hesse approach, the extractions characterised by smaller theoretical uncertainty acquire larger weight in the averaging procedure and therefore the uncertainty of the average \asz is smaller. In case of nuisance parameter treatment, the numerical value for the systematic shifts $b_{\mu_R}=\ln{\mu_R/\mu_R^0}$, $b_{\mu_F}=\ln{\mu_F/\mu_F^0}$, where $\mu_R^0$ and $\mu_F^0$ denote the default scale, represent the rescaling factor that has to be applied to the renormalisation or factorisation parameters in order to obtain a better fit. This treatment assumes full correlation of missing higher-orders contributions across the phase space, which is, in principle, difficult to justify. As demonstrated, simultaneous variation of scales results in a more conservative estimate of uncertainty on \as, therefore the errors on theoretical predictions estimated from simultaneous rescaling of $\mu_R$ and $\mu_F$ were used in the fit and a single parameter $b=b_\text{scale}$ was introduced instead of $b_{\mu_R}$ and $b_{\mu_F}$. The systematic shift obtained from the fit was $b_\text{scale}=0.11\pm 0.34$. Which indicates that within the uncertainty on $b_\text{scale}$ an $\mu_R=\sqrt{\qsq+\etjetb^2}$ and $\mu_F=Q$ cannot be distinguished from the 'optimal' scale choice.
 
 Fits with alternative definitions of the renormalisation and factorisation scales were also performed. Scale choices such as $\mu_R=\etjetb$, $\mu_R=Q$ and $\mu_F=\etjetb$, $\mu_F=\sqrt{\qsq+\etjetb^2}$ were investigated. In general, alternative fits had comparable $\chi^2/N_\text{DF}$, but resulted in lower values of \asz. Only the fit with $\mu_R=\mu_F=\sqrt{\qsq+\etjetb^2}$ gave rise to a somewhat larger value of the strong coupling. The discrepancy between the results of different fit variants was smaller than the scale variation uncertainty estimated using the offset-method and therefore is assumed to be covered by the scale variation uncertainty.
 
