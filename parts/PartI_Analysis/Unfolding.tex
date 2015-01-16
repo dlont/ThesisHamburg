@@ -4,7 +4,7 @@ The data are subject to various detector effects including non-linear response, 
  \label{eq:fredholm}
 \end{equation}
 where $g\left(s\right)$ is the measured distribution, $f\left(t\right)$ the underlying true distribution and the kernel $K\left(s,t\right)$ describes the response of the detector. Thus the determination of $f\left(t\right)$ requires the solution of this equation.
-The process of extracting of the true distribution from the measured one is called \emph{unfolding}. Various techniques were proposed in the literature to solve equation~\ref{eq:fredholm} (see for example~\cite{statistics book page 187} and references therein). In this thesis the so-called \emph{method of correction factors (or bin-by-bin method)} was employed.
+The process of extracting of the true distribution from the measured one is called \emph{unfolding}. Various techniques were proposed in the literature to solve equation~\ref{eq:fredholm} (see for example~\cite{Behnke:2013pga} p.187). In this thesis the so-called \emph{method of correction factors (or bin-by-bin method)} was employed.
 
 In this chapter the procedure used for the determination of inclusive-jet cross sections is described. In Section~\ref{sec:acccor} the bin-by-bin method is presented. Afterwards in Section~\ref{sec:bindef} the binning definition for the cross sections measurement is discussed. The chapter concludes with the description of polarisation corrections.
 
@@ -44,7 +44,7 @@ The terms appearing in the definitions~\eqref{eq:accdef}--\eqref{eq:efficiencyde
 \end{equation}
 where $N_{\mathrm{bin},i}^{\mathrm{\ulcorner rec \wedge gen}}$ and $N_{\mathrm{bin},i}^{\mathrm{rec \wedge \ulcorner gen}}$ are the number of jets generated but not reconstructed in bin $i$ and reconstructed but not generated in that bin, respectively.
 
-The acceptance correction factors, efficiency and purity for the relevant inclusive-jet cross sections determined using either \lepto or \ariadne MC samples are shown in Figures~\ref{fig:epa}~\subref{fig:epa_subfig1}--\subref{fig:epa_subfig3}. In general, the purity is typically above 40\% for all kinematic observables, while the efficiency is typicaly within 30\% and 65\%. The decrease of efficiency in the region $250\,\GeV^2<\qsq<500\,GeV^2$ was observed before~\cite{joerg hanno trevor januschek} and was attributed to the reduced electron identification capabilities in the transition region between the RCAL and BCAL. The acceptance correction factors never exceed 1.6 and are typically below 1.4.
+The acceptance correction factors, efficiency and purity for the relevant inclusive-jet cross sections determined using either \lepto or \ariadne MC samples are shown in Figures~\ref{fig:epa}~\subref{fig:epa_subfig1}--\subref{fig:epa_subfig3}. In general, the purity is typically above 40\% for all kinematic observables, while the efficiency is typicaly within 30\% and 65\%. The decrease of efficiency in the region $250\,\GeV^2<\qsq<500\,GeV^2$ was observed before~\cite{joerghannotrevorjanuschek} and was attributed to the reduced electron identification capabilities in the transition region between the RCAL and BCAL. The acceptance correction factors never exceed 1.6 and are typically below 1.4.
 \begin{figure}[pht]
 \begin{center}
 \begin{subfloat}{\includegraphics[width=\linewidth,trim={0 0 0 0},clip] {./Figures/epa/h_etjetb_CS_d_epa}
@@ -66,7 +66,7 @@ The acceptance correction factors, efficiency and purity for the relevant inclus
 \label{fig:epa}
 \end{figure}
 
-A major limitation of the described method is its possibly high sensitivity to the MC true level distribution~\cite{cowan note}. Hence this effect was investigated by using alternative event generators and was taken into account in the systematic uncertainty assessment (see Chapter~\ref{systematics}).
+A major limitation of the described method is its possibly high sensitivity to the MC true level distribution~\cite{Cowan:2002in}. Hence this effect was investigated by using alternative event generators and was taken into account in the systematic uncertainty assessment (see Chapter~\ref{systematics}).
 
 \section{Polarisation Correction}
 \input{parts//PartI_Analysis//corrections//polcor}
@@ -76,7 +76,7 @@ A major limitation of the described method is its possibly high sensitivity to t
 
 \section{Bin Definition}
 \label{sec:bindef}
-The choice of the size of the bin width is limited by two factors. Naturally, in order to obtain maximum information from the measurements, the bin width has to be as small as possible. However reduction of the bin size leads to a decrease of the number of entries. Therefore a width must be large enough to obtain a statistically significant number of entries per bin. In addition, because of finite resolution and possibly non-linear response of the detector, the migration effects can be substantial in case the bin width is much smaller than the detector resolution. Besides that it is convenient to define the binning for inclusive-jet analysis to be consistent with that for dijet and trijet analysis performed at \zeus~\cite{joerg Makarenko}.
+The choice of the size of the bin width is limited by two factors. Naturally, in order to obtain maximum information from the measurements, the bin width has to be as small as possible. However reduction of the bin size leads to a decrease of the number of entries. Therefore a width must be large enough to obtain a statistically significant number of entries per bin. In addition, because of finite resolution and possibly non-linear response of the detector, the migration effects can be substantial in case the bin width is much smaller than the detector resolution. Besides that it is convenient to define the binning for inclusive-jet analysis to be consistent with that for dijet and trijet analysis performed at \zeus~\cite{joergMakarenko}.
 
 The binning definition for the jet cross sections measured in this analysis is outlined below.
 \subsection*{Bin definition for ${\mathrm{d}\sigma}/{\mathrm{d}Q^2}$}

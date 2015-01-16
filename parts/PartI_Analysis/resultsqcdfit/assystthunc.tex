@@ -34,6 +34,7 @@ It can be seen that the fits are much more sensitive to the renormalisation scal
 Other approaches for the treatment of the scale variation uncertainty were also investigated. As an alternative, theoretical uncertainties were included into the covariance matrix assuming that errors attributed to the scale variations are completely uncorrelated across the measurements points. In this case the total error attributed to the theoretical and experimental uncertainties was propagated to the uncertainty on \asz value using the Hesse method. The uncertainty contribution on \as from the scale variations was calculated from the total error $\Delta_\text{tot}$ according to:
 \begin{equation}
  \Delta_\text{scales} = \sqrt{\left(\Delta_\text{tot}\right)^2 - \left(\Delta_\text{exp}\right)^2}
+ \label{eq:asuncscalecontrib}
 \end{equation}
 Another approach was also tested. The uncertainties due to missing higher-order contributions were included into the $\chi^2$ using the nuisance parameters, similar to jet-energy scale or luminosity uncertainty. In this case the systematic shifts attributed to the theoretical uncertainty are treated as correlated across different bins and propagated to the result using the Hesse method. Overall, fits with Hesse treatment of the scale variation uncertainties resulted in substantial reduction of \asz error in comparison to the offset method. The comparison of different approaches is provided in Table~\ref{tab:scaleuncvariants}.
 \begin{table}[h]
@@ -160,3 +161,10 @@ As was mentioned above, the strong coupling enters pQCD predictions for hadron-i
 
 As can be seen in Figure~\ref{fig:aschi2scanpdf_b}, the quality of the fit deteriorates with increasing assumed value of the strong coupling and the fits based on PDFs with the smallest \asz value yield the smallest values of $\chi^2/n_\text{DF}$. Nevertheless, for MSTW08, CT10 and HERAPDF1.5, the dependence of $\chi^2/n_\text{DF}$ on the assumed value is very mild in the vicinity of the minimum. The resulting values of \as for the fits with minimal value of $\chi^2/n_\text{DF}$ are consistent with the central value within the experimental uncertainty.
 
+\subsubsection{Uncertainties due to hadronisation corrections}
+\label{subsec:ashadrunc}
+The uncertainty on \as due to the that on the hadronisation corrections applied to the NLO pQCD predictions were estimated by error propagation utilising the Hesse method. The uncertainty on the correction factors was defined as a half-difference between the predictions obtained using the \ariadne or \lepto models and the average of those, which was used a default value (see Section~\ref{subsec:hadrcorr}).
+
+\as fits were performed adding the uncertainty on the hadronisation correction factors quadratically to the uncorrelated systematic uncertainty. The effect of the additional source of error on the extracted \asz value was determined using the Eq.~\eqref{eq:asuncscalecontrib}, where in this case, the $\Delta_\text{tot}$ represented the combined uncertainty on \as due to hadronisation corrections and experimental errors.
+
+The uncertainties on the predictions due to hadronisation correction factors was $\lessapprox$ 2\% but typically less than 0.5\% in most of the cross section bins. The \as fits were characterised by comparable quality of the fit and resulted in \asz very similar to the central value. The uncertainty on \asz due hadronisation corrections was smaller than 0.1\% and therefore was neglected.
