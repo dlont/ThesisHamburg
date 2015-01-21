@@ -5,13 +5,24 @@ In perturbative QCD, the predictions for a physical observable, $f$, are calcula
 \end{equation}
 The perturbation series starts at some power of the expansion parameter and only a few terms of the series are usually calculated. The expansion coefficients $f_i$ in the above series are usually calculated by summing up Feynman diagrams (or similar techniques). The number of diagrams grows as $\sim i!$ with increasing perturbative order, therefore such series are, in general, divergent and have to be treated as an asymptotic expansion~\cite{Ioffe:2010zz}. However, it is commonly assumed that the few first terms in the series provide a reasonable approximation to the exact solution.
 
-Calculation of higher-order corrections requires consideration of complex field configurations which emerge due to quantum fluctuations. Such configurations can be formally divided into two classes according to the topology of the corresponding Feyman diagrams. An example of next-to-leading-order diagrams contributing to the jet production in deep inelastic scattering process are illustrated in Figure~\ref{fig:nlojetfeyn}. The real corrections (Figure~\ref{fig:nlojetfeyn}a) are characterised by increased number of legs with respect to lower-order graphs, while in virtual contributions (Figure~\ref{fig:nlojetfeyn}b) the fields form closed loops. Leading-order graphs always have a tree structure.
+Leading-order graphs always have a tree-like structure. Calculation of higher-order corrections requires consideration of field configurations which emerge due to quantum fluctuations. Such configurations can be formally divided into two classes according to the topology of the corresponding Feyman diagrams. An example of next-to-leading-order diagrams contributing to the jet production in deep inelastic scattering process are illustrated in Figure~\ref{fig:nlojetfeyn}. The real corrections (Figure~\ref{fig:nlojetfeyn}a) are characterised by increased number of legs with respect to lower-order graphs, while in virtual contributions (Figure~\ref{fig:nlojetfeyn}b) the fields form closed loops.
  
 \begin{figure}[h]
- \includegraphics[width=\textwidth]{./Figures/DirectNLORealVirtualCorrections}
+	\begin{subfloat}[]{
+		\includegraphics[width=0.35\linewidth,trim=0 0 0 10,clip]{./Figures/source/DirectNLOVirtual}
+		\label{fig:nlojetfeynvirtual}
+	 }%
+	\end{subfloat}\hfill
+	\begin{subfloat}[]{
+		\includegraphics[width=0.35\linewidth,trim=0 0 0 10,clip]{./Figures/source/DirectNLOReal}
+		\label{fig:nlojetfeynreal}
+	}%
+	\end{subfloat}
+ %\includegraphics[width=\textwidth]{./Figures/DirectNLORealVirtualCorrections}
 \caption{Next-to-leading order corrections to the jet production include (a) virtual (b) real contributions.}
 \label{fig:nlojetfeyn}
 \end{figure}
 
-Intuitively, as the spatial scale at which the process is considered decreases,  more fluctuations of the quantum fields must be taken into account. As a result, the field couplings or masses have to be interpreted as effective parameters of the theory, which take into account charge screening, self interaction etc. Nevertheless, it is unnatural that fluctuations occurring at scales much smaller than that corresponding to the typical energy scale of the process in question should have a significant influence. Remarkably, QCD admits redefinition of the couplings, fields and masses that incorporate contributions from fields fluctuations occurring in the limit of infinite energy. Such a property of QCD is called renormalisability. 
+Intuitively, as the spatial scale at which the process is considered decreases,  more fluctuations of the quantum fields must be taken into account. Such fluctuations lead to (anti-)screening of the colour charge or self interaction of particles, as a result, the field couplings or masses have to be interpreted as effective parameters of the theory, which take into account these effect. Nevertheless, it is unnatural that fluctuations occurring at scales much smaller than that corresponding to the typical energy scale of the process in question should have a significant influence. Remarkably, QCD admits redefinition of the couplings, fields and masses that incorporate contributions from fields fluctuations occurring in the limit of infinite energy. Practically, such a procedure involves singular transformation consisting of expressing of physical observables in terms of finite number or measured quantities and absorbing singularities emerging in the intermediate calculations into theory parameters. Such a process is called renormalisation. 
 
+In the calculations used in this thesis the so-called $\overline{\mathrm{MS}}$~\cite{Bardeen:1978yd} renormalisation scheme was utilised. It consist of analytic continuation of the of the results of the calculations to un-physical $D=4+2\varepsilon$ dimensions\footnote{This procedure is also called dimensional regularisation.} and representing the results as a Laurent series in $\varepsilon$. The renormalisation proceeds with subtraction of the $1/\varepsilon^n$ poles to obtain finite quantities, when physical limit $\varepsilon \rightarrow 0$ is taken. Besides that the procedure introduces additional parameter $\mu$ which has the dimension of energy. The dependence of the results on this parameter is discussed below.
