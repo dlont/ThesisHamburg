@@ -1,3 +1,14 @@
+High-energy partons, emerging from the hard interaction, in the experiment appear as collimated ``spays'' of particles, called jets. In order to determine the parent-parton momentum an appropriate assignment of a particle to a jet has to be performed. Investigation of jet production provides access to the details of the underlying hard interaction as well as to the parton dynamics and the mechanism of parton showering. The proper combination of the particles has to satisfy general conditions:
+\begin{itemize}
+	\item infrared and collinear safety;
+	\item conservation of factorisation properties of the hard and soft processes;
+	\item little sensitivity to the hadronisation effects;
+	\item relative insensitivity to the soft interactions of the hadron remnant;
+	\item invariance under longitudinal Lorentz boosts;
+	\item easy implementation at the particle level in experimental analyses as well as at the parton/hadron level in perturbative theoretical calculations.
+\end{itemize}
+Among others the \kt-clustering algorithm satisfies all mentioned requirements and is described below in details.
+
 The recombination-type generalised \kt-algorithm is defined by the following iterative procedure applied to the input list of objects\footnote{The input objects may refer to the energy deposits in the calorimeter cells; the set of partons in MC or fixed-order predictions or the set of stable hadrons appearing at the hadron level of MC simulations.} (see Fig.~\ref{fig:jetcombinationalgorithm}).
 \begin{enumerate}
 	\item A distance measure, $d_{ij}$, quantifying the phase-space separation of two objects $i$ and $j$, is defined for each pair of particles:
