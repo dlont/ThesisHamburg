@@ -10,13 +10,13 @@ The electron method utilises the energy, \eefin, and the polar angle, \thetae, o
 where, $\eeini$, is the energy of the initial-state electron. It has been shown~\cite{nim:a426:583} that this method accurately reconstructs the event kinematic variables at high values of $\y$, while at low values of inelasticity it has poor resolution.
 \subsection{Jacquet-Blondel Method}
 \label{subsec:jb}
-The almost complete hermiticity of the \zeus calorimeter makes  possible the reconstruction of the event kinematics based exclusively on the hadronic system. Jacquet and Blondel proposed a method~\cite{proc:epfacility:1979:391} for the kinematic reconstruction for CC DIS events in which the final-state neutrino escapes the detector and cannot be measured. The kinematic variables are obtained from the following expressions:
+Transverse momentum conservation and almost complete hermiticity of the \zeus calorimeter makes  possible the reconstruction of the event kinematics based exclusively on the energy deposits attributed to the hadronic system. Jacquet and Blondel proposed a method~\cite{proc:epfacility:1979:391} for the kinematic reconstruction for CC DIS events in which the final-state neutrino escapes the detector and cannot be measured. The kinematic variables are obtained from the following expressions:
 \begin{align}
 	y_\text{JB}      &= \frac{\sum{ \left( E - P_{Z} \right) }}{2E_e},			\label{eq:ybj} \\
 	Q^2_\text{JB} &= \frac{ \left( \sum{P_{X}} \right)^2 + \left( \sum{P_{Y}} \right)^2 }{1-y_{JB}},			\label{eq:q2jb}							\\
 	x_\text{JB}      &= \frac{Q^2_\text{JB}}{s y_\text{JB}}.			\label{eq:xjb}
 \end{align}
-The sum in these expressions runs over the reconstructed final-state objects excluding those belonging to the scattered electron. It is assumed that the target remnants escaping the detector volume have small transverse momentum and are therefore suppressed in the expressions. The accuracy of this method is limited by the hadron-calorimeter energy resolution, the presence of dead material and backsplash/backscattering in the calorimeter. Because this method does not require the detection of the scattered electron, it is the only choice for photoproduction events\footnote{In photoproduction events the electron is scattered at small angles and escapes the detection in the beam pipe.}.
+The sum in these expressions runs over the reconstructed final-state objects (see above) excluding those belonging to the scattered electron. It is assumed that the target remnants escaping the detector volume have small transverse momentum and are therefore suppressed in the expressions. The accuracy of this method is limited by the hadron-calorimeter energy resolution, the presence of dead material and backsplash/backscattering in the calorimeter. Because this method does not require the detection of the scattered electron, it is the only choice for photoproduction events\footnote{In photoproduction events the electron is scattered at small angles and escapes the detection in the beam pipe.}.
 \subsection{Double-angle Method}
 \label{subsec:da}
 The Double-angle method~\cite{proc:hera:1991:23} benefits from exploiting the combined information about the scattered electron and the hadronic final state. The kinematic variables can be expressed in terms of the electron scattering angle, \thetae, and \gamha, which in the quark-parton model corresponds to the scattering angle of the stuck quark and can be obtained from the following equation
@@ -39,7 +39,8 @@ Using these relations an expression for the energy of the scattered electron can
 E_\text{el}^\text{DA} = \frac{2E_e \sin \gamma_\text{had}}{\sin \gamma_\text{had} - \sin \theta_e - \sin \left( \gamma_\text{had} + \theta_e \right)}.
 \label{eq:eeda}
 \end{equation}
-This formulae will be used later (see sec. systematics~\ref{sec:sysunc}) for the determination of the uncertainty due the absolute electromagnetic energy scale of the calorimeter.
 
  The measurements of the scattering angles usually have better resolution and are approximately independent of the absolute energy-scale of the calorimeter. It has been shown in~\cite{thesis:behr:2010} that this method is optimal in the phase space of this measurement and therefore was used as a default in this analysis.
+
+This formulae will be used later (see Section~\ref{sec:kinrec}) for the determination of the uncertainty due the absolute electromagnetic energy scale of the calorimeter.
 
