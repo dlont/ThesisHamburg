@@ -1,15 +1,18 @@
 Quantum Chromodynamcs emerged as a model to describe hadron spectra and the absence of observations of free hadron constituents. The QCD Lagrangian density can be derived from local $\mathrm{SU}\left(3\right)_{C}$ invariance and reads as follows
 \begin{align}
- \mathcal{L}\left( x\right)_{\mathrm{QCD}}  = & -\dfrac{1}{4}G_a^{\mu\nu}G_{\mu\nu}^a + i\sum_{j=1}^n{\overline{\psi}^{\alpha}_j \gamma_\mu \left( D^\mu \right)_{\alpha\beta} \psi_j^\beta } - \sum_{j=1}^n{m_j\overline{\psi}^{\alpha}_j\psi_{j,\alpha}} \\
+ \mathcal{L}\left( x\right)_{\mathrm{QCD}}  = & -\dfrac{1}{4}G_a^{\mu\nu}G_{\mu\nu}^a + i\sum_{j=1}^n{\overline{\psi}^{\alpha}_j \gamma_\mu \left( D^\mu \right)_{\alpha\beta} \psi_j^\beta } - \sum_{j=1}^n{m_j\overline{\psi}^{\alpha}_j\psi_{j,\alpha}} \notag\\
 					      & - \dfrac{1}{2\alpha_G} \partial^\mu \mathcal{A}^a_\mu \partial_\mu \mathcal{A}_a^\mu - \partial_\mu \overline{\varphi}_a D^\mu \varphi^a,
 \end{align}
-where $G_{\mu\nu}^a \equiv \partial_\mu \mathcal{A}^a_\nu - \partial_\nu \mathcal{A}^a_\mu + gf_{abc}\mathcal{A}^b_\mu \mathcal{A}^c_\nu $, $a=1 \ldots 8$ are the Yang-Mills field strength tensor~\cite{Yang:1954ek} constructed from gluon fields $\mathcal{A}^a_\mu$ in the adjoint representation of $\mathrm{SU}\left(3\right)_C$. Quarks of different flavours are described by $\psi_j$ fields in the fundamental representation of $\mathrm{SU}\left(3\right)_C$ while $\varphi^a$ are eight anti-commuting scalar Faddeev-Popov ghost fields required in the quantisation procedure~\cite{Faddeev:1967fc, DeWitt:1964yg}. The covariant derivative, $\left( D^\mu \right)_{\alpha\beta} = \delta_{\alpha\beta}\partial_\mu - ig\sum_a{\dfrac{1}{2}\lambda^a_{\alpha\beta}\mathcal{A}^a_\mu}$, is a generator of infinitesimal transformations in colour space acting on quark fields. Gell-Mann $3\times 3$ matrices, $\lambda^a_{\alpha\beta}$, are the generators of the $\mathrm{SU}\left(3\right)_C$ algebra and $f_{abc}$ are its real structure constants, defined by:
+where 
+\begin{equation}
+G_{\mu\nu}^a \equiv \partial_\mu \mathcal{A}^a_\nu - \partial_\nu \mathcal{A}^a_\mu + gf_{abc}\mathcal{A}^b_\mu \mathcal{A}^c_\nu , \qquad a=1 \ldots 8
+\label{eq:gluonstrenghtensor}
+\end{equation}
+are the Yang-Mills field strength tensor~\cite{Yang:1954ek} constructed from gluon fields $\mathcal{A}^a_\mu$ in the adjoint representation of $\mathrm{SU}\left(3\right)_C$. Quarks of different flavours are described by $\psi_j$ fields in the fundamental representation of $\mathrm{SU}\left(3\right)_C$ while $\varphi^a$ are eight anti-commuting scalar Faddeev-Popov ghost fields required in the quantisation procedure~\cite{Faddeev:1967fc, DeWitt:1964yg}. The covariant derivative, $\left( D^\mu \right)_{\alpha\beta} = \delta_{\alpha\beta}\partial_\mu - ig\sum_a{\dfrac{1}{2}\lambda^a_{\alpha\beta}\mathcal{A}^a_\mu}$, is a generator of infinitesimal transformations in colour space acting on quark fields. Gell-Mann $3\times 3$ matrices, $\lambda^a_{\alpha\beta}$, are the generators of the $\mathrm{SU}\left(3\right)_C$ algebra and $f_{abc}$ are its real structure constants, defined by:
 \begin{align}
  \left[T_a,T_b\right] = if_{abc}T_c,\qquad T_a = \dfrac{1}{2}\lambda_a.
 \end{align}
-An important feature that can be readily observed is a non-linear term,\\$gf_{abc}\mathcal{A}^b_\mu \mathcal{A}^c_\nu$, in the definition of the field-strength tensor. This term is the result of the non-Abelian structure of the symmetry group and determines the self-interaction of the force carriers. In contrast to the electromagnetic interaction, gluons carry two color charges. 
-
-Given the Lagrangian density, the Feynman rules and diagrams for QCD can be derived.  Feynman graphs representing interaction vertices of the fundamental fields are depicted in Figure~\ref{fig:FundamentalQCDInteractions}.
+An important feature that can be immediately observed is a non-linear term, $gf_{abc}\mathcal{A}^b_\mu \mathcal{A}^c_\nu$, in the definition of the field-strength tensor (see Eq.~\eqref{eq:gluonstrenghtensor}). This term is the result of the non-Abelian structure of the symmetry group and determines the self-interaction of the force carriers. In contrast to the electromagnetic interaction, gluons carry two color charges. Given the Lagrangian density, the Feynman rules and diagrams for QCD can be derived.  Feynman graphs representing interaction vertices of the fundamental fields of QCD are depicted in Figure~\ref{fig:FundamentalQCDInteractions}.
 \begin{figure}[t]
 	\centering
 		\includegraphics[width=\textwidth]{./Figures/source/FundamentalQCDInteractions.png}
@@ -17,7 +20,7 @@ Given the Lagrangian density, the Feynman rules and diagrams for QCD can be deri
 	\label{fig:FundamentalQCDInteractions}
 \end{figure}
 
-Such relatively simple model is extremely successful in description of vast variety of experimental data collected up to now. In particular, strong interaction has two distinct features: at large energy scales\footnote{In the limit $\Lambda_\mathrm{QCD}/E\rightarrow 0$, where $\Lambda\approx 225$ MeV is QCD characteristic energy scale.} hadron constituents behave as free particles and strength of the coupling decreases (``asymptotic freedom''); conversely, at low energy scales, the strength of the coupling grows, bounding quarks and gluons inside hadrons (``confinement'').  
+Such relatively simple theory is extremely successful in description of vast variety of experimental data collected up to now. In particular, strong interaction has two distinct features: at large energy scales\footnote{In the limit $\Lambda_\mathrm{QCD}/E\rightarrow 0$, where $\Lambda\approx 225$ MeV is QCD characteristic energy scale.} hadron constituents behave as free particles and strength of the coupling decreases (``asymptotic freedom''); conversely, at low energy scales, the strength of the coupling grows, bounding quarks and gluons inside hadrons (``confinement'').  
  
 At the current stage, direct solution of the Yang-Mills equations is an impossible task. Almost all quantitative QCD predictions are based on three first-principle approaches: perturbative QCD (pQCD), lattice QCD and effective theories. The perturbative approach exploits the smallness of the strong coupling constant in the high-energy regime and develops successive approximations to the solution. The next section summarises basic information about the pQCD approach.
 

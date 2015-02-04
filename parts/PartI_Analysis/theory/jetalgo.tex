@@ -1,15 +1,14 @@
-Jets are collimated ``spays'' of particles emerging from the hard interaction in high-energy collisions. Large kinematic boost of the scattered partons results in focusing of QCD radiation in a narrow cone around the parton momentum vector. Investigation of  the jet production provides an access to the details of the underlying hard interaction as well as to the parton dynamics and the mechanism of parton showering. In order to determine the parent-parton momentum an appropriate assignment of a particle to a jet has to be performed. The proper combination of the particles has to fulfil general conditions:
+%Jets are collimated ``spays'' of particles emerging from the hard interaction of partons. Large kinematic boost of the scattered partons results in focusing of QCD radiation in a narrow cone around the parton momentum vector.In order to determine the momentum of the parent-parton an appropriate assignment of particles to a jet has to be performed. 
+Investigation of the jet production provides an access to the details of the underlying hard interaction as well as to the parton dynamics and the mechanism of parton showering. In order to give a rigorous definition of the jet an algorithm for assignment of the particles to a jet must provided. The proper combination of the particles has to fulfil the following general conditions:
 \begin{itemize}
-	\item infrared and collinear safety;
+	\item infrared and collinear safety (see Section~\ref{subsec:nlojetcalc});
 	\item conservation of factorisation properties of the hard and soft processes;
 	\item little sensitivity to the hadronisation effects;
 	\item relative insensitivity to the soft interactions of the hadron remnant;
 	\item invariance under longitudinal Lorentz boosts;
 	\item easy implementation at the particle level in experimental analyses as well as at the parton/hadron level in perturbative theoretical calculations.
 \end{itemize}
-Among others the \kt-clustering algorithm satisfies all mentioned requirements and is described below in detail.
-
-The recombination-type generalised \kt-algorithm is defined by the following iterative procedure applied to the input list of objects\footnote{The input objects may refer to the energy deposits in the calorimeter cells; the set of partons in MC or fixed-order predictions or the set of stable hadrons appearing at the hadron level of MC simulations.} (see Fig.~\ref{fig:jetcombinationalgorithm}).
+Among others the recombination-type generalised \kt-algorithm satisfies all mentioned requirements and is defined by the following iterative procedure\footnote{The input objects may refer to the energy deposits in the calorimeter cells; the set of partons in MC or fixed-order predictions or the set of stable hadrons appearing at the hadron level of MC simulations.} (see Figure~\ref{fig:jetcombinationalgorithm}).
 \begin{enumerate}
 	\item A distance measure, $d_{ij}$, quantifying the phase-space separation of two objects $i$ and $j$, is defined for each pair of particles:
 	\begin{equation}
@@ -29,13 +28,13 @@ The recombination-type generalised \kt-algorithm is defined by the following ite
 	When $d_i$ is the smallest, the object is called jet and removed from the list.
 	\item The algorithm is repeated until no objects remain in the list.
 \end{enumerate}
-The parameter $n$ in equation~\ref{eq:dij} defines three types of algorithm:
+The parameter $n$ in Eq.~\eqref{eq:dij} defines three types of algorithm:
 \begin{itemize}
-	\item \textsl{$n$ = -1}: the inclusive anti-\kt~algorithm~\cite{Cacciari:2008gp}, which is now extensively used at the LHC. This algorithm results in jets of circular shape and combines particles with large $E_\text{T}$ first;
+	\item \textsl{$n$ = -1}: the inclusive anti-\kt~algorithm~\cite{Cacciari:2008gp}, which is now extensively used at the LHC. This algorithm results in jets of circular shape. The recombination process is characterised by first assigning particles with large $E_\text{T}$ to the jets and then combining a soft radiation;
 	\item \textsl{$n$ = 0}: the Cambridge-Aachen~\cite{Dokshitzer:1997in} algorithm, which takes into account only angular separations between two objects.  This algorithm was mostly used in $e^+e^-$ collider experiments.
-	\item \textsl{$n$ = 1}: the inclusive \kt~algorithm~\cite{Catani:1993hr}. It produces jets of irregular shape and combines soft particles first.
+	\item \textsl{$n$ = 1}: the inclusive \kt~algorithm~\cite{Catani:1993hr}. It produces jets of irregular shape and, in contrast to anti-\kt, recombines particles with small $E_\text{T}$ first.
 \end{itemize}
- It has been shown that in photoproduction~\cite{np:b864:1} and DIS~\cite{Abramowicz:2010ke}, the \kt~and anti-\kt~have similar performance. The study~\cite{pl:b649:12} has demonstrated that $R=1$ is the optimal choice of the radius parameter. Taking this into account, the choice of the \kt~algorithm with $R=1$ was adopted in this thesis. Taking advantage of the longitudinal invariance of the algorithm, the jet search is performed in the Breit frame described below.
+ It has been shown that in photoproduction~\cite{np:b864:1} and DIS~\cite{Abramowicz:2010ke}, the \kt~and anti-\kt~have similar performance. The study~\cite{pl:b649:12} has demonstrated that $R=1$ is the optimal choice of the radius parameter. Taking this into account, the choice of the \kt~algorithm with $R=1$ was adopted in this thesis. Taking advantage of the longitudinal invariance of the algorithm, the jet search was performed in the Breit frame, which described below.
 
 \begin{figure}
 	\centering
