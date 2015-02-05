@@ -4,13 +4,16 @@ The hadronic final-state of the DIS process contains charged and neutral particl
 The energy deposits in the elementary calorimeter units i.e. cells (see Section~\ref{subsec:UCAL}) were used as an input to the jet finder. In order to suppress noise signals the minimum energy threshold $E_\text{EM}>50$ MeV and $E_\text{HAD}>100$ MeV was imposed on energy deposits in electromagnetic and hadronic parts, respectively. Besides that, to avoid signals from spontaneous high-votage discharge of the photomultipliers, the cells with the difference of the photomultiplier signals exceeding 90\% were also excluded. Since the scattered DIS electron does not contribute to the hadronic final state the cells attiributed to the electron were excluded from consideration. 
 
 \textbf{Calorimeter islands.}
-Since single particle can give rise to the signals in more than one cell, the energy deposits from adjacent cells satisfying the afrore mentioned requirements were combined using designated algorithm into the so called calorimeter ``islands''~\cite{upub:grosse-knetter:zn9739}. The energy of the island was calculated from the energy sum of the corresponding cells and the position of the island was defined as energy-weighed average of the coordinates of the centres of individual cells belonging to an island. The energy of the island was corrected for the losses in the dead material in front of the calorimeter and/or in the inter-module gaps. Non-uniformities of the response in different parts of the CAL were also taken into account. In this thesis the island information was mainly used for the reconstruction of kinematic quantities (see below).
-
-Given energy of the calorimeter island or cell the four-momentum components of the vector corresponding to the energy deposit were determined using following equations:
+Since single particle can give rise to the signals in more than one cell, the energy deposits from adjacent cells satisfying the afrore mentioned requirements were combined using designated algorithm into the so called calorimeter ``islands''~\cite{upub:grosse-knetter:zn9739}. The energy of the island was calculated from the energy sum of the corresponding cells $E_k$ and the position of the island $\vec{r}_{isl}$ was defined as energy-weighed average of the coordinates $\vec{r}_i$ of the centres of individual cells belonging to an island:
+\begin{align}
+\vec{r}_{isl} &= \frac{\sum_i{w_i \vec{r}_i}}{\sum_i{w_i}}, \\
+w_i &= \max\left(0,W_0+\ln{\frac{E_i}{\sum_k{E_k}}}\right),
+\end{align}
+where $w_i$ is a weight assigned to the energy deposit and $W_0$ is a tunable parameter defining the minimum fraction of the energy deposit contributing to the cell-island position. Given energy of the calorimeter island or cell the four-momentum components of the vector corresponding to the energy deposit were determined using following equations:
 \begin{align}
 	E    &= E_{cell/isl}, \\
 	P_X &= E \sin{\theta}\cos{\phi}, \\
 	P_Y &= E \sin{\theta}\sin{\phi}, \\
 	P_Z &= E \cos{\theta},
 \end{align}
-where angles $\theta, \phi$ are determined from the direction to the centre of the calorimeter cell or cluster\footnote{The position of the primary vertex is used as a reference point for angle determination.}.
+where angles $\theta, \phi$ are determined from the direction from primary vertex to the centre of the calorimeter cell or cluster. The energy of the island was corrected for the losses in the dead material in front of the calorimeter and/or in the inter-module gaps as well as for ``backsplash'' effect. The backsplash process is characterised by the particle energy deposits in the locations different from their expected direction e.g. backscattering from the CAL surface or showering of the particles in front of the calorimeter. Non-uniformities of the response in different parts of the CAL were also taken into account. In this thesis the island information was mainly used for the reconstruction of kinematic quantities (see below).
