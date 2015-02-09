@@ -1,5 +1,5 @@
-\subsection{Signal Characteristics}
-\label{subsec:signalchar}
+\section{Signal Characteristics}
+\label{sec:signalchar}
 As can be seen from the Eq.~\ref{eq:q2el}, large values of \qsq\, in NC DIS events correspond to large scattering angles of the electron. The electron produces a well isolated electromagnetic shower in the calorimeter with a charged track pointing to the interaction vertex (see Figure~\ref{fig:ncdiseventdisplay}). At low and medium values of $\qsq < 500\, \GeV^2$ the electron typically scatters into the RCAL. For larger values of $\qsq$ the electron can be found in BCAL and at very high-$\qsq$ the electron scatters to the FCAL. From momentum conservation, the electron recoils from the hadronic system, which balances the scattered electron in the transverse plane.
 \begin{figure}[htbp]
 	\centering
@@ -14,41 +14,41 @@ In NC DIS processes the quantity $\delta$ defined as
 \end{equation}
 must be conserved. Similarly, the total transverse momentum of the event must vanish, because the initial-state transverse momentum is zero.
 
-\subsection{Characteristics of Background Processes}
-\label{subsec:bgchar}
+\section{Characteristics of Background Processes}
+\label{sec:bgchar}
 
-\subsubsection{Photoproduction}
-\label{subsubsec:photoprodbg}
+\subsection{Photoproduction}
+\label{subsec:photoprodbg}
 The cross section of inelastic electron-proton scattering with $\qsq \approx 0\;\GeV^2$ is large and serves as potential source of backgound to the NC DIS analysis. At low \qsq, the scattered electron is deflected by a small angle and escapes in the beampipe. Isolated electromagnetic clusters from $\pi^0$ decays can be misidentified as the final-state electron. The variable $\delta$ calculated from the final-state energy deposits will be smaller than 55 \GeV~by approximately twice the energy of the escaped electron\footnote{The energy and momentum of the particles escaping in the forward direction is approximately cancelled.}.
 
-\subsubsection{Beam-Gas interactions. Cosmic and Halo Muons}
-\label{subsubsec:beamgasfeatures}
+\subsection{Beam-Gas interactions. Cosmic and Halo Muons}
+\label{subsec:beamgasfeatures}
 The electron and proton beams can interact with the residual gas in the beam pipe. The proton collisions are characterised by large hadronic activity and many tracks emerging at low polar angles upstream from the nominal interaction point. Using the calorimeter timing information as well as signals from the \textcolor{blue}{Veto-Wall} such events can be successfully rejected. Additionally, such processes are characterised by low values of $\delta$. The rate of the electron beam interactions was found in a previous study~\cite{thesis:moritz:2001} to be very small and can be ignored.
 
 Additional sources of background come from cosmic and beam-halo muons. Cosmic muons are produced in high-energy cosmic rays. Passage of muons though the volume of the detector results in a time difference between the signals in the upper and lower parts of the CAL. Beam-halo muons, emerging from decays of pions produced in beam-gas interactions upstream of the detector, travel parallel to the beam axis. The time difference between signals in the RCAL and FCAL is used to eliminate such processes. In general, cosmic and beam-halo events have non-zero total transverse momentum due to imbalance of the energy deposits in the transverse plane. This information can be used for background suppression. The detailed description of event selection is presented in the following sections.
 
-\subsection{Data sets. Run selection. DQM requirements.}
+\section{Data sets. Run selection. DQM requirements.}
 This analysis was performed using the data recorded during the 2004 -- 2007 running period. The $\ep$ centre-of-mass collision energy during this period was \sqs = 318 \GeV. The integrated luminosity of the measurement amounts to 295 \invpb.
 
-\subsection{On-line selection}
-\label{subsec:onlineselect}
+\section{On-line selection}
+\label{sec:onlineselect}
 The operation of the detector components was continuously monitored during the data-taking. The status of each of the detector components was stored for every run in the so-called, ``EVTAKE'' flag. For this analysis the EVTAKE=1 was required indicating that all main detector components e.g. CTD, MVD, CAL were fully operational.
 
 In addition to EVTAKE flag, the LPOLTAKE and TPOLTAKE status records were used in this analysis in order to verify the availability of the information from the corresponding lepton-beam polarisation detectors. At least one of the detectors was required to be in good status on in order to determine the polarisation value for particular runs.
-\subsubsection{FLT trigger}
-\label{subsubsec:fltcuts}
+\subsection{FLT trigger}
+\label{subsec:fltcuts}
 \begin{itemize}
 	\item \textbf{FLT bit 40:} The total energy in the electromagnetic section of the calorimeter, $E_\text{EMC}^\text{CAL}$, exceeds 20 \GeV\, and \textcolor{blue}{track veto}.
 	\item \textbf{FLT bit 43:} The total transverse energy in the calorimeter, $E_\text{T}^\text{CAL}$, exceeds 20 \GeV\, and at least one good track is required.
 	\item \textbf{FLT bit 50:} The total energy, $E^\text{CAL}$, greater than $15\, \GeV$\, or $E_\text{EMC}^\text{CAL} > 10\, \GeV\,$ or $E_\text{EMC}^\text{BCAL} > 3.5\, \GeV$\, or $E_\text{EMC}^\text{RCAL} > 2\, \GeV$\, and $E_\text{T}^\text{CAL} > 1\, \GeV$\, and a good track is required.
 \end{itemize}
 
-\subsubsection{SLT trigger}
-\label{subsubsec:sltcuts}
+\subsection{SLT trigger}
+\label{subsec:sltcuts}
 The second-level trigger was used to suppress further the beam-related background. The information from the \zeus global tracking trigger was utilised at SLT for the reconstruction of the interaction vertex position and to reject events originating from background processes. Moreover, the calorimeter timing information was used extensively to suppress beam-gas and cosmic-ray background. For example, hadrons emerging in vicinity of the nominal interaction point will be characterised by approximately the same arrival time in different parts of the CAL, in contrast to cosmic-shower events for which the signals from the upper part of the BCAL will arrive earlier than from the bottom part. Thus, given the high timing resolution of the CAL, the background processes can be efficiently discriminated.
 
 \subsubsection{TLT trigger}
-\label{subsubsec:tltcuts}
+\label{subsec:tltcuts}
 The final stage of the trigger selection was based on the identification of the scattered DIS electron. The reduced read-out rate at the TLT allowed application of the complex reconstruction algorithms that were much closer related to those used in the off-line analysis. The TLT bit \textsf{DIS03} together with DST bit 12 were used in the selection chain and impose the loose cuts summarised in the Table~\ref{tab:TLTDSTreq}.
 \begin{table}
 \centering
@@ -62,21 +62,20 @@ The final stage of the trigger selection was based on the identification of the 
 \label{tab:TLTDSTreq}
 \end{table}
 
-\subsection{Off-line selection}
-\label{subsec:offlineselect}
+\section{Off-line selection}
+\label{sec:offlineselect}
+Trigger-level event selection cannot fulfil signal to background discrimination requirements necessary for precision analysis because of limited processing time and significant complexity of the reconstruction algorithms for the objects such as secondary vertices, particle decays or jets. In addition, information about detector operating conditions such as the number of dead channels, changes in high voltage, CTD gas pressure, temperature, etc. are difficult or impossible to take into account at the trigger level. After the trigger-based pre-selection a set of cuts is applied off-line to ensure a low level of background and high purity of selected sample. Additional requirements were imposed to restrict the phase space of the measurement. 
 
-After the trigger-based pre-selection a set of cuts is applied off-line to ensure a low level of background and high purity of selected sample. Additional requirements were imposed to restrict the phase space of the measurement. 
-
-\subsubsection{Phase space}
-\label{subsubsec:phasespace}
+\subsection{Phase space}
+\label{subsec:phasespace}
 The phase-space cuts are performed for selection of the kinematic region of the reaction in question. As was mentioned earlier, two variables completely determine the kinematics of deep inelastic scattering. In this analysis, the boson virtuality \qsq~and inelasticity \y~were used.
 \begin{itemize}
 	\item \textbf{Photon virtuality}, $125 < \qsq_{DA} < 20000\;\GeV^2$;  deep inelastic scattering processes with large four-momentum transfer were selected.
 	\item \textbf{Inelasticity}, $0.2 < \y_{DA} < 0.6\;\GeV$; the lower cut was imposed to reject events with large hadronic activity in the forward direction for which hadronisation corrections were found to be inaccurate. The upper cut was applied to ensure reliability of the detector acceptance corrections.
 \end{itemize}
 
-\subsubsection{Electron selection}
-\label{subsubsec:eleselect}
+\subsection{Electron selection}
+\label{subsec:eleselect}
 
 To ensure high purity and reliability of the reconstruction of the scattered electron, the following requirements were imposed on electron candidates.
 \begin{itemize}
@@ -92,8 +91,8 @@ To ensure high purity and reliability of the reconstruction of the scattered ele
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{Primary vertex selection}
-\label{subsubsec:vtxselect}
+\subsection{Primary vertex selection}
+\label{subsec:vtxselect}
 Proper identification of the interaction point is important for the reconstruction of the kinematic variables. The longitudinal extent of the interaction region is determined by the length of the interacting bunches and the time structure of the beam. Beam-gas or cosmic rays events are evenly distributed along the longitudinal coordinate, while \ep\, events appear with higher rate in the vicinity of the nominal beam-beam interaction point. Distribution of the longitudinal component of the position of the primary vertex has Gaussian-like shape (see section~\ref{sec:zvtxrew}). Selecting the events with the primary interaction vertex satisfying $\chi^2 < 10$ and $Z_\text{vtx}$ being within $\sim \pm 3\sigma$ of the width of the distributions suppresses the non-physics background contribution and ensures good understanding of the dependence of the acceptance of the calorimeter and tracking systems on the position of the interaction vertex. The mean value and the width of the $Z_\text{vtx}$ changes between different data-taking periods. The restrictions imposed on $Z_\text{vtx}$ are detailed in Table~\ref{tab:zvxcut}.
 \begin{table}[htbp]
 	\centering
@@ -110,8 +109,8 @@ Proper identification of the interaction point is important for the reconstructi
 	\label{tab:zvxcut}
 \end{table}
 
-\subsubsection{Longitudinal Momentum balance}
-\label{subsubsec:empzcut}
+\subsection{Longitudinal Momentum balance}
+\label{subsec:empzcut}
 As discussed previously in Section~\ref{subsubsec:beamgasfeatures}, longitudinal momentum balance can be used to discriminate against photoproduction and beam-gas background. The actual value of quantity $\delta=\sum_i{\left(E_i-p_{z,i}\right)}$ for a particular event may deviate from the nominal $\delta=55\;\GeV$ due to finite resolution as well as initial-state radiation effects. Therefore the following requirement was implied:
 \begin{equation}
 38 < \delta < 65\;\GeV.
@@ -119,37 +118,37 @@ As discussed previously in Section~\ref{subsubsec:beamgasfeatures}, longitudinal
 \end{equation}
 The lower value was chosen in order to reject photoproduction events efficiently, while the upper cut is required for the suppression of beam-gas events.
 
-\subsubsection{Transverse Momentum balance}
-\label{subsubsec:empzcut}
+\subsection{Transverse Momentum balance}
+\label{subsec:empzcut}
 Due to finite resolution, the total transverse momentum of an NC DIS event may be greater that zero. The energy resolution of the calorimeter scales approximately as $1/\sqrt{E}$. In order to suppress beam-gas-related, cosmic-ray and charged current processes with a misidentified electron, the following ratio was required to be small:
 \begin{equation}
 \frac{p_T}{\sqrt{E_T}} < 2.5\;\sqrt{\GeV}.
 \label{eq:ptcut}
 \end{equation}
 
-\subsubsection{Event Inelasticity}
-\label{subsubsec:yelcut}
+\subsection{Event Inelasticity}
+\label{subsec:yelcut}
 
 The DST bit 12 has a requirement on inelasticity of the event. In order to have the offline selection consistent with the trigger requirements, an additional cut $y_{el} < 0.75$ was imposed. This requirement rejects photoproduction background but the effect of the cut was found to be very small.
 
-\subsubsection{Elastic QED-Compton}
-\label{subsubsec:elasticqedcut}
+\subsection{Elastic QED-Compton}
+\label{subsec:elasticqedcut}
 Elastic Compton scattering processes ($ep \rightarrow ep\gamma$) in which the proton remains intact are not well described by Monte Carlo simulations. The characteristic feature of such processes is the presence of two isolated electromagnetic clusters in the calorimeter. Therefore, events containing two electron candidates with transverse momentum vectors opposite to each other ($\Delta\phi > 3$), a ratio of transverse momenta between 0.8 and 1.2 and total energy sum measured in the calorimeter, excluding the energy of the two EM clusters from the electron candidates, below 3 \GeV~were rejected.
 
-\subsubsection{Higher-order QED predictions}
-\label{subsubsec:qedcorcut}
+\subsection{Higher-order QED predictions}
+\label{subsec:qedcorcut}
 In order to ensure the validity of higher-order QED corrections applied to the data (see Section~\ref{sec:qedcorr}) the region of phase space given by the requirement $y_{JB}\cdot\left(1-x_{DA}\right)^2>0.004$ was excluded. Monte Carlo predictions were found to be unreliable in this region~\cite{cpc:81:381}.
 
-\subsubsection{Hadronic Scattering Angle}
-\label{subsubsec:gammahadcut}
+\subsection{Hadronic Scattering Angle}
+\label{subsec:gammahadcut}
 In order to suppress events with large hadronic activity in the forward region, where the simulations were found to be inaccurate~\cite{thesis:jose:2003}, a cut on the projection of the hadronic scattering angle in the FCAL $R^\text{FCAL}_{\gamma^{had}} > 18\;\cm$ was implied. This constraint had only a marginal effect because of inelasticity requirements suppressing events with large hadronic activity.
 
-\subsubsection{Track multiplicity}
-\label{subsubsec:trackmultcut}
+\subsection{Track multiplicity}
+\label{subsec:trackmultcut}
 The residual beam-gas contamination was minimised by requiring the presence of at least one track, which crossed a minimum of three CTD superlayers and had transverse momentum $p_T>0.2\;\GeV$. This cut had only a minor effect.
 
-\subsubsection{Jet selection}
-\label{subsubsec:jetselect}
+\subsection{Jet selection}
+\label{subsec:jetselect}
 In order to identify jets, the \kt~clustering-algorithm in the longitudinally-invariant inclusive mode was used. The jet search was performed in the Breit frame, therefore the momentum vectors corresponding to the energy deposits were transformed accordingly. The momentum vectors were constructed from the energy and orientation of the calorimeter-cell centre with respect to the interaction point. By definition the constructed vectors are massless. All cells excluding those corresponding to the electron candidate and satisfying the following requirements were used for the jet reconstruction:
 \begin{itemize}
 	\item the signals from natural Uranium radioactivity were suppressed by requiring the minimum energy in the cell to be above a threshold;
@@ -169,8 +168,8 @@ The purity of the jet sample was enhanced by applying the following jet-cleaning
 	\item jets with low transverse energy in the laboratory frame have large relative energy-scale uncertainty, therefore jets with $\etjetlab < 3\;\GeV$ were excluded.
 \end{itemize}
 
-\subsection{Final event sample}
-\label{subsec:eventsampletab}
+\section{Final event sample}
+\label{sec:eventsampletab}
 The imposed requirements restrict the kinematic phase space of the measurements to
 
 \begin{gather}
