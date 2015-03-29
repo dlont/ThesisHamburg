@@ -1,41 +1,65 @@
 \section{Signal Characteristics}
 \label{sec:signalchar}
-As can be seen from the Eq.~\eqref{eq:q2el}, large values of \qsq\, in NC DIS events correspond to large scattering angles of the electron. The electron produces a well isolated electromagnetic shower in the calorimeter with a charged track pointing from the interaction vertex to the electromagnetic cluster (see Figure~\ref{fig:ncdiseventdisplay}). At low and medium values of $\qsq < 500\, \GeV^2$ the electron typically scatters into the RCAL. For larger values of $\qsq$ the electron can be found in BCAL and at very high-$\qsq$ the electron scatters to the FCAL. The total transverse momentum of the event 
+As can be seen from the Eq.~\eqref{eq:q2el}, large values of \qsq\, in NC DIS events correspond to large scattering angles of the electron. The electron produces a well isolated electromagnetic shower in the calorimeter with a charged track pointing from the interaction vertex to the electromagnetic cluster (see Figure~\ref{fig:ncdiseventdisplay}). At low and medium values of $\qsq < 500\, \GeV^2$ the electron typically scatters into the RCAL. For larger values of $\qsq$ the electron can be found in BCAL and at very high-$\qsq$ the electron scatters to the FCAL. In NC DIS at \hera initial-state transverse momentum is zero, therefore final-state transverse momentum of the event must vanish according to momentum conservation:
 \begin{equation}
-P_{T,tot}^2 = P_{X,tot}^2+P_{Y,tot}^2 = \left(\sum_i{E_i\sin{\theta_i}\cos{\phi_i}}\right)^2 + \left(\sum_i{E_i\sin{\theta_i}\sin{\phi_i}}\right)^2
+P_{T,tot}^2 = P_{X,tot}^2+P_{Y,tot}^2 = \left(\sum_i{E_i\sin{\theta_i}\cos{\phi_i}}\right)^2 + \left(\sum_i{E_i\sin{\theta_i}\sin{\phi_i}}\right)^2 \approx 0\;\GeV^2.
 \end{equation}
-must vanish, because the initial-state transverse momentum is zero. In the above equation the summation runs over all energy deposits in the CAL. Momentum conservation implies, that the electron recoils from the hadronic system, which balances the scattered electron in the transverse-momentum plane.
+ In the above equation the summation runs over all energy deposits in the CAL. Momentum conservation implies, that the electron recoils from the hadronic system, which balances the scattered electron in the transverse-momentum plane.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{./Figures/event_display_53520_93222_jets} 
-	\caption{A typical NC DIS event with $E-P_Z=51~\GeV$, $P_T=2~\GeV$ and \qsq = 965~$\GeV^2$~and two jets identified in the Breit frame with \etjetb> 8~\GeV~as recorded by the \zeus detector. (left) The x-y view. (right) The z-r view. Red blocks represents energy deposits in the calorimeter. The final-state jets (wide energy clusters in the BCAL) and the scattered electron are indicated with arrows.}
+	\caption{A typical NC DIS event with $E-P_Z=51~\GeV$, $P_T=2~\GeV$ and \qsq = 965~$\GeV^2$~and two jets identified in the Breit frame with \etjetb> 8~\GeV~as recorded by the \zeus detector. Red blocks represents energy deposits in the calorimeter. The final-state objects: jets (wide energy clusters in the BCAL) and the scattered electron are indicated with arrows.}
 	\label{fig:ncdiseventdisplay}
 \end{figure}
-Moreover, in NC DIS processes the quantity $\delta$ defined as
+
+In NC DIS processes the quantity $\delta$, defined as
 \begin{equation}
-\delta = \delta_h + \delta_e = \left( E_p - P_{z,p} \right) - \left( E_e - P_{z,e}\right) = 2E_e = 55\;\GeV,
+\delta = \delta_h + \delta_e = \left( E_p - P_{z,p} \right) + \left( E_e - P_{z,e}\right) = 2E_e = 55\;\GeV,
 \label{eq:deltadis}
 \end{equation}
-must be conserved, i.e. the same variable calculated from the final state energy deposits
+is also conserved, i.e. the same variable calculated from the final state energy deposits
 \begin{equation}
 \delta = \sum_i{\left(E_i - P_{Z,i}\right)} = \sum_i{\left(E_i - E_i\cos{\theta_i}\right)} \approx 55\;\GeV.
 \end{equation}
-The deviations from the nominal quantity can be caused by e.g. undetected particles escaping the \zeus detector and/or due to finite energy resolution of the calorimeter.
+is preserved. The deviations of $P_{T,tot}$ and $\delta$ from the nominal quantity can be caused by e.g. undetected particles escaping the \zeus detector and/or due to finite energy resolution of the calorimeter.
 
-At leading-order in the Breit frame (see Figure~\ref{fig:breitframe}) an event with hard QCD interaction always has at least two jets. Nevertheless, one of the jets can be failing to pass selection criteria due to limited detector acceptance or resolution, therefore the signal events in this analysis are required to have at least one jet identified in the Breit frame within the detector acceptance and with transverse energy exceeding some minimum energy threshold.
+As was explained in Section~\ref{subsec:breitframe}, at leading-order in the Breit frame a process with hard QCD interaction always has at least two hadronic jets. In practice, however, one of the jets can be failing to pass selection criteria due to limited detector acceptance and/or resolution, therefore the signal events in this analysis were required to have at least one jet within the acceptance of the apparatus identified in the Breit frame and having transverse energy exceeding some minimum energy threshold.
 
 \section{Characteristics of Background Processes}
 \label{sec:bgchar}
 
 \subsection{Photoproduction}
 \label{subsec:photoprodbg}
-The cross section of inelastic electron-proton scattering with $\qsq \approx 0\;\GeV^2$ is large and serves as potential source of backgound to the NC DIS analysis. At low \qsq, the scattered electron is deflected by a small angle and escapes in the beam pipe. Isolated electromagnetic clusters from e.g. $\pi^0$ decays can be misidentified as the final-state electron thus mimicking the signature of NC DIS signal. In photoproduction, as in NC DIS the total transverse momentum vanishes but the quantity $\delta$ calculated from the final-state energy deposits will be smaller than 55 \GeV~by approximately twice the energy of the escaped electron\footnote{The energy and momentum of the particles escaping in the forward direction is approximately cancelled.}. Besides restrictions on the longitudinal momentum balance, the photoproduction events can be removed by applying extra cuts on isolation of the electron candidate because electromagnetic clusters from hadron decays are often part of the hadronic final state and are accompanied by other hadrons.
+The cross section of inelastic electron-proton scattering with $\qsq \approx 0\;\GeV^2$ is large and serves as potential source of backgound to the NC DIS analysis. At low \qsq, the scattered electron is deflected by a small angle and escapes in the beam pipe. Isolated electromagnetic clusters from e.g. $\pi^0$ decays can be misidentified as the final-state electron thus mimicking the signature of NC DIS processes. In photoproduction, as in NC DIS the total transverse momentum vanishes but the quantity $\delta$ calculated from the final-state energy deposits will be smaller than 55 \GeV~by approximately twice the energy of the escaped electron\footnote{The energy and momentum of the particles escaping in the forward direction is approximately cancelled.}. Besides restrictions on the longitudinal momentum balance, the photoproduction events can be removed by applying extra cuts on isolation of the electron candidate because electromagnetic clusters from hadron decays are often part of the hadronic final state and are accompanied by other hadrons.
 
-\subsection{Beam-Gas interactions. Cosmic and Halo Muons}
+\subsection{Beam-Gas Interactions. Cosmic and Halo Muons}
 \label{subsec:beamgasfeatures}
-The electron and proton beams can interact with the residual gas in the beam pipe. The proton-gas collisions are characterised by large hadronic activity and many tracks emerging at low polar angles upstream from the nominal interaction point. Using the calorimeter timing information as well as signals from the iron-scintillating detector (Veto-Wall) located in the rear part of the apparatus such events can be successfully rejected. Additionally, such processes are characterised by low values of $\delta$. The rate of the electron beam interactions was found in a previous study~\cite{thesis:moritz:2001} to be very small and can be ignored.
+The electron and proton beams can interact with the residual gas in the beam pipe. The proton-gas collisions are characterised by large hadronic activity and multiple tracks emerging at low polar angles upstream from the nominal interaction point (see Figure~\ref{fig:beamgaseventdisplay}). In such events, signals in FCAL follow those from RCAL separated by a time interval necessary for particles to reach the forward calorimeter. Using the information about particle arrival time in forward and rear parts of the CAL as well as signals from the specific iron-scintillating detector (Veto-Wall) located in the rear part of the \zeus, these events can be efficiently rejected. In addition, the suppression of beam-gas events can be achieved by imposing the restrictions on the longitudinal momentum balance, because such processes are characterised by lower value of $\delta$ than that for NC DIS. In contrast to the proton-gas collisions, the rate of the electron beam interactions was found in a previous study~\cite{thesis:moritz:2001} to be very small and therefore negligible.
 
-Additional sources of background come from cosmic and beam-halo muons. Cosmic muons are produced in high-energy cosmic rays. Passage of muons though the volume of the detector results in a time difference between the signals in the upper and lower parts of the CAL. Beam-halo muons, emerging from decays of pions produced in beam-gas interactions upstream of the detector, travel parallel to the beam axis. The time difference between signals in the RCAL and FCAL is used to eliminate such processes. In general, cosmic and beam-halo events have non-zero total transverse momentum due to imbalance of the energy deposits in the transverse plane. This information can be used for background suppression. The detailed description of event selection is presented in the following sections.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth]{./Figures/event_display_54628_99024_lessthicklines1} 
+	\caption{An example of proton beam -- residual gas collision identified using pilot bunch crossing. Many tracks emerge from the interaction point in the rear part of the \zeus detector outside of the acceptance of the tracking system.}
+	\label{fig:beamgaseventdisplay}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{./Figures/event_display_54450_48590_cosmic_track_thicklines} 
+	\caption{A high-energy cosmic muon traversing the the volume of the \zeus detector. Muon stubs are present in the upper and lower halves of the backing calorimeter and muon chambers. An energy cluster from the interaction of the muon with the material of the CAL can mimic signature of hadronic jets.}
+	\label{fig:cosmiceventdisplay}
+\end{figure}
+Additional sources of background come from cosmic and beam-halo muons. Cosmic muons are produced in high-energy interactions of cosmic rays with Earth atmosphere. Passage of cosmic muons though the volume of the detector results in a time difference between the signals in the upper and lower parts of the CAL (see Figure~\ref{fig:cosmiceventdisplay}). Such a timing signature and a typically low track multiplicity were used to detect cosmic events. In contrast to cosmic rays, beam-halo muons, emerging from decays of pions produced in beam-gas interactions upstream of the detector, travel parallel to the beam axis and therefore the time difference between signals in the RCAL and FCAL was used to eliminate such processes, as in case of beam-gas interactions. Moreover, cosmic and beam-halo events have non-zero total transverse momentum due to asymmetry of the energy deposits in the transverse plane. This information can also be used for the suppression of such background contributions. 
+
+\subsection{QED Compton scattering}
+The reactions of the type $ep \rightarrow e' \gamma p$ or $ep \rightarrow e'\gamma X$ in which the initial or the final state electron radiates a high-energy photon are called elastic and inelastic QED Compton (QEDC) scattering, respectively. In case of inelastic reaction the proton breaks up leaving some hadronic activity in the forward direction while in elastic processes the proton escapes down the beam pipe staying intact. QEDC events can be misidentified with high-\qsq~NC DIS processes when the electromagnetic cluster from the photon is confused with the final-state electron leading to incorrect determination of event kinematics. The characteristic features of such events are the presence of two isolated electromagnetic energy deposits in the calorimeter with approximately equal transverse momentum and low or vanishing hadronic activity in the FCAL (see Figure~\ref{fig:qedceventdisplay}). As was demonstrated in the study~\cite{thesis:moritz:2001} inelastic QEDC processes are well described by the \djangoh MC while elastic scattering is not well reproduced. Therefore such events have to be removed from the sample.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{./Figures/event_display_52396_3509_elastic_compton_thicklines} 
+	\caption{An elastic QED Compton scattering event as recorded by the \zeus detector. The electromagnetic clusters from the electron and photon (two oppositely charged tracks from $\gamma \rightarrow e^+e^-$ conversion) are detected in the RCAL. The particles balance each other in $P_T$ and there is no energy deposit in the forward direction.}
+	\label{fig:qedceventdisplay}
+\end{figure}
 
 \section{Data sets. On-line selection.}
 This analysis was performed using the data recorded during the 2004 -- 2007 running period. The $\ep$ centre-of-mass collision energy during this period was \sqs = 318 \GeV. The integrated luminosity of the measurement amounts to 295~\invpb. The pre-selection of the NC DIS events relevant for this analysis naturally happens during the data-taking exploiting, when the the \zeus trigger system is used to classify and record physical collisions.  
@@ -48,18 +72,18 @@ As described in Section~\ref{sec:daqtrigger} the \zeus trigger has a three-level
 \label{subsec:fltcuts}
 \begin{itemize}
 	\item \textbf{FLT bit 40:} The total energy in the electromagnetic section of the calorimeter, $E_\text{EMC}^\text{CAL}$, exceeds 20 \GeV\, and a condition on the track multiplicity, the so called \textit{track veto} (see Section~\ref{sec:trkvetoeff}).
-	\item \textbf{FLT bit 43:} The total transverse energy in the calorimeter, $E_\text{T}^\text{CAL}$, exceeds 20 \GeV\, and at least one good track is required.
+	\item \textbf{FLT bit 43:} The total transverse energy in the calorimeter, $E_\text{T}^\text{CAL}$, exceeds 20 \GeV\, and at least one good track\footnote{????????????????????????????} is required.
 	\item \textbf{FLT bit 50:} The total energy, $E^\text{CAL}$, greater than $15\, \GeV$\, or $E_\text{EMC}^\text{CAL} > 10\, \GeV\,$ or $E_\text{EMC}^\text{BCAL} > 3.5\, \GeV$\, or $E_\text{EMC}^\text{RCAL} > 2\, \GeV$\, and $E_\text{T}^\text{CAL} > 1\, \GeV$\, and a good track is required.
 \end{itemize}
 
 \subsection{SLT trigger}
 \label{subsec:sltcuts}
-The second-level trigger was used to suppress further the beam-related background. The information from the \zeus global tracking trigger was utilised at SLT for the reconstruction of the interaction vertex position and to reject events originating from background processes. Moreover, the calorimeter timing information was used extensively to suppress beam-gas and cosmic-ray background. For example, hadrons emerging in vicinity of the nominal interaction point will be characterised by approximately the same arrival time in different parts of the CAL, in contrast to cosmic-shower events for which the signals from the upper part of the BCAL will arrive earlier than from the bottom part. Thus, given the high timing resolution of the CAL, the background processes can be efficiently discriminated.
+The second-level trigger was used to suppress further beam-related background. The information from the \zeus global tracking trigger was utilised at SLT for the reconstruction of the interaction vertex position and to reject events originating from background processes. Moreover, the calorimeter timing information was used extensively to suppress beam-gas and cosmic-ray background. For example, hadrons emerging in vicinity of the nominal interaction point will be characterised by approximately the same arrival time in different parts of the CAL, in contrast to cosmic-shower events for which the signals from the upper part of the BCAL will arrive earlier than from the bottom part. Thus, given the high timing resolution of the CAL, the background processes can be efficiently discriminated.
 
 \subsubsection{TLT trigger}
 \label{subsec:tltcuts}
-The final stage of the trigger selection was based on the identification of the scattered DIS electron. The reduced read-out rate at the TLT allowed application of the complex reconstruction algorithms that were much closer related to those used in the off-line analysis. The TLT bit \textsf{DIS03} together with DST bit 12 were used in the selection chain and impose the loose cuts summarised in the Table~\ref{tab:TLTDSTreq}.
-\begin{table}
+The final stage of the trigger selection was based on the identification of the scattered DIS electron. The reduced read-out rate at the TLT allowed application of the complex reconstruction algorithms that were much closer related to those used in the off-line analysis. The TLT bit \textsf{DIS03} together with DST bit 12 imposing loose cuts on the electron candidate were used in the selection chain and are summarised in the Table~\ref{tab:TLTDSTreq}.
+\begin{table}[ht!]
 \centering
 \begin{tabular}{|c|c|}
 \hline scattered electron energy & $E'_{el}>4\,\GeV$ \\ 
