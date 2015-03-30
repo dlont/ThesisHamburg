@@ -23,7 +23,7 @@ is also conserved, i.e. the same variable calculated from the final state energy
 \end{equation}
 is preserved. The deviations of $P_{T,tot}$ and $\delta$ from the nominal quantity can be caused by e.g. undetected particles escaping the \zeus detector and/or due to finite energy resolution of the calorimeter.
 
-As was explained in Section~\ref{subsec:breitframe}, at leading-order in the Breit frame a process with hard QCD interaction always has at least two hadronic jets. In practice, however, one of the jets can be failing to pass selection criteria due to limited detector acceptance and/or resolution, therefore the signal events in this analysis were required to have at least one jet within the acceptance of the apparatus identified in the Breit frame and having transverse energy exceeding some minimum energy threshold.
+As was explained in Section~\ref{subsec:breitframe}, at leading-order in the Breit frame a process with hard QCD interaction always has at least two hadronic jets. In practice, however, one of the jets can be failing to pass selection criteria due to limited detector acceptance and/or resolution, therefore the signal events in this analysis were required to have at least one jet identified in the Breit frame within the acceptance of the apparatus and having transverse energy exceeding some minimum energy threshold.
 
 \section{Characteristics of Background Processes}
 \label{sec:bgchar}
@@ -34,7 +34,7 @@ The cross section of inelastic electron-proton scattering with $\qsq \approx 0\;
 
 \subsection{Beam-Gas Interactions. Cosmic and Halo Muons}
 \label{subsec:beamgasfeatures}
-The electron and proton beams can interact with the residual gas in the beam pipe. The proton-gas collisions are characterised by large hadronic activity and multiple tracks emerging at low polar angles upstream from the nominal interaction point (see Figure~\ref{fig:beamgaseventdisplay}). In such events, signals in FCAL follow those from RCAL separated by a time interval necessary for particles to reach the forward calorimeter. Using the information about particle arrival time in forward and rear parts of the CAL as well as signals from the specific iron-scintillating detector (Veto-Wall) located in the rear part of the \zeus, these events can be efficiently rejected. In addition, the suppression of beam-gas events can be achieved by imposing the restrictions on the longitudinal momentum balance, because such processes are characterised by lower value of $\delta$ than that for NC DIS. In contrast to the proton-gas collisions, the rate of the electron beam interactions was found in a previous study~\cite{thesis:moritz:2001} to be very small and therefore negligible.
+The electron and proton beams can interact with the residual gas in the beam pipe. The proton-gas collisions are characterised by large hadronic activity and multiple tracks emerging at low polar angles upstream from the nominal interaction point (see Figure~\ref{fig:beamgaseventdisplay}). In such events, signals in the FCAL follow those from the RCAL and are separated by the time interval necessary for particles to reach the forward calorimeter. Using the information about particles arrival time in forward and rear parts of the CAL as well as signals from the specific iron-scintillating detector (Veto-Wall) located in the rear part of the \zeus, these events can be efficiently rejected. In addition, the suppression of beam-gas events can be achieved by imposing the restrictions on the longitudinal momentum balance, because such processes are characterised by lower value of $\delta$ than that for NC DIS. In contrast to the proton-gas collisions, the rate of the electron beam interactions was found in a previous study~\cite{thesis:moritz:2001} to be very small and therefore negligible.
 
 \begin{figure}[ht]
 	\centering
@@ -49,7 +49,7 @@ The electron and proton beams can interact with the residual gas in the beam pip
 	\caption{A high-energy cosmic muon traversing the the volume of the \zeus detector. Muon stubs are present in the upper and lower halves of the backing calorimeter and muon chambers. An energy cluster from the interaction of the muon with the material of the CAL can mimic signature of hadronic jets.}
 	\label{fig:cosmiceventdisplay}
 \end{figure}
-Additional sources of background come from cosmic and beam-halo muons. Cosmic muons are produced in high-energy interactions of cosmic rays with Earth atmosphere. Passage of cosmic muons though the volume of the detector results in a time difference between the signals in the upper and lower parts of the CAL (see Figure~\ref{fig:cosmiceventdisplay}). Such a timing signature and a typically low track multiplicity were used to detect cosmic events. In contrast to cosmic rays, beam-halo muons, emerging from decays of pions produced in beam-gas interactions upstream of the detector, travel parallel to the beam axis and therefore the time difference between signals in the RCAL and FCAL was used to eliminate such processes, as in case of beam-gas interactions. Moreover, cosmic and beam-halo events have non-zero total transverse momentum due to asymmetry of the energy deposits in the transverse plane. This information can also be used for the suppression of such background contributions. 
+Additional sources of background come from cosmic and beam-halo muons. Cosmic muons are produced in high-energy interactions of cosmic rays with Earth atmosphere. Passage of cosmic muons though the volume of the detector results in a time difference between the signals in the upper and lower parts of the CAL (see Figure~\ref{fig:cosmiceventdisplay}). Such a timing signature and a typically low track multiplicity were used to detect cosmic events. In contrast to cosmic rays, beam-halo muons, emerging from decays of pions produced in beam-gas interactions upstream of the detector, travel parallel to the beam axis and therefore the time difference between the signals in the RCAL and FCAL can be used to eliminate such processes, similarly to beam-gas interactions described above. Moreover, cosmic and beam-halo events have non-zero total transverse momentum due to asymmetry of the energy deposits in the transverse plane. This information can also be used for the suppression of these background contributions. 
 
 \subsection{QED Compton scattering}
 The reactions of the type $ep \rightarrow e' \gamma p$ or $ep \rightarrow e'\gamma X$ in which the initial or the final state electron radiates a high-energy photon are called elastic and inelastic QED Compton (QEDC) scattering, respectively. In case of inelastic reaction the proton breaks up leaving some hadronic activity in the forward direction while in elastic processes the proton escapes down the beam pipe staying intact. QEDC events can be misidentified with high-\qsq~NC DIS processes when the electromagnetic cluster from the photon is confused with the final-state electron leading to incorrect determination of event kinematics. The characteristic features of such events are the presence of two isolated electromagnetic energy deposits in the calorimeter with approximately equal transverse momentum and low or vanishing hadronic activity in the FCAL (see Figure~\ref{fig:qedceventdisplay}). As was demonstrated in the study~\cite{thesis:moritz:2001} inelastic QEDC processes are well described by the \djangoh MC while elastic scattering is not well reproduced. Therefore such events have to be removed from the sample.
@@ -61,8 +61,28 @@ The reactions of the type $ep \rightarrow e' \gamma p$ or $ep \rightarrow e'\gam
 	\label{fig:qedceventdisplay}
 \end{figure}
 
-\section{Data sets. On-line selection.}
-This analysis was performed using the data recorded during the 2004 -- 2007 running period. The $\ep$ centre-of-mass collision energy during this period was \sqs = 318 \GeV. The integrated luminosity of the measurement amounts to 295~\invpb. The pre-selection of the NC DIS events relevant for this analysis naturally happens during the data-taking exploiting, when the the \zeus trigger system is used to classify and record physical collisions.  
+\section{Event selection.}
+The pre-selection of the NC DIS events relevant for the analysis starts naturally during the data-taking when the the \zeus trigger system is used. Only those events for which positive trigger decision was taken are stored on tape and can be further analysed off-line. The following sections present the general information about analysed data and MC samples and selection criteria used to obtain restricted event samples.
+
+\subsection{Data and MC sets.}
+This analysis was performed using the data recorded during the 2004 -- 2007 running period. The $\ep$ centre-of-mass collision energy during this period was \sqs = 318 \GeV. Table~\ref{tab:selecteddatasample} summarises the luminosity and average polarisation values for analysed data-taking periods.
+\begin{table}
+	\centering
+		\begin{tabular}[h]{|c|c|c|}
+		  \hline
+			Period & Integrated Luminosity & Average Polarisation \\
+			\hline \hline
+			2004 -- 2005  & 133.6 \invpb  & -0.07 \invpb \\
+			2006             & 53.0 \invpb    &  0.09 \invpb \\
+			2006 -- 2007  & 109.5 \invpb  & -0.07 \invpb \\
+			\hline
+		\end{tabular}
+	\caption{Luminosity and average polarisation of the final data samples used in the analysis.}
+	\label{tab:selecteddatasample}
+\end{table}
+The total integrated luminosity of the processed data sample amounts to 295~\invpb.
+
+MCMCMMC
 
 \section{On-line selection}
 \label{sec:onlineselect}
