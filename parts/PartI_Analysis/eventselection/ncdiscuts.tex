@@ -65,49 +65,56 @@ The reactions of the type $ep \rightarrow e' \gamma p$ or $ep \rightarrow e'\gam
 The pre-selection of the NC DIS events relevant for the analysis starts naturally during the data-taking when the the \zeus trigger system is used. Only those events for which positive trigger decision was taken are stored on tape and can be further analysed off-line. The following sections present the general information about analysed data and MC samples and selection criteria used to obtain restricted event samples.
 
 \subsection{Data and MC sets.}
-This analysis was performed using the data recorded during the 2004 -- 2007 running period. The $\ep$ centre-of-mass collision energy during this period was \sqs = 318 \GeV. Table~\ref{tab:selecteddatasample} summarises the luminosity and average polarisation values for analysed data-taking periods.
+This analysis was performed using the data recorded during the 2004 -- 2007 running period. The $\ep$ centre-of-mass collision energy during this period was \sqs = 318 \GeV.
 \begin{table}
 	\centering
-		\begin{tabular}[h]{|c|c|c|}
+		\begin{tabular}[h]{c|c}
 		  \hline
-			Period & Integrated Luminosity & Average Polarisation \\
+			Period & Integrated Luminosity \\
 			\hline \hline
-			2004 -- 2005  & 133.6 \invpb  & -0.07 \invpb \\
-			2006             & 53.0 \invpb    &  0.09 \invpb \\
-			2006 -- 2007  & 109.5 \invpb  & -0.07 \invpb \\
+			2004 -- 2005  & 133.6 \invpb  \\
+			2006             & 53.0 \invpb   \\
+			2006 -- 2007  & 109.5 \invpb \\
 			\hline
 		\end{tabular}
-	\caption{Luminosity and average polarisation of the final data samples used in the analysis.}
+	\caption{Luminosity values for the final data samples used in the analysis.}
 	\label{tab:selecteddatasample}
 \end{table}
-The total integrated luminosity of the processed data sample amounts to 295~\invpb.
+The total integrated luminosity of the processed data sample amounts to 295~\invpb. The luminosity values for analysed data-taking periods are summarised in Table~\ref{tab:selecteddatasample}.
 
-MCMCMMC
+Monte Carlo events were used to simulate detector effects and for determination of the detector acceptance. The samples were generated for the mentioned data-taking periods separately in order to take into account changing experiment running conditions. The program packages LEPTO and ARIADNE, described in Section~\ref{sec:mcmodels} were utilised. In total, about 32 million NC DIS events with $\qsq > 100\;\GeV$ were generated.
 
 \section{On-line selection}
 \label{sec:onlineselect}
-As described in Section~\ref{sec:daqtrigger} the \zeus trigger has a three-level architecture. Below individual requirements imposed on the data at each trigger level are described. Technically, after the event was recorded on storage-tape it was marked with specific flags, the so called trigger slots or bits, according to event characteristic features, like total and/or regional energy sums or presence of electromagentic clusters etc. Any of the trigger bits listed below was required to be fired\footnote{Which corresponds to a logical \textbf{OR} between individual bits.} in order to keep the event for further analysis. The following subsections outline the cuts imposed by every trigger bit utilised in this work. 
+As described in Section~\ref{sec:daqtrigger} the \zeus trigger has a three-level architecture. At each level every event can be classified into different categories\footnote{Single event can be attributed to several categories.} according to event characteristic features, like total and/or regional energy sums or presence of electromagentic clusters etc. Technically, when the event was recorded on storage-tape it was marked with specific flags, the so called trigger slots or bits, which represent different event classes. The requirements imposed by specific trigger bits are listed below. Any of the enumerated trigger bits were required to be fired\footnote{Which corresponds to a logical \textbf{OR} between individual bits.} in order to keep the event for further analysis. 
 
 \subsection{FLT trigger}
 \label{subsec:fltcuts}
+The FLT selection is centred around the idea of having an event with large transverse momentum and significant electromagnetic energy deposit corresponding to the DIS electron. Besides that, every FLT bit imposes additional restrictions (not listed here) on the CAL timing and information from other detector components, like Veto-Wall in order to suppess un-physical background.
 \begin{itemize}
 	\item \textbf{FLT bit 40:} The total energy in the electromagnetic section of the calorimeter, $E_\text{EMC}^\text{CAL}$, exceeds 20 \GeV\, and a condition on the track multiplicity, the so called \textit{track veto} (see Section~\ref{sec:trkvetoeff}).
-	\item \textbf{FLT bit 43:} The total transverse energy in the calorimeter, $E_\text{T}^\text{CAL}$, exceeds 20 \GeV\, and at least one good track\footnote{????????????????????????????} is required.
-	\item \textbf{FLT bit 50:} The total energy, $E^\text{CAL}$, greater than $15\, \GeV$\, or $E_\text{EMC}^\text{CAL} > 10\, \GeV\,$ or $E_\text{EMC}^\text{BCAL} > 3.5\, \GeV$\, or $E_\text{EMC}^\text{RCAL} > 2\, \GeV$\, and $E_\text{T}^\text{CAL} > 1\, \GeV$\, and a good track is required.
+	\item \textbf{FLT bit 43:} The total transverse energy in the calorimeter, $E_\text{T}^\text{CAL}$, exceeds 20 \GeV\, and at least one \textit{good track}\footnote{FLT Track class > 1 (see Section~\ref{sec:trkvetoeff}).} is required.
+	\item \textbf{FLT bit 50:} The total energy, $E^\text{CAL}$, greater than $15\; \GeV$\, or $E_\text{EMC}^\text{CAL} > 10\; \GeV\,$ or $E_\text{EMC}^\text{BCAL} > 3.5\; \GeV$\, or $E_\text{EMC}^\text{RCAL} > 2\; \GeV$\, and $E_\text{T}^\text{CAL} > 1\; \GeV$\, and a good track is required.
 \end{itemize}
 
 \subsection{SLT trigger}
 \label{subsec:sltcuts}
-The second-level trigger was used to suppress further beam-related background. The information from the \zeus global tracking trigger was utilised at SLT for the reconstruction of the interaction vertex position and to reject events originating from background processes. Moreover, the calorimeter timing information was used extensively to suppress beam-gas and cosmic-ray background. For example, hadrons emerging in vicinity of the nominal interaction point will be characterised by approximately the same arrival time in different parts of the CAL, in contrast to cosmic-shower events for which the signals from the upper part of the BCAL will arrive earlier than from the bottom part. Thus, given the high timing resolution of the CAL, the background processes can be efficiently discriminated.
+The second-level trigger was used to suppress further beam-related background. The information from the \zeus global tracking trigger was utilised at the SLT for the reconstruction of the interaction vertex position and to reject events originating from background processes. Moreover, the calorimeter timing information was used extensively to suppress beam-gas and cosmic-ray background. For example, hadrons emerging in vicinity of the nominal interaction point will be characterised by approximately the same arrival time in different parts of the CAL, in contrast to cosmic-shower events for which the signals from the upper part of the BCAL will arrive earlier than from the bottom part. Thus, given the high timing resolution of the CAL, the background processes can be efficiently discriminated.
 
+The SLT bits DIS01, 04, 07 were used in the analysis. Any of those bits require the FLT bits 28, 30, 31, 36, 39, 40, 41, 43, 44, 46, 47, 62 to be fired. Besides that the following restrictions were imposed:
+\begin{itemize}
+	\item \textbf{SLT bit DIS01:} The total energy in the electromagnetic sections of the calorimeter, $E_\text{EMC}^\text{RCAL} > 2.5\;\GeV$or $E_\text{EMC}^\text{BCAL} > 2.5\;\GeV$ or $E_\text{EMC}^\text{FCAL} > 10\;\GeV$ or hadronic energy in the forward region $E_\text{HAC}^\text{FCAL} > 10\;\GeV$ and $E-P_Z > 29\;\GeV$;
+	\item \textbf{SLT bit DIS04:} The total energy in the electromagnetic sections of the calorimeter, $E_\text{EMC}^\text{RCAL} > 2.5\;\GeV$or $E_\text{EMC}^\text{BCAL} > 2.5\;\GeV$ or $E_\text{EMC}^\text{FCAL} > 10\;\GeV$ or hadronic energy in the forward region $E_\text{HAC}^\text{FCAL} > 10\;\GeV$ and $E-P_Z > 19\;\GeV$;
+	\item \textbf{SLT bit DIS07:} The energy of the SLT electron candidate $E_e^{SLT}>5\;\GeV$.
+\end{itemize}
 \subsubsection{TLT trigger}
 \label{subsec:tltcuts}
 The final stage of the trigger selection was based on the identification of the scattered DIS electron. The reduced read-out rate at the TLT allowed application of the complex reconstruction algorithms that were much closer related to those used in the off-line analysis. The TLT bit \textsf{DIS03} together with DST bit 12 imposing loose cuts on the electron candidate were used in the selection chain and are summarised in the Table~\ref{tab:TLTDSTreq}.
 \begin{table}[ht!]
 \centering
-\begin{tabular}{|c|c|}
+\begin{tabular}{c|c}
 \hline scattered electron energy & $E'_{el}>4\,\GeV$ \\ 
-\hline distance from the beam pipe  & $R_{el}^{CAL}>35\,\cm$ \\ 
+\hline distance from the origin of the CS  & $R_{el}^{CAL}>35\,\cm$ \\ 
 \hline longitudinal momentum balance & $30<E-p_Z<100\,\GeV$\\
 \hline 
 \end{tabular} 
@@ -123,7 +130,7 @@ The operation of the detector components was continuously monitored during the d
 
 In addition to EVTAKE flag, the LPOLTAKE and TPOLTAKE status records were used in this analysis in order to verify the availability of the information from the corresponding lepton-beam polarisation detectors. At least one of the detectors was required to be in good status on in order to determine the polarisation value for particular runs.
 
-Trigger-level event selection cannot fulfil signal to background discrimination requirements necessary for precision analysis because of limited processing time and significant complexity of the reconstruction algorithms for the objects such as secondary vertices, particle decays or jets. In addition, information about detector operating conditions such as the number of dead channels, changes in high voltage, CTD gas pressure, temperature, etc. are difficult or impossible to take into account at the trigger level. After the trigger-based pre-selection a set of cuts is applied off-line to ensure a low level of background and high purity of selected sample. Additional requirements were imposed to restrict the phase space of the measurement. 
+Trigger-level event selection cannot fulfil signal to background discrimination requirements necessary for precision analysis because of limited processing time and significant complexity of the reconstruction algorithms for the objects such as secondary vertices, particle decays or jets. In addition, information about detector operating conditions such as the number of dead channels, changes in high voltage, CTD gas pressure, temperature, etc. are difficult or impossible to take into account at the trigger level. Thus, after the trigger-based pre-selection a set of cuts is applied off-line to ensure a low level of background and high purity of selected sample. Additional requirements were imposed to restrict the phase space of the measurement. 
 
 \subsection{Electron selection}
 \label{subsec:eleselect}
@@ -131,20 +138,20 @@ Trigger-level event selection cannot fulfil signal to background discrimination 
 To ensure high purity and reliability of the reconstruction of the scattered electron, the following requirements were imposed on electron candidates.
 \begin{itemize}
 	\item \textbf{Probability:} The probability, as given by the SINISTRA algorithm, was required to be greater than $90\%$. If several electron candidates satisfied this criterion, the candidate with the highest probability was used for the reconstruction of event kinematics.
-	\item \textbf{Energy:} The electron energy, \eefin was required to be greater than 10 \GeV, because low-energy electron candidates appear mostly from misidentified electromagnetic showers from $\pi^0\rightarrow\gamma\gamma,\, \eta\rightarrow\gamma\gamma$ decays. In addition, this cut restricts the electron-finding algorithm to the region with high electron-identification efficiency.
+	\item \textbf{Energy:} The electron energy, \eefin was required to be greater than 10 \GeV, to ensure the best electron candidate reconstruction efficiency and high acceptance. Moreover, this cut helps to reduce amount of wrongly identified low-energy electron candidates arising due to electromagnetic showers from $\pi^0\rightarrow\gamma\gamma,\, \eta\rightarrow\gamma\gamma$ decays.
 	\item \textbf{Isolation:} In order to remove events in which the electromagnetic shower of the electron candidate is contaminated by the energy deposits from hadronic tracks, the fraction of the energy within a cone of radius of 0.7 units in the pseudorapidity-azimuth plane, not associated to the electron, was required to be less than $10\%$. The cone axis was defined by the electron momentum direction.
-	\item \textbf{Track Matching:} The angular resolution of the tracking detectors is typically much better than that of the calorimeter, therefore precision of the position of the electromagnetic shower can be improved, when the information from the tracking detectors is used. The charged track pointing to the electromagnetic shower was required to have the distance of closest approach between the track extrapolation point at front surface of the CAL and the energy-cluster position to be less than 10 cm. The track energy as measured by the tracking system had to be greater than 3 \GeV. In case the electon track was outside the acceptance region\footnote{The tracking system covers the region of polar angles restricted to $0.3 < \theta_\text{e} < 2.85$. } of the tracking detectors, the information from the calorimeter system was used.
+	\item \textbf{Track Matching:} The angular resolution of the tracking detectors is typically much better than that of the calorimeter, therefore precision of the position of the electromagnetic shower can be improved, when the information from the tracking detectors is used. The charged track pointing to the electromagnetic shower was required to have the distance of closest approach between the track extrapolation point at front surface of the CAL and the energy-cluster position to be less than 10 cm. The track energy as measured by the tracking system had to be greater than 3 \GeV. In case the electron track was outside the acceptance region\footnote{The tracking system covers the region of polar angles restricted to $0.3 < \theta_\text{e} < 2.85$. } of the tracking detectors, the information from the calorimeter system was used.
 	\item \textbf{Position:} To ensure full containment of the electromagnetic shower inside the fiducial volume of the calorimeter system and to avoid regions with insufficiently good description by the MC simulations, additional requirements on the position of the electromagnetic shower were imposed. The events in which the electron was found in the following regions were rejected:
 	\begin{itemize}
-		\item $ -104\, \cm < Z_\text{e} < -98.5\, \cm	$ and $ 164\, \cm < Z_\text{e} < 174\, \cm $ - the so called ``super-crack'' regions between the BCAL and the RCAL or between the BCAL and the FCAL;
-		\item $\left| X_\text{e} \right|$ < 10 \cm\, and $Y_\text{e}$ > 80 \cm. In this region some of the calorimeter cells were removed to make room for the  pipes transporting  liquid helium to the superconducting solenoid;
-		\item $ 36\, \cm < R^\text{RCAL}_\text{e} < 170\, \cm $, where $R^\text{RCAL}_\text{e}$ is the distance in the $X-Y$ plane from the centre of the beam-pipe to the electron. The leakage of the electromagnetic showers from the electrons hitting the RCAL close to the inner or outer edges is not well simulated, especially at the trigger level~\cite{januschek-p96}. These regions were therefore excluded. 
+		\item $ -104\, \cm < Z_\text{e} < -98.5\, \cm	$ and $ 164\, \cm < Z_\text{e} < 174\, \cm $, where $Z_\text{e}$ is the longitudinal coordinate of the centre of gravity of the of the electromagnetic cluster attributed to the electron --- the so called ``super-crack'' regions between the BCAL and the RCAL or between the BCAL and the FCAL;
+		\item $\left| X_\text{e} \right|$ < 10 \cm\, and $Y_\text{e}$ > 80 \cm, where $X_\text{e}$ and $Y_\text{e}$ are the coordinates of the position of the electron energy deposit in the CAL. In this region some of the calorimeter cells were removed to make room for the  pipes transporting  liquid helium to the superconducting solenoid;
+		\item $ 36\, \cm < R^\text{RCAL}_\text{e} < 170\, \cm $, where $R^\text{RCAL}_\text{e}$ is the distance in the $X-Y$ plane from the origin of the \zeus CS to the electron. The leakage of the electromagnetic showers from the electrons hitting the RCAL close to the inner or outer edges is not well simulated, especially at the trigger level~\cite{januschek-p96}. These regions were therefore excluded. 
 	\end{itemize}
 \end{itemize}
 
 \subsection{Primary vertex selection}
 \label{subsec:vtxselect}
-Proper identification of the interaction point is important for the reconstruction of the kinematic variables. The longitudinal extent of the interaction region is determined by the length of the interacting bunches and the time structure of the beam. Beam-gas or cosmic rays events are evenly distributed along the longitudinal coordinate, while \ep\, events appear with higher rate in the vicinity of the nominal beam-beam interaction point. Distribution of the longitudinal component of the position of the primary vertex has Gaussian-like shape (see section~\ref{sec:zvtxrew}). Selecting the events with the primary interaction vertex satisfying $\chi^2 < 10$ and $Z_\text{vtx}$ being within $\sim \pm 3\sigma$ of the width of the distributions suppresses the non-physics background contribution and ensures good understanding of the dependence of the acceptance of the calorimeter and tracking systems on the position of the interaction vertex. The mean value and the width of the $Z_\text{vtx}$ changes between different data-taking periods. The restrictions imposed on $Z_\text{vtx}$ are detailed in Table~\ref{tab:zvxcut}.
+Proper identification of the interaction point is important for the reconstruction of the kinematic variables. The longitudinal extent of the interaction region is determined by the length of the interacting bunches and the time structure of the beam. Beam-gas or cosmic rays events are approximately evenly distributed along the longitudinal coordinate, while \ep\, events appear with higher rate in the vicinity of the nominal beam-beam interaction point. Distribution of the longitudinal component of the position of the primary vertex has Gaussian-like shape (see section~\ref{sec:zvtxrew}). Selecting the events with the primary interaction vertex satisfying $\chi^2 < 10$ and $Z_\text{vtx}$ being within $\sim \pm 3\sigma$ of the width of the distributions suppresses the non-physics background contribution and ensures good understanding of the dependence of the acceptance of the calorimeter and tracking systems on the position of the interaction vertex. The mean value and the width of the $Z_\text{vtx}$ changes between different data-taking periods. The restrictions imposed on $Z_\text{vtx}$ are detailed in Table~\ref{tab:zvxcut}.
 \begin{table}[htbp]
 	\centering
 		\begin{tabular}{|c|c|}
@@ -208,11 +215,12 @@ The phase-space cuts are performed for selection of the kinematic region of the 
 
 \subsection{Jet selection}
 \label{subsec:jetselect}
-In order to identify jets, the \kt~clustering-algorithm in the longitudinally-invariant inclusive mode was used. The jet search was performed in the Breit frame, therefore the momentum vectors corresponding to the energy deposits were transformed accordingly. The momentum vectors were constructed from the energy and orientation of the calorimeter-cell centre with respect to the interaction point. By definition the constructed vectors are massless. All cells excluding those corresponding to the electron candidate and satisfying the following requirements were used for the jet reconstruction:
-\begin{itemize}
-	\item the signals from natural Uranium radioactivity were suppressed by requiring the minimum energy in the cell to be above a threshold;
-	\item the cut on imbalance between two photomultiplier signals attributed to a single cell was imposed in order to reject signals due to spontaneous discharge of one of the PMT bases.
-\end{itemize}
+In order to identify jets, the \kt~clustering-algorithm in the longitudinally-invariant inclusive mode was used. The jet search was performed in the Breit frame, therefore the momentum vectors corresponding to the energy deposits were transformed accordingly. 
+%The momentum vectors were constructed from the energy and orientation of the calorimeter-cell centre with respect to the interaction point. By definition the constructed vectors are massless. All cells excluding those corresponding to the electron candidate and satisfying the following requirements were used for the jet reconstruction:
+%\begin{itemize}
+%	\item the signals from natural Uranium radioactivity were suppressed by requiring the minimum energy in the cell to be above a threshold;
+%	\item the cut on imbalance between two photomultiplier signals attributed to a single cell was imposed in order to reject signals due to spontaneous discharge of one of the PMT bases.
+%\end{itemize}
 
 The phase space for jet production was limited by the following requirements:
 \begin{itemize}
