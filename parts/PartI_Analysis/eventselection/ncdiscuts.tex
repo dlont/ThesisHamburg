@@ -82,7 +82,7 @@ This analysis was performed using the data recorded during the 2004 -- 2007 runn
 \end{table}
 The total integrated luminosity of the processed data sample amounts to 295~\invpb. The luminosity values for analysed data-taking periods are summarised in Table~\ref{tab:selecteddatasample}.
 
-Monte Carlo events were used to simulate detector effects and for determination of the detector acceptance. The samples were generated for the mentioned data-taking periods separately in order to take into account changing experiment running conditions. The program packages LEPTO and ARIADNE, described in Section~\ref{sec:mcmodels} were utilised. In total, about 32 million NC DIS events with $\qsq > 100\;\GeV$ were generated.
+Monte Carlo events were used to simulate detector effects and for determination of the detector acceptance. The samples were generated for the mentioned data-taking periods separately in order to take into account changing experiment running conditions. The program packages LEPTO and ARIADNE, described in Section~\ref{sec:mcmodels} were utilised. In total, about 32 million NC DIS events with $\qsq > 100\;\GeV^2$ were generated.
 
 \section{On-line selection}
 \label{sec:onlineselect}
@@ -140,18 +140,20 @@ To ensure high purity and reliability of the reconstruction of the scattered ele
 	\item \textbf{Probability:} The probability, as given by the SINISTRA algorithm, was required to be greater than $90\%$. If several electron candidates satisfied this criterion, the candidate with the highest probability was used for the reconstruction of event kinematics.
 	\item \textbf{Energy:} The electron energy, \eefin was required to be greater than 10 \GeV, to ensure the best electron candidate reconstruction efficiency and high acceptance. Moreover, this cut helps to reduce amount of wrongly identified low-energy electron candidates arising due to electromagnetic showers from $\pi^0\rightarrow\gamma\gamma,\, \eta\rightarrow\gamma\gamma$ decays.
 	\item \textbf{Isolation:} In order to remove events in which the electromagnetic shower of the electron candidate is contaminated by the energy deposits from hadronic tracks, the fraction of the energy within a cone of radius of 0.7 units in the pseudorapidity-azimuth plane, not associated to the electron, was required to be less than $10\%$. The cone axis was defined by the electron momentum direction.
-	\item \textbf{Track Matching:} The angular resolution of the tracking detectors is typically much better than that of the calorimeter, therefore precision of the position of the electromagnetic shower can be improved, when the information from the tracking detectors is used. The charged track pointing to the electromagnetic shower was required to have the distance of closest approach between the track extrapolation point at front surface of the CAL and the energy-cluster position to be less than 10 cm. The track energy as measured by the tracking system had to be greater than 3 \GeV. In case the electron track was outside the acceptance region\footnote{The tracking system covers the region of polar angles restricted to $0.3 < \theta_\text{e} < 2.85$. } of the tracking detectors, the information from the calorimeter system was used.
+	\item \textbf{Track Matching:} Tracking system can be used to validate the electron identification, because electromagnetic clusters within the acceptance of the tracking system and having matching track are most likely photons. Moreover, the tracking information can be used to determine much more precisely the polar angle of the scattered electron than the determination from the electron cluster and primary vertex position only. Thus, if the electron candidate was within the tracking system acceptance region, the presence of a matched track was required. This track was required to 
+	%The angular resolution of the tracking detectors is typically much better than that of the calorimeter, therefore precision of the position of the electromagnetic shower can be improved, when the information from the tracking detectors is used. The charged track pointing to the electromagnetic shower was required to
+	have a distance of closest approach between the track extrapolation point at front surface of the CAL and the energy-cluster position of less than 10 cm. The track energy as measured by the tracking system had to be greater than 3 \GeV, because for higher energy electrons the bremsstrahlung energy loss is significant. In case the electron track was outside the acceptance region\footnote{The tracking system covers the region of polar angles restricted to $0.3 < \theta_\text{e} < 2.85$. } of the tracking detectors, the information from the calorimeter system was used to determine the position of the electron candidate.
 	\item \textbf{Position:} To ensure full containment of the electromagnetic shower inside the fiducial volume of the calorimeter system and to avoid regions with insufficiently good description by the MC simulations, additional requirements on the position of the electromagnetic shower were imposed. The events in which the electron was found in the following regions were rejected:
 	\begin{itemize}
 		\item $ -104\, \cm < Z_\text{e} < -98.5\, \cm	$ and $ 164\, \cm < Z_\text{e} < 174\, \cm $, where $Z_\text{e}$ is the longitudinal coordinate of the centre of gravity of the of the electromagnetic cluster attributed to the electron --- the so called ``super-crack'' regions between the BCAL and the RCAL or between the BCAL and the FCAL;
 		\item $\left| X_\text{e} \right|$ < 10 \cm\, and $Y_\text{e}$ > 80 \cm, where $X_\text{e}$ and $Y_\text{e}$ are the coordinates of the position of the electron energy deposit in the CAL. In this region some of the calorimeter cells were removed to make room for the  pipes transporting  liquid helium to the superconducting solenoid;
-		\item $ 36\, \cm < R^\text{RCAL}_\text{e} < 170\, \cm $, where $R^\text{RCAL}_\text{e}$ is the distance in the $X-Y$ plane from the origin of the \zeus CS to the electron. The leakage of the electromagnetic showers from the electrons hitting the RCAL close to the inner or outer edges is not well simulated, especially at the trigger level~\cite{januschek-p96}. These regions were therefore excluded. 
+		\item $ 36\, \cm < R^\text{RCAL}_\text{e} < 170\, \cm $, where $R^\text{RCAL}_\text{e}$ is the distance in the $X-Y$ plane from the origin of the \zeus CS to the electron. The leakage of the electromagnetic showers from the electrons hitting the RCAL close to the inner or outer edges is not well simulated, especially at the trigger level~\cite{thesis:januschek:2011}. These regions were therefore excluded. 
 	\end{itemize}
 \end{itemize}
 
 \subsection{Primary vertex selection}
 \label{subsec:vtxselect}
-Proper identification of the interaction point is important for the reconstruction of the kinematic variables. The longitudinal extent of the interaction region is determined by the length of the interacting bunches and the time structure of the beam. Beam-gas or cosmic rays events are approximately evenly distributed along the longitudinal coordinate, while \ep\, events appear with higher rate in the vicinity of the nominal beam-beam interaction point. Distribution of the longitudinal component of the position of the primary vertex has Gaussian-like shape (see section~\ref{sec:zvtxrew}). Selecting the events with the primary interaction vertex satisfying $\chi^2 < 10$ and $Z_\text{vtx}$ being within $\sim \pm 3\sigma$ of the width of the distributions suppresses the non-physics background contribution and ensures good understanding of the dependence of the acceptance of the calorimeter and tracking systems on the position of the interaction vertex. The mean value and the width of the $Z_\text{vtx}$ changes between different data-taking periods. The restrictions imposed on $Z_\text{vtx}$ are detailed in Table~\ref{tab:zvxcut}.
+Proper identification of the interaction point is important for the reconstruction of the kinematic variables. The longitudinal extent of the interaction region is determined by the length of the interacting bunches and the time structure of the beam. Beam-gas or cosmic rays events are approximately evenly distributed along the longitudinal coordinate, while \ep\, events appear with higher rate in the vicinity of the nominal beam-beam interaction point. Distribution of the longitudinal component of the position of the primary vertex has Gaussian-like shape (see Section~\ref{sec:zvtxrew}). Selecting the events with the primary interaction vertex satisfying $\chi^2 < 10$ and $Z_\text{vtx}$ being within $\sim \pm 3\sigma$ of the width of the distributions suppresses the non-physics background contribution and ensures good understanding of the dependence of the acceptance of the calorimeter and tracking systems on the position of the interaction vertex. The mean value and the width of the $Z_\text{vtx}$ changes between different data-taking periods. The restrictions imposed on $Z_\text{vtx}$ are detailed in Table~\ref{tab:zvxcut}.
 \begin{table}[htbp]
 	\centering
 		\begin{tabular}{|c|c|}
@@ -169,12 +171,12 @@ Proper identification of the interaction point is important for the reconstructi
 
 \subsection{Longitudinal Momentum balance}
 \label{subsec:empzcut}
-As discussed previously in Section~\ref{subsubsec:beamgasfeatures}, longitudinal momentum balance can be used to discriminate against photoproduction and beam-gas background. The actual value of quantity $\delta=\sum_i{\left(E_i-p_{z,i}\right)}$ for a particular event may deviate from the nominal $\delta=55\;\GeV$ due to finite resolution as well as initial-state radiation effects. Therefore the following requirement was implied:
+As discussed previously in Section~\ref{subsec:beamgasfeatures}, longitudinal momentum balance can be used to discriminate against photoproduction and beam-gas background. The actual value of quantity $\delta=\sum_i{\left(E_i-p_{z,i}\right)}$ for a particular event may deviate from the nominal $\delta=55\;\GeV$ due to finite resolution as well as initial-state radiation effects. Therefore the following requirement was implied:
 \begin{equation}
 38 < \delta < 65\;\GeV.
 \label{eq:epmzcut}
 \end{equation}
-The lower value was chosen in order to reject photoproduction events efficiently, while the upper cut is required for the suppression of beam-gas events.
+The lower value was chosen in order to reject photoproduction and beam-gas events efficiently, while the upper cut is required for the suppression of events with significant energy deposits in the rear direction, e.g. due backspash processes that are poorly simulated in MC.
 
 \subsection{Transverse Momentum balance}
 \label{subsec:empzcut}
@@ -191,11 +193,15 @@ The DST bit 12 has a requirement on inelasticity of the event. In order to have 
 
 \subsection{Elastic QED-Compton}
 \label{subsec:elasticqedcut}
-Elastic Compton scattering processes ($ep \rightarrow ep\gamma$) in which the proton remains intact are not well described by Monte Carlo simulations. The characteristic feature of such processes is the presence of two isolated electromagnetic clusters in the calorimeter. Therefore, events containing two electron candidates with transverse momentum vectors opposite to each other ($\Delta\phi > 3$), a ratio of transverse momenta between 0.8 and 1.2 and total energy sum measured in the calorimeter, excluding the energy of the two EM clusters from the electron candidates, below 3 \GeV~were rejected.
+Elastic Compton scattering processes ($ep \rightarrow ep\gamma$) in which the proton remains intact are not well described by Monte Carlo simulations. The characteristic feature of such processes is the presence of two isolated electromagnetic clusters in the calorimeter. Therefore, events containing two electron candidates satisfying requirements described above and with transverse momentum vectors opposite to each other ($\Delta\phi > 3$), a ratio of transverse momenta between 0.8 and 1.2 and total energy sum measured in the calorimeter, excluding the energy of the two EM clusters from the electron candidates, below 3 \GeV~were rejected.
 
 \subsection{Higher-order QED predictions}
 \label{subsec:qedcorcut}
-In order to ensure the validity of higher-order QED corrections applied to the data (see Section~\ref{sec:qedcorr}) the region of phase space given by the requirement $y_{JB}\cdot\left(1-x_{DA}\right)^2>0.004$ was excluded. Monte Carlo predictions were found to be unreliable in this region~\cite{cpc:81:381}.
+In order to ensure the validity of higher-order QED corrections applied to the data (see Section~\ref{sec:qedcor}) the region of phase space given by the requirement 
+\begin{equation}
+y_{JB}\cdot\left(1-x_{DA}\right)^2>0.004
+\end{equation}
+was excluded. Monte Carlo predictions were found to be unreliable in this region~\cite{cpc:81:381}.
 
 \subsection{Hadronic Scattering Angle}
 \label{subsec:gammahadcut}
@@ -203,14 +209,14 @@ In order to suppress events with large hadronic activity in the forward region, 
 
 \subsection{Track multiplicity}
 \label{subsec:trackmultcut}
-The residual beam-gas contamination was minimised by requiring the presence of at least one track, which crossed a minimum of three CTD superlayers and had transverse momentum $p_T>0.2\;\GeV$. This cut had only a minor effect.
+The residual beam-gas contamination was minimised by requiring the presence of at least one track, which crossed a minimum of three CTD superlayers and had transverse momentum $p_T>0.2\;\GeV$. This cut had only a minor effect on signal acceptance.
 
 \subsection{Phase space}
 \label{subsec:phasespace}
 The phase-space cuts are performed for selection of the kinematic region of the reaction in question. As was mentioned earlier, two variables completely determine the kinematics of deep inelastic scattering. In this analysis, the boson virtuality \qsq~and inelasticity \y~were used.
 \begin{itemize}
 	\item \textbf{Photon virtuality}, $125 < \qsq_{DA} < 20000\;\GeV^2$;  deep inelastic scattering processes with large four-momentum transfer were selected.
-	\item \textbf{Inelasticity}, $0.2 < \y_{DA} < 0.6\;\GeV$; the lower cut was imposed to reject events with large hadronic activity in the forward direction for which hadronisation corrections were found to be inaccurate. The upper cut was applied to ensure reliability of the detector acceptance corrections.
+	\item \textbf{Inelasticity}, $0.2 < \y_{DA} < 0.6$; the lower cut was imposed to reject events with large hadronic activity in the forward direction for which hadronisation corrections were found to be inaccurate. The upper cut was applied to ensure reliability of the detector acceptance corrections, since the region $\y_{DA} > 0.6$ was poorly described in MC.
 \end{itemize}
 
 \subsection{Jet selection}
@@ -225,7 +231,8 @@ In order to identify jets, the \kt~clustering-algorithm in the longitudinally-in
 The phase space for jet production was limited by the following requirements:
 \begin{itemize}
 	\item \textbf{transverse energy} of the jets in the Breit frame was required to be greater than 8~\GeV.
-	\item \textbf{pseudorapidity} of the jets had to be in region $-1<\etajetlab<2.5$.
+	\item \textbf{pseudorapidity} of the jets had to be in region $-1<\etajetlab<2.5$. The lower cut corresponds approximately to the transition region between the barrel and rear parts of the CAL and since the RCAL has only one HAC section (see Section~\ref{subsec:UCAL}), the high-energy hadronic showers cannot be full absorbed, leading to the increase of the absolute energy scale uncertainty of the jets in that region. The upper $\etajetlab$ cut was motivated by the trigger limitations since events with large hadronic activity in the forward direction occur at the rate exceeding trigger capabilities.
+	
 \end{itemize}
 The purity of the jet sample was enhanced by applying the following jet-cleaning cuts:
 
@@ -238,7 +245,6 @@ The purity of the jet sample was enhanced by applying the following jet-cleaning
 \section{Final event sample}
 \label{sec:eventsampletab}
 The imposed requirements restrict the kinematic phase space of the measurements to
-
 \begin{gather}
 125 < \qsq < 20000\;\GeV^2 \qquad 0.2 < y < 0.6, \\
 \etjetb > 8\;\GeV \qquad -1 < \etajetlab < 2.5.
@@ -260,7 +266,11 @@ The imposed requirements restrict the kinematic phase space of the measurements 
 %	\caption{Number of selected events in data and MC simulations.}
 %	\label{tab:numevents}
 %\end{table}
-
-In general, the data are very well described by the Monte Carlo simulations when renormalised to the size of the data sample. A comparison of MC predictions to the data is demonstrated in Figures~\ref{fig:cp_ari},~\ref{fig:cp_ariadne}. 
+A comparison of the data and ARIADNE (LEPTO) MC distributions for the most important event observables after full selection is demonstrated in Figures~\ref{fig:cp_ariadne} and~\ref{fig:cp_lepto}, respectively. The presented plots include distribution of the reconstructed longitudinal coordinate of the primary vertex, $Z_\text{vtx}$; kinematic observables: $\y_\text{DA}$, $\qsq_\text{DA}$; energy, azimuthal and polar angle distributions for the NC DIS electron candidate as well as polar angle of hadronic final state, $\cos{\gamma_\text{had}}$; observables characterising momentum balance: $p_T/\sqrt{E_T}$, $\left(E-P_Z\right)$. The bin content of the MC distributions was rescaled to the number of events in the data sample by applying constant factor:
+\begin{equation}
+\mathcal{R} = \frac{N_\text{data}}{N_\text{MC}},
+\label{eq:mcrescale}
+\end{equation}
+where $N_\text{data}$ and $N_\text{MC}$ are the number of events in corresponding samples. In general, observed distributions are very well described by the Monte Carlo simulations when all corrections and reweightings (see Chapter~\ref{ch:calibcorr}) are applied to the data and MC, therefore the MC samples can be used to estimate the detector acceptance and for studies of systematic effects.
 
 \input{parts//PartI_Analysis//corrections//controlplots}
