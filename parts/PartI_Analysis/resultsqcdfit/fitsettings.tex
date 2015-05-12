@@ -7,9 +7,12 @@ where $\sigma_{i,\text{uncor}}$($\sigma_{i,\text{stat}}$) is an estimate of the 
 \begin{equation}
 \gamma_{i,\mu}=\frac{1}{{t_i}} \frac{\partial t_i}{\partial b_{\mu}}
 \end{equation}
-is the relative correlated systematic uncertainty quantifying the sensitivity of the measurement $i$ to the systematic source $\mu$. 
+is the relative correlated systematic uncertainty quantifying the sensitivity of the measurement $i$ to the systematic source $\mu$. However, in practice, the relative systematic is replaced with the following approximation:
+\begin{equation}
+\gamma_{i,\mu}=\frac{1}{{m_i}} \frac{\partial m_i}{\partial b_{\mu}}.
+\end{equation}
 
-The statistical uncertainty $\sigma_{i,\text{stat}}$ is assumed to scale with the square root of expected number of events. Correcting for bias from systematic shifts, the statistical uncertainty is equal to
+The statistical uncertainty $\sigma_{i,\text{stat}}$ is assumed to scale with the square root of expected number of events. Correcting for the bias from systematic shifts, the statistical uncertainty is equal to
 \begin{equation}
  \sigma_{\text{stat},i}^2 = \delta_{\text{stat},i}^2\cdot m_i\left( t_i - \sum_\mu\gamma_{i,\mu}t_ib_\mu \right),
 \end{equation}
@@ -38,11 +41,11 @@ As was mentioned earlier, some systematic variations in this analysis resulted i
 \begin{equation}
  \sigma_i^{sym} = \frac{\sigma_i^+ + \sigma_i^-}{2},
 \end{equation}
-with $\sigma_i^{+\left(-\right)}$ expressing the positive (negative) component of the asymmetric uncertainty.
+with $\sigma_i^{+\left(-\right)}$ expressing the positive (negative) component of the asymmetric uncertainty. This procedure is applied to correlated as well as uncorrelated components of the systematic error.
 
-The procedure for determination of the parameters that best fit the data is based on the numerical minimisation of the $\chi^2$ function with respect to fit parameters. The systematic shifts $b_\mu$, described above, are fitted simultaneously with the parameters $\mathbf{a}$ in order to take into account the correlation of systematic uncertainties across measured points.
+The procedure for determination of the parameters that provide the best fit to the data is based on the numerical minimisation of the $\chi^2$ function with respect to the fit parameters. The systematic shifts $b_\mu$, described above, are fitted simultaneously with the parameters $\mathbf{a}$.
 
-The quality of the fit is assessed by the value of $\chi^2$-function at its minimum. Assuming that the measurements are sampled according to the normal distribution around the expectation value provided by theoretical predictions and with a variance described by the covariance matrix, the $\chi^2$ value can be treated as a random variable expected to follow a $\chi^2$-distribution~\cite{PDG:2014}
+The quality of the fit can be assessed by the value of $\chi^2$-function at its minimum. Assuming that the measurements are sampled according to a normal distribution around the expectation value provided by theoretical predictions and with a variance described by the covariance matrix, the $\chi^2$ value can be treated as a random variable expected to follow a $\chi^2$-distribution~\cite{PDG:2014}
 with mean value equal to the number of degrees of freedom $\left\langle \chi^2 \right\rangle = n_\text{DF}$, which in case of an $n_\text{par}$ parameters fit to $n_\text{p}$ points is $n_\text{DF}=n_\text{p}-n_\text{par}$.
 % \footnote{Due to penalty term, the nuisance parameters $\mathbf{b}$ are not free parametes, hence they do not contribute to the number of degrees of freedom.}. 
 Therefore, ratios $\chi^2/n_\text{DF} \approx 1$ indicate a good quality of the fit while larger values can indicate some inconsistency.
