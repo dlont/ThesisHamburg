@@ -1,6 +1,6 @@
 \section{Signal Characteristics}
 \label{sec:signalchar}
-As can be seen from the Eq.~\eqref{eq:q2el}, large values of \qsq\, in NC DIS events correspond to large scattering angles of the electron. The electron produces a well isolated electromagnetic shower in the calorimeter with a charged track pointing from the interaction vertex to the electromagnetic cluster (see Figure~\ref{fig:ncdiseventdisplay}). At low and medium values of $\qsq < 500\, \GeV^2$ the electron typically scatters into the RCAL. For larger values of $\qsq$ the electron can be found in BCAL and at very high-$\qsq$ the electron scatters to the FCAL. In NC DIS at \hera initial-state transverse momentum is zero, therefore final-state transverse momentum of the event must vanish according to momentum conservation:
+As can be seen from the Eq.~\eqref{eq:q2el}, large values of \qsq\, in NC DIS events correspond to large scattering angles of the electron. It produces a well isolated electromagnetic shower in the calorimeter with a charged track pointing from the interaction vertex to the electromagnetic cluster (see Figure~\ref{fig:ncdiseventdisplay}). At low and medium values of $\qsq < 500\, \GeV^2$ the electron typically scatters into the RCAL. For larger values of $\qsq$ the electron can be found in BCAL and at very high-$\qsq$ the electron scatters to the FCAL. In NC DIS at \hera initial-state transverse momentum is zero, therefore final-state transverse momentum of the event must vanish according to momentum conservation:
 \begin{equation}
 P_{T,tot}^2 = P_{X,tot}^2+P_{Y,tot}^2 = \left(\sum_i{E_i\sin{\theta_i}\cos{\phi_i}}\right)^2 + \left(\sum_i{E_i\sin{\theta_i}\sin{\phi_i}}\right)^2 \approx 0\;\GeV^2.
 \end{equation}
@@ -12,7 +12,7 @@ P_{T,tot}^2 = P_{X,tot}^2+P_{Y,tot}^2 = \left(\sum_i{E_i\sin{\theta_i}\cos{\phi_
 	\label{fig:ncdiseventdisplay}
 \end{figure}
 
-In NC DIS processes the quantity $\delta$, defined as
+Furthermore, in NC DIS processes the quantity $\delta$, defined as
 \begin{equation}
 \delta = \delta_h + \delta_e = \left( E_p - P_{z,p} \right) + \left( E_e - P_{z,e}\right) = 2E_e = 55\;\GeV,
 \label{eq:deltadis}
@@ -21,7 +21,7 @@ is also conserved, i.e. the same variable calculated from the final state energy
 \begin{equation}
 \delta = \sum_i{\left(E_i - P_{Z,i}\right)} = \sum_i{\left(E_i - E_i\cos{\theta_i}\right)} \approx 55\;\GeV.
 \end{equation}
-is preserved. The deviations of $P_{T,tot}$ and $\delta$ from the nominal quantity can be caused by e.g. undetected particles escaping the \zeus detector and/or due to finite energy resolution of the calorimeter.
+is preserved. The deviations of $P_{T,tot}$ and $\delta$ from the nominal quantity can be caused by e.g. undetected particles escaping the  detector volume and/or due to finite energy resolution of the calorimeter.
 
 As was explained in Section~\ref{subsec:breitframe}, at leading-order in the Breit frame a process with hard QCD interaction always has at least two hadronic jets. In practice, however, one of the jets can be failing to pass selection criteria due to limited detector acceptance and/or resolution, therefore the signal events in this analysis were required to have at least one jet identified in the Breit frame within the acceptance of the apparatus and having transverse energy exceeding some minimum energy threshold.
 
@@ -34,12 +34,14 @@ The cross section of inelastic electron-proton scattering with $\qsq \approx 0\;
 
 \subsection{Beam-Gas Interactions. Cosmic and Halo Muons}
 \label{subsec:beamgasfeatures}
-The electron and proton beams can interact with the residual gas in the beam pipe. The proton-gas collisions are characterised by large hadronic activity and multiple tracks emerging at low polar angles upstream from the nominal interaction point (see Figure~\ref{fig:beamgaseventdisplay}). In such events, signals in the FCAL follow those from the RCAL and are separated by the time interval necessary for particles to reach the forward calorimeter. Using the information about particles arrival time in forward and rear parts of the CAL as well as signals from the specific iron-scintillating detector (Veto-Wall) located in the rear part of the \zeus, these events can be efficiently rejected. In addition, the suppression of beam-gas events can be achieved by imposing the restrictions on the longitudinal momentum balance, because such processes are characterised by lower value of $\delta$ than that for NC DIS. In contrast to the proton-gas collisions, the rate of the electron beam interactions was found in a previous study~\cite{thesis:moritz:2001} to be very small and therefore negligible.
+The electron and proton beams can interact with the residual gas in the beam pipe. The proton-gas collisions are characterised by large hadronic activity and multiple tracks emerging at low polar angles upstream from the nominal interaction point (see Figure~\ref{fig:beamgaseventdisplay}). In such events, signals in the FCAL follow those from the RCAL and are separated by the time interval necessary for particles to reach the forward calorimeter, typically about 30-40 ns. Using the information about particles arrival time in forward and rear parts of the CAL as well as signals from the specific iron-scintillating detector (Veto-Wall) located in the rear part of the \zeus, these events can be efficiently rejected. In addition, the suppression of beam-gas events can be achieved by imposing the restrictions on the longitudinal momentum balance, because such processes are characterised by lower value of $\delta$ than that for NC DIS. 
+
+In contrast to the proton-gas collisions, the rate of the electron beam interactions was found in a previous study~\cite{thesis:moritz:2001} to be very small and therefore negligible.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\textwidth]{./Figures/event_display_54628_99024_lessthicklines1} 
-	\caption{An example of proton beam -- residual gas collision identified using pilot bunch crossing. Many tracks emerge from the interaction point in the rear part of the \zeus detector outside of the acceptance of the tracking system.}
+	\caption{An example of proton beam -- residual gas collision identified using pilot bunch crossing number. Many tracks emerge from the interaction point in the rear part of the \zeus detector outside of the acceptance of the tracking system.}
 	\label{fig:beamgaseventdisplay}
 \end{figure}
 
@@ -70,7 +72,7 @@ The reactions of the type $ep \rightarrow e' \gamma p$ or $ep \rightarrow e'\gam
 \end{figure}
 
 \section{Event selection.}
-The pre-selection of the NC DIS events relevant for the analysis starts naturally during the data-taking when the the \zeus trigger system is used. Only those events for which positive trigger decision was taken are stored on tape and can be further analysed off-line. The following sections present the general information about analysed data and MC samples and selection criteria used to obtain restricted event samples.
+The pre-selection of the NC DIS events relevant for the analysis starts naturally during the data-taking when the the \zeus trigger system is used. Only those events for which positive trigger decision was taken are stored on tape and can be further analysed offline. The following sections present the general information about analysed data and MC samples and selection criteria used to obtain restricted event samples.
 
 \subsection{Data and MC sets.}
 This analysis was performed using the data recorded during the 2004 -- 2007 running period. The $\ep$ centre-of-mass collision energy during this period was \sqs = 318 \GeV.
@@ -82,7 +84,7 @@ This analysis was performed using the data recorded during the 2004 -- 2007 runn
 			\hline \hline
 			2004 -- 2005  & 133.6 \invpb  \\
 			2006             & 53.0 \invpb   \\
-			2006 -- 2007  & 109.5 \invpb \\
+			2006 -- 2007  & 108.5 \invpb \\
 			\hline
 		\end{tabular}
 	\caption{Luminosity values for the final data samples used in the analysis.}
@@ -90,15 +92,15 @@ This analysis was performed using the data recorded during the 2004 -- 2007 runn
 \end{table}
 The total integrated luminosity of the processed data sample amounts to 295~\invpb. The luminosity values for analysed data-taking periods are summarised in Table~\ref{tab:selecteddatasample}.
 
-Monte Carlo events were used to simulate detector effects and for determination of the detector acceptance. The samples were generated for the mentioned data-taking periods separately in order to take into account changing experiment running conditions. The program packages LEPTO and ARIADNE, described in Section~\ref{sec:mcmodels} were utilised. In total, about 32 million NC DIS events with $\qsq > 100\;\GeV^2$ were generated.
+Monte Carlo events were used to simulate detector effects and for determination of the detector acceptance. The MC samples for the mentioned data-taking periods were generated  separately in order to take into account changing experimental conditions. The program packages LEPTO and ARIADNE, described in Section~\ref{sec:mcmodels} were utilised. In total, about 32 million NC DIS events with $\qsq > 100\;\GeV^2$ were generated.
 
 \section{On-line selection}
 \label{sec:onlineselect}
-As described in Section~\ref{sec:daqtrigger} the \zeus trigger has a three-level architecture. At each level every event can be classified into different categories\footnote{Single event can be attributed to several categories.} according to event characteristic features, like total and/or regional energy sums or presence of electromagentic clusters etc. Technically, when the event was recorded on storage-tape it was marked with specific flags, the so called trigger slots or bits, which represent different event classes. The requirements imposed by specific trigger bits are listed below. Any of the enumerated trigger bits were required to be fired\footnote{Which corresponds to a logical \textbf{OR} between individual bits.} in order to keep the event for further analysis. 
+As described in Section~\ref{sec:daqtrigger} the \zeus trigger has a three-level architecture. At each level every event can be classified into different categories\footnote{Single event can be attributed to several categories.} according to event characteristic features, like total and/or regional energy sums or presence of electromagnetic clusters etc. Technically, when the event was recorded on storage-tape it was marked with specific flags, the so called trigger slots or bits, which represent different event classes. The requirements imposed by specific trigger bits are listed below. Any of the enumerated trigger bits were required to be fired\footnote{Which corresponds to a logical \textbf{OR} between individual bits.} in order to keep the event for further analysis. 
 
 \subsection{FLT trigger}
 \label{subsec:fltcuts}
-The FLT selection is centred around the idea of having an event with large transverse momentum and significant electromagnetic energy deposit corresponding to the DIS electron. Besides that, every FLT bit imposes additional restrictions (not listed here) on the CAL timing and information from other detector components, like Veto-Wall in order to suppess un-physical background.
+The FLT selection is centred around the idea of having an event with large transverse momentum and significant electromagnetic energy deposit corresponding to the DIS electron. Besides that, every FLT bit imposes additional restrictions (not listed here) on the CAL timing and information from other detector components, like Veto-Wall in order to suppress unphysical background.
 \begin{itemize}
 	\item \textbf{FLT bit 40:} The total energy in the electromagnetic section of the calorimeter, $E_\text{EMC}^\text{CAL}$, exceeds 20 \GeV\, and a condition on the track multiplicity, the so called \textit{track veto} (see Section~\ref{sec:trkvetoeff}).
 	\item \textbf{FLT bit 43:} The total transverse energy in the calorimeter, $E_\text{T}^\text{CAL}$, exceeds 20 \GeV\, and at least one \textit{good track}\footnote{FLT Track class > 1 (see Section~\ref{sec:trkvetoeff}).} is required.
@@ -107,17 +109,17 @@ The FLT selection is centred around the idea of having an event with large trans
 
 \subsection{SLT trigger}
 \label{subsec:sltcuts}
-The second-level trigger was used to suppress further beam-related background. The information from the \zeus global tracking trigger was utilised at the SLT for the reconstruction of the interaction vertex position and to reject events originating from background processes. Moreover, the calorimeter timing information was used extensively to suppress beam-gas and cosmic-ray background. For example, hadrons emerging in vicinity of the nominal interaction point will be characterised by approximately the same arrival time in different parts of the CAL, in contrast to cosmic-shower events for which the signals from the upper part of the BCAL will arrive earlier than from the bottom part. Thus, given the high timing resolution of the CAL, the background processes can be efficiently discriminated.
+The second-level trigger was used to suppress further beam-related background. The information from the \zeus global tracking trigger was utilised at the SLT for the reconstruction of the interaction vertex position and to reject events originating from background processes. Moreover, the calorimeter timing information was used extensively to suppress beam-gas and cosmic-ray background. For example, hadrons emerging in vicinity of the nominal interaction point will be characterised by approximately the same arrival time in different parts of the CAL, in contrast to cosmic-shower events for which the signals from the upper part of the BCAL will arrive earlier than from the bottom part. Thus, given the high timing resolution of the CAL, the background processes can be efficiently discriminated at SLT.
 
 The SLT bits DIS01, 04, 07 were used in the analysis. Any of those bits require the FLT bits 28, 30, 31, 36, 39, 40, 41, 43, 44, 46, 47, 62 to be fired. Besides that the following restrictions were imposed:
 \begin{itemize}
-	\item \textbf{SLT bit DIS01:} The total energy in the electromagnetic sections of the calorimeter, $E_\text{EMC}^\text{RCAL} > 2.5\;\GeV$or $E_\text{EMC}^\text{BCAL} > 2.5\;\GeV$ or $E_\text{EMC}^\text{FCAL} > 10\;\GeV$ or hadronic energy in the forward region $E_\text{HAC}^\text{FCAL} > 10\;\GeV$ and $E-P_Z > 29\;\GeV$;
-	\item \textbf{SLT bit DIS04:} The total energy in the electromagnetic sections of the calorimeter, $E_\text{EMC}^\text{RCAL} > 2.5\;\GeV$or $E_\text{EMC}^\text{BCAL} > 2.5\;\GeV$ or $E_\text{EMC}^\text{FCAL} > 10\;\GeV$ or hadronic energy in the forward region $E_\text{HAC}^\text{FCAL} > 10\;\GeV$ and $E-P_Z > 19\;\GeV$;
+	\item \textbf{SLT bit DIS01:} The total energy in the electromagnetic sections of the calorimeter, $E_\text{EMC}^\text{RCAL} > 2.5\;\GeV$or $E_\text{EMC}^\text{BCAL} > 2.5\;\GeV$~or $E_\text{EMC}^\text{FCAL} > 10\;\GeV$ or hadronic energy in the forward region $E_\text{HAC}^\text{FCAL} > 10\;\GeV$ and $E-P_Z > 29\;\GeV$;
+	\item \textbf{SLT bit DIS04:} The total energy in the electromagnetic sections of the calorimeter, $E_\text{EMC}^\text{RCAL} > 2.5\;\GeV$or $E_\text{EMC}^\text{BCAL} > 2.5\;\GeV$~or $E_\text{EMC}^\text{FCAL} > 10\;\GeV$ or hadronic energy in the forward region $E_\text{HAC}^\text{FCAL} > 10\;\GeV$ and $E-P_Z > 19\;\GeV$;
 	\item \textbf{SLT bit DIS07:} The energy of the SLT electron candidate $E_e^{SLT}>5\;\GeV$.
 \end{itemize}
 \subsubsection{TLT trigger}
 \label{subsec:tltcuts}
-The final stage of the trigger selection was based on the identification of the scattered DIS electron. The reduced read-out rate at the TLT allowed application of the complex reconstruction algorithms that were much closer related to those used in the off-line analysis. The TLT bit \textsf{DIS03} together with DST bit 12 imposing loose cuts on the electron candidate were used in the selection chain and are summarised in the Table~\ref{tab:TLTDSTreq}.
+The final stage of the trigger selection was based on the identification of the scattered DIS electron. The reduced read-out rate at the TLT allowed application of the complex reconstruction algorithms that were much closer related to those used in the offline analysis. The TLT bit \textsf{DIS03} together with DST bit 12 imposing loose cuts on the electron candidate were used in the selection chain and are summarised in the Table~\ref{tab:TLTDSTreq}.
 \begin{table}[ht!]
 \centering
 \begin{tabular}{c|c}
@@ -130,7 +132,7 @@ The final stage of the trigger selection was based on the identification of the 
 \label{tab:TLTDSTreq}
 \end{table}
 
-\section{Off-line selection}
+\section{Offline selection}
 \label{sec:offlineselect}
 
 \subsection{Data-quality requirements.}
@@ -138,7 +140,8 @@ The operation of the detector components was continuously monitored during the d
 
 In addition to EVTAKE flag, the LPOLTAKE and TPOLTAKE status records were used in this analysis in order to verify the availability of the information from the corresponding lepton-beam polarisation detectors. At least one of the detectors was required to be in good status on in order to determine the polarisation value for particular runs.
 
-Trigger-level event selection cannot fulfil signal to background discrimination requirements necessary for precision analysis because of limited processing time and significant complexity of the reconstruction algorithms for the objects such as secondary vertices, particle decays or jets. In addition, information about detector operating conditions such as the number of dead channels, changes in high voltage, CTD gas pressure, temperature, etc. are difficult or impossible to take into account at the trigger level. Thus, after the trigger-based pre-selection a set of cuts is applied off-line to ensure a low level of background and high purity of selected sample. Additional requirements were imposed to restrict the phase space of the measurement. 
+Trigger-level event selection cannot fulfil signal to background discrimination requirements necessary for precision analysis because of limited processing time and significant complexity of the reconstruction algorithms for the objects such as secondary vertices, particle decays or jets. In addition, information about detector operating conditions such as the number of dead channels, changes in high voltage, CTD gas pressure, temperature, etc. are difficult or impossible to take into account at the trigger level. Thus, after the trigger-based pre-selection a set of cuts is applied offline to ensure a low level of background and high purity of selected sample. Additional requirements were imposed to restrict the phase space of the measurement. 
+Trigger-level event selection cannot fulfil signal to background discrimination requirements necessary for precision analysis because of limited processing time and significant complexity of the reconstruction algorithms for the objects such as secondary vertices, particle decays or jets. In addition, information about detector operating conditions such as the number of dead channels, changes in high voltage, CTD gas pressure, temperature, etc. are difficult or impossible to take into account at the trigger level. Thus, after the trigger-based pre-selection a set of cuts is applied offline to ensure a low level of background and high purity of selected sample. Additional requirements were imposed to restrict the phase space of the measurement. 
 
 \subsection{Electron selection}
 \label{subsec:eleselect}
