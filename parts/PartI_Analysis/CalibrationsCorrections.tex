@@ -1,9 +1,20 @@
- In many high energy physics analyses, the estimation of detector effects is often based on Monte Carlo simulations. However, as it will be discussed in Chapter~\ref{ch:unfolding}, a reliable estimate of the influence of the detector response is only possible if the MC simulations accurately describe all relevant distributions. %\sout{Therefore a detailed description of the observed data distributions is one of the crucial steps in any analysis.} 
+In many high energy physics analyses, the estimation of detector effects is often based on Monte Carlo simulations. However, as it will be discribed in Chapter~\ref{ch:unfolding}, a reliable estimate of the influence of the detector response is only possible if the MC simulations accurately describe all relevant distributions. %\sout{Therefore a detailed description of the observed data distributions is one of the crucial steps in any analysis.} 
  The discrepancy between data and MC may originate from two basic sources: inadequacy of the modelling of the \ep~physics process up to the generation of the final-state hadrons or of the response of the detector to the generated particles.
  
-Improvement in the simulations is achieved by using more accurate predictions for the physical process and employing better detector simulation algorithms. However, obtaining a detailed description of the complete physical process can be a formidable task, therefore, often, a more feasible approach is used. An improvement of the description of the data distribution is obtained by assigning weights to the MC events (\emph{reweighting method}). The weights are usually functions of the kinematic variables and are adjusted in such a way that the simulations reasonably describe the data. The size of the weights is usually determined from an empirical fit to the data. The reweighting procedure is required to be independent of the reconstruction, therefore it must be based on \emph{true} level information. In the case when several quantities are reweighted, the final weight factor applied to the MC event is a product of individual weights, $w = \prod_i w_i$.
- 
- This chapter describes the corrections applied to the MC simulations. At the beginning, the details of the longitudinal-vertex-position reweighting are presented. Later the MC track-veto correction is described.
+Improvement in the simulations is achieved by using more accurate predictions for the physical process and employing better detector simulation algorithms. However, obtaining a detailed description of the complete physical process can be a formidable task, therefore, often, a more feasible approach is used.
+
+This chapter describes the corrections applied to the samples of MC generated events in order to obtain accurate description of observed spectra by MC simulations. At the beginning, a brief account of the reweighting method is introduced. Then, the details of the longitudinal-vertex-position reweighting and the correction procedure for MC trigger-efficiency are presented. The chapter proceeds with the details of the \qsq and \etjetb spectra reweigthing and the comparison of electromagnetic and hadronic energy scales in data and simulations. Afterwards, jet-energy-scale and jet-transverse-energy corrections are elucidated. The chapter ends with the conclusions about the results of the aforementioned corrections.
+
+\section{Reweighting method}
+
+An improvement of the description of the data distribution is obtained by assigning weights to the MC events (\emph{reweighting method}). The weights are usually functions of the kinematic variables and are adjusted in such a way that the simulations reasonably describe the data. The size of the weights is usually determined from an empirical fit to the observed spectra. The reweighting procedure is required to be independent of the reconstruction, therefore it must be based on MC \emph{true} level information. In case when several quantities are reweighted, the final weight factor applied to the MC event is a product of individual weights, $w = \prod_i w_i$. 
+
+%For example, in this analysis the reweighting of longitudinal-vertex-position, virtuality, and jet transverse energy was performed, therefore the resulting weight applied to MC event with given values of $Z_{vtx}$, \qsq, and \etjetb is:
+%\begin{equation}
+% w = w_{1}\left(Z_{vtx}) w_{2}\left(\qsq, \etjetb, n_{jet}),
+%\label{eq:mcweight}
+%\end{equation}
+%where $w_{2}\left(\qsq, \etjetb, n_{jet})$ weight cannot be further factored into a product of independent weights.
 
  \section{Reweighting of the Longitudinal Vertex Position}
  \label{sec:zvtxrew}
