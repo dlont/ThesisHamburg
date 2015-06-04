@@ -1,18 +1,17 @@
 \setstcolor{blue}
 \begin{itemize}	\itemsep-5pt \parskip0pt
 	\item \st{Multiple-jet production is not a Poisson flow (Definition of a Poisson flow)}
-	\item Model for inclusive-jet production statistics (Multi-poisson distribution) [reference to unpublished Juan's paper]
+	\item \st{Model for inclusive-jet production statistics (Multi-Poisson distribution) [reference to unpublished Juan's paper]}
 		\begin{itemize} \itemsep-5pt \parskip0pt
-		  \itemsep1pt
 			\item \st{model for \qsq}
-			\item model for \etjet
+			\item \st{model for \etjet}
 		\end{itemize}
-  \item Derivation of statistical correlations
+  \item \st{Derivation of statistical correlations}
 	\item Statistical correlation figure
 	\item Discussion of statistical correlations. Conclusions. Reference to \as extraction
 \end{itemize}
 
-In counting experiments the statistical uncertainty is typically assumed to follow Poisson distribution, however is case of inclusive jet production where every jet is counted, such an assumption is incorrect because jets appear in pairs or with even higher multiplicity. Therefore, occurrence of jets is not a Poisson process. However, taking into account that the number of \textit{events} with a given jet multiplicity accumulated during a fixed time interval is indeed Poisson distributed, it was demonstrated~\cite{upub:juanstatcorrel} that the probability of observing $n$ jets in a given bin of a jet cross section\footnote{It is assumed that all jets in event are assigned to the same bin, as for example, in \qsq distribution.} provided by the multi-Poisson:
+In counting experiments the statistical uncertainty is typically assumed to follow Poisson distribution, however is case of inclusive jet production where every jet is counted, such an assumption is incorrect because jets appear in pairs or with even higher multiplicity. Thus, the occurrence of jets is not a Poisson process. However, taking into account that the number of \textit{events} with a given jet multiplicity accumulated during a fixed time interval is indeed Poisson distributed, it was demonstrated~\cite{upub:juanstatcorrel} that the probability of observing $n$ jets in a given bin of a jet cross section\footnote{It is assumed that all jets in event are assigned to the same bin, as for example, in \qsq distribution.} provided by the multi-Poisson:
 \begin{equation}
 P\left(n_1, n_2, n_3, \ldots \right) = \prod_i{ e^{-\lambda_i} \cdot \frac{\lambda_1^{n_i}}{n_i!} },
 \label{eq:multipoissonqsq}
@@ -25,20 +24,41 @@ with the number of jets, $n$, constrained by the requirement
 \begin{equation}
 n = n_1 + 2\cdot n_2 + 3\cdot n_3 + \ldots
 \end{equation}
-Substituting the expression for $P\left(n_1, n_2, n_3, \ldots \right)$, the mean value and the variance of the number of jets in specific bin are given by
+Substituting the expression for $P\left(n_1, n_2, n_3, \ldots \right)$, the mean value and the variance of the number of jets can be evaluated to
 \begin{align}
   \left\langle n \right \rangle &= \lambda_1 + 2\cdot\lambda_2 + 3\cdot\lambda_3 + \ldots\\
 	\left\langle n^2 \right \rangle - \left( \left\langle n \right \rangle \right)^2 &= \lambda_1 + 4\cdot\lambda_2 + 9\cdot\lambda_3 +\ldots
 \end{align}
-Because the expectation values $\lambda_i$ are not know the number of observed events with a given jet multiplicity in a given bin were used as an estimator. Thus the statistical uncertainty in this analysis was calculated according to the following expression:
+Since the expectation values $\lambda_i$ are not known, the number of observed events with a given jet multiplicity were used as an estimator. Thus, the statistical uncertainty in this analysis was calculated according to the following expression:
 \begin{equation}
 \sigma_\text{stat} = \sqrt{N_1+4\cdot N_2 + 9\cdot N_3 + \ldots},
 \end{equation}
 where $N_i$ is the number of observed $i$-jet events.
 
-The model for statistical uncertainties for $\etjet$ and $\etajet$ distributions is more complicated, because different jets in a single event can end-up in different cross section bins. Such assignment of jets results in statistical correlation between entries in different bins. The probability distribution is still multi-Poissonian, however more possibilities for assignment of the jets to different cross section have to be taken into account. A general case is easier to illustrate in a simplified example, where the jet cross section (e.g. $\dsdetjetb$) with only two bins is considered.
+The model for statistical uncertainties for $\etjet$ and $\etajet$ distributions is more complicated, because different jets in a single event can end-up in different cross section bins. Such assignment of jets results in statistical correlation between entries in different bins. The probability distribution is still multi-Poissonian, however more possibilities for assignment of the jets to different cross section bins have to be taken into account. Those are
+ \begin{enumerate}
+  \item 1-,2-,3-jet events, \ldots, in which only \textit{one} jet lies in a given bin. The corresponding event numbers and expectation values are given by $n_{1,1}, n_{1,2}, n_{1,3}, \ldots$ and $\lambda_{1,1}, \lambda_{1,2}, \lambda_{1,3}, \ldots$, respectively.
+  \item 2-,3-jet events, \ldots, in which exactly \textit{two} jets fall in a given bin. The corresponding variables are denoted by $n_{2,2}, n_{2,3}, \ldots$ and $\lambda_{2,2}, \lambda_{2,3}, \ldots$, respectively.
+  \item \ldots
+ \end{enumerate}
+Taking these possibilities into account, the corresponding probability distribution is expressed as:
 \begin{equation}
-P\left(n_{1,1}, n_{1,2},\ldots, n_{2,2}, n_{2,3}, \ldots \right) = \left( \prod_{i_1}{ e^{-\lambda_{1,i_1}} \cdot \frac{\lambda_1^{n_{1,{i_1}}}}{n_{1,{i_1}}!} } \right) \cdot \left( \prod_{i_2}{ e^{-\lambda_{i_2} } \cdot \frac{\lambda_1^{n_{i_2}}}{n_{i_2}!} } \right) \cdot \ldots
+P\left(n_{1,1}, n_{1,2},\ldots, n_{2,2}, n_{2,3}, \ldots \right) = \left( \prod_{i_1}{ e^{-\lambda_{1,i_1}} \cdot \frac{\lambda_1^{n_{1,{i_1}}}}{n_{1,{i_1}}!} } \right) \cdot \left( \prod_{i_2}{ e^{-\lambda_{i_2} } \cdot \frac{\lambda_1^{n_{i_2}}}{n_{i_2}!} } \right) \cdot \ldots.
 \label{eq:multipoissonqsq}
 \end{equation}
+Evaluating the mean number of jets and the variance, the following expressions can be obtained:
+\begin{align}
+ \left\langle n \right\rangle &= \lambda_{1,1} + \lambda_{1,2} + \ldots + 2\cdot\left(\lambda_{2,2}+\lambda_{2,3}+\ldots\right) + 3\cdot\left( \lambda_{3,3} + \lambda_{3,4} + \ldots \right) + \ldots;\\
+ \left\langle n^2 \right \rangle - \left( \left\langle n \right \rangle \right)^2 &= \lambda_{1,1} + \lambda_{1,2} + \ldots + 4\cdot\left(\lambda_{2,2}+\lambda_{2,3}+\ldots\right) + 9\cdot\left( \lambda_{3,3} + \lambda_{3,4} + \ldots \right) + \ldots. 
+\end{align} 
+An estimator of statistical uncertainty calculated from observed numbers of events is:
+\begin{equation}
+ \sigma_\text{stat} = \sqrt{ N_{1,1} + N_{1,2} + \ldots + 4\cdot\left(N_{2,2}+N_{2,3}+\ldots\right) + 9\cdot\left( N_{3,3} + N_{3,4} + \ldots \right) + \ldots}.
+\end{equation}
 
+The estimate of covariance between numbers of jets in bins $i$ and $j$ can also be derived~\ref{upub:juanstatcorrel}:
+\begin{equation}
+ \mathrm{cov}_{ij} = N_{i,j}^{\left(2\right)} + \sum_{k\neq i,k}{\left(N_{i,j,k}^{\left(3\right)} + N_{i,k,j}^{\left(3\right)} + N_{k,i,j}^{\left(3\right)} \right) + 2\cdot\left( N_{i,j,j}^{\left(3\right)} + N_{i,i,j}^{\left(3\right)} \right) + \ldots },
+ \label{eq:covmultipoisson}
+\end{equation}
+where $N_{i,j}^{\left(2\right)}$ is the number of 2-jet events with jets in bins $i$ and $j$; $N_{i,j,k}^{\left(3\right)}$ is the number of 3-jet events with jets in bins $i$, $j$ and $k$, correspondingly.
