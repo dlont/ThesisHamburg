@@ -38,8 +38,9 @@
 \usepackage{geometry}
 \usepackage{extsizes}%
  \usepackage{fourier}%
-
- \usepackage{pbox}
+\usepackage{longtable}%
+\usepackage{multirow}
+ \usepackage{pbox}%
 \usepackage{nicefrac}%
  \usepackage{xfrac}%
 
@@ -227,7 +228,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \chapter{Introduction}
  \label{ch:intro}
- \input{parts//PartI_Analysis//Intro}
+ %\input{parts//PartI_Analysis//Intro}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					 %%
@@ -236,7 +237,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \chapter{Theoretical Framework}
  \label{ch:theory}
- \input{parts//PartI_Analysis//TheoreticalFramework}
+ %\input{parts//PartI_Analysis//TheoreticalFramework}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -245,7 +246,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \chapter{Experimental Setup}
  \label{ch:expsetup}
- \input{parts//PartI_Analysis//ExperimentalSetup}
+ %\input{parts//PartI_Analysis//ExperimentalSetup}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -254,7 +255,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \chapter{Event Reconstruction}
  \label{ch:reconstruction}
- \input{parts//PartI_Analysis//Reconstruction}
+ %\input{parts//PartI_Analysis//Reconstruction}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -263,7 +264,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \chapter{Event Selection}
  \label{ch:selection}
- \input{parts//PartI_Analysis//Selection}
+ %\input{parts//PartI_Analysis//Selection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -272,7 +273,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \chapter{Calibrations and Corrections}
  \label{ch:calibcorr}
- \input{parts//PartI_Analysis//CalibrationsCorrections}
+ %\input{parts//PartI_Analysis//CalibrationsCorrections}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -281,7 +282,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \chapter{Cross-section determination}
  \label{ch:unfolding}
- \input{parts//PartI_Analysis//Unfolding}
+ %\input{parts//PartI_Analysis//Unfolding}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -290,7 +291,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Results. Inclusive-Jet cross sections}
 \label{ch:resultscs}
- \input{parts//PartI_Analysis//Results}
+ %\input{parts//PartI_Analysis//Results}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -299,7 +300,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Results. QCD Analysis of Inclusive-Jet data}
 \label{ch:resultsqcdfit}
-\input{parts//PartI_Analysis//ResultsQCDfit}
+%\input{parts//PartI_Analysis//ResultsQCDfit}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -310,7 +311,7 @@
 \chapter*{Summary and Outlook}
 \label{ch:summary}
 \addcontentsline{toc}{chapter}{Summary and Outlook}
-\input{parts//PartI_Analysis//JetsSummary}
+%\input{parts//PartI_Analysis//JetsSummary}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -331,11 +332,17 @@
  \backmatter \appendix
  \chapter{Cross section tables}
  \label{ch:cstables}
- \input{parts//Appendix//cset}
- \input{parts//Appendix//cseta}
- \input{parts//Appendix//csq2}
+\vspace{-40pt}
+\input{parts//Appendix//csq2} 
+\vspace{-15pt}
+\input{parts//Appendix//cset}
+\vspace{-15pt}
+\input{parts//Appendix//cseta}
+ 
+\clearpage
  \input{parts//Appendix//csetinq2bins}
-  \input{parts/Appendix/asrunning}
+ \input{parts//Appendix//statcorrelmatrix}
+ \input{parts/Appendix/asrunning}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
