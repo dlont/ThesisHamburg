@@ -1,10 +1,16 @@
 The following sources of uncertainty in the theoretical predictions were investigated:
 \begin{itemize}
- \item the uncertainty on the predicted inclusive-jet cross section due to that on the value of \asz was estimated by repeating the calculations assuming different values of \asz=0.1156 and 0.1196\footnote{These values correspond to the standard deviation of \as, that was determined in the HERAPDF fit} and using the corresponding proton PDF sets from the \herapdf1.5 bundle. The resulting uncertainty was typically about $\pm2\%$;
+ \item the uncertainty on the predicted inclusive-jet cross section due to the value of \asz was estimated by repeating the calculations assuming different values of \asz=0.1156 and 0.1196\footnote{These values correspond to the standard deviation of \as, that was determined in the \herapdf fit~\cite{upub:herapdf1.5}} and using the corresponding proton PDF sets from the \herapdf1.5 series. The resulting uncertainty was typically about $\pm2\%$;
  \item PDFPDFPDF
  \item the uncertainty on the NLO QCD calculations arising from higher-order terms, estimated by varying the renormalisation scale up and down by a factor of 2. It was about $\pm10\%$ in the low-\qsq, low-\etjetb region but decreasing to about $\pm5\%$ at high \qsq and high \etjetb;
- \item the uncertainty of the calculations originating from the residual dependence on factorisation scale was estimated by repeating the calculations with $\mu_F$ scaled up and down by factors 0.5 and 2, resulting in a difference between the predictions $\lesssim 3\%$;
- \item the uncertainty due to modelling of the parton shower was typically about 1\% in most of the phase space.
+ \item the uncertainty of the calculations originating from the dependence on factorisation scale was estimated by repeating the calculations with $\mu_F$ scaled up and down by factors 0.5 and 2, resulting in a difference between the predictions $\lesssim\pm 3\%$;
+ \item the uncertainty due to the modelling of the parton shower was estimated as the symmetric relative difference between the predictions for hadronisation correction factors obtained using \lepto or \ariadne MC
+\begin{align}
+\delta^{\pm}_{\text{PS},i} &= \frac{1}{2}\max{\left(\left|\mathcal{C}^\text{hadr}_{\lepto,i} - \mathcal{C}^\text{hadr}_{av,i}\right|,\left|\mathcal{C}^\text{hadr}_{\ariadne,i} - \mathcal{C}^\text{hadr}_{av,i}\right|\right)},\\
+\mathcal{C}^\text{hadr}_{av,i} &= \frac{1}{2}\left(\mathcal{C}^\text{hadr}_{\lepto,i}+\mathcal{C}^\text{hadr}_{\ariadne,i}\right).\notag
+\label{eq:hadrcorunc}
+\end{align}
+ It was found to be typically about $\pm 1\%$ in most of the phase space.
 \end{itemize}
 \begin{figure}[t!]
 \begin{center}
@@ -18,6 +24,6 @@ The following sources of uncertainty in the theoretical predictions were investi
 \end{subfloat}
 \end{center}
 \caption{Estimated theoretical uncertainties on NLO pQCD predictions as functions of \etjetb and \qsq.}
-\label{fig:z0corr}
+\label{fig:thunc}
 \end{figure}
-The total theoretical uncertainty was calculated by summing the individual contributions in quadrature. The break-down of the theoretical uncertainties as functions of various kinematic variables are shown in Figures~\ref{fig:z0corr}~\subref{fig:thunc_subfig1}--\subref{fig:thunc_subfig3}.
+The total theoretical uncertainty was calculated by summing the individual contributions in quadrature. The break-down of the theoretical uncertainties as functions of various kinematic variables are shown in Figures~\ref{fig:thunc}.
