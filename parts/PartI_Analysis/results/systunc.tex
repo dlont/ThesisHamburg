@@ -1,41 +1,41 @@
-Systematic uncertainties arise due to various effects such as the incomplete understanding of the detector response or deficiencies in the modelling of the \ep~physics. The systematic uncertainties from identified sources were quantified in the the following way. For each source of uncertainty attributed to imperfect knowledge of some continuous parameter, a variation by its estimated uncertainty was performed and the cross sections re-evaluated. In the case when the source of uncertainty is attributed to a specific reconstruction technique, the difference with respect to the cross section calculated using an alternative reconstruction method is taken as an approximation to the systematic uncertainty. The positive, $\delta^+_i$, (negative, $\delta^-_i$) variations of the cross sections were added in quadrature in order to obtain the positive (negative) total systematic uncertainties
+Systematic uncertainties arise due to various effects such as the incomplete understanding of the detector response or deficiencies in the modelling of the \ep~physics. The systematic uncertainties from identified sources were quantified in the the following way. For each source of uncertainty attributed to imperfect knowledge of some continuous parameter, a variation by its estimated uncertainty was performed and the cross sections were re-evaluated. In the case when the source of uncertainty is attributed to a specific reconstruction technique, the difference with respect to the cross section calculated using an alternative reconstruction method is taken as an approximation of the systematic uncertainty. The positive, $\delta^+_i$, (negative, $\delta^-_i$) variations of the cross sections were added in quadrature in order to obtain the positive (negative) total systematic uncertainties
 \[
 	\begin{aligned}
 		\delta_{\left( +\right)}^{2} = \sum_i{\mbox{$\delta_i^{\left( +\right)}$}^2}\qquad,\\
 		\delta_{\left( -\right)}^{2} = \sum_i{\mbox{$\delta_i^{\left( -\right)}$}^2}\qquad.
 	\end{aligned}
 \]
-In general, the total uncertainty of the measurements presented in this thesis is dominated by the systematic contribution and only in some regions of phase space were limited accuracy from insufficiently large data samples an issue. The details of the determination of the statistical correlations between various measurement bins are provided in the next subsection.
+%In general, the total uncertainty of the measurements presented in this thesis is dominated by the systematic contribution and only in some regions of phase space were limited accuracy from insufficiently large data samples an issue. The details of the determination of the statistical correlations between various measurement bins are provided in the next subsection.
 
-In what follows the detailed description of the sources of systematic uncertainties is presented.
+In what follows a detailed description of the sources of systematic uncertainties is presented.
 \begin{itemize}
 	\item \textbf{Hadronic energy scale} \\
-		As it was demonstrated in Section~\ref{sec:jetenescale}, the precision to which the absolute jet-energy scale can be calibrated in the data down to $\pm1\%$ for jets with $\etjetlab > 10\,\GeV$ and, as was found in other jet analysis at \zeus, $\pm1\%$ for jets with $3\,< \etjetlab < 10\,\GeV$. Therefore, to assess the effect of this uncertainty on the cross sections, the jet transverse energy was varied in the MC simulations up and down within the specified limits. Each variation resulted in a single-sided change of the cross sections in all bins with respect to the nominal values. As a function of \qsq~this uncertainty was monotonically decreasing with increase of the exchange-boson virtuality, ranging from 5\% at low \qsq~to 3\% in the highest \qsq~bin. As a function of \etjetb, it was approximately constant and did not exceed 7\%.
+		As demonstrated in Section~\ref{subsec:jetenescale}, the precision to which the absolute jet-energy scale can be calibrated in the data is down to $\pm1\%$ for jets with $\etjetlab > 10\,\GeV$ and, as was found in other jet analysis at \zeus, $\pm3\%$ for jets with $3\,< \etjetlab < 10\,\GeV$. Therefore, to assess the effect of this uncertainty on the cross sections, the jet transverse energy was varied in the MC simulations up and down within the specified limits. Each variation resulted in a single-sided change\marginpar{OB:Wants definition of single-sided change.} of the cross sections in all bins with respect to the nominal values. This uncertainty was monotonically decreasing as a function of \qsq, ranging from 5\% at low \qsq~to 3\% in the highest \qsq~bin. As a function of \etjetb, it was approximately constant and did not exceed 7\%.
 		
 	\item \textbf{Acceptance correction} \\
-		The dependence of the acceptance correction factors on the modelling of the parton-shower process was taken into account in the systematic uncertainty. The cross sections were re-evaluated using the acceptance corrections obtained from the \ariadne sample instead of \lepto. Half of the difference between the obtained cross sections was taken as a systematic error. The effect was below 3\% for \qsq < 1000 $\GeV^2$ but increased up to 5\% in the largest \qsq~bin. As a function of \etjetb~it was typically below 5\% but reached 10\% in statistically significant high-\etjetb~regions.
+		The dependence of the acceptance correction factors on the modelling of the parton-shower process was taken into account in the systematic uncertainty. The cross sections were re-evaluated using the acceptance corrections obtained from the \ariadne sample instead of \lepto. Half\marginpar{OB:Why half?\\DL:Because acceptance cor.fac. is an average.} of the difference between the obtained cross sections was taken as a systematic error. The effect was below 3\% for \qsq < 1000 $\GeV^2$ but increased up to 5\% in the largest \qsq~bin. As a function of \etjetb~it was typically below 5\% but reached 10\% in the high-\etjetb~regions.
 			
 	\item \textbf{Dependence on the electron finder}\\
 		The \textsc{SINISTRA} electron finder (see Section~\ref{sec:eleid}) was used for the determination of the nominal cross section values. In order to estimate the size of the systematic uncertainty attributed to the electron identification, the \textsc{EM} electron finder was used as an alternative. The resulting uncertainty was typically about 0.5\% but could reach 2\% in regions of high \qsq.
 	
 	\item \textbf{Electromagnetic energy scale}\\
-		The uncertainty on the electromagnetic energy scale was determined using the technique similar to that for the calibration of the hadronic energy scale. Exploiting the approximate independence of the energy of the electron reconstructed using the double-angle method, a calibration of the absolute electromagnetic energy scale of the calorimeter can be performed. As was demonstrated in Section~\ref{subsec:eleenescale}, the residual discrepancy between data and MC simulations was less than 2\%. This value was interpreted as an uncertainty on the electron energy scale and was propagated to the cross sections by varying the scattered electron energy up and down by $\pm$ 2\% in the Monte Carlo simulation. In addition, this variation covers the uncertainty due to the determination of the Lorentz boost to the Breit reference frame. 
+		The uncertainty on the electromagnetic energy scale was determined using a technique similar to that for the calibration of the hadronic energy scale. Exploiting the approximate independence of the energy of the electron reconstructed using the double-angle method, a calibration of the absolute electromagnetic energy scale of the calorimeter can be performed. As was demonstrated in Section~\ref{sec:eleenescale}, the residual discrepancy between data and MC simulations was less than 2\%. This value was interpreted as an uncertainty on the electron energy scale and was propagated to the cross sections by varying the scattered electron energy up and down by $\pm$ 2\% in the Monte Carlo simulation. In addition, this variation covers the uncertainty due to the determination of the Lorentz boost to the Breit reference frame. 
 	
 	\item \textbf{Track veto efficiency correction}\\
-		In order to estimate the size of the effect on the cross sections due to the MC track-veto correction introduced in Section~\ref{sec:tvrew}, the procedure was changed slightly. Instead of the parametrisation of the track-veto efficiency as a function of $y_{DA}$, the CTD-FLT vertex tracks multiplicity was used as an alternative. The effect on the cross section was typically about 0.5\%.
+		In order to estimate the size of the effect on the cross sections due to the MC track-veto correction introduced in Section~\ref{sec:trkvetoeff}, the procedure was changed slightly. Instead of the parametrisation of the track-veto efficiency as a function of $y_{DA}$, the CTD-FLT vertex tracks multiplicity was used as an alternative. The effect on the cross section was typically about 0.5\%.
 	
 	\item \textbf{Photoproduction background}\\
-		The contribution to the high-\qsq NC DIS jet cross sections from photoproduction processes can be estimated using the dedicated Monte Carlo event generators e.g. \pythia and \herwig. It was demonstrated in other analysis~\cite{federike,trewor} that in the phase space of this work the photoproduction background can be neglected.
+		The contribution to the high-\qsq NC DIS jet cross sections from photoproduction processes can be estimated using the dedicated Monte Carlo event generators e.g. \pythia and \herwig. It was demonstrated in other analysis~\cite{thesis:januschek:2011,thesis:stewart:2012} that in the phase space of this work the photoproduction background can be neglected.
 	
 	\item \textbf{Selection cuts variation} \\
-		The stability of the results with respect to the choice of particular cut values, introduced in Chapter~\ref{ch:selectionreco}, was investigated. For this purpose the cut thresholds were changed in the data and MC according to the resolution of the considered quantity. Hence, for 
+		The stability of the results with respect to the choice of particular cut values, introduced in Chapter~\ref{ch:selection}, was investigated. For this purpose the cut thresholds were changed in the data and MC according to the resolution of the considered quantity. Hence, for 
 		\begin{itemize}
 			\item \textbf{$\left( E-p_Z\right) $ cut:} the variation by $\pm6\%$ resulted in the change of the cross sections by ...
 		\end{itemize}
 	\item \textbf{Luminosity} \\
 		The overall normalisation of the measurements depends on the integrated luminosity of the data sample that was determined with $\pm1.8\%$ for the given data-taking period.
 \end{itemize}
-All described systematic studies are summarised in the Table~\ref{tab:sysunc}. The Figures~\ref{fig:} illustrate the individual components of the statistical and systematic uncertainty as functions of various kinematic observables.
+All described systematic studies are summarised in Table~\ref{tab:sysunc}. The Figure~\ref{fig:systunc} illustrates the individual components of the statistical and systematic uncertainty as functions of various kinematic observables.
 \begin{table}[h!]
 \centering
 {\footnotesize
@@ -56,3 +56,17 @@ All described systematic studies are summarised in the Table~\ref{tab:sysunc}. T
 \label{tab:sysunc}
 \end{table}
 
+\begin{figure}[t!]
+\begin{center}
+\begin{subfloat}{\includegraphics[width=0.48\linewidth] {./Figures/systunc/h_q2_CS_systBreakdown}
+   \label{fig:z0corr_subfig3}
+ }%
+\end{subfloat}
+\begin{subfloat}{\includegraphics[width=0.48\linewidth]{./Figures/systunc/h_etjetb_CS_systBreakdown}
+   \label{fig:z0corr_subfig2}
+ }%
+\end{subfloat}
+\end{center}
+\caption{Estimated systematic uncertainties on inclusive-jet cross sections as functions of \etjetb and \qsq.}
+\label{fig:systunc}
+\end{figure}
