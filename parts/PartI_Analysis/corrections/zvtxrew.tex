@@ -4,24 +4,33 @@ Summarising, an accurate simulation of the $Z_\text{vtx}$ distribution in the MC
 \begin{itemize}
  \item in order to avoid a possible bias from the jet selection as well as from tracking restrictions at the trigger level, the FLT30 bit was required instead of the FLT40, 43, 50 bits that were used as a standard in the analysis;
  \item selection cuts on the longitudinal position of the interaction vertex were removed;
- \item the $Z_\text{vtx}$ distributions distributions in the data and MC were fitted to the sum of four Gaussian functions, $f\left(\vec a\right)=\sum_{i=1}^4{a_N^{\left(i\right)}\exp{\left[-\left(Z_\text{vtx}-a_{\mu}^{\left(i\right)}\right)^2/\left(a_\sigma^{\left(i\right)}\right)^2\right]}}$. The reweighting factors, $w_{Z}$, were determined from the fit of the ratio of the normalised data and MC distributions to the function $w=f\left(\vec a_{\mathrm{Data}}\right)/f\left(\vec a_{\mathrm{MC}}\right)$ using the parameters of the first fit as seed values;
+ \item the $Z_\text{vtx}$ distributions in the data and MC were fitted to the sum of four Gaussian functions, 
+\begin{equation}
+f\left(\vec a\right)=\sum_{i=1}^4{a_N^{\left(i\right)}\exp{\left[-\left(Z_\text{vtx}-a_{\mu}^{\left(i\right)}\right)^2/\left(a_\sigma^{\left(i\right)}\right)^2\right]}}.
+\label{eq:fourgauss}
+\end{equation}
+ The reweighting factors, $w_{Z}$, were determined from the fit of the ratio of the normalised data and MC distributions to the function 
+\begin{equation}
+w=f\left(\vec a_{\mathrm{Data}}\right)/f\left(\vec a_{\mathrm{MC}}\right)
+\label{eq:zvtxweght}
+\end{equation}
+ using the parameters of the first fit as seed values;
  \item the weights were determined from the detector level distributions as function of the reconstructed position, $Z_\text{vtx}$. They were then applied to the MC events as a function of the true position, $Z_\text{vtx}^\text{true}$. This substitution $Z_\text{vtx} \mapsto Z_\text{vtx}^\text{true}$ can be made because the migration effects for the $Z_\text{vtx}$ distribution were found to be very small and can be neglected.
 \end{itemize}
 
-The existing MC samples for the 2004--2005~$e^-$ and 2006~$e^-$ data taking periods describe the data very well in the whole interaction region. Only for the 2006/2007~$e^+$ running period did the MC not reproduce the data distribution reasonably. Therefore, reweighting of the longitudinal position of the primary vertex was implemented only for this MC sample. The comparison between data and MC distributions for the 2006/2007~$e^+$ data taking period before and after reweighting is shown in Figures~\ref{fig:zvtxrew} and~\ref{fig:zvtxrewaf}. After reweighting a good agreement was observed.\marginpar{OB:unclear which true distribution of zvtx was generated in MC?}
+The existing MC samples for the 2004--2005~$e^-$ and 2006~$e^-$ data taking periods describe the data very well in the whole interaction region. Only for the 2006/2007~$e^+$ running period the MC did not reproduce the data distribution reasonably\footnote{The primary vertex distribution for the \hera II running period was measured in a dedicated ub-biased study of low-\qsq NC DIS events~\cite{upub:oliver:zn07008} and was implemented in the MC production software}. Therefore, a reweighting of the longitudinal position of the primary vertex was implemented only for this MC sample. The comparison between data and MC distributions for the 2006/2007~$e^+$ data taking period before and after reweighting is shown in Figures~\ref{fig:zvtxrew} and~\ref{fig:zvtxrewaf}. After reweighting a good agreement was observed.\marginpar{OB:unclear which true distribution of zvtx was generated in MC?}
 \begin{figure}[t]
 \begin{center}
  \hspace{-35pt}\includegraphics[width=1.1\textwidth]{./Figures/zvtxrew/h_Zvtxfit_ratio_p_lepto}%
 \end{center}
-\caption{The $Z_\text{vtx}$ distributions in the data and \lepto MC before the reweighting together with the individual fits. In the lower left panel the ratio DATA/MC and the fit is shown.} 
+\caption{The $Z_\text{vtx}$ distributions in the data and \lepto MC before the reweighting together (top left panel) with the individual fits to the function Eq.~\eqref{eq:fourgauss} of the data (top right panel), of MC (bottom right panel). The ratio DATA/MC and the fit to Eq.~\eqref{eq:zvtxweght} is shown (bottom left panel).} 
 \label{fig:zvtxrew}
 \end{figure}
-
 
 \begin{figure}[p]
 \begin{center}
  \includegraphics[height=0.9\textheight]{./Figures/zvtxrew/h_Zvtxratio_p_lepto}
 \end{center}
-\caption{Comparison of the $Z_\text{vtx}$ in data and \lepto MC distribution after reweighting (Top panel) and ratio of the two distributions (Bottom panel).} 
+\caption{Comparison of the $Z_\text{vtx}$ in data and \lepto MC distribution after reweighting (top panel) and ratio of the two distributions (bottom panel).} 
 \label{fig:zvtxrewaf}
 \end{figure}
