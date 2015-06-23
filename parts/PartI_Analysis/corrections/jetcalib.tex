@@ -8,7 +8,7 @@ r = \frac{E_T^{jet}}{E_T^{DA}} = 1.
 
 The deviation of a double ratio calculated in data and Monte Carlo events
 \begin{equation}
-C_\text{scale} = \frac{r^{DATA}}{r^{MC}} \textcolor{blue}{\stackrel{!}{=}} 1
+C_\text{scale} = \frac{r^{DATA}}{r^{MC}} \stackrel{\mathrm{def}}{=} 1
 \label{eq:cscale}
 \end{equation}
 indicates a difference in the energy-scale of the calorimeter in data and simulations. This factor can be used to correct the relative difference between data and MC assuming that $C_\text{scale}$ is independent of the energy of jets. 
@@ -17,8 +17,8 @@ The procedure for the extraction of the relative correction factors $C_\text{sca
 \begin{itemize}
 	\item in order to avoid problems with imprecisely reconstructed Lorentz boosts to the Breit frame, the jet search was performed in the laboratory frame;
 	\item a single jet with $\etjetlab > 10\; \GeV$ and no other jets with $\etjetlab > 5\; \GeV$ were required in order to suppress further hadronic activity not related to the hard scattering;
-	\item the requirement on the pseudorapidity and the transverse energy in the Breit frame was omitted;
-	\item to enlarge the amount of events with hadronic activity in the forward direction, the inelasticity cut on $y$ was removed.
+	\item the requirement on the pseudorapidity and the transverse energy in the Breit frame was omitted (see Eq.~\eqref{eq:jetphasespacecuts});
+	\item to enlarge the amount of events with hadronic activity in the forward direction, the inelasticity cut on $y$ was removed  (see Eq.~\eqref{eq:kinematicphasespacecuts}).
 \end{itemize}
 
 Figure~\ref{fig:ratcalibcontrolplot} demonstrates the description of the quantity $r$, from which the correction factors are determined, by the Monte Carlo simulations. In general, the MC describes the shape of the data well, however a discrepancy between the mean values of the order of 3\% was observed in some bins of $\etajetlab$. The ratio of the mean values in data and MC is illustrated in Figure~\ref*{fig:ratcalibcontrolplot}. These values were used to correct the discrepancy in the hadronic energy scale between data and MC. The transverse energy of the jets in the MC was multiplied such that:
