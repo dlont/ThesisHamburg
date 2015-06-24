@@ -3,6 +3,7 @@ After the inclusive-jet selection described in Chapter~\ref{ch:selection} and af
 The kinematic distributions in \lepto and \ariadne featured different properties, for example, an excess of events was observed in the high-\qsq region in the \ariadne sample (see Figure~\ref{fig:q2rew_ari}\subref{fig:q2rew_ari_subfig1}), while \lepto had a deficiency in this region (see Figure~\ref{fig:q2rewlepto}\subref{fig:q2rew_ari_subfig5}). In addition, as can be seen from Figure~\ref{fig:q2rew_ari}\subref{fig:q2rew_ari_subfig3} the \ariadne MC predicted slightly harder jet spectrum than in the data. In order to take into account differences between the MC samples, two different reweighting procedures were developed for \lepto and \ariadne.
 
 \subsection{\lepto reweighting}
+\label{subsec:leptoq2rew}
 A reweighting as a function of \qsq was imposed on the events simulated using the \lepto event generator. Two iterations were necessary to achieve adequate description of the data distribution. In each iteration the ratio of the normalised \qsq distributions in the data and MC was fitted to empirical functions to determine the weights, $w\left( \qsq\right) $. In order to mitigate the influence of detector effects, the data were corrected to the generator level using the acceptance correction factors determined at each reweighting iteration. Ansatz for the reweighting functions was as follows\footnote{Other expressions for the reweighting functions were also tested. It was empirically found, that these two relatively simple functions provide reasonable result.}:
 
 \newsavebox{\mycases}% Store case "title" and brace
@@ -20,7 +21,7 @@ A reweighting as a function of \qsq was imposed on the events simulated using th
 %\end{cases}
 %\end{equation}
 \marginpar{OB:Needs motivation for these functions.\\DL:They were empirically deduced.}
-The product of the weights obtained in each iteration was used for the final reweighting of the \lepto sample. The effect of each iteration of the \qsq~spectrum reweighing is illustrated in Figure~\ref{fig:q2rewlepto}\subref{fig:q2rew_lep_subfig1}--\subref{fig:q2rew_lep_subfig3}. 
+In this equation \qsq value determined from the generator level quantities was used. The product of the weights obtained in each iteration was used for the final reweighting of the \lepto sample. The effect of each iteration of the \qsq~spectrum reweighing is illustrated in Figure~\ref{fig:q2rewlepto}\subref{fig:q2rew_lep_subfig1}--\subref{fig:q2rew_lep_subfig3}. 
 The original \qsq spectrum (Figure~\ref{fig:q2rewlepto}\subref{fig:q2rew_lep_subfig1}) of the \lepto generator was characterised by a deficit of events in the lowest and highest \qsq bins and an excess of  events  for $250 < \qsq < 5000 \GeV^2$ was observed. Due to irregular shape of the ratio of normalised \qsq spectra it was approximated by a smooth functions in several iterations. The first iteration (Eq.~\eqref{eq:q2rew1iter}) improved the \qsq spectrum in region $125 < \qsq < 5000 \GeV^2$, while description of the data in the last \qsq bin became worse (see Figure~\ref{fig:q2rewlepto}\subref{fig:q2rew_lep_subfig2}) and had to be downweighted. Free coefficients $a_{i}, i=1..2$ of $w\left( \qsq\right)$ were determined from the fit to the ratio of the data and MC distributions. To minimise the discrepancy between data and simulations in the last \qsq bin second iteration of the reweighting (Eq.~\eqref{eq:q2rew2iter}) was applied. The coefficients $b_{i}, i=1..2$ were also determined from the fit. Overall, after reweighting a considerable improvement of the description of the \qsq~distribution was observed. The deviation between the data and MC in the last bin of \qsq~after the reweighing was statistically insignificant.
 
 \begin{figure}[pht]
@@ -47,13 +48,18 @@ The original \qsq spectrum (Figure~\ref{fig:q2rewlepto}\subref{fig:q2rew_lep_sub
 \end{figure}
 
 \subsection{\ariadne reweighting}
+\label{subsec:ariadneq2rew}
 It was found that the reweighting as a function of \qsq~was insufficient for achieving reasonable agreement between jet spectra in the data and the \ariadne MC, in particular a residual discrepancy in \etjetb~distribution was observed. A direct reweighting as a function of \etjetb~is impossible because, while the jet can be present at the reconstructed level, it can be lost due to, for example, phase space restrictions at the generator level. A dedicated simultaneous reweighting as a function of the transverse energy of the hardest jet, $E_{T,B}^{jet1}$, and the process virtuality \qsq~was employed. The reweighting procedure proceeds as follows:
 \begin{itemize}
 	\item the data and MC events were classified according to the jet multiplicity into three categories with one, two and three or more jets, respectively;
-	\item for each category the two dimensional \qsq~vs $E_{T,B}^{jet1}$ distribution in the data and MC was measured;
-	\item the bin content in MC was multiplied by \\$w\left( \qsq, E_{T,B}^{jet1} \right)=a_1\,\exp{\left( -\alpha E_{T,B}^{jet1}\right) }\left(1- \exp{\left( -\beta\qsq\right) } + a_2 E_{T,B}^{jet1} \right) $, where $a_i, \alpha, \beta$ are free parameters, and a 2d-likelihood fit of the shape of the data distribution was performed;
+	\item for each category the two dimensional \qsq~vs $E_{T,B}^{jet1}$ distribution in the data and MC was measured; for comparison of the data distributions to the generator level MC to be valid, the data were corrected to the hadron level using the acceptance correction factors as described in Section~\ref{subsec:leptoq2rew}.
+	\item the bin content in MC was multiplied by 
+	\begin{equation}
+		w\left( \qsq, E_{T,B}^{jet1}/ \right)=a_1\,e^{\left( -\alpha E_{T,B}^{jet1}/\GeV\right) }\left(1- e^{\left( -\beta\qsq/\GeV^2\right) } + a_2 E_{T,B}^{jet1}/\GeV \right),
+		\end{equation}
+where $a_i, \alpha, \beta$ are free parameters and $E_{T,B}^{jet1},\,\qsq$ correspond to the generator level quantities. A 2d-likelihood fit of the shape of the data distribution was performed to determine free parameters;
 \end{itemize}
-The described procedure was iterated until reasonable agreement between data and MC was achieved. Besides the variables used in the reweighting procedure the description of other jet quantities was verified, e.g. the comparison of the \etajetb~and jet multiplicity distributions before and after reweighting is demonstrated in Figures~\ref{fig:q2rew_ari1}\subref{fig:q2rew_ari_subfig5}--\subref{fig:q2rew_ari_subfig8}
+The described procedure was iterated until reasonable agreement between data and MC was achieved. Besides the variables used in the reweighting procedure the description of other jet quantities was verified, e.g. the comparison of the \etajetb~and jet multiplicity distributions before and after reweighting is demonstrated in Figures~\ref{fig:q2rew_ari1}\subref{fig:q2rew_ari_subfig5}--\subref{fig:q2rew_ari_subfig8}. Significant improvement in the description of the jet multiplicity and \etajetb was achieved. Quantitatively it can be explained as follows. Before the reweighting an excess of high-energy jet in the simulations resulted in a larger fraction of events with $> 1$ jet in event (see Figure~\ref{fig:q2rew_ari1}\subref{fig:q2rew_ari_subfig5}). The reduction of the fraction of high-energy jets after the reweighting has led increase of the number of events with single jet and decrease of those with two. An improvement of the $\etajetb$ distribution was attributed to the changes in the \qsq spectrum, which affected the jet kinematics in the Breit frame.
 \begin{figure}[pht]
 \begin{center}
 \begin{subfloat}[]{\includegraphics[width=0.49\textwidth] {./Figures/q2rew/h_q2_CS_dcontro_plot_ariadne_befrew}
