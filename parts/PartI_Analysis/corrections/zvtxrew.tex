@@ -1,4 +1,4 @@
-The detection and reconstruction of the scattered electron depend on the longitudinal position of the primary vertex, $Z_\text{vtx}$. In particular the detector and trigger acceptances vary with $Z_\text{vtx}$. The shape of the distribution of the primary vertex position is determined by the length\footnote{The space-charge distribution within a bunch typically has a Gaussian shape.} of the interacting bunches and thus depends on machine conditions. In order to suppress non-$ep$ background, restrictions were applied on the primary vertex position. Therefore, since the luminosity measurements refer to the whole $ep$ interaction region, the cuts on $Z_\text{vtx}$ have an effect on the overall normalisation. 
+The detection and reconstruction of the scattered electron depend on the longitudinal position of the primary vertex, $Z_\text{vtx}$. In particular the detector and trigger acceptances vary with $Z_\text{vtx}$. The shape of the distribution of the primary vertex position is determined by the length\footnote{The space-charge distribution within a bunch typically has a Gaussian shape.} of the interacting bunches and thus depends on machine conditions. In order to suppress non-$ep$ background, restrictions were applied on the primary vertex position (see Chapter~\ref{ch:selection}). Therefore, since the luminosity measurements refer to the whole $ep$ interaction region, the cuts on $Z_\text{vtx}$ have an effect on the overall normalisation. 
 
 Summarising, an accurate simulation of the $Z_\text{vtx}$ distribution in the MC samples is very important. The $Z_\text{vtx}$-reweighting procedure adopted here was developed in~\cite{thesis:behr:2010} and consisted of the following steps:
 \begin{itemize}
@@ -11,19 +11,19 @@ f\left(\vec a\right)=\sum_{i=1}^4{a_N^{\left(i\right)}\exp{\left[-\left(Z_\text{
 \end{equation}
  The reweighting factors, $w_{Z}$, were determined from the fit of the ratio of the normalised data and MC distributions to the function 
 \begin{equation}
-w=f\left(\vec a_{\mathrm{Data}}\right)/f\left(\vec a_{\mathrm{MC}}\right)
+w=f\left(\vec a_1\right)/f\left(\vec a_2\right)
 \label{eq:zvtxweght}
 \end{equation}
- using the parameters of the first fit as seed values;
+ using the parameters of individual fits $\vec a_{\mathrm{Data}}, \vec a_{\mathrm{MC}}$ as seed values;
  \item the weights were determined from the detector level distributions as function of the reconstructed position, $Z_\text{vtx}$. They were then applied to the MC events as a function of the true position, $Z_\text{vtx}^\text{true}$. This substitution $Z_\text{vtx} \mapsto Z_\text{vtx}^\text{true}$ can be made because the migration effects for the $Z_\text{vtx}$ distribution were found to be very small and can be neglected.
 \end{itemize}
 
-The existing MC samples for the 2004--2005~$e^-$ and 2006~$e^-$ data taking periods describe the data very well in the whole interaction region. Only for the 2006/2007~$e^+$ running period the MC did not reproduce the data distribution reasonably\footnote{The primary vertex distribution for the \hera II running period was measured in a dedicated ub-biased study of low-\qsq NC DIS events~\cite{upub:oliver:zn07008} and was implemented in the MC production software}. Therefore, a reweighting of the longitudinal position of the primary vertex was implemented only for this MC sample. The comparison between data and MC distributions for the 2006/2007~$e^+$ data taking period before and after reweighting is shown in Figures~\ref{fig:zvtxrew} and~\ref{fig:zvtxrewaf}. After reweighting a good agreement was observed.\marginpar{OB:unclear which true distribution of zvtx was generated in MC?}
+The existing MC samples for the 2004--2005~$e^-$ and 2006~$e^-$ data taking periods describe the data very well in the whole interaction region. Only for the 2006/2007~$e^+$ running period the MC did not reproduce the data distribution reasonably\footnote{The primary vertex distribution for the \hera II running period was measured in a dedicated un-biased study of low-\qsq NC DIS events~\cite{upub:oliver:zn07008} and was implemented in the MC production software}. In particular, disagreement between the measured and simulated distributions in the satellite-bunch and transition regions ($\left|Z_{\text{vtx}}\right|>30\,\cm$) was observed. Therefore, a reweighting of the longitudinal position of the primary vertex was implemented only for this MC sample. The comparison between data and MC distributions for the 2006/2007~$e^+$ data taking period before the reweighting is shown in Figure~\ref{fig:zvtxrew}. Although, individual fits have relatively large $\chi^2/N_\text{df}$ values, which, in principle, may introduce a bias, the final fit to the ratio of the normalised distributions has $\chi^2/N_\text{df}\approx 1$, and justifies using the fit results in the reweighting. After correcting the MC distributionion (see Figure~\ref{fig:zvtxrewaf}) a good agreement between data and simulations was observed.\marginpar{OB:unclear which true distribution of zvtx was generated in MC?\\DL:added a footnote.}
 \begin{figure}[t]
 \begin{center}
  \hspace{-35pt}\includegraphics[width=1.1\textwidth]{./Figures/zvtxrew/h_Zvtxfit_ratio_p_lepto}%
 \end{center}
-\caption{The $Z_\text{vtx}$ distributions in the data and \lepto MC before the reweighting together (top left panel) with the individual fits to the function Eq.~\eqref{eq:fourgauss} of the data (top right panel), of MC (bottom right panel). The ratio DATA/MC and the fit to Eq.~\eqref{eq:zvtxweght} is shown (bottom left panel).} 
+\caption{The $Z_\text{vtx}$ distributions in the data and \lepto MC before the reweighting together (top left panel) with the individual fits of the data (top right panel) and MC (bottom right panel) to the function Eq.~\eqref{eq:fourgauss}. The ratio DATA/MC and the fit to Eq.~\eqref{eq:zvtxweght} is also shown (bottom left panel).} 
 \label{fig:zvtxrew}
 \end{figure}
 

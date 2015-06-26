@@ -11,14 +11,17 @@ Monte Carlo simulations were used to estimate the energy loss because they provi
 
 The procedure proceeds as follows:
 \begin{itemize}
- \item in the MC events accepted at the generated and reconstructed levels, a pair of jets was identified according to the distance between jets in the $\eta-\phi$ plane. A hadron-level jet was matched to the reconstructed jet if the distance $r=\sqrt{\left[\left(\eta_{had}-\eta_{det}\right)^2 + \left(\phi_{had}-\phi_{det}\right)^2\right]}$ between the two was small, $r<0.7$, and no further jets were reconstructed within the cone\marginpar{OB:Would that be possible (Rcut <1).\\DL:I think, yes, because jets have irregular shape and R=1 is a maximum radius.}. In order to avoid any bias on the correction procedure introduced by the boundaries of the jet phase space, the cuts on the jet transverse energy were relaxed to $\etjetbhad>6\,\GeV$ and $\etjetbdet>3\,\GeV$ at the hadron and detector levels, respectively;
- \item in each bin $i$ of $\etajetlab$, a linear fit $\left\langle\etjetbdet\right\rangle = a_i + b_i\cdot\left\langle\etjetbhad\right\rangle$ was performed, where $\left\langle\etjetbdet\right\rangle$ and $\left\langle\etjetbhad\right\rangle$ were determined using the matched jet sample;
+ \item in the MC events accepted at the generated and reconstructed levels, a pair of jets was identified according to the distance between jets in the $\eta-\phi$ plane. A hadron-level jet was matched to the reconstructed jet if the distance 
+\begin{equation}
+r=\sqrt{\left[\left(\eta_{had}-\eta_{det}\right)^2 + \left(\phi_{had}-\phi_{det}\right)^2\right]}
+\end{equation}
+between the two was small, $r<0.7$, and no further jets were reconstructed within the cone\marginpar{OB:Would that be possible (Rcut <1).\\DL:I think, yes, because jets have irregular shape and R=1 is a maximum radius.}. In order to avoid any bias on the correction procedure introduced by the boundaries of the jet phase space, the cuts on the jet transverse energy were relaxed to $\etjetbhad>6\;\GeV$ and $\etjetbdet>3\;\GeV$ at the hadron and detector levels, respectively;
+ \item in each bin $i$ of $\etajetlab$, a linear fit $\left\langle\etjetbdet\right\rangle = a_i + b_i\cdot\left\langle\etjetbhad\right\rangle$ was performed, where $\left\langle\etjetbdet\right\rangle$ and $\left\langle\etjetbhad\right\rangle$ were determined using the set of matched jets; the fits for the 2004--2005~$e^-$ running period are illustrated in Figure~\ref{fig:05e_lepto_coeffitients};
  \item the corrections were determined using the \ariadne and \lepto sample for each data taking period separately. 
 \end{itemize}
-The fits are illustrated in Figure~\ref{fig:05e_lepto_coeffitients}.
 \begin{figure}[p]
 \centering
-\includegraphics[width=\linewidth]{./Figures/etcorr/coeff/05e_lepto_coeffitients}
+\includegraphics[width=\linewidth]{./Figures/etcorr/new/coeff/05e_lepto_coeffitients}
 \caption{The average measured detector-level jet transverse energy $\left\langle\etjetbdet\right\rangle$ as a function of $\left\langle\etjetbhad\right\rangle$ and the corresponding straight-line fits in different regions of $\etajetlab$ for the data-taking period 2004--2005~$e^-$ in the \lepto MC sample.}
 \label{fig:05e_lepto_coeffitients}
 \end{figure}
@@ -27,4 +30,6 @@ Given the extracted fit parameters, the components of the jet four-momentum were
  \begin{equation}
   E_{T,B}^{jet,det} \mapsto E_{T,B}^{jet,corr} = \frac{E_{T,B}^{jet,det} - a_i}{b_i}.
  \end{equation}
-Because the analysis in this thesis was performed in the Breit frame, the jet pseudorapidity in the laboratory frame was recalculated and the corresponding correction factors were applied. Assuming a valid description of the detector effects in the simulations, the correction was applied to both the data and MC jets, thus introducing a dependence on the parton-shower simulation. \textcolor{blue}{Therefore in the unfolding procedure the respective data and MC samples were utilised.} In the MC simulations the correction was applied in addition to that introduced in Section~\ref{sec:jetcalib}.
+Because the analysis in this thesis was performed in the Breit frame, the jet pseudorapidity in the laboratory frame was recalculated and the corresponding correction factors were applied. Assuming a valid description of the detector effects in the simulations, the correction was applied to both the data and MC jets. In the simulations the correction was applied in addition to that introduced in Section~\ref{subsec:jetenescale}.
+
+%thus introducing a dependence on the parton-shower simulation. \textcolor{blue}{Therefore in the unfolding procedure the respective data and MC samples were utilised.} 
