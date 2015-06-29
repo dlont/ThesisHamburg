@@ -1,31 +1,16 @@
-\begin{figure}[p]
-	\centering	\includegraphics[width=1.05\textwidth]{./Figures/etcorr/correl/h_EtHadEtDetCorrel_ac_05e_correlplot}
-	\label{fig:h_EtHadEtDetCorrel_05e_correlplot}
-\end{figure}
-
-\begin{figure}[p]
-	\centering	\includegraphics[width=1.05\textwidth]{./Figures/etcorr/correl/h_EtaHadEtaDetCorrel_ac_05e_correlplot}
-	\label{fig:h_EtHadEtDetCorrel_05e_correlplot}
-\end{figure}
-
-\begin{figure}[p]
-	\centering	\includegraphics[width=1.05\textwidth]{./Figures/etcorr/correl/h_PhiHadPhiDetCorrel_ac_05e_correlplot}
-	\label{fig:h_EtHadEtDetCorrel_05e_correlplot}
-\end{figure}
-
 % % % % % % % % % % % % % % % % % % % % ARIADNE % % % % % % % % % % % % % % % % % %
 % % % % % % % % % % % % % % % % % % % % JETS % % % % % % % % % % % % % % % % % % % %
 \begin{figure}[ht!]
 \begin{center}
-\begin{subfloat}[]{\includegraphics[width=.45\textwidth] {./Figures/control_plots_ev/ari/h_jetmult_lead_detcontro_plot_ariadne_afrew}
-   \label{fig:cplep_subfig1}
- }%
-\end{subfloat}
- \begin{subfloat}[]{\includegraphics[width=.45\textwidth]{./Figures/control_plots_ev/ari/h_breit_kt_det_injet_multcontro_plot_ariadne}
-   \label{fig:cplep_subfig2}
- }%
-\end{subfloat}
-\newline
+%\begin{subfloat}[]{\includegraphics[width=.45\textwidth] {./Figures/control_plots_ev/ari/h_jetmult_lead_detcontro_plot_ariadne_afrew}
+   %\label{fig:cplep_subfig1}
+ %}%
+%\end{subfloat}
+ %\begin{subfloat}[]{\includegraphics[width=.45\textwidth]{./Figures/control_plots_ev/ari/h_breit_kt_det_injet_multcontro_plot_ariadne}
+   %\label{fig:cplep_subfig2}
+ %}%
+%\end{subfloat}
+%\newline
 \begin{subfloat}[]{\includegraphics[width=.45\textwidth] {./Figures/control_plots_ev/ari/h_breit_kt_det_injet_etcontro_plot_ariadne}
    \label{fig:cplep_subfig3}
  }%
@@ -43,7 +28,7 @@
    \label{fig:cplep_subfig6}
  }%
 \end{subfloat}
-\caption{Comparison of corrected MC (\ariadne) and data distributions for jet variables. (c) jet transverse energy in the Breit frame; (d) jet transverse energy in the laboratory frame; (e) jet pseudorapidity in the Breit frame; (f) jet pseudorapidity in the laboratory frame \etajetlab.}
+\caption{Comparison of corrected MC (\ariadne) and data distributions for jet variables. (a) jet transverse energy in the Breit frame; (b) jet transverse energy in the laboratory frame; (c) jet pseudorapidity in the Breit frame; (d) jet pseudorapidity in the laboratory frame \etajetlab.}
 \label{fig:cp_arijets}
 \end{center}
 \end{figure}
@@ -52,15 +37,15 @@
 % % % % % % % % % % % % % % % % % % % % JETS % % % % % % % % % % % % % % % % % % % %
 \begin{figure}[ht!]
 \begin{center}
-\begin{subfloat}[]{\includegraphics[width=.45\textwidth] {./Figures/control_plots_ev/lep/h_jetmult_lead_detcontro_plot_lepto_afrew}
-   \label{fig:cplep_subfig1}
- }%
-\end{subfloat}
- \begin{subfloat}[]{\includegraphics[width=.45\textwidth]{./Figures/control_plots_ev/lep/h_breit_kt_det_injet_multcontro_plot_lepto}
-   \label{fig:cplep_subfig2}
- }%
-\end{subfloat}
-\newline
+%\begin{subfloat}[]{\includegraphics[width=.45\textwidth] {./Figures/control_plots_ev/lep/h_jetmult_lead_detcontro_plot_lepto_afrew}
+   %\label{fig:cplep_subfig1}
+ %}%
+%\end{subfloat}
+ %\begin{subfloat}[]{\includegraphics[width=.45\textwidth]{./Figures/control_plots_ev/lep/h_breit_kt_det_injet_multcontro_plot_lepto}
+   %\label{fig:cplep_subfig2}
+ %}%
+%\end{subfloat}
+%\newline
 \begin{subfloat}[]{\includegraphics[width=.45\textwidth] {./Figures/control_plots_ev/lep/h_breit_kt_det_injet_etcontro_plot_lepto}
    \label{fig:cplep_subfig3}
  }%
@@ -78,7 +63,29 @@
    \label{fig:cplep_subfig6}
  }%
 \end{subfloat}
-\caption{Comparison of corrected MC (\lepto) and data distributions for jet variables. (c) jet transverse energy in the Breit frame; (d) jet transverse energy in the laboratory frame; (e) jet pseudorapidity in the Breit frame; (f) jet pseudorapidity in the laboratory frame \etajetlab.}
+\caption{Comparison of corrected MC (\lepto) and data distributions for jet variables. (a) jet transverse energy in the Breit frame; (b) jet transverse energy in the laboratory frame; (c) jet pseudorapidity in the Breit frame; (d) jet pseudorapidity in the laboratory frame \etajetlab.}
 \label{fig:cp_leptojets}
 \end{center}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% CORRELATIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[p]
+	\centering	\includegraphics[width=1.05\textwidth]{./Figures/etcorr/correl/h_EtHadEtDetCorrel_ac_05e_correlplot}
+	\caption{(top row) Correlation between generated and reconstructed jet transverse energy $E_{T,B}^\text{jet,det}$ vs $E_{T,B}^\text{jet,had}$. (middle row) Relative difference distribution $\left(E_{T,B}^\text{jet,det} - E_{T,B}^\text{jet,had}\right)/E_{T,B}^\text{jet,had}$ (bottom row) Variation of the relative difference with respect to $E_{T,B}^\text{jet,had}$.}
+	\label{fig:h_EtHadEtDetCorrel_05e_correlplot}
+\end{figure}
+
+\begin{figure}[p]
+	\centering	\includegraphics[width=1.05\textwidth]{./Figures/etcorr/correl/h_EtaHadEtaDetCorrel_ac_05e_correlplot}
+	\caption{(top row) Correlation between generated and reconstructed jet pseudorapidity $\eta_{B}^\text{jet,det}$ vs $\eta_{B}^\text{jet,had}$. (middle row) Relative difference distribution $\left(\eta_{T,B}^\text{jet,det} - \eta_{T,B}^\text{jet,had}\right)/\eta_{T,B}^\text{jet,had}$ (bottom row) Variation of the relative difference with respect to $\eta_{T,B}^\text{jet,had}$.}
+	\label{fig:h_EtaHadEtDetCorrel_05e_correlplot}
+\end{figure}
+
+\begin{figure}[p]
+	\centering	\includegraphics[width=1.05\textwidth]{./Figures/etcorr/correl/h_PhiHadPhiDetCorrel_ac_05e_correlplot}
+	\caption{(top row) Correlation between generated and reconstructed jet pseudorapidity $\phi_{B}^\text{jet,det}$ vs $\phi_{B}^\text{jet,had}$. (middle row) Relative difference distribution $\left(\phi_{T,B}^\text{jet,det} - \phi_{T,B}^\text{jet,had}\right)/\eta_{T,B}^\text{jet,had}$ (bottom row) Variation of the relative difference with respect to $\phi_{T,B}^\text{jet,had}$.}
+	\label{fig:h_PhiHadEtDetCorrel_05e_correlplot}
 \end{figure}
