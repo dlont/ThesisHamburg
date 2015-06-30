@@ -49,7 +49,7 @@ The original \qsq spectrum (Figure~\ref{fig:q2rewlepto}\subref{fig:q2rew_lep_sub
 
 \subsection{\ariadne reweighting}
 \label{subsec:ariadneq2rew}
-It was found that the reweighting as a function of \qsq~only was insufficient for achieving reasonable agreement between jet spectra in the data and the \ariadne MC, in particular a residual discrepancy in \etjetb~distribution was observed. A direct reweighting as a function of \etjetb~is impossible because, while the jet can be present at the reconstructed level, it can be lost due to, for example, phase space restrictions at the generator level. A dedicated simultaneous reweighting as a function of the transverse energy of the hardest jet, $E_{T,B}^{jet1}$, and the process virtuality \qsq~was employed. The reweighting procedure proceeds as follows:
+It was found that the reweighting as a function of \qsq~only was insufficient for achieving reasonable agreement between jet spectra in the data and the \ariadne MC, in particular a residual discrepancy in \etjetb~distribution was observed. A direct reweighting as a function of \etjetb~is impossible because, while the jet can be present at the reconstructed level, it can be lost due to, for example, phase space restrictions at the generator level. Thus, a dedicated simultaneous reweighting as a function of the transverse energy of the hardest jet, $E_{T,B}^{jet1}$, and the process virtuality \qsq~was employed. The reweighting procedure proceeds as follows:
 \begin{itemize}
 	\item the data and MC events were classified according to the jet multiplicity into three categories with one, two and three or more jets, respectively;
 	\item for each category the two dimensional \qsq~vs $E_{T,B}^{jet1}$ distribution in the data and MC was measured; for comparison of the data distributions to the generator level MC to be valid, the data were corrected to the hadron level using the acceptance correction factors as described in Section~\ref{subsec:leptoq2rew}.
@@ -59,35 +59,60 @@ It was found that the reweighting as a function of \qsq~only was insufficient fo
 		\end{equation}
 where $a_i, \alpha, \beta$ are free parameters and $E_{T,B}^{jet1},\,\qsq$ correspond to the generator level quantities. A 2d-likelihood fit of the shape of the data distribution was performed to determine free parameters;
 \end{itemize}
-The described procedure was iterated until reasonable agreement between data and MC was achieved. 
-
-
-Besides the variables used in the reweighting procedure the description of other jet quantities was verified, e.g. the comparison of the \etajetb~and jet multiplicity distributions before and after reweighting is demonstrated in Figures~\ref{fig:q2rew_ari1}\subref{fig:q2rew_ari_subfig5}--\subref{fig:q2rew_ari_subfig8}. Significant improvement in the description of the jet multiplicity and \etajetb was achieved. Quantitatively it can be explained as follows. Before the reweighting an excess of high-energy jet in the simulations resulted in a larger fraction of events with $> 1$ jet in event (see Figure~\ref{fig:q2rew_ari1}\subref{fig:q2rew_ari_subfig5}). The reduction of the fraction of high-energy jets after the reweighting has led increase of the number of events with single jet and decrease of those with two. An improvement of the $\etajetb$ distribution was attributed to the changes in the \qsq spectrum, which affected the jet kinematics in the Breit frame.
-\begin{figure}[pht]
+The described procedure was iterated until reasonable agreement between data and MC was achieved. Figures~\ref{fig:2dq2rew_q2_1jet} and~\ref{fig:2dq2rew_et_1jet} show the distribution of the exchanged boson virtuality and jet transverse momentum in single-jet events after applying the described reweighting\footnote{The figures for events with higher jet multiplicity can be found in Appendix.}. As can be seen, after the reweighting the \qsq and \etjetb spectra are very well described by the simulations. The quality of the fits assessed by the value  $\chi^2/N_\text{df}$ is summarised in the Table~\ref{tab:chi2q2ariadnerew}.
+\begin{table}%
 \begin{center}
-\begin{subfloat}[]{\includegraphics[width=0.49\textwidth] {./Figures/q2rew/h_q2_CS_dcontro_plot_ariadne_befrew}
-   \label{fig:q2rew_ari_subfig1}
- }%
-\end{subfloat}
- \begin{subfloat}[]{\includegraphics[width=0.49\textwidth]{./Figures/q2rew/h_q2_CS_dcontro_plot_ariadne_afrew}
-   \label{fig:q2rew_ari_subfig2}
- }%
-\end{subfloat}
-\newline
-\begin{subfloat}[]{\includegraphics[width=0.49\textwidth] {./Figures/q2rew/h_breit_kt_det_injet_etcontro_plot_ariadne_befrew}
-   \label{fig:q2rew_ari_subfig3}
- }%
-\end{subfloat}
- \begin{subfloat}[]{\includegraphics[width=0.49\textwidth]{./Figures/q2rew/h_breit_kt_det_injet_etcontro_plot_ariadne_afrew}
-   \label{fig:q2rew_ari_subfig4}
- }%
-\end{subfloat}
+\begin{tabular}{l|c}
+jet multiplicity & $\chi^2/N_\text{df}$ \\
+\hline
+1 jet & 0.88 \\
+2 jet & 0.88 \\
+$\geq$ 3 jets & 0.86 \\
+\end{tabular}
 \end{center}
-\caption{Result of two iterations of the \qsq reweighting in the \ariadne MC sample. \qsq and \etjetb distributions in data and MC before (a,c) and after the reweighting (b,d)}
-\label{fig:q2rew_ari}
+\caption{$\chi^2/N_\text{df}$ for likelihood fits for simultaneous \qsq and \etjetb reweighting.}
+\label{tab:chi2q2ariadnerew}
+\end{table}
+
+\begin{figure}[t!]%
+\centering
+\includegraphics[width=0.7\columnwidth]{./Figures/q2rew/ari2d/2drewq2hist_1jet}%
+\caption{Comparison of \qsq spectra in data and \ariadne after MC reweighting for events containing exactly one jet.}%
+\label{fig:2dq2rew_q2_1jet}%
 \end{figure}
 
-\begin{figure}[pht]
+\begin{figure}[p]%
+\centering
+\includegraphics[width=\columnwidth]{./Figures/q2rew/ari2d/2drewetbinshist_1jet}%
+\caption{Comparison of transverse energy of the leading jet spectra in data and \ariadne after MC reweighting for events containing exactly one jet.}%
+\label{fig:2dq2rew_et_1jet}%
+\end{figure}
+
+Besides the variables used in the reweighting procedure the description of other jet quantities was verified, e.g. the comparison of the \etajetb~and jet multiplicity distributions before and after reweighting is demonstrated in Figures~\ref{fig:q2rew_ari1}\subref{fig:q2rew_ari_subfig5}--\subref{fig:q2rew_ari_subfig8}. Significant improvement in the description of the jet multiplicity and \etajetb was achieved. Quantitatively it can be explained as follows. Before the reweighting an excess of high-energy jet in the simulations resulted in a larger fraction of events with $> 1$ jet in event (see Figure~\ref{fig:q2rew_ari1}\subref{fig:q2rew_ari_subfig5}). The reduction of the fraction of high-energy jets after the reweighting has led to increase of the number of events with single jet and decrease of those with two. An improvement of the $\etajetb$ distribution was attributed to the changes in the \qsq spectrum, which affected the jet kinematics in the Breit frame.
+%\begin{figure}[pht]
+%\begin{center}
+%\begin{subfloat}[]{\includegraphics[width=0.49\textwidth] {./Figures/q2rew/h_q2_CS_dcontro_plot_ariadne_befrew}
+   %\label{fig:q2rew_ari_subfig1}
+ %}%
+%\end{subfloat}
+ %\begin{subfloat}[]{\includegraphics[width=0.49\textwidth]{./Figures/q2rew/h_q2_CS_dcontro_plot_ariadne_afrew}
+   %\label{fig:q2rew_ari_subfig2}
+ %}%
+%\end{subfloat}
+%\newline
+%\begin{subfloat}[]{\includegraphics[width=0.49\textwidth] {./Figures/q2rew/h_breit_kt_det_injet_etcontro_plot_ariadne_befrew}
+   %\label{fig:q2rew_ari_subfig3}
+ %}%
+%\end{subfloat}
+ %\begin{subfloat}[]{\includegraphics[width=0.49\textwidth]{./Figures/q2rew/h_breit_kt_det_injet_etcontro_plot_ariadne_afrew}
+   %\label{fig:q2rew_ari_subfig4}
+ %}%
+%\end{subfloat}
+%\end{center}
+%\caption{Result of two iterations of the \qsq reweighting in the \ariadne MC sample. \qsq and \etjetb distributions in data and MC before (a,c) and after the reweighting (b,d)}
+%\label{fig:q2rew_ari}
+%\end{figure}
+\begin{figure}[htp!]
 \begin{center}
 \begin{subfloat}[]{\includegraphics[width=0.49\textwidth] {./Figures/q2rew/h_breit_kt_det_injet_multcontro_plot_ariadne_befrew}
    \label{fig:q2rew_ari_subfig5}
