@@ -50,10 +50,10 @@ In contrast to the proton-gas collisions, the rate of the electron beam interact
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{./Figures/event_display_54450_48590_cosmic_track_thicklines} 
-	\caption{A high-energy cosmic muon traversing the the volume of the \zeus detector. Muon stubs are present in the upper and lower halves of the backing calorimeter and muon chambers. Energy clusters from the interaction of the muon with the material of the CAL can mimic signatures of hadronic jets.}
+	\caption{A high-energy cosmic muon traversing the the volume of the \zeus detector. Muon track segments are present in the upper and lower halves of the backing calorimeter and muon chambers. Energy clusters from the interaction of the muon with the material of the CAL can mimic signatures of hadronic jets.}
 	\label{fig:cosmiceventdisplay}
 \end{figure}
-\marginpar{OB:Doesn't like ``stubs''} 
+
 \marginpar{OB:Was backing calorimeter introduced?}
 
 \begin{figure}[htbp!]
@@ -122,7 +122,7 @@ The FLT selection is centred around the idea of having an event with large trans
 \label{subsec:sltcuts}
 The second-level trigger was used to suppress further beam-related background. The information from the \zeus global tracking trigger was utilised at the SLT for the reconstruction of the interaction vertex position and to reject events originating from background processes. Moreover, the calorimeter timing information was used extensively to suppress beam-gas and cosmic-ray background. For example, hadrons emerging in the vicinity of the nominal interaction point will be characterised by approximately the same arrival time in different parts of the CAL, in contrast to cosmic-shower events for which the signals from the upper part of the BCAL will arrive earlier than from the bottom part. Thus, given the high timing resolution of the CAL, the background processes can be efficiently discriminated at SLT.
 
-The SLT bits DIS01, 04, 07 were used in the analysis. Any of those bits require the FLT bits 28, 30, 31, 36, 39, 40, 41, 43, 44, 46, 47, 62 to be fired. The other requirements imposed by the mentioned SLT bits are listed below:
+The SLT bits DIS01, 04, 07 were used in the analysis. Besides of required FLT bits, the following restrictions were imposed:
 \begin{itemize}
 	\item \textbf{SLT bit DIS01:} The total energy in the electromagnetic sections of the calorimeter, $E_\text{EMC}^\text{RCAL} > 2.5\;\GeV$ or $E_\text{EMC}^\text{BCAL} > 2.5\;\GeV$~or $E_\text{EMC}^\text{FCAL} > 10\;\GeV$ or hadronic energy in the forward region $E_\text{HAC}^\text{FCAL} > 10\;\GeV$ and $E-P_Z > 29\;\GeV$;
 	\item \textbf{SLT bit DIS04:} The total energy in the electromagnetic sections of the calorimeter, $E_\text{EMC}^\text{RCAL} > 2.5\;\GeV$ or $E_\text{EMC}^\text{BCAL} > 2.5\;\GeV$~or $E_\text{EMC}^\text{FCAL} > 10\;\GeV$ or hadronic energy in the forward region $E_\text{HAC}^\text{FCAL} > 10\;\GeV$ and $E-P_Z > 19\;\GeV$;
