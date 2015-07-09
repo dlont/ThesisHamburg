@@ -3,7 +3,7 @@ In the least-squares method~\cite{Behnke:2013pga}, the optimal values of paramet
  m_i = t_i\left( \mathbf{a} \right) + w_{i}\sigma_{i,\text{stat}} + \varepsilon_{i} \sigma_{i,\text{uncor}} + \sum_{\mu=1}^{K}{b_{\mu}\sigma_{i,\text{cor}}^\mu}, \qquad i=1\ldots N_\text{bins},
 \label{eq:measmodel}
 \end{equation}
-where $\sigma_{i,\text{uncor}}$($\sigma_{i,\text{stat}}$) is an estimate of the total uncorrelated systematic (statistical) uncertainty for the cross section measurement and $\varepsilon_{i}$($w_{i}$)  is a random normally distributed variable with mean value $\left\langle \varepsilon_{i}\right\rangle = \left\langle w_{i} \right\rangle = 0$ and variance $\text{Var}\left( \varepsilon_{i}\right) = \text{Var}\left( w_{i}\right)  = 1$; $\sigma_{i,\text{cor}}^\mu$ and $b_{\mu}$ represent the correlated uncertainty component from source $\mu$ and the corresponding systematic shift\footnote{Parameters $b_\mu$ are also called ``nuisance'' parameter.}, respectively. It is assumed here that the systematic shifts $b_{\mu}$ can also be modelled by normally distributed random variables with zero mean and unit variance. In order to take into account the proportionality of the systematic uncertainties to the central value of the measurement\footnote{Most of the systematic uncertainties in this analysis e.g. absolute normalisation uncertainty or acceptance correction uncertainty are to good approximation proportional to the central value of the measured cross section, this means that the fractional uncertainties are constant and the absolute uncertainties scale with the measurement value.}, the corresponding uncertainty components are expressed as $\sigma_{i,\text{cor}}^\mu = \gamma_{i,\mu}t_i$, where 
+where $\sigma_{i,\text{uncor}}$ and $\sigma_{i,\text{stat}}$ are estimate of the total uncorrelated statistical and systematic uncertainties, respectively. $\varepsilon_{i}$ and $w_{i}$ are random normally distributed variables with mean values $\left\langle \varepsilon_{i}\right\rangle = \left\langle w_{i} \right\rangle = 0$ and variance $\text{Var}\left( \varepsilon_{i}\right) = \text{Var}\left( w_{i}\right)  = 1$; $\sigma_{i,\text{cor}}^\mu$ and $b_{\mu}$ represent the correlated uncertainty component from source $\mu$ and the corresponding systematic shift\footnote{Parameters $b_\mu$ are also called ``nuisance'' parameter.}, respectively. It is assumed here that the systematic shifts $b_{\mu}$ can also be modelled by normally distributed random variables with zero mean and unit variance. In order to take into account the proportionality of the systematic uncertainties to the central value of the measurement\footnote{Most of the systematic uncertainties in this analysis e.g. absolute normalisation uncertainty or acceptance correction uncertainty are to good approximation proportional to the central value of the measured cross section, this means that the fractional uncertainties are constant and the absolute uncertainties scale with the measurement value.}, the corresponding uncertainty components are expressed as $\sigma_{i,\text{cor}}^\mu = \gamma_{i,\mu}t_i$, where 
 \begin{equation}
 \gamma_{i,\mu}=\frac{1}{{t_i}} \frac{\partial t_i}{\partial b_{\mu}}
 \end{equation}
@@ -16,7 +16,7 @@ The statistical uncertainty $\sigma_{i,\text{stat}}$ is assumed to scale with th
 \begin{equation}
  \sigma_{\text{stat},i}^2 = \delta_{\text{stat},i}^2\cdot m_i\left( t_i - \sum_\mu\gamma_{i,\mu}t_ib_\mu \right),
 \end{equation}
-where $\delta_{\text{stat},i}$ is the relative statistical uncertainty determined from the observed number of events in bin $i$. A least squares method is used for the QCD fit; the so-called $\chi^2$-function used for statistically uncorrelated measurements is defined as:
+where $\delta_{\text{stat},i}$ is the relative statistical uncertainty determined from the observed number of events in bin $i$. A least squares method is used for the QCD fit; the so-called $\chi^2$-function is defined as~\cite{Aaron:2009aa}:
 \begin{equation}
  \chi^2 = \sum_i{ \frac{\left( m_i-t_i-\sum_{\mu}{\gamma_{i,\mu} t_i b_\mu} \right)^2 }{ \delta_{\text{stat},i}^2 m_i \left( t_i - \sum_\mu{\gamma_{i,\mu}t_ib_\mu} \right)+ \left( \delta_{i,\text{uncor}}t_i\right)^2 } } + \sum_{\mu}{b_\mu^2},
  \label{eq:chi2uncorr}
@@ -31,7 +31,7 @@ with $\delta_{i,\text{uncor}}$ denoting the relative uncorrelated systematic unc
                                            &+ \sum_{\mu}{b_\mu^2},
  \label{eq:chi2corr}
 \end{align}
-where $C_{ij}$ is the element $i,j$ of the covariance matrix for the measured data points. It is equal to the sum of covariance matrices for statistical and uncorrelated systematic uncertainty components $C_{ij}=C_{ij}\left(t_i\right)=C_{ij}^{\text{stat.}}+C_{ij}^{\text{uncor.}}$. The covariance matrix for the uncorrelated uncertainties has a diagonal form. The $\Gamma_\mu^i$ is related to the relative correlated systematic uncertainties
+where $C_{ij}$ is the element $i,j$ of the covariance matrix for the measured data points. It is equal to the sum of covariance matrices for statistical and uncorrelated systematic uncertainty components $C_{ij}=C_{ij}\left(t_i\right)=C_{ij}^{\text{stat.}}+C_{ij}^{\text{uncor.}}$. The covariance matrix for the uncorrelated uncertainties has a diagonal form. The quantities $\Gamma_\mu^i$ are related to the relative correlated systematic uncertainties
 \begin{equation}
  \Gamma_{\mu}^i = \gamma_{\mu}^i \cdot t^i. 
 \end{equation}
@@ -43,9 +43,9 @@ As was mentioned earlier, some systematic variations in this analysis resulted i
 \end{equation}
 with $\sigma_i^{+\left(-\right)}$ expressing the positive (negative) component of the asymmetric uncertainty. This procedure is applied to correlated as well as uncorrelated components of the systematic error.
 
-The procedure for determination of the parameters that provide the best fit to the data is based on the numerical minimisation of the $\chi^2$ function with respect to the fit parameters. The systematic shifts $b_\mu$, described above, are fitted simultaneously with the parameters $\mathbf{a}$.
+The procedure for determination of the parameters that provide the fit best to the data is based on the numerical minimisation of the $\chi^2$ function with respect to the fit parameters. The systematic shifts $b_\mu$, described above, are fitted simultaneously with the parameters $\mathbf{a}$.
 
-The quality of the fit can be assessed by the value of $\chi^2$-function at its minimum. Assuming that the measurements are sampled according to a normal distribution around the expectation value provided by theoretical predictions and with a variance described by the covariance matrix, the $\chi^2$ value can be treated as a random variable expected to follow a $\chi^2$-distribution~\cite{PDG:2014}
+The quality of the fit can be assessed by the value of $\chi^2$-function at its minimum. Assuming that the measurements are sampled according to a normal distribution around the expectation value provided by the theoretical predictions and with a variance described by the covariance matrix, the $\chi^2$ value can be treated as a random variable expected to follow approximately a $\chi^2$-distribution~\cite{PDG:2014}
 with mean value equal to the number of degrees of freedom $\left\langle \chi^2 \right\rangle = n_\text{DF}$, which in case of an $n_\text{par}$ parameters fit to $n_\text{p}$ points is $n_\text{DF}=n_\text{p}-n_\text{par}$.
 % \footnote{Due to penalty term, the nuisance parameters $\mathbf{b}$ are not free parametes, hence they do not contribute to the number of degrees of freedom.}. 
 Therefore, ratios $\chi^2/n_\text{DF} \approx 1$ indicate a good quality of the fit while larger values can indicate some inconsistency.

@@ -1,6 +1,20 @@
 After the inclusive-jet selection described in Chapter~\ref{ch:selection} and after applying the $Z_\text{vtx}$ and track-veto corrections explained above, the distributions for kinematic variables were still not very well described by MC. Aiming to a reliable estimation of the detector effects to be corrected for in the cross section determination procedure (see Chapter~\ref{ch:unfolding}), a further reweighing of the Monte Carlo distributions was employed. 
 
-The kinematic distributions in \lepto and \ariadne featured different properties, for example, an excess of events was observed in the high-\qsq region in the \ariadne sample (see Figure~\ref{fig:q2rew_ari}\subref{fig:q2rew_ari_subfig1}), while \lepto had a deficiency in this region (see Figure~\ref{fig:q2rewlepto}\subref{fig:q2rew_ari_subfig5}). In addition, as can be seen from Figure~\ref{fig:q2rew_ari}\subref{fig:q2rew_ari_subfig3} the \ariadne MC predicted slightly harder jet spectrum than in the data. In order to take into account differences between the MC samples, two different reweighting procedures were developed for \lepto and \ariadne.
+The kinematic distributions in \lepto and \ariadne featured different properties, for example, an excess of events was observed in the high-\qsq region in the \ariadne sample (see Figure~\ref{fig:q2rew_ari}\subref{fig:q2rew_ari_subfig1}), while \lepto had a deficiency in this region (see Figure~\ref{fig:q2rewlepto}\subref{fig:q2rew_ari_subfig5}). In addition, as can be seen from Figure~\ref{fig:q2rew_ari}\subref{fig:q2rew_ari_subfig2} the \ariadne MC predicted slightly harder jet spectrum than in the data. In order to take into account differences between the MC samples, two different reweighting procedures were developed for \lepto and \ariadne.
+\begin{figure}[htpb!]
+\begin{center}
+\begin{subfloat}[]{\includegraphics[width=0.49\textwidth] {./Figures/q2rew/h_q2_CS_dcontro_plot_ariadne_befrew}
+   \label{fig:q2rew_ari_subfig1}
+ }%
+\end{subfloat}
+ \begin{subfloat}[]{\includegraphics[width=0.49\textwidth]{./Figures/q2rew/h_breit_kt_det_injet_etcontro_plot_ariadne_befrew}
+   \label{fig:q2rew_ari_subfig2}
+ }%
+\end{subfloat}
+\end{center}
+\caption{(a) \qsq and (b) \etjetb control distributions before the reweighting.}
+\label{fig:q2rew_ari}
+\end{figure}
 
 \subsection{\lepto reweighting}
 \label{subsec:leptoq2rew}
@@ -89,29 +103,7 @@ $\geq$ 3 jets & 0.86 \\
 \end{figure}
 
 Besides the variables used in the reweighting procedure the description of other jet quantities was verified, e.g. the comparison of the \etajetb~and jet multiplicity distributions before and after reweighting is demonstrated in Figures~\ref{fig:q2rew_ari1}\subref{fig:q2rew_ari_subfig5}--\subref{fig:q2rew_ari_subfig8}. Significant improvement in the description of the jet multiplicity and \etajetb was achieved. Quantitatively it can be explained as follows. Before the reweighting an excess of high-energy jet in the simulations resulted in a larger fraction of events with $> 1$ jet in event (see Figure~\ref{fig:q2rew_ari1}\subref{fig:q2rew_ari_subfig5}). The reduction of the fraction of high-energy jets after the reweighting has led to increase of the number of events with single jet and decrease of those with two. An improvement of the $\etajetb$ distribution was attributed to the changes in the \qsq spectrum, which affected the jet kinematics in the Breit frame.
-%\begin{figure}[pht]
-%\begin{center}
-%\begin{subfloat}[]{\includegraphics[width=0.49\textwidth] {./Figures/q2rew/h_q2_CS_dcontro_plot_ariadne_befrew}
-   %\label{fig:q2rew_ari_subfig1}
- %}%
-%\end{subfloat}
- %\begin{subfloat}[]{\includegraphics[width=0.49\textwidth]{./Figures/q2rew/h_q2_CS_dcontro_plot_ariadne_afrew}
-   %\label{fig:q2rew_ari_subfig2}
- %}%
-%\end{subfloat}
-%\newline
-%\begin{subfloat}[]{\includegraphics[width=0.49\textwidth] {./Figures/q2rew/h_breit_kt_det_injet_etcontro_plot_ariadne_befrew}
-   %\label{fig:q2rew_ari_subfig3}
- %}%
-%\end{subfloat}
- %\begin{subfloat}[]{\includegraphics[width=0.49\textwidth]{./Figures/q2rew/h_breit_kt_det_injet_etcontro_plot_ariadne_afrew}
-   %\label{fig:q2rew_ari_subfig4}
- %}%
-%\end{subfloat}
-%\end{center}
-%\caption{Result of two iterations of the \qsq reweighting in the \ariadne MC sample. \qsq and \etjetb distributions in data and MC before (a,c) and after the reweighting (b,d)}
-%\label{fig:q2rew_ari}
-%\end{figure}
+
 \begin{figure}[htp!]
 \begin{center}
 \begin{subfloat}[]{\includegraphics[width=0.49\textwidth] {./Figures/q2rew/h_breit_kt_det_injet_multcontro_plot_ariadne_befrew}
