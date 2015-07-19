@@ -28,15 +28,15 @@ In what follows a detailed description of the sources of systematic uncertaintie
 		The contribution to the high-\qsq NC DIS jet cross sections from photoproduction processes can be estimated using the dedicated Monte Carlo event generators e.g. \pythia and \herwig. As it was demonstrated in Section~\ref{sec:eventsampletab}, the photoproduction background can be neglected in the phase space of this work.
 	
 	\item \textbf{Selection cuts variation} \\
-		The stability of the results with respect to the choice of particular cut values, introduced in Chapter~\ref{ch:selection}, was investigated. For this purpose the cut thresholds were changed in the data and MC according to the resolution of the considered quantity. Hence, for 
+		The stability of the results with respect to the choice of particular cut values, introduced in Chapter~\ref{ch:selection}, was investigated. For this purpose the cut thresholds were changed in the data and MC according to the resolution of the considered quantity. As mentioned in Section~\ref{sec:eventsampletab} the description of the $\left(E-p_Z\right)$-distribution in the data by simulations was inaccurate and has to be taken into account. Hence, for 
 		\begin{itemize}
-			\item \textbf{$\left( E-p_Z\right) $ cut:} the variation by $\pm6\%$ resulted in the change of the cross sections by $\lessim \pm 1\%$
+			\item \textbf{$\left( E-p_Z\right) $ cut:} the variation by $\pm6\%$ was performed and resulted in the change of the cross sections by $\lesssim \pm 1\%$
 		\end{itemize}
 	\item \textbf{Luminosity} \\
-		The overall normalisation of the measurements depends on the integrated luminosity of the data sample that was determined with $\pm1.8\%$ for the given data-taking period~\cite{}.
+		The luminosity and its uncertainty was determined using dedicated detector components, as described in Section~\ref{sec:lumimeas}. The overall normalisation of the measurements depends on the integrated luminosity of the data sample that was determined with $\pm1.8\%$ for the given data-taking period.
 \end{itemize}
-All described systematic studies are summarised in Table~\ref{tab:sysunc}. The Figure~\ref{fig:systunc} illustrates the individual components of the statistical and systematic uncertainty as functions of various kinematic observables.
-\begin{table}[h!]
+All described systematic studies are summarised in Table~\ref{tab:sysunc}. The total uncorrelated component of the experimental systematic uncertainty was obtained by adding corresponding individual contributions in quadrature. The Figure~\ref{fig:systunc} illustrates the individual components of the statistical and systematic uncertainties as functions of various kinematic observables.
+\begin{table}[htpb!]
 \centering
 {\footnotesize
 \begin{tabular}{l|l|c|c}
@@ -56,17 +56,25 @@ All described systematic studies are summarised in Table~\ref{tab:sysunc}. The F
 \label{tab:sysunc}
 \end{table}
 
-\begin{figure}[t!]
+\newgeometry{textwidth=12cm,textheight=20cm}
+\begin{landscape}
+\begin{figure}[p!]
 \begin{center}
-\begin{subfloat}{\includegraphics[width=0.48\linewidth] {./Figures/systunc/h_q2_CS_systBreakdown}
-   \label{fig:z0corr_subfig3}
+\begin{subfloat}{\includegraphics[height=\textheight] {./Figures/systunc/h_q2_CS_systBreakdown}
+   \label{fig:z0corr_subfig1}
  }%
 \end{subfloat}
-\begin{subfloat}{\includegraphics[width=0.48\linewidth]{./Figures/systunc/h_etjetb_CS_systBreakdown}
+\begin{subfloat}{\includegraphics[height=\textheight]{./Figures/systunc/h_etjetb_CS_systBreakdown}
    \label{fig:z0corr_subfig2}
  }%
 \end{subfloat}
+\begin{subfloat}{\includegraphics[height=\textheight]{./Figures/systunc/h_etajetb_CS_systBreakdown}
+   \label{fig:z0corr_subfig3}
+ }%
+\end{subfloat}
 \end{center}
-\caption{Estimated systematic uncertainties on inclusive-jet cross sections as functions of \etjetb and \qsq.}
+\caption{Estimated systematic uncertainties on inclusive-jet cross sections as functions of (a) \qsq, (b) \etjetb and (c) \etajetb.}
 \label{fig:systunc}
 \end{figure}
+\end{landscape}
+\restoregeometry
