@@ -1,11 +1,11 @@
 \clearpage
-\phantom{x}
-\vspace{0.2\textheight}
-\begin{longtable}[p!]{cc|ccccccc}
-%\begin{table}
+%\phantom{x}
+%\vspace{0.2\textheight}
+%\begin{longtable}[p!]{cc|ccccccc}
+\begin{table}[p!]
 	\centering
-		%\begin{tabular}{cc|ccccccc}
-		  %\hline
+		\begin{tabular}{cc|ccccccc}
+		  \hline
 			& & 8 \dots 10     & 10 \dots 14    & 14 \dots 18    &  18 \dots 25    &  25 \dots 35    & 35 \dots 100  &  \\
 			\hline   \\ \hline
 			\input{parts//Appendix//correlq2bin1}
@@ -14,17 +14,28 @@
 			\hline  \\ \hline
 			\input{parts//Appendix//correlq2bin3}
 			\hline  \\ 
+			\end{tabular}
+			\caption{Statistical correlations matrix for the double-differential inclusive-jet cross section as a function of \etjetb in different regions of \qsq}
+	\label{tab:StatisticalCorrelationsMatrix_part1}
+			\end{table}
+			
 			\newpage
-			\hline 
+			
+			\begin{table}[p!]
+			\centering
+			\begin{tabular}{cc|ccccccc}
+		  \hline
+			& & 8 \dots 10     & 10 \dots 14    & 14 \dots 18    &  18 \dots 25    &  25 \dots 35    & 35 \dots 100  &  \\
+			\hline   \\ \hline
 			\input{parts//Appendix//correlq2bin4}
 			\hline  \\ \hline
 			\input{parts//Appendix//correlq2bin5}
 			\hline  \\ \hline 
 			\input{parts//Appendix//correlq2bin6}
 			\hline
-		%\end{tabular}
+		\end{tabular}
 		
-	\caption{Statistical correlations matrix for the double-differential inclusive-jet cross section as a function of \etjetb in different regions of \qsq}
-	\label{tab:StatisticalCorrelationsMatrix}
-	%\end{table}
-\end{longtable}
+	\caption{Statistical correlations matrix for the double-differential inclusive-jet cross section as a function of \etjetb in different regions of \qsq. Continuation of Table~\ref{tab:StatisticalCorrelationsMatrix_part1}.}
+	\label{tab:StatisticalCorrelationsMatrix_part2}
+	\end{table}
+%\end{longtable}
