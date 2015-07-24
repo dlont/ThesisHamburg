@@ -1,4 +1,12 @@
-mcvalidation
+As was demonstrated in Chapter~\ref{ch:selection} both MC models after the reweightings describe the observed distributions reasonably well and are consistent with each other at the detector level. However, as can be seen in Figure~\ref{fig:epa} the acceptance correction factors estimated using \ariadne and \lepto MC models can differ by 10\%, implying substantial difference at the hadron level. In order to investigate the influence of the choice of MC model on the cross section values, additional study has been performed.
+
+The observed cross section value in particular bin can be regarded as a Gaussian-distributed random variable $x = \mathcal{N}\left(\mu,w\right)$ with the mean value, $\mu$, provided by the \textit{true} physical cross section and the variance, $w$, given by statistical uncertainty\footnote{Without loss of generality, experimental uncertainty can neglected for simplicity.}. Therefore the variable, called pull,
+\begin{equation}
+p=\frac{x-\mu}{w}
+\label{eq:pulldef}
+\end{equation}
+must follow standard Gaussian distribution with zero mean and unit variance. 
+
 \begin{figure}[p!]
 \begin{center}
 \begin{subfloat}[]{\includegraphics[width=.45\textwidth] {Figures/pulls/Lepto_q2_sum}
