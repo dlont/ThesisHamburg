@@ -2,8 +2,8 @@ The schematic layout of the \zeus detector is presented in Figure~\ref{fig:zeus2
 \begin{landscape}
 \begin{figure}[htpb]
 	\centering
-		\includegraphics[angle=-90,width=\linewidth]{./Figures/zeus2d1.png}
-	\caption{Z-Y cut of the \zeus detector}
+		\includegraphics[angle=90,width=\linewidth]{./Figures/ZEUS_2000_topview.png}
+	\caption{Top view of the \zeus detector}
 	\label{fig:zeus2d1}
 \end{figure}
 \end{landscape}
@@ -12,7 +12,11 @@ The pseudorapidity was an important quantity used in this analysis and defined b
 \begin{equation}
 \eta = -\ln \tan \dfrac{\theta}{2}.
 \end{equation}
-The pseudorapidity has simple transformation properties under Lorentz boosts. The difference $\Delta \eta$ is a Lorentz invariant. For massless particles the numerical value of the pseudorapidity coincides with the normal rapidity.
+The pseudorapidity has simple transformation properties under Lorentz boosts. The difference $\Delta \eta$ is a Lorentz invariant. For massless particles the numerical value of the pseudorapidity coincides with the normal rapidity defined as 
+\begin{equation}
+y=\lim_{m\rightarrow 0}\frac{1}{2}\ln{\left(\frac{E+p_Z}{E-p_Z}\right)}\approx \lim_{m\rightarrow 0}\frac{1}{2}\ln{\frac{\cos^2{\theta/2}+m^2/4p^2}{\sin^2{\theta/2}+m^2/4p^2}} = -\ln \tan \dfrac{\theta}{2} = \eta.
+\end{equation}
+	
 \begin{figure}[htpb]
 	\centering
 		\includegraphics[width=0.5\textwidth]{./Figures/zeus_coordsyst.jpg}
