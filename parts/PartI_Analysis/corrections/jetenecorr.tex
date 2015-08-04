@@ -1,15 +1,16 @@
-The energy of hadronic jets reconstructed from energy deposits in the calorimeter is influenced by various effects e.g. particle absorption in uninstrumented material between the production point and the calorimeter, inhomogeneities of the detector, noise etc. Hadron jets loose in the \zeus detector typically 5-15\% of their energy in inactive media (superconducting solenoid, support structures etc.) in front of the calorimeter. This effect may lead to systematic migrations of jets to cross section bins with lower energy. In principle, such effects must be taken into account in the unfolding procedure (see Chapter~\ref{ch:unfolding}). Nevertheless, in order to minimise migrations and to avoid a possible bias from the energy loss in inactive detector media, a dedicated jet-energy correction was employed in this analysis.
+The energy of hadronic jets reconstructed from energy deposits in the calorimeter is influenced by various effects e.g. particle absorption in uninstrumented material between the production point and the calorimeter, inhomogeneities of the detector, noise etc. Hadron jets in the \zeus detector typically loose 5-15\% of their energy in inactive media (superconducting solenoid, support structures etc.) in front of the calorimeter. This effect may lead to systematic migrations of jets to cross section bins with lower energy. In principle, such effects must be taken into account in the unfolding procedure (see Chapter~\ref{ch:unfolding}). Nevertheless, in order to minimise migrations and to avoid a possible bias from the energy loss in inactive detector media, a dedicated jet-energy correction was employed in this analysis.
 
-Two common approaches for correcting the jet energy loss exist:
+Two approaches for correcting the jet energy loss exist:
 \begin{itemize}
  \item the \emph{bottom-up} approach consists of correcting the energy of the input objects (i.e. calorimeter cells in this analysis) to compensate for the energy loss and then using the corrected objects as an input to the jet algorithm;
  \item in the \emph{top-down} approach the energy of identified jets is corrected directly.
 \end{itemize}
-In general, the two approaches are equivalent if the unfolding of the measured cross sections is performed\marginpar{OB:Why?\\DL:because the correctly constructed response matrix has to take the migrations due to energy loss into account}. In this thesis, the top-down approach was adopted.
+In principle, with the former approach more precise correction can be achieved, because individual jet details can be take into account, while in the later, only an average correction is achieved. Nevertheless, the \emph{top-down} approach is much more simple and therefore was used in this thesis.
+%In general, the two approaches are equivalent if the unfolding of the measured cross sections is performed\marginpar{OB:Why?\\DL:because the correctly constructed response matrix has to take the migrations due to energy loss into account}. In this thesis, the top-down approach was adopted.
 
 Monte Carlo simulations were used to estimate the energy loss because they provide the detailed information about hadron propagation in the detector volume. The measured jet energy, $E_T^{jet,det}$, depends approximately linearly on the 'true', $E_T^{jet}$, value, but the size of the energy loss depends on the thickness of the traversed material and therefore on the jet pseudorapidity in the laboratory frame. For this reason, the complete measurement region $-1<\etajetlab<2.5$ was divided into 14 equal size regions and the correction was determined separately in each $\etajetlab$ bin.
 
-The procedure proceeds as follows:
+The procedure was as follows:
 \begin{itemize}
  \item in the MC events accepted at the generated and reconstructed levels, a pair of jets was identified according to the distance between jets in the $\eta-\phi$ plane. A hadron-level jet was matched to the reconstructed jet if the distance 
 \begin{equation}
@@ -17,11 +18,11 @@ r=\sqrt{\left[\left(\eta_{had}-\eta_{det}\right)^2 + \left(\phi_{had}-\phi_{det}
 \end{equation}
 between the two was small, $r<0.7$, and no further jets were reconstructed within the cone\marginpar{OB:Would that be possible (Rcut <1).\\DL:I think, yes, because jets have irregular shape and R=1 is a maximum radius.}. In order to avoid any bias on the correction procedure introduced by the boundaries of the jet phase space, the cuts on the jet transverse energy were relaxed to $\etjetbhad>6\;\GeV$ and $\etjetbdet>3\;\GeV$ at the hadron and detector levels, respectively;
  \item in each bin $i$ of $\etajetlab$, a linear fit $\left\langle\etjetbdet\right\rangle = a_i + b_i\cdot\left\langle\etjetbhad\right\rangle$ was performed, where $\left\langle\etjetbdet\right\rangle$ and $\left\langle\etjetbhad\right\rangle$ were determined using the set of matched jets; the fits for the 2004--2005~$e^-$ running period are illustrated in Figure~\ref{fig:05e_lepto_coeffitients};
- \item the corrections were determined using the \ariadne and \lepto sample for each data taking period separately. 
+ \item the corrections were determined using the \ariadne and \lepto sample for each data-taking period separately. 
 \end{itemize}
 \begin{figure}[p]
 \centering
-\includegraphics[width=\linewidth]{./Figures/etcorr/new/coeff/05e_lepto_coeffitients}
+\includegraphics[height=0.9\textheight]{./Figures/etcorr/new/coeff/05e_lepto_coeffitients}
 \caption{The average measured detector-level jet transverse energy $\left\langle\etjetbdet\right\rangle$ as a function of $\left\langle\etjetbhad\right\rangle$ and the corresponding straight-line fits in different regions of $\etajetlab$ for the data-taking period 2004--2005~$e^-$ in the \lepto MC sample.}
 \label{fig:05e_lepto_coeffitients}
 \end{figure}
@@ -30,7 +31,7 @@ Given the extracted fit parameters, the components of the jet four-momentum were
  \begin{equation}
   E_{T,B}^{jet,det} \mapsto E_{T,B}^{jet,corr} = \frac{E_{T,B}^{jet,det} - a_i}{b_i}.
  \end{equation}
-As can be seen in Figure~\ref{fig:05e_lepto_coeffitients} the fractional energy loss, represented by the slope of the fitted straight line, varies as a function of jet pseudorapidity. The size of the correction decreases towards the forward region of the detector. Such a behaviour was attributed to the variation of the amount of material in front of the calorimeter, in particular, the presence of superconducting solenoid surrounding the tracking system. 
+As can be seen in Figure~\ref{fig:05e_lepto_coeffitients}, the fractional energy loss, represented by the slope of the fitted straight line, varies as a function of jet pseudorapidity. The size of the correction decreases towards the forward region of the detector. Such a behaviour was attributed to the variation of the amount of material in front of the calorimeter, in particular, the presence of superconducting solenoid surrounding the tracking system. 
 
 Since the analysis was performed in the Breit frame, the jet pseudorapidity in the laboratory frame was recalculated and the corresponding correction factors were applied. Assuming a valid description of the detector effects in the simulations, the correction was applied to both the data and MC jets. In the simulations the correction was applied on top of that introduced in Section~\ref{subsec:jetenescale}.
 
