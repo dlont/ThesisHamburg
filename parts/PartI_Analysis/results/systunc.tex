@@ -1,8 +1,8 @@
 Systematic uncertainties arise due to various effects such as, for example, incomplete understanding of the detector response or deficiencies in the modelling of the \ep~physics. The systematic uncertainties from identified sources were quantified in the the following way. For each source of uncertainty attributed to imperfect knowledge of some continuous parameter, a variation by its estimated uncertainty was performed and the cross sections were re-evaluated. In the case when the source of uncertainty is attributed to a specific reconstruction technique, the difference with respect to the cross section calculated using an alternative reconstruction method is taken as an approximation of the systematic uncertainty. The positive, $\delta^+_i$, (negative, $\delta^-_i$) variations of the cross sections were added in quadrature in order to obtain the positive (negative) total systematic uncertainties
 \[
 	\begin{aligned}
-		\delta_{\left( +\right)}^{2} = \sum_i{\mbox{$\delta_i^{\left( +\right)}$}^2}\qquad,\\
-		\delta_{\left( -\right)}^{2} = \sum_i{\mbox{$\delta_i^{\left( -\right)}$}^2}\qquad.
+		\delta_{\left( +\right)}^{2} = \sum_i{\mbox{$\delta_i^{\left( +\right)}$}^2},\\
+		\delta_{\left( -\right)}^{2} = \sum_i{\mbox{$\delta_i^{\left( -\right)}$}^2}.
 	\end{aligned}
 \]
 %In general, the total uncertainty of the measurements presented in this thesis is dominated by the systematic contribution and only in some regions of phase space were limited accuracy from insufficiently large data samples an issue. The details of the determination of the statistical correlations between various measurement bins are provided in the next subsection.
@@ -17,24 +17,24 @@ In what follows a detailed description of the sources of systematic uncertaintie
 In principle, in order to reduce this sensitivity a composition of generated event samples can be used for the determination of the acceptance correction factors. Nevertheless, in this analysis, \lepto sample was used as a nominal event generator, as it initially provided better description of the data.
 			
 	\item \textbf{Dependence on the electron finder}\\
-		The \textsc{SINISTRA} electron finder (see Section~\ref{sec:eleid}) was used for the determination of the nominal cross section values. In order to estimate the size of the systematic uncertainty attributed to the electron identification, the \textsc{EM} electron finder~\cite{epj:c11:427,upub:Straub:url} was used as an alternative\footnote{By such a variation the effects due to characteristics of particular identification algorithm (SINISTRA is based on neural-network pattern recognition, while EM models directly the probability of a shower to originate from the DIS electron candidate) are taken into account.}. The resulting uncertainty was typically about 0.5\% but could reach 2\% in regions of high \qsq.
+		The \textsc{SINISTRA} electron finder (see Section~\ref{sec:eleid}) was used for the determination of the nominal cross section values. In order to estimate the size of the systematic uncertainty attributed to the electron identification, the \textsc{EM} electron finder~\cite{epj:c11:427,upub:Straub:url} was used as an alternative\footnote{By such a variation the effects due to the characteristics of a particular identification algorithm (SINISTRA is based on neural-network pattern recognition, while EM models directly the probability of a shower to originate from the DIS electron candidate) are taken into account.}. The resulting uncertainty was typically about 0.5\% but could reach 2\% in regions of high \qsq.
 	
 	\item \textbf{Electromagnetic energy scale}\\
 		The uncertainty on the electromagnetic energy scale was determined using a technique similar to that for the calibration of the hadronic energy scale. Exploiting the approximate independence of the energy of the electron reconstructed using the double-angle method, a calibration of the absolute electromagnetic energy scale of the calorimeter can be performed. As was demonstrated in Section~\ref{sec:eleenescale}, the residual discrepancy between data and MC simulations was less than 2\%. This value was interpreted as an uncertainty on the electron energy scale and was propagated to the cross sections by varying the scattered electron energy up and down by $\pm$ 2\% in the Monte Carlo simulation. Therefore, this variation also covers the uncertainty due to the determination of the Lorentz boost to the Breit reference frame. 
 	
-	\item \textbf{Track veto efficiency correction}\\
-		In order to estimate the size of the effect on the cross sections due to the MC track-veto correction introduced in Section~\ref{sec:trkvetoeff}, the procedure was changed slightly. Instead of the parametrisation of the track-veto efficiency as a function of $y_{DA}$, the CTD-FLT vertex tracks multiplicity was used as an alternative. The effect on the cross section was typically about 0.5\%.
+	\item \textbf{Track-veto efficiency correction}\\
+		In order to estimate the size of the effect on the cross sections due to the MC track-veto correction introduced in Section~\ref{sec:trkvetoeff}, the procedure was changed slightly. Instead of the parametrisation of the track-veto efficiency as a function of $y_{DA}$, the CTD-FLT vertex-track multiplicity was used as an alternative. The effect on the cross section was typically about 0.5\%.
 	
 	\item \textbf{Photoproduction background}\\
-		The contribution to the high-\qsq NC DIS jet cross sections from photoproduction processes can be estimated using the dedicated Monte Carlo event generators e.g. \pythia and \herwig. As it was demonstrated in Section~\ref{sec:eventsampletab}, the photoproduction background can be neglected in the phase space of this work.
+		The contribution to the high-\qsq NC DIS jet cross sections from photoproduction processes can be estimated using the dedicated Monte Carlo event generators e.g. \pythia and \herwig. As was demonstrated in Section~\ref{sec:eventsampletab}, the photoproduction background can be neglected in the phase space of this work.
 	
 	\item \textbf{Selection cuts variation} \\
-		The stability of the results with respect to the choice of particular cut values, introduced in Chapter~\ref{ch:selection}, was investigated. For this purpose the cut thresholds were changed in the data and MC according to the resolution of the considered quantity. As mentioned in Section~\ref{sec:eventsampletab} the description of the $\left(E-p_Z\right)$-distribution in the data by simulations was inaccurate and has to be taken into account. Hence, for 
+		The stability of the results with respect to the choice of particular cut values, introduced in Chapter~\ref{ch:selection}, was investigated. For this purpose the cut thresholds were changed in the data and MC according to the resolution of the considered quantity. As mentioned in Section~\ref{sec:eventsampletab}, the description of the $\left(E-p_Z\right)$-distribution in the data by simulations was inaccurate and requires correction. Hence, for 
 		\begin{itemize}
-			\item \textbf{$\left( E-p_Z\right) $ cut:} the variation by $\pm6\%$ was performed and resulted in the change of the cross sections by $\lesssim \pm 1\%$
+			\item $\left( E-p_Z\right) $ cut: the variation by $\pm6\%$ was performed and resulted in the change of the cross sections by $\lesssim \pm 1\%$
 		\end{itemize}
 	\item \textbf{Luminosity} \\
-		The luminosity and its uncertainty was determined using dedicated detector components, as described in Section~\ref{sec:lumimeas}. The overall normalisation of the measurements depends on the integrated luminosity of the data sample that was determined with $\pm1.8\%$ for the given data-taking period.
+		The luminosity and its uncertainty were determined using dedicated detector components, as described in Section~\ref{sec:lumimeas}. The overall normalisation of the measurements depends on the integrated luminosity of the data sample that was determined with $\pm1.8\%$ for the given data-taking period.
 \end{itemize}
 All described systematic studies are summarised in Table~\ref{tab:sysunc}. The total uncorrelated component of the experimental systematic uncertainty was obtained by adding corresponding individual contributions in quadrature. The Figure~\ref{fig:systunc} illustrates the individual components of the statistical and systematic uncertainties as functions of various kinematic observables.
 \begin{table}[htpb!]

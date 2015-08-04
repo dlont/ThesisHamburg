@@ -11,7 +11,7 @@
 	%\item Discussion of statistical correlations. Conclusions. Reference to \as extraction
 %\end{itemize}
 
-In counting experiments the statistical uncertainty is typically assumed to follow Poisson distribution, however is case of inclusive jet production where every jet is counted, such an assumption is incorrect because jets appear in pairs or with even higher multiplicity. Thus, the occurrence of jets is not a Poisson process. However, taking into account that the number of \textit{events} with a given jet multiplicity accumulated during a fixed time interval is indeed Poisson distributed, it was demonstrated~\cite{upub:juanstatcorrel} that the probability of observing $n$ jets in a given bin of a jet cross section\footnote{It is assumed that all jets in event are assigned to the same bin, as for example, in \qsq distribution.} provided by the multi-Poisson:
+In counting experiments, the statistical uncertainty is typically assumed to follow a Poisson distribution. However is the case, of inclusive jet production, in which every jet is counted, such an assumption is incorrect because jets appear in pairs or with even higher multiplicity. Thus, the occurrence of jets is not a Poisson process. However, taking into account that the number of \textit{events} with a given jet multiplicity accumulated during a fixed time interval is indeed Poisson distributed, it was demonstrated~\cite{upub:juanstatcorrel} that the probability of observing $n$ jets in a given bin of a jet cross section\footnote{It is assumed that all jets in event are assigned to the same bin, as for example, in \qsq distribution.} is given by the multi-Poisson:
 \begin{equation}
 P\left(n_1, n_2, n_3, \ldots \right) = \prod_i{ e^{-\lambda_i} \cdot \frac{\lambda_1^{n_i}}{n_i!} },
 \label{eq:multipoissonqsq}
@@ -24,7 +24,7 @@ with the number of jets, $n$, constrained by the requirement
 \begin{equation}
 n = n_1 + 2\cdot n_2 + 3\cdot n_3 + \ldots
 \end{equation}
-Substituting the expression for $P\left(n_1, n_2, n_3, \ldots \right)$, the mean value and the variance of the number of jets can be evaluated to
+Substituting the expression for $P\left(n_1, n_2, n_3, \ldots \right)$, the mean value and the variance of the number of jets can be shown to be
 \begin{align}
   \left\langle n \right \rangle &= \lambda_1 + 2\cdot\lambda_2 + 3\cdot\lambda_3 + \ldots\\
 	\left\langle n^2 \right \rangle - \left( \left\langle n \right \rangle \right)^2 &= \lambda_1 + 4\cdot\lambda_2 + 9\cdot\lambda_3 +\ldots
@@ -35,7 +35,7 @@ Since the expectation values $\lambda_i$ are not known, the number of observed e
 \end{equation}
 where $N_i$ is the number of observed $i$-jet events.
 
-The model for statistical uncertainties for $\etjet$ and $\etajet$ distributions is more complicated, because different jets in a single event can end-up in different cross section bins. Such assignment of jets results in statistical correlation between entries in different bins. The probability distribution is still multi-Poissonian, however more possibilities for assignment of the jets to different cross section bins have to be taken into account. Those are
+The model for statistical uncertainties for $\etjet$ and $\etajet$ distributions is more complicated, because different jets in a single event can end up in different cross-section bins. Such assignment of jets results in a statistical correlation between entries in different bins. The probability distribution is still multi-Poissonian, however more possibilities for assignment of the jets to different cross-section bins have to be taken into account. Those are
  \begin{enumerate}
   \item 1-,2-,3-jet events, \ldots, in which only \textit{one} jet lies in a given bin. The corresponding event numbers and expectation values are given by $n_{1,1}, n_{1,2}, n_{1,3}, \ldots$ and $\lambda_{1,1}, \lambda_{1,2}, \lambda_{1,3}, \ldots$, respectively.
   \item 2-,3-jet events, \ldots, in which exactly \textit{two} jets fall in a given bin. The corresponding variables are denoted by $n_{2,2}, n_{2,3}, \ldots$ and $\lambda_{2,2}, \lambda_{2,3}, \ldots$, respectively.
@@ -61,9 +61,9 @@ The estimate of covariance between numbers of jets in bins $i$ and $j$ can also 
  \mathrm{cov}_{ij} = N_{i,j}^{\left(2\right)} + \sum_{k\neq i,k}{\left(N_{i,j,k}^{\left(3\right)} + N_{i,k,j}^{\left(3\right)} + N_{k,i,j}^{\left(3\right)} \right) + 2\cdot\left( N_{i,j,j}^{\left(3\right)} + N_{i,i,j}^{\left(3\right)} \right) + \ldots },
  \label{eq:covmultipoisson}
 \end{equation}
-where $N_{i,j}^{\left(2\right)}$ is the number of 2-jet events with jets in bins $i$ and $j$; $N_{i,j,k}^{\left(3\right)}$ is the number of 3-jet events with jets in bins $i$, $j$ and $k$, correspondingly. As it follows from Eq~\eqref{eq:covmultipoisson}, only positive correlation between different bins is possible.
+where $N_{i,j}^{\left(2\right)}$ is the number of 2-jet events with jets in bins $i$ and $j$; $N_{i,j,k}^{\left(3\right)}$ is the number of 3-jet events with jets in bins $i$, $j$ and $k$, correspondingly. As follows from Eq.~\eqref{eq:covmultipoisson}, only positive correlation between different bins is possible.
 
-The resulting correlation values for different bins of \dsdetjetb cross section in different regions of \qsq are presented in Figure~\ref{fig:correlmatrix} and in Table~\ref{tab:StatisticalCorrelationsMatrix}. As Figure~\ref{fig:correlmatrix} shows, the statistical correlation may reach up to $40\%$. Only those \etjetb bins belonging to the same \qsq range have nonvanishing correlations. It is important to take correlations into account when a fit to the cross section points is performed, especially for bins in the phase region with limited jet statistics, e.g. $\qsq > 5000\;\GeV^2$~(see Chapter~\ref{ch:resultsqcdfit}).
+The resulting correlation values for different bins of the \dsdetjetb cross section in different regions of \qsq are presented in Figure~\ref{fig:correlmatrix} and in Appendix in Table~\ref{tab:StatisticalCorrelationsMatrix}. As Figure~\ref{fig:correlmatrix} shows, the statistical correlation may reach up to $40\%$. Only those \etjetb bins belonging to the same \qsq range have non-vanishing correlations. It is important to take correlations into account when a fit to the cross section is performed, especially for bins in the phase-space region with limited jet statistics, e.g. $\qsq > 5000\;\GeV^2$~(see Chapter~\ref{ch:resultsqcdfit}).
 \begin{figure}
 	\centering
 		\includegraphics[width=\textwidth,angle=-90]{Figures/stat_correl/inclusive_correl}
