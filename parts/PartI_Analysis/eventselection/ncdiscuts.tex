@@ -84,10 +84,10 @@ The reactions of the type $ep \rightarrow e' \gamma p'$ or $ep \rightarrow e'\ga
 
 QEDC events can be misidentified as high-\qsq~NC DIS processes when the electromagnetic cluster from the photon is wrongly reconstructed as the final-state electron that leads to incorrect determination of event kinematics. The characteristic features of such events are the presence of two isolated electromagnetic energy deposits in the calorimeter with approximately equal transverse momentum and low or vanishing hadronic activity in the FCAL (see Figure~\ref{fig:qedceventdisplay}). As was demonstrated in the study~\cite{thesis:moritz:2001} inelastic QEDC processes are well described by the \djangoh MC\marginpar{OB:reference is missing to \djangoh.\\DL:Is it really needed? There is a general reference in theory chapter.} while elastic scattering is not well reproduced. Therefore such events have to be removed from the data sample by imposing dedicated cuts (see below).
 
-\section{Event selection.}
+\section{Event Selection}
 The pre-selection of the NC DIS events relevant for the analysis starts naturally during the data-taking phase when the the \zeus trigger system is used. Only those events for which a positive trigger decision was taken are stored on tape and can be further analysed offline. In the following sections general information about analysed data and MC samples as well as selection criteria applied to event samples are described.
 
-\subsection{Data and MC sets.}
+\subsection{Data and MC Sets.}
 This analysis was performed using the data recorded during the 2004 -- 2007 \hera running period. The $\ep$ centre-of-mass collision energy during this period was \sqs = 318 \GeV. The total integrated luminosity of the processed data sample amounts to 295~\invpb. The luminosity values for the analysed data-taking periods are summarised in Table~\ref{tab:selecteddatasample}.
 
 \begin{table}[htpb!]
@@ -109,11 +109,11 @@ Monte Carlo simulated events were used for the estimation of detector effects an
 
 Additional samples of photoproduction events with $\qsq\approx 0~\GeV^2$ generated using \herwig~\cite{cpc:67:465, jhep01:2001:010} and \pythia~\cite{cpc:82:74} programs were also used. These samples were utilised in the jet-photoproduction analysis~\cite{np:b864:1} for the estimation of detector effects. Another sample of simulated events that almost fills the gap in \qsq between the photoproduction and high-\qsq regions was taken from the analysis of~\cite{thesis:perrey:2011} and covers the interval $4~\GeV<\qsq<100~\GeV$. The photoproduction and low-\qsq MC samples were used for the estimation of background contribution (see below).
 
-\section{On-line selection}
+\section{On-line Selection}
 \label{sec:onlineselect}
 As described in Section~\ref{sec:daqtrigger} the \zeus trigger has a three-level architecture. At each level, every event can be classified into different categories\footnote{A single event can be attributed to \textbf{several} categories.} according to event characteristics such as total and/or regional energy sums, presence of electromagnetic clusters, etc. Technically, when an event is recorded on storage-tape it is marked with specific flags, the so-called trigger slots or bits, which correspond to different event classes. The requirements imposed by specific trigger bits are listed below. Any of the specified trigger bits was required to be fired\footnote{Which corresponds to a logical \textbf{OR} between individual bits.} in order to keep the event for further analysis. 
 
-\subsection{FLT trigger}
+\subsection{FLT Trigger}
 \label{subsec:fltcuts}
 The FLT selection is centred around the idea of having an event with large transverse momentum and significant electromagnetic energy deposit corresponding to the DIS electron. Besides that, every FLT bit imposes additional restrictions (not listed here) on the CAL timing and information from other detector components like Veto-Wall in order to suppress background processes.
 \begin{itemize}
@@ -122,7 +122,7 @@ The FLT selection is centred around the idea of having an event with large trans
 	\item \textbf{FLT bit 50:} The total energy, $E^\text{CAL}$, greater than $15\; \GeV$\, or $E_\text{EMC}^\text{CAL} > 10\; \GeV\,$ or $E_\text{EMC}^\text{BCAL} > 3.5\; \GeV$\, or $E_\text{EMC}^\text{RCAL} > 2\; \GeV$\, and $E_\text{T}^\text{CAL} > 1\; \GeV$\, and a good track is required.
 \end{itemize}
 
-\subsection{SLT trigger}
+\subsection{SLT Trigger}
 \label{subsec:sltcuts}
 The second-level trigger was used to suppress further beam-related background. The information from the \zeus global tracking trigger was utilised at the SLT for the reconstruction of the interaction vertex position and to reject events originating from background processes. Moreover, the calorimeter timing information was used extensively to suppress beam-gas and cosmic-ray background. For example, hadrons emerging in the vicinity of the nominal interaction point are characterised by approximately the same arrival time in different parts of the CAL, in contrast to cosmic-shower events for which the signals from the upper part of the BCAL will arrive earlier than those from the bottom part. Thus, given the high timing resolution of the CAL, the background processes can be efficiently discriminated at SLT.
 
@@ -132,7 +132,8 @@ The SLT bits DIS01, 04, 07 were used in the analysis. Besides the required FLT b
 	\item \textbf{SLT bit DIS04:} The total energy in the electromagnetic sections of the calorimeter, $E_\text{EMC}^\text{RCAL} > 2.5\;\GeV$ or $E_\text{EMC}^\text{BCAL} > 2.5\;\GeV$~or $E_\text{EMC}^\text{FCAL} > 10\;\GeV$ or hadronic energy in the forward region $E_\text{HAC}^\text{FCAL} > 10\;\GeV$ and $E-P_Z > 19\;\GeV$;
 	\item \textbf{SLT bit DIS07:} The energy of the SLT electron candidate $E_e^{SLT}>5\;\GeV$.
 \end{itemize}
-\subsubsection{TLT trigger}
+
+\subsection{TLT Trigger}
 \label{subsec:tltcuts}
 The final stage of the trigger selection was based on the identification of the scattered DIS electron. The reduced read-out rate at the TLT allowed application of the complex reconstruction algorithms much more closely related to those used in the offline analysis. The TLT bit \textsf{DIS03} together with DST bit 12 imposing loose cuts on the electron candidate were used in the selection chain and are summarised in the Table~\ref{tab:TLTDSTreq}.
 \begin{table}[ht!]
@@ -147,16 +148,16 @@ The final stage of the trigger selection was based on the identification of the 
 \label{tab:TLTDSTreq}
 \end{table}
 
-\section{Offline selection}
+\section{Offline Selection}
 \label{sec:offlineselect}
 The trigger-level event selection cannot fulfill the signal-to-background discrimination requirements necessary for precision analysis because of limited processing time and significant complexity of the reconstruction algorithms for the objects such as secondary vertices, particle decays or jets. In addition, information about detector operating conditions such as the number of dead channels, changes in high voltage, CTD gas pressure, temperature, etc. are difficult or impossible to take into account at the trigger level. Thus, after the trigger-based pre-selection, a set of cuts is applied offline to ensure a low level of background and a high signal purity of the selected sample. Additional requirements are typically imposed on a data sample to restrict the phase space of the measurement to a region of well understood detector acceptance and efficiency.
 
-\subsection{Data-quality requirements.}
+\subsection{Data-Quality Requirements.}
 The offline selection starts with removing runs with inappropriate detector operation. For this purpose during the data-taking the functioning of the detector components was continuously monitored. The status of each of component was stored for every run in the so-called, ``EVTAKE'' flag. In this analysis EVTAKE=1 was required, indicating that all main detector components e.g. CTD, MVD, CAL were fully operational.
 
 In addition to the EVTAKE flag, the LPOLTAKE and TPOLTAKE status records were used in order to verify the availability of the information from the corresponding lepton-beam polarisation detectors. At least one of the detectors was required to have good status in order to determine the polarisation value for particular runs.
 
-\subsection{Electron selection}
+\subsection{Electron Selection}
 \label{subsec:eleselect}
 The next key step in the selection procedure is the electron-based identification of the high-\qsq DIS event. To ensure high purity and reliability of the reconstruction of the scattered electron, the following requirements were imposed on electron candidates:
 \begin{itemize}
@@ -174,7 +175,7 @@ The next key step in the selection procedure is the electron-based identificatio
 	\end{itemize}
 \end{itemize}
 
-\subsection{Primary vertex selection}
+\subsection{Primary Vertex Selection}
 \label{subsec:vtxselect}
 Proper identification of the interaction point is important for the reconstruction of the kinematic variables. The longitudinal extent of the interaction region is determined by the length of the interacting bunches and the time structure of the beam. Beam-gas or cosmic-ray events are approximately evenly distributed along the longitudinal coordinate, while \ep\, events appear with higher rate in the vicinity of the nominal beam-beam interaction point. The distribution of the longitudinal component of the position of the primary vertex has a Gaussian-like shape (see Section~\ref{sec:zvtxrew}). Selecting the events with the primary interaction vertex fit satisfying $\chi^2 < 10$\marginpar{OB:explain $\chi^2$.\\DL:has to clarify.} and $Z_\text{vtx}$ being within $\sim \pm 3\sigma$ of the width of the distributions suppresses the non-physics background contribution and ensures good understanding of the dependence of the acceptance of the calorimeter and tracking systems on the position of the interaction vertex. The mean value and the width of the $Z_\text{vtx}$ changes between different data-taking periods. The final restrictions imposed on $Z_\text{vtx}$ are detailed in Table~\ref{tab:zvxcut}.
 \begin{table}[htbp]
@@ -192,7 +193,7 @@ Proper identification of the interaction point is important for the reconstructi
 	\label{tab:zvxcut}
 \end{table}
 
-\subsection{Longitudinal Momentum balance}
+\subsection{Longitudinal Momentum Balance}
 \label{subsec:empzcut}
 As discussed previously in Section~\ref{subsec:beamgasfeatures}, longitudinal momentum balance can be used to discriminate against photoproduction and beam-gas background. As mentioned, the actual value of quantity $\delta=\sum_i{\left(E_i-p_{z,i}\right)}$ for a particular event may deviate from the nominal $\delta=55\;\GeV$ due to finite energy resolution and/or ISR effects\footnote{ISR leads to smaller values of $\delta$.}. Therefore the following requirement was implied on $\delta$:
 \begin{equation}
@@ -201,7 +202,7 @@ As discussed previously in Section~\ref{subsec:beamgasfeatures}, longitudinal mo
 \end{equation}
 The lower value was chosen in order to reject photoproduction and beam-gas events, while the upper cut is required for the suppression of events with significant energy deposits in the rear direction, e.g. due to backspash processes that are poorly simulated in MC.
 
-\subsection{Transverse Momentum balance}
+\subsection{Transverse Momentum Balance}
 \label{subsec:empzcut}
 Due to finite resolution, the total transverse momentum of an NC DIS event may be greater that zero. The energy resolution of the calorimeter scales approximately as $1/\sqrt{E}$. In order to suppress beam-gas-related, cosmic-ray and charged current processes with a misidentified electron, the following ratio was required to be small:
 \begin{equation}
@@ -223,7 +224,7 @@ was imposed. Besides other restrictions listed in Table~\ref{tab:TLTDSTreq}, thi
 \label{subsec:elasticqedcut}
 As described above, elastic Compton scattering processes ($ep \rightarrow ep\gamma$) are not well described by Monte Carlo simulations. Therefore, events containing two electron candidates satisfying the requirements listed in Section~\ref{subsec:eleselect} and having transverse-momentum vectors opposite to each other, $\left|\phi^1 - \phi^2\right| > 3$, the ratio of transverse momenta, $0.8 < P_{T}^1/P_T^{2} < 1.2$, and the total event-energy sum, excluding the contribution from the two electron clusters, $E_T^{CAL} < 3 \GeV$, were rejected.
 
-\subsection{Higher-order QED predictions}
+\subsection{Higher-Order QED Predictions}
 \label{subsec:qedcorcut}
 In order to ensure the validity of higher-order QED corrections (see Section~\ref{sec:qedcor}) the region of phase space given by the requirement 
 \begin{equation}
@@ -235,11 +236,11 @@ was excluded because Monte Carlo predictions were found to be unreliable in this
 \label{subsec:gammahadcut}
 In order to suppress events with large hadronic activity in the forward region, where the simulations were found to be inaccurate~\cite{thesis:jose:2003}, a cut on the projection of the hadronic scattering angle in the FCAL $R^\text{FCAL}_{\gamma^{had}} > 18\;\cm$ was implied. This constraint had only a marginal effect because inelasticity requirements suppress events with large hadronic activity in the FCAL.
 
-\subsection{Track multiplicity}
+\subsection{Track Multiplicity}
 \label{subsec:trackmultcut}
 The residual beam-gas contamination was minimised by requiring the presence of at least one track, which crossed a minimum of three CTD superlayers and had transverse momentum $p_T>0.2\;\GeV$. It was found that this cut had only a minor effect on the signal acceptance, as expected, since events with jets composed solely of neutral particles are very unlikely.
 
-\subsection{Phase space}
+\subsection{Phase Space}
 \label{subsec:phasespace}
 Phase-space cuts are performed to select the kinematic region of the reaction of interest. As mentioned earlier, two variables completely determine the kinematics of deep inelastic scattering. In this analysis, the exchanged boson virtuality \qsq~and inelasticity \y~were used for the NC DIS phase space definition.
 \begin{itemize}
@@ -247,7 +248,7 @@ Phase-space cuts are performed to select the kinematic region of the reaction of
 	\item \textbf{Inelasticity}, $0.2 < \y_{DA} < 0.6$; the lower cut was imposed to reject events with large hadronic activity in the forward direction for which hadronisation corrections were found to be inaccurate. The upper cut was applied to ensure reliability of the detector acceptance corrections, since the region $\y_{DA} > 0.6$ was poorly described in the MC.
 \end{itemize}
 
-\subsection{Jet selection}
+\subsection{Jet Selection}
 \label{subsec:jetselect}
 In order to identify jets, the \kt~clustering-algorithm in the longitudinally invariant inclusive mode was used. The jet search was performed in the Breit frame, therefore the momentum vectors corresponding to the energy deposits in the CAL were transformed accordingly. 
 %The momentum vectors were constructed from the energy and orientation of the calorimeter-cell centre with respect to the interaction point. By definition the constructed vectors are massless. All cells excluding those corresponding to the electron candidate and satisfying the following requirements were used for the jet reconstruction:
@@ -270,7 +271,7 @@ The purity of the jet sample was enhanced by applying the following jet-cleaning
 	\item jets with low transverse energy in the laboratory frame have large relative energy-scale uncertainty, therefore jets with $\etjetlab < 3\;\GeV$ were excluded.
 \end{itemize}
 
-\section{Final event sample}
+\section{Final Event Sample}
 \label{sec:eventsampletab}
 Summarising, the imposed requirements restrict the kinematic phase space of the measurements to
 \begin{gather}
