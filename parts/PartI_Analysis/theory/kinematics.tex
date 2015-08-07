@@ -10,7 +10,7 @@ where the symbol in brackets indicates the momentum of the particle and $X$ deno
 	\caption{The leading order Feynman diagram for the deep inelastic scattering process.}
 	\label{fig:DISgraph}
 \end{figure}
-At leading order, the interaction between lepton and hadron is mediated by electroweak bosons. For virtual $\gamma$ or $\zn$ exchange, the process is called Neutral Current (NC) DIS, while for $W^\pm$ exchange the process is called Charged Current (CC) DIS. At \hera the CC DIS process is characterised by the transformation of the initial-state electron (positron) into a final-state (anti-) neutrino. The leading-order Feynman diagram for this process is illustrated in Figure~\ref{fig:DISgraph}.
+At leading order, the interaction between lepton and hadron is mediated by electroweak bosons. For virtual $\gamma$ or $\zn$ exchange, the process is called Neutral Current (NC) DIS, while for $W^\pm$ exchange the process is called Charged Current (CC) DIS. At \hera the CC DIS process is characterised by the transformation of the initial-state electron (positron) into a final-state (anti-) neutrino. The leading-order Feynman diagram for the NC and CC process is illustrated in Figure~\ref{fig:DISgraph}.
 
 Because of the fixed centre-of-mass energy, 
 \begin{equation}
@@ -23,7 +23,7 @@ two independent Lorentz-invariant scalar variables are sufficient to describe th
 		 y &= \frac{p\cdot q}{p\cdot k},
 \label{eq:vardefinit}
 \end{align}
-where \qsq\, is the negative square of the four-momentum transfer or the virtuality of the exchange boson. Two kinematic regions are formally distinguished at \hera: $\qsq < 1\GeV^2$, typically $\qsq \approx 0$, called the photoproduction region; $\qsq > 1 \GeV^2$, called the deep inelastic scattering regime. The scaling variable, $x$, introduced by Bjorken~\cite{Bjorken:1968dy}, in the Quark-Parton Model~\cite{Feynman:1969ej,Feynman:1973xc} can be interpreted as the longitudinal momentum fraction of the parton inside the proton that takes part in the hard scattering. The variable $y$ represents the fraction of the lepton energy transferred to the hadron in the hadron rest frame. When electron and proton masses are ignored, the following equation relating the introduced variables holds:
+where \qsq\, is the negative square of the four-momentum transfer or the virtuality of the exchange boson. Two kinematic regions are formally distinguished at \hera: $\qsq < 1\GeV^2$, typically $\qsq \approx 0$, called the photoproduction region; $\qsq > 1 \GeV^2$, called the deep inelastic scattering regime\footnote{Formally, the deep inelastic scattering regime is achieved when $\Lambda_\text{QCD}^2/\qsq \rightarrow 0$. The exact boundary between the photoproduction and deep inelastic scattering defined by $\qsq = 1\;\GeV^2$ is the conventional.}. The scaling variable, $x$, introduced by Bjorken~\cite{Bjorken:1968dy}, in the Quark-Parton Model (QPM)~\cite{Feynman:1969ej,Feynman:1973xc} can be interpreted as the longitudinal momentum fraction of the parton inside the proton that takes part in the hard scattering. The variable $y$ represents the fraction of the lepton energy carried by the gauge boson in the hadron rest frame. When electron and proton masses are ignored, the following equation relating the introduced variables holds:
 \begin{equation}
 \qsq = sxy.
 \label{eq:qsxy}
@@ -34,16 +34,30 @@ Choosing $\qsq$ and $x$ as independent variables, the deep inelastic scattering 
 \frac{d^2\sigma\left( e^\pm p \right) }{dxd\qsq} = \frac{4\pi\alpha^2}{xQ^4}\left[ Y_+F_2\left(x,\qsq\right) - y^2F_L\left(x,\qsq\right) \mp Y_-xF_3\left(x,\qsq\right) \right],
 \label{eq:ddifDIS}
 \end{equation}
-where $\alpha$ is the fine-structure constant and $Y_\pm = 1 \pm \left( 1 - y \right)^2$. The dominant contribution to the scattering cross section is given by $F_2\left(x,\qsq\right)$, which in the Quark-Parton model is directly related to the quark content of the proton:
+where $\alpha$ is the fine-structure constant and $Y_\pm = 1 \pm \left( 1 - y \right)^2$. The dominant contribution to the scattering cross section is given by $F_2\left(x,\qsq\right)$, which in the QPM is directly related to the quark content of the proton:
 \begin{equation}
 F_2\left(x\right) = \sum_i{e_i^2xf_i\left(x\right)}.
 \label{eq:f2pdf}
 \end{equation}
-In this equation $e_i$ is a fractional charge of the quark and $f_i\left(x\right)$ is the proton parton density function (PDF) describing the density of quarks of different flavours in the nucleon. The longitudinal structure function, $F_L\left(x,\qsq\right)$, has significant contribution to the cross section only at high values of $y$ and can be related to the cross section, $\sigma_L$, for the absorption of the longitudinally polarised virtual photons:
+In this equation $e_i$ is the fractional charge of the quark and $f_i\left(x\right)$ is the proton parton density function (PDF) describing the density of quarks of different flavours in the nucleon. The state-of-the-art extraction of the proton PDFs from the combined deep inelastic scattering data from \hera is show in Figure~\ref{fig:d15-039f23}. The valence quark distributions $xu_v$ and $xd_v$ have a peak at $x\approx 0.1$ which approximately corresponds to the QPM expectations. However, when the proton is examined by the high-energy probe, its dominating gluon and sea quark\footnote{Sea quarks arise from the vacuum fluctuations of QCD fields (see Section~\ref{sec:qcd})} content is revealed.
+\begin{figure}[t!]
+	\centering
+		\includegraphics[width=0.7\textwidth]{Figures/HERAPDF20/d15-039f23}
+	\caption{The parton distribution functions $xu_v$, $xd_v$, $xS=2x\left(\bar{U}+\bar{D}\right)$ and $xg$ of HERAPDF2.0 NNLO. The gluon and sea distributions are scaled for better visibility. The plot is taken from~\protect\cite{Abramowicz:2015mha}.}
+	\label{fig:d15-039f23}
+\end{figure}
+
+The longitudinal structure function, $F_L\left(x,\qsq\right)$, has significant contribution to the cross section only at high values of $y$ and can be related to the cross section, $\sigma_L$, for the absorption of longitudinally polarised virtual photons:
 \begin{equation}
 F_L = \frac{Q^2}{4\pi^2\alpha}\cdot \sigma_L.
 \label{eq:sigmal}
 \end{equation}
-The structure function $F_3\left(x,\qsq\right)$ arises from \zn-exchange and $\gamma\zn$-interference and has significant size only for $\qsq \gtrsim M^2_Z$ because processes induced by \zn interaction are suppressed by the mass of the \zn-boson.
+The structure function $F_3\left(x,\qsq\right)$ arises from \zn-exchange and $\gamma\zn$-interference and has significant size only for $\qsq \gtrsim \dfrac{1}{2}M^2_Z$ because processes induced by \zn interaction are suppressed by the mass of the \zn-boson. The Figure~\ref{d15-039f74} shows the \dsdqsq cross sections for NC and CC $e^-p$ and $e^+p$ reactions at \hera. The difference between the $e^-p$ and $e^+p$ NC DIS cross section is clearly visible.
+\begin{figure}[t!]
+	\centering
+		\includegraphics[width=0.7\textwidth]{Figures/HERAPDF20/d15-039f74}
+	\caption{The combined \hera NC and CC $e^-p$ and $e^+p$ cross sections, \dsdqsq together with theoretical predictions. The plot is taken from~\protect\cite{Abramowicz:2015mha}.}
+	\label{d15-039f74}
+\end{figure}
 
 According to the factorisation theorem (see Section~\ref{subsec:factorisation}), the proton PDFs are universal and independent of the process under consideration. Currently, PDFs cannot be predicted reliably from first principles and have to be determined by experiment. The measurement of the inclusive DIS cross section at \hera provides direct access to the proton PDFs. Investigation of various sub-processes contributing to the inclusive DIS cross section can help to understand the details of the hard scattering process.
