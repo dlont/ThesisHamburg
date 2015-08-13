@@ -1,7 +1,7 @@
 As described in Section~\ref{sec:kindis}, deep inelastic scattering at \hera can be characterised by two independent variables, for example, $\qsq$ and $\y$. The values of the kinematic variables can be determined from the components of the four-momenta of the scattered electron or the hadronic system or from the combination of the two. Below the different approaches for the measurement of the DIS kinematics are described.
 \subsection{Electron Method}
 \label{subsec:em}
-The electron method utilises the energy, \eefin, and the polar angle, \thetae, of the scattered electron only\footnote{It is assumed that the electron does not undergo initial- and/or final-state radiation that effectively reduces the electron energy.}. The kinematic quantities characterising an event are given by the following expressions:
+The electron method utilises the energy, \eefin, and the polar angle, \thetae, of the scattered electron only\footnote{It is assumed that the electron does not undergo initial- and/or final-state radiation that effectively reduces the electron energy.}. The kinematic quantities characterising an event are given by the following expressions (see Section~\ref{sec:kindis}):
 \begin{align}
 	Q^2_\text{el} &= 2 E_e E_e' \left( 1 + \cos \theta_e \right),			\label{eq:q2el}							\\
 	y_\text{el}      &= 1 - \frac{E_e'}{2 E_e}\left( 1 - \cos \theta_e \right),			\label{eq:yel} \\
@@ -15,7 +15,7 @@ Transverse momentum conservation and the almost complete hermiticity of the \zeu
 	y_\text{JB}      &= \frac{\sum{ \left( E - P_{Z} \right) }}{2E_e},			\label{eq:ybj} \\
 	Q^2_\text{JB} &= \frac{ \left( \sum{P_{X}} \right)^2 + \left( \sum{P_{Y}} \right)^2 }{1-y_{JB}},			\label{eq:q2jb}							\\
 	x_\text{JB}      &= \frac{Q^2_\text{JB}}{s y_\text{JB}}.			\label{eq:xjb}
-\end{align}\marginpar{OB:Needs derivation of the formulas.\\DL:I think it is unnecessary because can lookup by reference.}
+\end{align}
 The sum in these expressions runs over the reconstructed final-state objects (see above) excluding those belonging to the scattered electron. It is assumed that the target remnants escaping the detector volume have small transverse momentum and are therefore suppressed in the expressions. The accuracy of this method is limited by the hadron-calorimeter energy resolution, the presence of dead material and backsplash/backscattering in the calorimeter. Since this method does not require the detection of the scattered electron, it is the only choice for photoproduction events\footnote{In photoproduction events the electron is scattered at small angles and escapes detection in the beam pipe.}.
 \subsection{Double-Angle Method}
 \label{subsec:da}
@@ -38,7 +38,7 @@ Using these relations an expression for the energy of the scattered electron can
 \begin{equation}
 E_\text{el}^\text{DA} = \frac{2E_e \sin \gamma_\text{had}}{\sin \gamma_\text{had} - \sin \theta_e - \sin \left( \gamma_\text{had} + \theta_e \right)}.
 \label{eq:eeda}
-\end{equation}\marginpar{OB:Needs derivation of the formulas, again.\\DL:I think it is unnecessary because can lookup by reference.}
+\end{equation}
 
  The measurements of the scattering angles usually have better resolution and are approximately independent of the absolute energy-scale of the calorimeter. It has been shown in~\cite{thesis:behr:2010} that this method is optimal in the phase space of this measurement and therefore this was used as a default in this analysis.
 

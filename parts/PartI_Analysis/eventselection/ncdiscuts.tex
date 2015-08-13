@@ -58,8 +58,6 @@ In contrast to the proton-gas collisions, the rate of the electron beam interact
 	\label{fig:cosmiceventdisplay}
 \end{figure}
 
-\marginpar{OB:Was backing calorimeter introduced?}
-
 \begin{figure}[htbp!]
 	\centering
 	\includegraphics[width=\textwidth]{./Figures/event_display_54019_64617_beamhalo_overlay1} 
@@ -71,7 +69,7 @@ Additional sources of background come from cosmic and beam-halo muons. Cosmic mu
 
 In contrast to cosmic rays, beam-halo muons (see Figure~\ref{fig:beamhaloeventdisplay}), emerge from decays of pions produced in beam-gas interactions upstream of the detector and travel parallel to the beam axis, therefore the time difference between the signals in the RCAL and FCAL can be used to eliminate such processes, similarly to beam-gas interactions described above. 
 
-Moreover, cosmic and beam-halo events have non-zero total transverse momentum due to asymmetry of the energy deposits in the transverse plane. This information can also be used for the suppression of these background contributions. \marginpar{OB:Make a statement about final contribution from cosmics and beam halo.DL:I think I have it at the end.}
+Moreover, cosmic and beam-halo events have non-zero total transverse momentum due to asymmetry of the energy deposits in the transverse plane. This information can also be used for the suppression of these background contributions. \marginpar{OB:Make a statement about final contribution from cosmics and beam halo.DL:I think I have it at the end.\ding{52}}
 
 \subsection{QED Compton scattering}
 The reactions of the type $ep \rightarrow e' \gamma p'$ or $ep \rightarrow e'\gamma X$ in which the initial or the final-state electron radiates a high-energy photon are called elastic and inelastic QED Compton (QEDC) scattering, respectively. In case of inelastic reaction the proton breaks up resulting in hadronic activity in the forward direction while in elastic processes the proton escapes down the beam pipe staying intact. 
@@ -82,7 +80,7 @@ The reactions of the type $ep \rightarrow e' \gamma p'$ or $ep \rightarrow e'\ga
 	\label{fig:qedceventdisplay}
 \end{figure}
 
-QEDC events can be misidentified as high-\qsq~NC DIS processes when the electromagnetic cluster from the photon is wrongly reconstructed as the final-state electron that leads to incorrect determination of event kinematics. The characteristic features of such events are the presence of two isolated electromagnetic energy deposits in the calorimeter with approximately equal transverse momentum and low or vanishing hadronic activity in the FCAL (see Figure~\ref{fig:qedceventdisplay}). As was demonstrated in the study~\cite{thesis:moritz:2001} inelastic QEDC processes are well described by the \djangoh MC\marginpar{OB:reference is missing to \djangoh.\\DL:Is it really needed? There is a general reference in theory chapter.} while elastic scattering is not well reproduced. Therefore such events have to be removed from the data sample by imposing dedicated cuts (see below).
+QEDC events can be misidentified as high-\qsq~NC DIS processes when the electromagnetic cluster from the photon is wrongly reconstructed as the final-state electron that leads to incorrect determination of event kinematics. The characteristic features of such events are the presence of two isolated electromagnetic energy deposits in the calorimeter with approximately equal transverse momentum and low or vanishing hadronic activity in the FCAL (see Figure~\ref{fig:qedceventdisplay}). As was demonstrated in the study~\cite{thesis:moritz:2001} inelastic QEDC processes are well described by the \djangoh MC~\cite{cpc:81:381} while elastic scattering is not well reproduced. Therefore such events have to be removed from the data sample by imposing dedicated cuts (see below).
 
 \section{Event Selection}
 The pre-selection of the NC DIS events relevant for the analysis starts naturally during the data-taking phase when the the \zeus trigger system is used. Only those events for which a positive trigger decision was taken are stored on tape and can be further analysed offline. In the following sections general information about analysed data and MC samples as well as selection criteria applied to event samples are described.
@@ -105,7 +103,7 @@ This analysis was performed using the data recorded during the 2004 -- 2007 \her
 	\label{tab:selecteddatasample}
 \end{table}
 
-Monte Carlo simulated events were used for the estimation of detector effects and the size of various contributions not accounted for in the perturbative QCD calculations (see Chapters~\ref{ch:unfolding},~\ref{ch:resultscs}). The MC events for the mentioned data-taking periods were generated separately taking varying experimental conditions into account. The program packages \lepto and \ariadne\marginpar{OB:Wants reference for \lepto and \ariadne here.\\DL:same comment as for \djangoh. There are refs in theory chapter.}, described in Section~\ref{sec:mcmodels} were utilised for this purpose. In total, about 32 million NC DIS events with $\qsq > 100\;\GeV^2$ were generated, leading to statistical uncertainty in the MC distributions smaller than 1\% across the measured phase space. 
+Monte Carlo simulated events were used for the estimation of detector effects and the size of various contributions not accounted for in the perturbative QCD calculations (see Chapters~\ref{ch:unfolding},~\ref{ch:resultscs}). The MC events for the mentioned data-taking periods were generated separately taking varying experimental conditions into account. The program packages \lepto~\cite{Ingelman:1996mq} and \ariadne~\cite{cpc:71:15,Lonnblad:1994wk}, described in Section~\ref{sec:mcmodels} were utilised for this purpose. In total, about 32 million NC DIS events with $\qsq > 100\;\GeV^2$ were generated, leading to statistical uncertainty in the MC distributions smaller than 1\% across the measured phase space. 
 
 Additional samples of photoproduction events with $\qsq\approx 0~\GeV^2$ generated using \herwig~\cite{cpc:67:465, jhep01:2001:010} and \pythia~\cite{cpc:82:74} programs were also used. These samples were utilised in the jet-photoproduction analysis~\cite{np:b864:1} for the estimation of detector effects. Another sample of simulated events that almost fills the gap in \qsq between the photoproduction and high-\qsq regions was taken from the analysis of~\cite{thesis:perrey:2011} and covers the interval $4~\GeV<\qsq<100~\GeV$. The photoproduction and low-\qsq MC samples were used for the estimation of background contribution (see below).
 
@@ -135,7 +133,7 @@ The SLT bits DIS01, 04, 07 were used in the analysis. Besides the required FLT b
 
 \subsection{TLT Trigger}
 \label{subsec:tltcuts}
-The final stage of the trigger selection was based on the identification of the scattered DIS electron. The reduced read-out rate at the TLT allowed application of the complex reconstruction algorithms much more closely related to those used in the offline analysis. The TLT bit \textsf{DIS03} together with DST bit 12 imposing loose cuts on the electron candidate were used in the selection chain and are summarised in the Table~\ref{tab:TLTDSTreq}.
+The final stage of the trigger selection was based on the identification of the scattered DIS electron. The reduced read-out rate at the TLT allowed application of the complex reconstruction algorithms much more closely related to those used in the offline analysis. The TLT bit \textsf{DIS03} together with DST bit 12 imposing loose cuts on the electron candidate were used in the selection chain and are summarised in the Table~\ref{tab:TLTDSTreq}, where  $E'_{el}$ denotes the energy of the scattered electron candidate and $R_{el}^{CAL}$ denotes the distance of the centre-of-gravity of the electron cluster to the beam-line in the $XY$ plane.
 \begin{table}[ht!]
 \centering
 \begin{tabular}{c|c}
@@ -204,7 +202,7 @@ The lower value was chosen in order to reject photoproduction and beam-gas event
 
 \subsection{Transverse Momentum Balance}
 \label{subsec:empzcut}
-Due to finite resolution, the total transverse momentum of an NC DIS event may be greater that zero. The energy resolution of the calorimeter scales approximately as $1/\sqrt{E}$. In order to suppress beam-gas-related, cosmic-ray and charged current processes with a misidentified electron, the following ratio was required to be small:
+Due to finite resolution, the total transverse momentum of an NC DIS event may be greater that zero. The energy resolution of the calorimeter scales approximately as $1/\sqrt{E}$. In order to suppress beam-gas-related, cosmic-ray and charged current processes (see Section~\ref{sec:kindis}) with a misidentified electron, the following ratio was required to be small:
 \begin{equation}
 \frac{p_T}{\sqrt{E_T}} < 2.5\;\sqrt{\GeV}.
 \label{eq:ptcut}
@@ -306,7 +304,7 @@ The primary vertex distribution (Figures~\ref{fig:cp_lepto}\subref{fig:cplep_sub
 
 In general, the observed distributions are very well described by the Monte Carlo simulations when all corrections and reweightings (see Chapter~\ref{ch:calibcorr}) are applied to the data and MC, thus verifying the accuracy of the determination of the detector acceptance (Section~\ref{sec:acccor}) and systematic effects (Section~\ref{subsec:systunc}) using the MC samples.
 
-The residual background contribution from beam-gas interactions was estimated by applying the described selection procedure to events with a proton bunch crossing only. In this pilot-bunch sample, only a small number of events persisted after the selection. The visual inspection of such collisions revealed that selected events were typical NC DIS reactions with hard hadronic jets. It was concluded that for some runs the bunch crossing number was set incorrectly during the data-taking\footnote{No bunch crossing number requirements were applied for selections of the final sample.}.
+The residual background contribution from beam-gas interactions was estimated by applying the described selection procedure to events with a proton bunch crossing only. In this pilot-bunch sample, only a small number of events persisted after the selection. The visual inspection of such collisions revealed that selected events were typical NC DIS reactions with hard hadronic jets. It was concluded that for some runs the bunch crossing number was set incorrectly during the data-taking\footnote{No bunch crossing number requirements were applied for selections of the final sample.}. Similarly, full off-line selection chain was applied to events identified at the trigger level as cosmic. No events from this sample survived final selection, thus the conclusion, that the background due to cosmic showers can be neglected, was drawn.
 
 The photoproduction and low-\qsq NC DIS contamination was investigated utilising MC samples prepared for dedicated studies of jet production at low and very low exchanged boson virtualities. The estimated contribution of these events to the final jet sample is illustrated in Figure~\ref{fig:cp_bg}. The photoproduction component estimate varies by a factor of two depending on the generator used. The \pythia MC predicts a cross section approximately twice as large as that given by \herwig for the kinematic region $\qsq < 1~\GeV^2$. Due to the steeply falling nature of the \qsq distribution, the NC DIS cross section obtained using \lepto for a much wider region $4< \qsq < 125~\GeV^2$ appeared to be approximately of the same magnitude as for the $\qsq < 1~\GeV^2$ region. As demonstrated in Figures~\ref{fig:cp_bg}(a, d) the background populates the low-\qsq and low-$E_T$ region of phase space and arises mostly due to incorrect identification of the DIS electron candidate. In total, the contamination from events with $\qsq < 125~\GeV^2$ to the measurement sample amounted to less than 0.2\% and was neglected.
 \input{parts//PartI_Analysis//corrections//controlplots_bg}
