@@ -62,7 +62,7 @@ The original \qsq spectrum (Figure~\ref{fig:q2rewlepto}\subref{fig:q2rew_lep_sub
 
 \subsection{\ariadne Reweighting}
 \label{subsec:ariadneq2rew}
-It was found that reweighting as a function of \qsq~only was insufficient to achieve reasonable agreement between jet spectra in the data and the \ariadne MC; in particular a residual discrepancy in \etjetb~distribution was observed. A direct reweighting as a function of \etjetb~is impossible because, while the jet can be present at the reconstructed level, it can be lost due to, for example, phase-space restrictions at the generator level. Thus, a dedicated simultaneous reweighting as a function of the transverse energy of the hardest jet, $E_{T,B}^{jet1}$, and the process virtuality \qsq~was employed. The reweighting procedure proceeded as follows:
+It was found that reweighting as a function of \qsq~only was insufficient to achieve reasonable agreement between jet spectra in the data and the \ariadne MC; in particular a residual discrepancy in \etjetb~distribution was observed. A direct reweighting as a function of \etjetb~is impossible because, while the jet can be present at the reconstructed level, it can be lost due to, for example, phase-space restrictions at the generator level. Thus, a dedicated simultaneous re\-wei\-ghting as a function of the transverse energy of the hardest jet, $E_{T,B}^{jet1}$, and the process virtuality \qsq~was employed. The reweighting procedure proceeded as follows:
 \begin{itemize}
 	\item the data and MC events were classified according to the jet multiplicity into three categories with one, two and three or more jets, respectively;
 	\item for each category the two dimensional \qsq~vs $E_{T,B}^{jet1}$ distribution in the data and MC was measured; for comparison of the data distributions to the generator level MC to be valid, the data were corrected to the hadron level using the acceptance correction factors as described in Section~\ref{subsec:leptoq2rew}.
@@ -70,7 +70,7 @@ It was found that reweighting as a function of \qsq~only was insufficient to ach
 	\begin{equation}
 		w\left( \qsq, E_{T,B}^{jet1}/ \right)=a_1\,e^{\left( -\alpha E_{T,B}^{jet1}/\GeV\right) }\left(1- e^{\left( -\beta\qsq/\GeV^2\right) } + a_2 E_{T,B}^{jet1}/\GeV \right),
 		\end{equation}
-where $a_i, \alpha, \beta$ are free parameters and $E_{T,B}^{jet1},\,\qsq$ correspond to the generator-level quantities. A 2d-likelihood fit of the shape of the data distribution was performed to determine the free parameters.
+where $a_i, \alpha, \beta$ are free parameters and $E_{T,B}^{jet1},\,\qsq$ correspond to the ge\-ne\-ra\-tor-level quantities. A 2d-likelihood fit of the shape of the data distribution was performed to determine the free parameters.
 \end{itemize}
 The described procedure was iterated until reasonable agreement between data and MC was achieved. Figures~\ref{fig:2dq2rew_q2_1jet} and~\ref{fig:2dq2rew_et_1jet} show the distribution of the exchanged boson virtuality and jet transverse momentum in single-jet events after applying the described reweighting\footnote{The figures for events with higher jet multiplicity can be found in the Appendix.}. As can be seen, after the reweighting the \qsq and \etjetb spectra are very well described by the simulations. The quality of the fits assessed by the value  $\chi^2/N_\text{df}$ is summarised in the Table~\ref{tab:chi2q2ariadnerew}.
 \begin{table}%
