@@ -3,14 +3,16 @@ As was demonstrated in Chapter~\ref{ch:selection}, both MC models after the rewe
 The observed cross section value in particular bin can be regarded as a Gaussian-distributed\footnote{In general, the number of counts in particular bin follow multi-Poisson distribution, as described in Section~\ref{subsec:statcorel}, nevertheless Gaussian approximation can be used in the limit of large number of counts (no bins with less than 55 counts were observed).} random variable $x = \mathcal{N}\left(\mu,w\right)$ with the mean value, $\mu$, provided by the \textit{true} physical cross section and the variance, $w$, given by statistical uncertainty\footnote{Without loss of generality, experimental uncertainty can neglected for simplicity.}. In this context, the Eq.~\eqref{eq:csdef} has to be considered as a definition of a statistical estimator of the true cross section value.
 
 Pull distribution provides valuable information when the properties of an estimator such as bias and efficiency are studied. It is defined as 
+%\vspace{-20pt}
 \begin{equation}
 p=\frac{x-\mu}{w}.
 \label{eq:pulldef}
 \end{equation}
-It follows normal distribution with zero mean and unit variance if an estimator, $x$, is unbiased and its variance is correctly determined. In practice, however, the true cross section value, $\mu$, is unknown and has to be determined. Therefore for investigation of the properties of the employed unfolding approach, pseudo-experiments were preformed. For this purpose, \lepto and \ariadne MC events were split separately in ten equal-size statistical samples. For every sample the true cross section value, provided by the hadron level prediction is know, and pulls can be constructed. For every single differential cross section, the detector level spectra of \lepto and \ariadne samples were unfolded using the acceptance correction factors determined using full \lepto sample\footnote{Small correlation between the acceptance correction factors and detector-level number of counts in \lepto pseudo-experiment samples can be neglected.}. The unfolded cross sections were compared to the corresponding hadron level values. The statistical uncertainty of the detector level cross section was used as an estimate of $w$. The obtained pull distributions for individual cross section bins were added together and presented in Figure~\ref{fig:pulls_sum}. Additional figures with individual pull distributions for all single-differential cross section bins can be found in Appendix.
+%\vspace{-20pt}
+This quantity follows normal distribution with zero mean and unit variance if an estimator, $x$, is unbiased and its variance is correctly determined. In practice, however, the true cross section value, $\mu$, is unknown and has to be determined. Therefore for investigation of the properties of the employed unfolding approach, pseudo-experiments were preformed. For this purpose, \lepto and \ariadne MC events were split separately in ten equal-size statistical samples. For every sample the true cross section value, provided by the hadron level prediction is know, and pulls can be constructed. For every single differential cross section, the detector level spectra of \lepto and \ariadne samples were unfolded using the acceptance correction factors determined using full \lepto sample\footnote{Small correlation between the acceptance correction factors and detector-level number of counts in \lepto pseudo-experiment samples can be neglected.}. The unfolded cross sections were compared to the corresponding hadron level values. The statistical uncertainty of the detector level cross section was used as an estimate of $w$. The obtained pull distributions for individual cross section bins were added together and presented in Figure~\ref{fig:pulls_sum}. Additional figures with individual pull distributions for all single-differential cross section bins can be found in Appendix.
 
 It was observed that the \lepto acceptance correction applied to \lepto pseudo-data provide an unbiased estimate of the hadron-level cross section. However, when the same correction factors applied to \ariadne, non-Gaussian pull distributions with significant bias and non-unit variance were observed, indicating sensitivity of the cross section estimate to the choice of MC model. This effect was taken into account in the systematic uncertainty assessment (see Section~\ref{subsec:systunc}).
-
+\clearpage
 \begin{figure}[p!]
 \begin{center}
 \begin{subfloat}[]{\includegraphics[width=.45\textwidth] {Figures/pulls/Lepto_q2_sum}
@@ -43,3 +45,4 @@ It was observed that the \lepto acceptance correction applied to \lepto pseudo-d
 \label{fig:pulls_sum}
 \end{center}
 \end{figure}
+\clearpage

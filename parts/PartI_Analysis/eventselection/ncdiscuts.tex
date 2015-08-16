@@ -69,7 +69,7 @@ Additional sources of background come from cosmic and beam-halo muons. Cosmic mu
 
 In contrast to cosmic rays, beam-halo muons (see Figure~\ref{fig:beamhaloeventdisplay}), emerge from decays of pions produced in beam-gas interactions upstream of the detector and travel parallel to the beam axis, therefore the time difference between the signals in the RCAL and FCAL can be used to eliminate such processes, similarly to beam-gas interactions described above. 
 
-Moreover, cosmic and beam-halo events have non-zero total transverse momentum due to asymmetry of the energy deposits in the transverse plane. This information can also be used for the suppression of these background contributions. \marginpar{OB:Make a statement about final contribution from cosmics and beam halo.DL:I think I have it at the end.\ding{52}}
+Moreover, cosmic and beam-halo events have non-zero total transverse momentum due to asymmetry of the energy deposits in the transverse plane. This information can also be used for the suppression of these background contributions.
 
 \subsection{QED Compton scattering}
 The reactions of the type $ep \rightarrow e' \gamma p'$ or $ep \rightarrow e'\gamma X$ in which the initial or the final-state electron radiates a high-energy photon are called elastic and inelastic QED Compton (QEDC) scattering, respectively. In case of inelastic reaction the proton breaks up resulting in hadronic activity in the forward direction while in elastic processes the proton escapes down the beam pipe staying intact. 
@@ -94,9 +94,9 @@ This analysis was performed using the data recorded during the 2004 -- 2007 \her
 		  \hline
 			Period & Integrated Luminosity \\
 			\hline \hline
-			2004 -- 2005  & 133.6 \invpb  \\
-			2006             & 53.0 \invpb   \\
-			2006 -- 2007  & 108.5 \invpb \\
+			2004 -- 2005 $e^-$ & 133.6 \invpb  \T\B\\
+			2006            $e^-$ & 53.0 \invpb   \T\B\\
+			2006 -- 2007 $e^+$ & 108.5 \invpb \T\B\\
 			\hline
 		\end{tabular}
 	\caption{Luminosity values for the final data samples used for the jet cross section measurements.}
@@ -137,9 +137,9 @@ The final stage of the trigger selection was based on the identification of the 
 \begin{table}[ht!]
 \centering
 \begin{tabular}{c|c}
-\hline scattered electron energy & $E'_{el}>4\,\GeV$ \\ 
-\hline \pbox{6cm}{distance from the origin of the \\ coordinate system}  & $R_{el}^{CAL}>35\,\cm$ \\ 
-\hline longitudinal momentum balance & $30<E-p_Z<100\,\GeV$\\
+\hline scattered electron energy & $E'_{el}>4\,\GeV$ \T\B\\ 
+\hline \pbox{6cm}{distance from the origin of the \\ coordinate system}  & $R_{el}^{CAL}>35\,\cm$ \T\B\\ 
+\hline longitudinal momentum balance & $30<E-p_Z<100\,\GeV$\T\B\\
 \hline 
 \end{tabular} 
 \caption{The requirements imposed on the events at the TLT.}
@@ -148,7 +148,7 @@ The final stage of the trigger selection was based on the identification of the 
 
 \section{Offline Selection}
 \label{sec:offlineselect}
-The trigger-level event selection cannot fulfill the signal-to-background discrimination requirements necessary for precision analysis because of limited processing time and significant complexity of the reconstruction algorithms for the objects such as secondary vertices, particle decays or jets. In addition, information about detector operating conditions such as the number of dead channels, changes in high voltage, CTD gas pressure, temperature, etc. are difficult or impossible to take into account at the trigger level. Thus, after the trigger-based pre-selection, a set of cuts is applied offline to ensure a low level of background and a high signal purity of the selected sample. Additional requirements are typically imposed on a data sample to restrict the phase space of the measurement to a region of well understood detector acceptance and efficiency.
+The trigger-level event selection cannot fulfil the signal-to-background discrimination requirements necessary for precision analysis because of limited processing time and significant complexity of the reconstruction algorithms for the objects such as secondary vertices, particle decays or jets. In addition, information about detector operating conditions such as the number of dead channels, changes in high voltage, CTD gas pressure, temperature, etc. are difficult or impossible to take into account at the trigger level. Thus, after the trigger-based pre-selection, a set of cuts is applied offline to ensure a low level of background and a high signal purity of the selected sample. Additional requirements are typically imposed on a data sample to restrict the phase space of the measurement to a region of well understood detector acceptance and efficiency.
 
 \subsection{Data-Quality Requirements.}
 The offline selection starts with removing runs with inappropriate detector operation. For this purpose during the data-taking the functioning of the detector components was continuously monitored. The status of each of component was stored for every run in the so-called, ``EVTAKE'' flag. In this analysis EVTAKE=1 was required, indicating that all main detector components e.g. CTD, MVD, CAL were fully operational.
@@ -175,7 +175,7 @@ The next key step in the selection procedure is the electron-based identificatio
 
 \subsection{Primary Vertex Selection}
 \label{subsec:vtxselect}
-Proper identification of the interaction point is important for the reconstruction of the kinematic variables. The longitudinal extent of the interaction region is determined by the length of the interacting bunches and the time structure of the beam. Beam-gas or cosmic-ray events are approximately evenly distributed along the longitudinal coordinate, while \ep\, events appear with higher rate in the vicinity of the nominal beam-beam interaction point. The distribution of the longitudinal component of the position of the primary vertex has a Gaussian-like shape (see Section~\ref{sec:zvtxrew}). Selecting the events with the primary interaction vertex fit satisfying $\chi^2 < 10$\marginpar{OB:explain $\chi^2$.\\DL:has to clarify.} and $Z_\text{vtx}$ being within $\sim \pm 3\sigma$ of the width of the distributions suppresses the non-physics background contribution and ensures good understanding of the dependence of the acceptance of the calorimeter and tracking systems on the position of the interaction vertex. The mean value and the width of the $Z_\text{vtx}$ changes between different data-taking periods. The final restrictions imposed on $Z_\text{vtx}$ are detailed in Table~\ref{tab:zvxcut}.
+Proper identification of the interaction point is important for the reconstruction of the kinematic variables. The longitudinal extent of the interaction region is determined by the length of the interacting bunches and the time structure of the beam. Beam-gas or cosmic-ray events are approximately evenly distributed along the longitudinal coordinate, while \ep\, events appear with higher rate in the vicinity of the nominal beam-beam interaction point. The distribution of the longitudinal component of the position of the primary vertex has a Gaussian-like shape (see Section~\ref{sec:zvtxrew}). Selecting the events with the primary interaction vertex fit satisfying $\chi^2 < 10$ and $Z_\text{vtx}$ being within $\sim \pm 3\sigma$ of the width of the distributions suppresses the non-physics background contribution and ensures good understanding of the dependence of the acceptance of the calorimeter and tracking systems on the position of the interaction vertex. The mean value and the width of the $Z_\text{vtx}$ changes between different data-taking periods. The final restrictions imposed on $Z_\text{vtx}$ are detailed in Table~\ref{tab:zvxcut}.
 \begin{table}[htbp]
 	\centering
 		\begin{tabular}{|c|c|}
