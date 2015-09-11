@@ -1,4 +1,4 @@
-The energy of hadronic jets reconstructed from energy deposits in the calorimeter is influenced by various effects e.g. particle absorption in uninstrumented material between the production point and the calorimeter, inhomogeneities of the detector, noise etc. Hadron jets in the \zeus detector typically loose 5-15\% of their energy in inactive media (superconducting solenoid, support structures etc.) in front of the calorimeter. This effect may lead to systematic migrations of jets to cross section bins with lower energy. In principle, such effects must be taken into account in the unfolding procedure (see Chapter~\ref{ch:unfolding}). Nevertheless, in order to minimise migrations and to avoid a possible bias from the energy loss in inactive detector media, a dedicated jet-energy correction was employed in this analysis.
+The energy of hadronic jets reconstructed from energy deposits in the calorimeter is influenced by various effects e.g. particle absorption in uninstrumented material between the production point and the calorimeter, inhomogeneities of the detector, noise etc. Hadron jets in the \zeus detector typically loose 5-15\% of their energy in inactive media (superconducting solenoid, support structures etc.) in front of the calorimeter. This effect may lead to systematic migrations of jets to cross-section bins with lower energy. In principle, such effects must be taken into account in the unfolding procedure (see Chapter~\ref{ch:unfolding}). Nevertheless, in order to minimise migrations and to avoid a possible bias from the energy loss in inactive detector media, a dedicated jet-energy correction was employed in this analysis.
 
 Two approaches for correcting the jet energy loss exist:
 \begin{itemize}
@@ -15,7 +15,7 @@ The procedure was as follows:
 \begin{equation}
 r=\sqrt{\left[\left(\eta_{had}-\eta_{det}\right)^2 + \left(\phi_{had}-\phi_{det}\right)^2\right]}
 \end{equation}
-between the two was small, $r<0.7$, and no further jets were reconstructed within the cone
+between the two was small, $r<0.7$, and no further jets were reconstructed within the cone.
 %\marginpar{OB:Would that be possible (Rcut <1).\\DL:I think, yes, because jets have irregular shape and R=1 is a maximum radius.}. 
 In order to avoid any bias on the correction procedure introduced by the boundaries of the jet phase space, the cuts on the jet transverse energy were relaxed to $\etjetbhad>6\;\GeV$ and $\etjetbdet>3\;\GeV$ at the hadron and detector levels, respectively;
  \item in each bin $i$ of $\etajetlab$, a linear fit $\left\langle\etjetbdet\right\rangle = a_i + b_i\cdot\left\langle\etjetbhad\right\rangle$ was performed, where $\left\langle\etjetbdet\right\rangle$ and $\left\langle\etjetbhad\right\rangle$ were determined using the set of matched jets; the fits for the 2004--2005~$e^-$ running period are illustrated in Figure~\ref{fig:05e_lepto_coeffitients};

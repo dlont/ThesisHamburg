@@ -11,7 +11,7 @@
 	%\item Discussion of statistical correlations. Conclusions. Reference to \as extraction
 %\end{itemize}
 
-In counting experiments, the statistical uncertainty is typically assumed to follow a Poisson distribution. However is the case, of inclusive jet production, in which every jet is counted, such an assumption is incorrect because jets appear in pairs or with even higher multiplicity. Thus, the occurrence of jets is not a Poisson process. However, taking into account that the number of \textit{events} with a given jet multiplicity accumulated during a fixed time interval is indeed Poisson distributed, it was demonstrated~\cite{upub:juanstatcorrel} that the probability of observing $n$ jets in a given bin of a jet cross section\footnote{It is assumed that all jets in event are assigned to the same bin, as for example, in \qsq distribution.} is given by the multi-Poisson:
+In counting experiments, the statistical uncertainty is typically assumed to follow a Poisson distribution. However in the case of inclusive jet production, in which every jet is counted, such an assumption is incorrect because jets appear in pairs or with even higher multiplicity. Thus, the occurrence of jets is not a Poisson process. However, taking into account that the number of \textit{events} with a given jet multiplicity accumulated during a fixed time interval is indeed Poisson distributed, it was demonstrated~\cite{upub:juanstatcorrel} that the probability of observing $n$ jets in a given bin of a jet cross section\footnote{It is assumed that all jets in event are assigned to the same bin, as for example, in \qsq distribution.} is given by the multi-Poisson:
 \begin{equation}
 P\left(n_1, n_2, n_3, \ldots \right) = \prod_i{ e^{-\lambda_i} \cdot \frac{\lambda_1^{n_i}}{n_i!} },
 \label{eq:multipoissonqsq}
@@ -29,7 +29,7 @@ Substituting the expression for $P\left(n_1, n_2, n_3, \ldots \right)$, the mean
   \left\langle n \right \rangle &= \lambda_1 + 2\cdot\lambda_2 + 3\cdot\lambda_3 + \ldots\\
 	\left\langle n^2 \right \rangle - \left( \left\langle n \right \rangle \right)^2 &= \lambda_1 + 4\cdot\lambda_2 + 9\cdot\lambda_3 +\ldots
 \end{align}
-Since the expectation values $\lambda_i$ are not known, the number of observed events with a given jet multiplicity were used as an estimator. Thus, the statistical uncertainty in this analysis was calculated according to the following expression:
+Since the expectation values $\lambda_i$ are not known, the number of observed events with a given jet multiplicity was used as an estimator. Thus, the statistical uncertainty in this analysis was calculated according to the following expression:
 \begin{equation}
 \sigma_\text{stat} = \sqrt{N_1+4\cdot N_2 + 9\cdot N_3 + \ldots},
 \end{equation}
@@ -67,6 +67,6 @@ The resulting correlation values for different bins of the \dsdetjetb cross sect
 \begin{figure}
 	\centering
 		\includegraphics[width=\textwidth,angle=-90]{Figures/stat_correl/inclusive_correl}
-	\caption{Correlation matrix for double differential inclusive-jet cross section as a function of \etjetb in different regions of \qsq}
+	\caption{Correlation matrix for double-differential inclusive-jet cross section as a function of \etjetb in different regions of \qsq}
 	\label{fig:correlmatrix}
 \end{figure}
