@@ -1,16 +1,3 @@
-%\setstcolor{blue}
-%\begin{itemize}	\itemsep-5pt \parskip0pt
-	%\item \st{Multiple-jet production is not a Poisson flow (Definition of a Poisson flow)}
-	%\item \st{Model for inclusive-jet production statistics (Multi-Poisson distribution) [reference to unpublished Juan's paper]}
-		%\begin{itemize} \itemsep-5pt \parskip0pt
-			%\item \st{model for \qsq}
-			%\item \st{model for \etjet}
-		%\end{itemize}
-  %\item \st{Derivation of statistical correlations}
-	%\item \st{Statistical correlation figure}
-	%\item Discussion of statistical correlations. Conclusions. Reference to \as extraction
-%\end{itemize}
-
 In counting experiments, the statistical uncertainty is typically assumed to follow a Poisson distribution. However in the case of inclusive jet production, in which every jet is counted, such an assumption is incorrect because jets appear in pairs or with even higher multiplicity. Thus, the occurrence of jets is not a Poisson process. However, taking into account that the number of \textit{events} with a given jet multiplicity accumulated during a fixed time interval is indeed Poisson distributed, it was demonstrated~\cite{upub:juanstatcorrel} that the probability of observing $n$ jets in a given bin of a jet cross section\footnote{It is assumed that all jets in event are assigned to the same bin, as for example, in \qsq distribution.} is given by the multi-Poisson:
 \begin{equation}
 P\left(n_1, n_2, n_3, \ldots \right) = \prod_i{ e^{-\lambda_i} \cdot \frac{\lambda_1^{n_i}}{n_i!} },
