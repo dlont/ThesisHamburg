@@ -21,7 +21,7 @@ where $\delta_{\text{stat},i}$ is the relative statistical uncertainty determine
  \chi^2 = \sum_i{ \frac{\left( m_i-t_i-\sum_{\mu}{\gamma_{i,\mu} t_i b_\mu} \right)^2 }{ \delta_{\text{stat},i}^2 m_i \left( t_i - \sum_\mu{\gamma_{i,\mu}t_ib_\mu} \right)+ \left( \delta_{i,\text{uncor}}t_i\right)^2 } } + \sum_{\mu}{b_\mu^2},
  \label{eq:chi2uncorr}
 \end{equation}
-with $\delta_{i,\text{uncor}}$ denoting the relative uncorrelated systematic uncertainty of measurement $i$. The last term in this equation represents the penalty for the sys\-te\-ma\-tic-shift parameters. In order to take into account statistical correlations between different data points the $\chi^2$-function can be re-expressed as follows~\cite{Aaron:2009aa}:
+with $\delta_{i,\text{uncor}}$ denoting the relative uncorrelated systematic uncertainty of measurement $i$. The last term in this equation represents the penalty for the sys\-te\-ma\-tic-shift parameters. In order to take into account statistical correlations between different data points the $\chi^2$-function can be re-expressed as follows\footnote{This $\chi^2$ definition is a combination of different representations documented in~\cite{herafitter:2014:manual}. In principle, the absence of bias, possibly introduced in this approach, has to be validated in a dedicated study.}:
 %\begin{equation}
 % \chi^2\left( \mathbf{m},\mathbf{b}\right) = \sum_{i}{\frac{\left[ m^i-\Sigma_j{\gamma^i_jm^ib_j-\mu^i}\right]^2 }{\left( \delta_{i,\text{stat}}\mu^i\right)^2 + \left( \delta_{i,\text{uncor}}\mu^i\right)^2 }} + \sum_{j}{b_j^2}
 % \label{eq:chi2uncor}
