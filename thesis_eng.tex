@@ -186,7 +186,7 @@
 \begin{document}
 
 
-%\frontmatter
+\frontmatter
 \title{Measurement of Jet Production with the ZEUS Detector}
 \author{Denys Lontkovskyi}
 \date{Hamburg\\2014}
@@ -387,14 +387,20 @@ To my family
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
-%%							BIBLIOGRAPHY                     															                           %%
+%%							LOT,LOF,BIBLIOGRAPHY                 											                           %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\backmatter 
+\clearpage
+\addcontentsline{toc}{chapter}{List of Figures}
 \listoffigures
+\cleardoublepage
+\addcontentsline{toc}{chapter}{List of Tables}
 \listoftables
 
  \bibliographystyle{bibliography//BiBTeX//bst//l4z_jhep3}
+\clearpage
+\addcontentsline{toc}{chapter}{Bibliography}
  \bibliography{bibliography//bibliography,bibliography//BiBTeX//bib//l4z_articles,bibliography//BiBTeX//bib//l4z_books,bibliography//BiBTeX//bib//l4z_misc,bibliography//BiBTeX//bib//l4z_preprints,bibliography//BiBTeX//bib//l4z_zeus,bibliography//BiBTeX//bib//l4z_h1,bibliography//BiBTeX//bib//l4z_conferences}
  
  \newpage
