@@ -43,7 +43,6 @@
  \usepackage{pbox}%
 \usepackage{nicefrac}%
  \usepackage{xfrac}%
-
 %\usepackage{axodraw4j}%
 %
 \usepackage{slashed}
@@ -67,9 +66,10 @@
 \numberwithin{equation}{subsection}
 \usepackage{amsfonts}%
 \usepackage{amssymb}%
+\usepackage{pifont}%
 \usepackage{graphicx}%
-\usepackage{wrapfig}
-\usepackage{xcolor}
+\usepackage{wrapfig}%
+\usepackage{xcolor}%
 %
 %\usepackage[multiple]{footmisc}
 \usepackage{cite}
@@ -87,6 +87,8 @@
 %\usepackage{zeusdet_siunitx}
 %\usepackage{zeusdet_hepunits}
 %\usepackage{zeusdet_units}
+
+\usepackage{chngcntr}
 
  \usepackage[linktoc=all]{hyperref}
  \hypersetup{
@@ -158,9 +160,17 @@
 %\setmonofont{DejaVu Sans Mono}  %% задаёт моноширинный шрифт
 %\defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}  %% устанавливает поведение шрифтов по умолчанию
 %----------------------------------------------------------
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
 \usepackage{soul}
 %print line numbers
 %\linenumbers
+
+\setcapindent{0em}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					 %%
@@ -191,6 +201,7 @@
  \input{parts//coverpage}
  \titlePAGE % This command includes the title page
  \newpage
+ \thispagestyle{empty}
  \titelGUTACHTERS
  \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -198,14 +209,29 @@
 %%							             Abstract                                                                    %%
 %%																																																					 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{center}
 \textbf{Abstract}
 \end{center}
 \input{parts//Abstract}
-\hrule
+
+\newpage
+
 \begin{center}
 \textbf{Kurzfassung}
 \end{center}
+\input{parts//AbstractDeu}
+
+\newpage
+\thispagestyle{empty}
+%\begin{dedication}
+\vspace*{8\baselineskip}{%
+\begin{flushright}
+To my family
+\end{flushright}%
+\par}
+%\end{dedication}
+\newpage
 
 \tableofcontents
 %\listoffigures
@@ -228,7 +254,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \chapter{Introduction}
  \label{ch:intro}
- %\input{parts//PartI_Analysis//Intro}
+ \input{parts//PartI_Analysis//Intro}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					 %%
@@ -237,7 +263,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \chapter{Theoretical Framework}
  \label{ch:theory}
- %\input{parts//PartI_Analysis//TheoreticalFramework}
+ \input{parts//PartI_Analysis//TheoreticalFramework}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -246,7 +272,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \chapter{Experimental Setup}
  \label{ch:expsetup}
- %\input{parts//PartI_Analysis//ExperimentalSetup}
+ \input{parts//PartI_Analysis//ExperimentalSetup}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -255,7 +281,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \chapter{Event Reconstruction}
  \label{ch:reconstruction}
- %\input{parts//PartI_Analysis//Reconstruction}
+ \input{parts//PartI_Analysis//Reconstruction}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -264,7 +290,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \chapter{Event Selection}
  \label{ch:selection}
- %\input{parts//PartI_Analysis//Selection}
+ \input{parts//PartI_Analysis//Selection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -273,34 +299,34 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \chapter{Calibrations and Corrections}
  \label{ch:calibcorr}
- %\input{parts//PartI_Analysis//CalibrationsCorrections}
+ \input{parts//PartI_Analysis//CalibrationsCorrections}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
 %%							Chapter 7. Data Unfolding                                                               %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- \chapter{Cross-section determination}
+ \chapter{Cross-Section Determination}
  \label{ch:unfolding}
- %\input{parts//PartI_Analysis//Unfolding}
+ \input{parts//PartI_Analysis//Unfolding}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
 %%							Chapter 8. Results. Inclusive-Jet cross sections                                                                   %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Results. Inclusive-Jet cross sections}
+\chapter{Results. Inclusive-Jet Cross Sections}
 \label{ch:resultscs}
- %\input{parts//PartI_Analysis//Results}
+ \input{parts//PartI_Analysis//Results}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
 %%							Chapter 9. Results. QCD and PDF fits                                                                         %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Results. QCD Analysis of Inclusive-Jet data}
+\chapter{Results. QCD Analysis of Inclusive-Jet Data}
 \label{ch:resultsqcdfit}
-%\input{parts//PartI_Analysis//ResultsQCDfit}
+\input{parts//PartI_Analysis//ResultsQCDfit}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -311,7 +337,7 @@
 \chapter*{Summary and Outlook}
 \label{ch:summary}
 \addcontentsline{toc}{chapter}{Summary and Outlook}
-%\input{parts//PartI_Analysis//JetsSummary}
+\input{parts//PartI_Analysis//JetsSummary}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
@@ -329,30 +355,49 @@
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \backmatter \appendix
- \chapter{Cross section tables}
- \label{ch:cstables}
+ %\backmatter 
+\appendix
+
+ \chapter{Cross Section Tables}
+ \label{app:cstables}
 \vspace{-40pt}
 \input{parts//Appendix//csq2} 
 \vspace{-15pt}
 \input{parts//Appendix//cset}
 \vspace{-15pt}
 \input{parts//Appendix//cseta}
- 
 \clearpage
  \input{parts//Appendix//csetinq2bins}
  \input{parts//Appendix//statcorrelmatrix}
+\clearpage
+\chapter{Running of the Strong Coupling}
+ \label{app:asrunningtable}
  \input{parts/Appendix/asrunning}
+
+ \chapter{Corrections and Reweightings}
+ \label{app:corrrew}
+%\counterwithin{figure}{section}
+ \input{parts//Appendix//correw}
+ \input{parts//Appendix//polrew}
+
+ \chapter{MC Validation}
+\label{app:mcvalidation}
+%\counterwithin{figure}{section}
+ \input{parts//Appendix//mcvalidationapp}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%																																																					       %%
 %%							BIBLIOGRAPHY                     															                           %%
 %%																																																					       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\listoffigures
+\listoftables
+
  \bibliographystyle{bibliography//BiBTeX//bst//l4z_jhep3}
  \bibliography{bibliography//bibliography,bibliography//BiBTeX//bib//l4z_articles,bibliography//BiBTeX//bib//l4z_books,bibliography//BiBTeX//bib//l4z_misc,bibliography//BiBTeX//bib//l4z_preprints,bibliography//BiBTeX//bib//l4z_zeus,bibliography//BiBTeX//bib//l4z_h1,bibliography//BiBTeX//bib//l4z_conferences}
  
- %\newpage
+ \newpage
  %\chapter*{Acknowledgements}
- %\include{parts//Acknowledgements}
+ \input{parts//Acknowledgements}
 \end{document}

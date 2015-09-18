@@ -12,10 +12,10 @@ In what follows a detailed description of the sources of systematic uncertaintie
 	\item \textbf{Hadronic energy scale} \\
 		As demonstrated in Section~\ref{subsec:jetenescale}, the precision to which the absolute jet-energy scale can be calibrated in the data is down to $\pm1\%$ for jets with $\etjetlab > 10\;\GeV$ and, as was found in other jet analysis at \zeus, $\pm3\%$ for jets with $3\,< \etjetlab < 10\,\GeV$. Therefore, to assess the effect of this uncertainty on the cross sections, the jet transverse energy was varied in the MC simulations up and down within the specified limits. Each variation resulted in a single-sided\footnote{As the result of the variation, the measured cross sections in \textit{all} bins increase or decrease simultaneously.} change of the cross sections in all bins with respect to the nominal values. This uncertainty was monotonically decreasing as a function of \qsq, ranging from 5\% at low \qsq~to 3\% in the highest \qsq~bin. As a function of \etjetb, it was approximately constant and did not exceed 7\%.
  \item \textbf{Jet energy resolution} \\
-     In study~\ref{thesis:behr:2010} the description of the jet energy resolution in data and MC simulations was investigated. For this purpose single-jet events were selected and two quantities:
+     In study~\cite{thesis:behr:2010} the description of the jet energy resolution in data and MC simulations was investigated. For this purpose single-jet events were selected and two quantities:
 		\begin{align}
 		\sigma_\mathrm{rel}^\mathrm{DATA} &= \frac{\etjetlab-E_{T,DA}}{E_{T,DA}},\label{eq:dataetres}\\
-		\sigma_\mathrm{rel}^\mathrm{MC} &= \frac{E_{T,lab}^{det,jet}-E_{T,lab}^{had,jet}}{E_{T,lab}^{had,jet}},\label{eq:mcetres}.
+		\sigma_\mathrm{rel}^\mathrm{MC} &= \frac{E_{T,lab}^{det,jet}-E_{T,lab}^{had,jet}}{E_{T,lab}^{had,jet}} \label{eq:mcetres}.
 		\end{align}
 		where $\etjetlab$ is the jet transverse energy in the laboratory frame and $E_{T,DA}$ is the transverse energy of the scattered electron (see Eq.~\eqref{eq:eeda}), while $E_{T,lab}^{det,jet}(E_{T,lab}^{had,jet})$ is the jet transverse energy determined at the reconstructed (generated) level in MC, were examined. Two variables $\sigma_\mathrm{rel}^\mathrm{DATA}$ and $\sigma_\mathrm{rel}^\mathrm{MC}$ represent the measure of the jet-energy resolution in data and simulations, respectively. In that study, the agreement between these two quantities was found to be sufficient for not attributing the systematic uncertainty to this source.
 	\item \textbf{Acceptance correction} \\
@@ -63,24 +63,24 @@ All described systematic studies are summarised in Table~\ref{tab:sysunc}. The t
 \label{tab:sysunc}
 \end{table}
 
-\newgeometry{textwidth=12cm,textheight=20cm}
+\newgeometry{textwidth=12cm,textheight=22cm}
 \begin{landscape}
 \begin{figure}[p!]
 \begin{center}
-\begin{subfloat}{\includegraphics[height=\textheight] {./Figures/systunc/h_q2_CS_systBreakdown}
+\begin{subfloat}[]{\includegraphics[height=\textheight] {./Figures/systunc/h_q2_CS_systBreakdown}
    \label{fig:z0corr_subfig1}
  }%
 \end{subfloat}
-\begin{subfloat}{\includegraphics[height=\textheight]{./Figures/systunc/h_etjetb_CS_systBreakdown}
+\begin{subfloat}[]{\includegraphics[height=\textheight]{./Figures/systunc/h_etjetb_CS_systBreakdown}
    \label{fig:z0corr_subfig2}
  }%
 \end{subfloat}
-\begin{subfloat}{\includegraphics[height=\textheight]{./Figures/systunc/h_etajetb_CS_systBreakdown}
+\begin{subfloat}[]{\includegraphics[height=\textheight]{./Figures/systunc/h_etajetb_CS_systBreakdown}
    \label{fig:z0corr_subfig3}
  }%
 \end{subfloat}
 \end{center}
-\caption{Estimated systematic uncertainties on inclusive-jet cross sections as functions of (a) \qsq, (b) \etjetb and (c) \etajetb.}
+\caption{Estimated systematic uncertainties on inclusive-jet cross sections as functions of \qsq (a), \etjetb (b) and \etajetb (c).}
 \label{fig:systunc}
 \end{figure}
 \end{landscape}
